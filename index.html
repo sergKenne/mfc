@@ -239,7 +239,29 @@
             <div class="container">
                 <div class="main-content__inner">
                     <div class="sidebar main-content__sidebar">
-                        
+                        <p class="sidebar__paragraphe">Соотношение заболевших в мире</p>
+                        <img src="img/stat1.svg" alt="" class="sidebar__stat">
+                        <ul class="sidebar__radio-list">
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  в Области</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В России</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В мире</label>
+                            </li>
+                        </ul>
+                        <p class="sidebar__paragraphe">Соотношение заболевших в мире</p>
+                        <img src="img/stat2.svg" alt="" class="sidebar__stat">
+                        <ul class="sidebar__radio-list">
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В России</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В мире</label>
+                            </li>
+                        </ul>
                     </div>
                     <div class="news main-content__main main-content__main--news">
                        <div class="news__content">
@@ -292,7 +314,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a href="" class="news__slider-btn news__content-btn">Подробнее</a>
+                            <a href="" class="news__content-btn news__slider-btn news__slider-btn--light">Подробнее</a>
                        </div>
                        <div class="news__slider">
                             <ul class="news__nav-list">
@@ -344,7 +366,8 @@
                                     </div>
                                 </div>
                             </div> 
-                            <a href="" class="news__slider-btn">Подробнее</a>
+                            <!-- <a href="" class="news__slider-btn">Подробнее</a> -->
+                            <a href="" class="news__slider-btn news__slider-btn--light">Подробнее</a>
                        </div>
                        
                        <!-- <div>
@@ -360,16 +383,137 @@
             <div class="container">
                 <div class="main-content__inner">
                     <div class="sidebar main-content__sidebar">
-                        
+                        <img class="sidebar__pub-img" src="img/pub.png" alt="">
+                        <p class="sidebar__paragraphe">Средний возраст наших посетителей</p>
+                        <img src="img/stat3.svg" alt="" class="sidebar__stat-img">
+                        <ul class="sidebar__radio-list">
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  молодые</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  среднего возраста</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  пожилые</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  другие</label>
+                            </li>
+                        </ul>
+
                     </div>
-                    <div class="news main-content__main main-content__main--info">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur maiores rem ipsa laborum vitae ab at neque, id officiis doloribus iusto rerum perspiciatis! Molestiae hic facere reprehenderit aspernatur vero dolor repellendus temporibus labore error commodi inventore doloremque molestias consequuntur mollitia, aperiam sed, non, accusamus dolorum doloribus. Inventore porro, amet repellendus officia itaque fugiat placeat ducimus ipsam labore doloribus, nemo est expedita aliquam optio. Qui repellendus id, amet dolore officia, doloribus illum commodi natus, iure odit tempora optio? Explicabo, id mollitia.
+                    <div class="info main-content__main main-content__main--info">
+                        <h3 class="info__title">Полезные ресурсы</h3>
+                        <ul class="info__partener-list">
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener1.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener2.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener3.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener4.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener5.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener6.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener7.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener8.svg" alt="">
+                            </li>
+                        </ul>
+                        <h3 class="info__title">Наши офисы и центры</h3>
+                        <form class="info__form">
+                            <span class="info__form-btn" >На карте</span>
+                            <span class="info__form-btn">Списком</span>
+                            <div>
+                                <input class="info__form-input" type="text" placeholder="Начните вводить адрес...">
+                            </div>
+                        </form>
+                        <h4 class="info__time-title">Выберите время ожидания:</h4>
+                        <div>
+                            <label class="info__label" ><input class="info__radio" type="radio" name="radio"><span></span>  менее 5 минут</label>
+                            <label class="info__label"><input class="info__radio" type="radio" name="radio"><span></span>  от 15 до 30 минут</label>
+                        </div>
+                        <div>
+                            <label class="info__label"><input class="info__radio" type="radio" name="radio"><span></span>  более 30 минут</label>
+                            <label class="info__label"><input class="info__radio" type="radio" name="radio"><span></span>  нет данных</label>
+                        </div>
+                        <img class="info__map" src="img/map.svg" alt="">
                     </div>
                 </div>
             </div>
         </section>
+        <section class="socials">
+            <div class="container">
+                <div class="socials__inner">
+                    <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg>
+                    <div class="socials__icons">
+                        <h5 class="socials__title">Мы в социальных сетях</h5>
+                        <ul class="socials__list">
+                            <li class="socials__list-item"><img class="socials__img" src="img/s1.svg" alt=""></li>
+                            <li class="socials__list-item"><img class="socials__img" src="img/s2.svg" alt=""></li>
+                            <li class="socials__list-item"><img class="socials__img" src="img/s3.svg" alt=""></li>
+                            <li class="socials__list-item"><img class="socials__img" src="img/s4.svg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="socials__contact">
+                        <p class="socials__phone">8 (343) 273-00-08</p>
+                        <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                    </div>
+                </div> 
+            </div>    
+        </section>
         <footer class="footer">
-            footer
+            <div class="container">
+                <ul class="footer__inner">
+                    <li class="footer__item">
+                        <h4 class="footer__title">Мобильное приложение:</h4>
+                        <div>
+                            <img src="img/store1.png" alt="">
+                        </div>
+                        <br/>
+                        <div>
+                            <img src="img/store2.png" alt="">
+                        </div>
+                    </li>
+                    <li class="footer__item">
+                        <h4 class="footer__title">Наши сервисы:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Обратная связь</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Официальное обращение в МФЦ</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Вопрос-ответ</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Записаться на прием</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Статус обращения</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Реклама</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item">
+                        <h4 class="footer__title">Об МФЦ:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Цели и задачи</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Дирекция</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Вакансии</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Информация для граждан</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Новости</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Объявления</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Видео</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item">
+                        <span class="footer__btn">Вакансии</span>
+                    </li>
+                </ul>
+            </div>
         </footer>
     </div>
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
