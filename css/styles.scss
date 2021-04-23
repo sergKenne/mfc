@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap');
 
-
-
 *,
 *::after,
 *::before {
@@ -11,7 +9,8 @@
 .clearfix::after {
     content: "";
     display: table;
-    clear: both; }
+    clear: both; 
+}
 
 html {
     font-size: 100%; 
@@ -38,7 +37,7 @@ $brown:#623B2A;
 
 
 .wrapper {
-    max-width: 1604px;
+    //max-width: 1604px;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -46,11 +45,9 @@ $brown:#623B2A;
     overflow: hidden;
 }
 .container {
-    //max-width: 1236px;
     max-width: 1456px;
     margin: 0 auto;
     padding: 0 10px;
-    //overflow: hidden;
 }
 
 //ОБЩИЕ СТИЛУ
@@ -105,45 +102,73 @@ $brown:#623B2A;
 
 // HEADER
 .header {
-
+    padding-top: 80px;
     &__top {
         background-color: $red;
+        position: fixed;
+        top:0;
+        width: 100%;
+        z-index: 9999;
+        //height: 80px;
     }
     &__inner {
+        height: 80px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
     }
     &__left {
         display: flex;
-        padding-top: 6px;
+        //padding-top: 6px;
+        //height: 100%;
+        justify-content: center;
     }
     &__burger {
-        width: 30px;
-        height: 25px;
-        margin-right: 92px;
-        padding-top: 6px;
+        // width: 30px;
+        // height: 25px;
+        margin-right: 22px;
+        // padding-top: 6px;
+        width: 52px;
+        height: 52px;
         cursor: pointer;
+        border: 1px solid #EEE2D6;
+        box-sizing: border-box;
+        border-radius: 11px;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    &__burger-svg {
+        max-width: 100%;
+        max-height: 100%;
+        fill: white;
     }
     &__logo {
-        width: 94px;
-        height: 32px;
+        // width: 94px;
+        // height: 32px;
         margin-right: 32px;
     }
     &__phone {
         font-family: 'Circe';
         font-style: normal;
         font-weight: bold;
-        font-size: 21px;
+        font-size: 24px;
+        line-height: 32px;
         color: #FDFDFD;
+        margin-top: 5px;
     }
     &__work-time {
         font-weight: normal;
-        font-size: 13px;
+        font-size: 18px;
         line-height: 1;
         display: block;
         text-align: right;
     }
+    &__time-strong {
+        color: #2C2A29;
+        font-weight: bold;
+    }
+    
 }
 
 //NAVBAR
@@ -152,7 +177,6 @@ $brown:#623B2A;
         display: flex;
         padding: 6px 0;
     }
-
     &__item {
         margin-left: 36px;
         &:first-child {
@@ -215,23 +239,23 @@ $brown:#623B2A;
         &::after {
             content: "";
             display: block;
-            width: 88px;
+            width: 100%;
             height: 1px;
             background-color: #C39367;
             position: absolute;
             bottom: 0px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            //transform: translateX(-50%);
         }
     }
     &__main-logo {
         width: 212px;
-        height: 65px;
+        height: 80px;
         margin-top: 15px;
         padding-bottom: 23px;
     }
     &__nav-list {
-        margin-top: 60px;
+        margin-top: 80px;
     }
     &__nav-item {
         margin-bottom: 10px;
@@ -242,6 +266,18 @@ $brown:#623B2A;
         display: flex;
         align-items: center;
         justify-content: center;
+        &:hover {
+            background: $red;
+            color: #fff;
+
+        }
+        &:hover .main-btn__icon  {
+            fill: #fff;
+            stroke: #fff;
+        }
+        &:hover .main-btn__text {
+            color:#fff;
+        }
     }
 
     &__paragraphe {
@@ -260,7 +296,6 @@ $brown:#623B2A;
         color: #263238;
         display: inline-block;
         width: 200px;
-        //border:1px solid;
         margin-top: 20px;
         span {
             display: inline-block;
@@ -284,8 +319,6 @@ $brown:#623B2A;
     &__stat-img {
         width: 200px;
     }
-
-    
 }
 
 //MAIN
@@ -305,10 +338,8 @@ $brown:#623B2A;
         font-family: 'Circe';
         font-weight: 800;
         font-size: 45.5093px;
-        //line-height: 150%;
         line-height: 68px;
         color: #623B2A;
-
     }
     &__strong {
         color: $red;
@@ -344,13 +375,10 @@ $brown:#623B2A;
         &:hover {
             color: $beige;
             background-color: $red;
-            //box-shadow: 4px 4px 5px rgba(55, 84, 170, 0.1);
             box-shadow: 4px 4px  2px rgba(0, 0, 0, .2);
         }
     }
     &__slider {
-        max-width: 1195px;
-        //width: 100%;
         margin-top: 30px;
     }
     &__slider-item {
@@ -389,25 +417,27 @@ $brown:#623B2A;
         margin-top: 15px;
     }
 
-    //slick slider css
-    .slick-dots {
-        bottom: 4px;
-        left: 300px;
-        list-style: none;
+    //BXSLIDER
+    .bx-wrapper {
+        box-shadow: none;
+        background: transparent;
+        border: none;
     }
-    .slick-dots li button {
-        width: 10px;
-        height: 10px;
+    .bx-viewport {
+        height: 340px!important;
+    }
+    .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+        bottom: 22px;
+        right: -484px;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a {
         background: #E3CCB7;
-        border-radius: 50%;
     }
-    .slick-dots li.slick-active button{
-        background: $red;
+    .bx-wrapper .bx-pager.bx-default-pager a.active,
+    .bx-wrapper .bx-pager.bx-default-pager a:focus,
+    .bx-wrapper .bx-pager.bx-default-pager a:hover {
+        background: #CFA580;
     }
-    .slick-dots li button:before{
-        content: "";
-    }
-
 }
 
 //SERVICES
@@ -428,15 +458,45 @@ $brown:#623B2A;
         border-radius: 11px;
         overflow: hidden;
         cursor: pointer;
-        
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        //transition: all .4s ease-in-out;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: $red;
+            position: absolute;
+            left: 100%;
+            transition: left .7s linear;
+            //transition: transform .4s linear;
+            //transition: transform .4s linear;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: $red;
+            position: absolute;
+            bottom: 0;
+            right: 100%;
+            transition: right .7s linear;
+        }
         &:hover {
-            //height: 90px;
             transform: scale(1.05, 1.4);
-            border-top: 8px solid $red;
-            border-bottom: 8px solid $red;
             border-left: 2px solid $red;
             border-right: 2px solid $red;
         }
+        
+        &:hover::before {
+            left: 0;
+        }
+        &:hover::after {
+            right: 0;
+        }
+
         &:hover .services__overlay {
             background: transparent;
             color:#2C2A29;
@@ -471,7 +531,6 @@ $brown:#623B2A;
         background: linear-gradient(90deg, #E04E39 28.67%, rgba(224, 78, 57, 0) 100%);
         //border: 1px solid transparent;
         transition: all .6s linear;
-
     }
     &__title {
         font-family: "Circe";
@@ -588,9 +647,10 @@ $brown:#623B2A;
         border-radius: 11px;
         margin-top: 16px;
         transition: all .4s ease-in-out;
-        &:hover {
+        &--show:hover {
             color: $red;
             background: #EEE2D6;
+
         }
         &--light {
             font-weight: normal;
@@ -620,8 +680,11 @@ $brown:#623B2A;
         border-radius: 11px;
     }
     .bx-wrapper .bx-pager{
+        // bottom: 22px;
+        // left: -127px;
         bottom: 22px;
-        left: -127px;
+        left: -45px;
+        width: 60%;
     }
     .bx-wrapper .bx-pager.bx-default-pager a {
         background:  #E3CCB7;
@@ -644,12 +707,21 @@ $brown:#623B2A;
         margin-top: 97px;
     }
     &__partener-list {
+       
+        // display: flex;
+        // justify-content: space-around;
+        // align-items: center;
+        // margin-top: 32px;
+        // padding-bottom: 40px;
+        // border-bottom: 1px solid #E0E2E5;
+    }
+    &__partener-item {
+        text-align: center;
+        //border: 1px solid red;
+        height: 120px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        margin-top: 32px;
-        padding-bottom: 40px;
-        border-bottom: 1px solid #E0E2E5;
     }
     &__partener-img {
         filter: grayscale(100%);
@@ -676,7 +748,7 @@ $brown:#623B2A;
         margin-top: 20px;
         border-radius: 11px;
         border: 1px solid #58595B;
-        transition: all .4s ease-in-out;
+        transition: all .2s linear;
         cursor: pointer;
         &:hover {
             background-color: $red;

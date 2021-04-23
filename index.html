@@ -31,13 +31,14 @@
                 <div class="container">
                     <div class="header__inner">
                         <div class="header__left">
-                            <svg class="header__burger"><use xlink:href="sprite.svg#burger"></use></svg>
-                            <svg class="header__logo"><use xlink:href="sprite.svg#logo"></use></svg>
-                            <div class="header__phone">8 (343) 273-00-08<span class="header__work-time">Ежедневно с 8:00 до 20:00</span></div>
+                            <div class="header__burger"><svg class="header__burger-svg"><use xlink:href="sprite.svg#burger"></use></svg></div>
+                            <!-- <svg class="header__logo"><use xlink:href="sprite.svg#logo"></use></svg> -->
+                            <img class="header__logo" src="img/logo.png" alt="logo" />
+                            <div class="header__phone">8 (343) 273-00-08<span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
                         </div>
                         <nav class="navbar header__navbar">
                             <ul class="navbar__list">
-                                <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#geop"></use></svg><span class="navbar__text">Офисы</span></a></li>
+                                <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#geop"></use></svg><span class="navbar__text">Вакансии</span></a></li>
                                 <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#doc"></use></svg><span class="navbar__text">Документы</span></a></li>
                                 <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
                                 <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
@@ -96,7 +97,7 @@
                                     <h1 class="showcase__title">МНОГОФУНКЦИОНАЛЬНЫЙ<br/><span class="showcase__strong">ЦЕНТР СВЕРДЛОВСКОЙ ОБЛАСТИ</span></h1>
                                 </div>
                                 <div class="showcase__number">
-                                    <div class="showcase__phone">8 (343) 273-00-08<span class="showcase__work-time">Ежедневно с 8:00 до 20:00</span></div>
+                                    <div class="showcase__phone">8 (343) 273-00-08<span class="showcase__work-time">Ежедневно с <span class="header__time-strong">8:00</span> до <span class="header__time-strong">20:00</span></span></div>
                                     <a href="" class="main-btn showcase__btn">
                                         <span class="__text">Онлайн-запись в МФЦ</span>
                                     </a>
@@ -334,35 +335,35 @@
                                     <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn">Подробнее</a>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
                                     <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn">Подробнее</a>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
                                     <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn">Подробнее</a>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
                                     <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn">Подробнее</a>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
                                     <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn">Подробнее</a>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                             </div> 
@@ -404,7 +405,7 @@
                     </div>
                     <div class="info main-content__main main-content__main--info">
                         <h3 class="info__title">Полезные ресурсы</h3>
-                        <ul class="info__partener-list">
+                        <ul class="partener-slider info__partener-list">
                             <li class="info__partener-item">
                                 <img class="info__partener-img" src="img/partener1.svg" alt="">
                             </li>
@@ -428,6 +429,21 @@
                             </li>
                             <li class="info__partener-item">
                                 <img class="info__partener-img" src="img/partener8.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener3.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener4.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener5.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener6.svg" alt="">
+                            </li>
+                            <li class="info__partener-item">
+                                <img class="info__partener-img" src="img/partener7.svg" alt="">
                             </li>
                         </ul>
                         <h3 class="info__title">Наши офисы и центры</h3>
