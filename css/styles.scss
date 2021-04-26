@@ -61,10 +61,14 @@ $brown:#623B2A;
         font-weight: bold;
         font-size: 18px;
         color: #58595B;
-        text-transform: capitalize;
+        //text-transform: capitalize;
         transition: all .4s linear;
         &--active {
             color: #FDFDFD;
+        }
+        &--first  {
+            color: $red;
+            text-align: left;
         }
         &--news {
             color: #58595B;
@@ -80,6 +84,10 @@ $brown:#623B2A;
         fill: #58595B;
         stroke: #58595B;
         transition: all .4s linear;
+        &--first {
+            fill: $red;
+            stroke: $red;
+        }
     }
     &__strong {
         color: #EEE2D6;
@@ -108,7 +116,7 @@ $brown:#623B2A;
         position: fixed;
         top:0;
         width: 100%;
-        z-index: 9999;
+        z-index: 99999;
         //height: 80px;
     }
     &__inner {
@@ -178,7 +186,7 @@ $brown:#623B2A;
         padding: 6px 0;
     }
     &__item {
-        margin-left: 36px;
+        margin-left: 6px;
         &:first-child {
             margin-left: 0;
         }
@@ -186,11 +194,27 @@ $brown:#623B2A;
     &__link {
         display: flex;
         align-items: center;
+        padding: 6px 18px;
+        transition: all .4s linear;
+        &:hover {
+            background: #ffffff;
+            border-radius: 11px;
+        }
+        &:hover .navbar__text {
+            color: $red;
+        }
+        &:hover .navbar__icon  {
+            fill: $red!important;
+            stroke: $red;
+        }
 
     }
     &__icon {
        width: 36px;
        height: 36px;
+       stroke: #EEE2D6;
+       fill: #EEE2D6;
+       
     }
     &__text {
         font-weight: bold;
@@ -251,11 +275,11 @@ $brown:#623B2A;
     &__main-logo {
         width: 212px;
         height: 80px;
-        margin-top: 15px;
+        margin-top: 43px;
         padding-bottom: 23px;
     }
     &__nav-list {
-        margin-top: 80px;
+        margin-top: 56px;
     }
     &__nav-item {
         margin-bottom: 10px;
@@ -265,7 +289,19 @@ $brown:#623B2A;
         line-height: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        //justify-content: center;
+        padding-left: 12px;
+        &--active {
+            border-color: $red;
+            // &:hover {
+            //     background: #fff!important;
+            // }
+            &:hover .main-btn__icon--first {
+                fill: #ffffff;
+                stroke: #ffffff;
+            }
+            
+        }
         &:hover {
             background: $red;
             color: #fff;
@@ -450,16 +486,20 @@ $brown:#623B2A;
         width: 25%;
         padding: 0 16px;
         margin-bottom: 32px;
+        //overflow: hidden;
     }
     &__card {
         position: relative;
-        height: 80px;
+        height: 90px;
+        width: 100%;
         background-color: #FDFDFD;
         border-radius: 11px;
         overflow: hidden;
         cursor: pointer;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
+        // border-left: 1px solid transparent;
+        // border-right: 1px solid transparent;
+        transition: transform 0s linear;
+
         //transition: all .4s ease-in-out;
         &::before {
             content: "";
@@ -468,10 +508,9 @@ $brown:#623B2A;
             height: 8px;
             background: $red;
             position: absolute;
+            top: 0;
             left: 100%;
             transition: left .7s linear;
-            //transition: transform .4s linear;
-            //transition: transform .4s linear;
         }
         &::after {
             content: "";
@@ -486,8 +525,8 @@ $brown:#623B2A;
         }
         &:hover {
             transform: scale(1.05, 1.4);
-            border-left: 2px solid $red;
-            border-right: 2px solid $red;
+            // border-left: 2px solid $red;
+            // border-right: 2px solid $red;
         }
         
         &:hover::before {
@@ -496,7 +535,12 @@ $brown:#623B2A;
         &:hover::after {
             right: 0;
         }
-
+        &:hover .services__left {
+            top: 0;
+        }
+        &:hover .services__right {
+            bottom: 0;
+        }
         &:hover .services__overlay {
             background: transparent;
             color:#2C2A29;
@@ -504,16 +548,41 @@ $brown:#623B2A;
         &:hover .services__img {
             opacity: 1;
         }
-        &:hover .services__title, .services__text {
+        &:hover .services__title {
+            color: #2C2A29;
+            font-size: 16px;
+        }
+        &:hover .services__text {
             color: #2C2A29;
         }
+    }
+    &__left {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: $red;
+        transition: top .7s linear;
+    }
+    &__right {
+        position: absolute;
+        bottom: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: $red;
+        transition: bottom .7s linear;
+
     }
     &__img {
         display: block;
         width: 100%;
         height: 100%;
+        // min-width: 100%;
+        // max-height: 100%;
         opacity: .3;
-        transition: all .5s linear;
+        transition: opacity 0s linear;
     }
     &__overlay {
         height: 100%;
@@ -522,6 +591,7 @@ $brown:#623B2A;
         justify-content: space-between;
         padding-top: 14px;
         padding-left: 18px;
+        padding-right: 18px;
         padding-bottom: 9px;
         position: absolute;
         top: 0;
@@ -539,7 +609,7 @@ $brown:#623B2A;
         font-size: 20px;
         line-height: 100%;
         color: $beige;
-        transition: all .5s linear;
+        transition: all .1s linear;
     }
     &__text {
         font-weight: 400;
@@ -781,13 +851,26 @@ $brown:#623B2A;
         width: 200px;
         //border:1px solid;
         margin-top: 25px;
-        span {
+        
+    }
+    &__out {
             display: inline-block;
             height: 12px;
             width: 12px;
-            border: 1px solid #C39367;
+            border: 2px solid #C39367;
             border-radius: 100%;
-        }
+            &--first {
+                border-color: #31B647;
+            }
+            &--second {
+                border-color: #FFDB4D;
+            }
+            &--middle {
+                border-color: $red;
+            }
+            &--last {
+                border-color: #ABABAB;
+            }
     }
     &__radio {
         display: none;
@@ -799,6 +882,42 @@ $brown:#623B2A;
         position: absolute;
         right: 0;
         bottom: 77px;
+    }
+
+    //BXSLIDER
+    .bx-wrapper {
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid rgb(207, 203, 203);
+    }
+    .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+        display: none;
+    }
+    .bx-wrapper .bx-prev {
+        left: -3px;
+        background: url(../img/left.svg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        //border: 1px solid red;
+    }
+    .bx-wrapper .bx-next {
+        right: -3px;
+        background: url(../img/right.svg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        //border: 1px solid red;
+    }
+    .bx-wrapper .bx-prev:hover,
+    .bx-wrapper .bx-prev:focus,
+    .bx-wrapper .bx-next:hover,
+    .bx-wrapper .bx-next:focus
+     {
+        background-position: center;
+    }
+    .bx-wrapper .bx-controls-direction a {
+       
+        width: 16px;
+        height: 22px;
     }
    
 }
@@ -847,6 +966,10 @@ $brown:#623B2A;
         color: #2C2A29;
 
     }
+    &__img {
+        height: 46px;
+        width: 46px;
+    }
     
 }
 
@@ -882,9 +1005,13 @@ $brown:#623B2A;
         font-size: 16px;
         line-height: 20px;
         color: #808285; 
-        transition: all .4s ease-in-out;
+        transition: all .2s linear;
         &:hover {
             color: $red;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            color: #E04E39;
         }
     }
     &__btn {

@@ -57,13 +57,17 @@ a {
   font-weight: bold;
   font-size: 18px;
   color: #58595B;
-  text-transform: capitalize;
   -webkit-transition: all .4s linear;
   transition: all .4s linear;
 }
 
 .main-btn__text--active {
   color: #FDFDFD;
+}
+
+.main-btn__text--first {
+  color: #E04E39;
+  text-align: left;
 }
 
 .main-btn__text--news {
@@ -81,6 +85,11 @@ a {
   stroke: #58595B;
   -webkit-transition: all .4s linear;
   transition: all .4s linear;
+}
+
+.main-btn__icon--first {
+  fill: #E04E39;
+  stroke: #E04E39;
 }
 
 .main-btn__strong {
@@ -114,7 +123,7 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .header__inner {
@@ -195,7 +204,7 @@ a {
 }
 
 .navbar__item {
-  margin-left: 36px;
+  margin-left: 6px;
 }
 
 .navbar__item:first-child {
@@ -209,11 +218,30 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 6px 18px;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.navbar__link:hover {
+  background: #ffffff;
+  border-radius: 11px;
+}
+
+.navbar__link:hover .navbar__text {
+  color: #E04E39;
+}
+
+.navbar__link:hover .navbar__icon {
+  fill: #E04E39 !important;
+  stroke: #E04E39;
 }
 
 .navbar__icon {
   width: 36px;
   height: 36px;
+  stroke: #EEE2D6;
+  fill: #EEE2D6;
 }
 
 .navbar__text {
@@ -285,12 +313,12 @@ a {
 .sidebar__main-logo {
   width: 212px;
   height: 80px;
-  margin-top: 15px;
+  margin-top: 43px;
   padding-bottom: 23px;
 }
 
 .sidebar__nav-list {
-  margin-top: 80px;
+  margin-top: 56px;
 }
 
 .sidebar__nav-item {
@@ -306,9 +334,16 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 12px;
+}
+
+.sidebar__nav-link--active {
+  border-color: #E04E39;
+}
+
+.sidebar__nav-link--active:hover .main-btn__icon--first {
+  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .sidebar__nav-link:hover {
@@ -518,13 +553,16 @@ a {
 
 .services__card {
   position: relative;
-  height: 80px;
+  height: 90px;
+  width: 100%;
   background-color: #FDFDFD;
   border-radius: 11px;
   overflow: hidden;
   cursor: pointer;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
+  -webkit-transition: -webkit-transform 0s linear;
+  transition: -webkit-transform 0s linear;
+  transition: transform 0s linear;
+  transition: transform 0s linear, -webkit-transform 0s linear;
 }
 
 .services__card::before {
@@ -534,6 +572,7 @@ a {
   height: 8px;
   background: #E04E39;
   position: absolute;
+  top: 0;
   left: 100%;
   -webkit-transition: left .7s linear;
   transition: left .7s linear;
@@ -555,8 +594,6 @@ a {
 .services__card:hover {
   -webkit-transform: scale(1.05, 1.4);
           transform: scale(1.05, 1.4);
-  border-left: 2px solid #E04E39;
-  border-right: 2px solid #E04E39;
 }
 
 .services__card:hover::before {
@@ -565,6 +602,14 @@ a {
 
 .services__card:hover::after {
   right: 0;
+}
+
+.services__card:hover .services__left {
+  top: 0;
+}
+
+.services__card:hover .services__right {
+  bottom: 0;
 }
 
 .services__card:hover .services__overlay {
@@ -576,8 +621,35 @@ a {
   opacity: 1;
 }
 
-.services__card:hover .services__title, .services__card .services__text {
+.services__card:hover .services__title {
   color: #2C2A29;
+  font-size: 16px;
+}
+
+.services__card:hover .services__text {
+  color: #2C2A29;
+}
+
+.services__left {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #E04E39;
+  -webkit-transition: top .7s linear;
+  transition: top .7s linear;
+}
+
+.services__right {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #E04E39;
+  -webkit-transition: bottom .7s linear;
+  transition: bottom .7s linear;
 }
 
 .services__img {
@@ -585,8 +657,8 @@ a {
   width: 100%;
   height: 100%;
   opacity: .3;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+  -webkit-transition: opacity 0s linear;
+  transition: opacity 0s linear;
 }
 
 .services__overlay {
@@ -603,6 +675,7 @@ a {
           justify-content: space-between;
   padding-top: 14px;
   padding-left: 18px;
+  padding-right: 18px;
   padding-bottom: 9px;
   position: absolute;
   top: 0;
@@ -622,8 +695,8 @@ a {
   font-size: 20px;
   line-height: 100%;
   color: #EEE2D6;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 .services__text {
@@ -900,12 +973,28 @@ a {
   margin-top: 25px;
 }
 
-.info__label span {
+.info__out {
   display: inline-block;
   height: 12px;
   width: 12px;
-  border: 1px solid #C39367;
+  border: 2px solid #C39367;
   border-radius: 100%;
+}
+
+.info__out--first {
+  border-color: #31B647;
+}
+
+.info__out--second {
+  border-color: #FFDB4D;
+}
+
+.info__out--middle {
+  border-color: #E04E39;
+}
+
+.info__out--last {
+  border-color: #ABABAB;
 }
 
 .info__radio {
@@ -920,6 +1009,43 @@ a {
   position: absolute;
   right: 0;
   bottom: 77px;
+}
+
+.info .bx-wrapper {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #cfcbcb;
+}
+
+.info .bx-wrapper .bx-pager, .info .bx-wrapper .bx-controls-auto {
+  display: none;
+}
+
+.info .bx-wrapper .bx-prev {
+  left: -3px;
+  background: url(../img/left.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info .bx-wrapper .bx-next {
+  right: -3px;
+  background: url(../img/right.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info .bx-wrapper .bx-prev:hover,
+.info .bx-wrapper .bx-prev:focus,
+.info .bx-wrapper .bx-next:hover,
+.info .bx-wrapper .bx-next:focus {
+  background-position: center;
+}
+
+.info .bx-wrapper .bx-controls-direction a {
+  width: 16px;
+  height: 22px;
 }
 
 .socials__inner {
@@ -974,6 +1100,11 @@ a {
   color: #2C2A29;
 }
 
+.socials__img {
+  height: 46px;
+  width: 46px;
+}
+
 .footer {
   padding-bottom: 55px;
 }
@@ -1008,11 +1139,15 @@ a {
   font-size: 16px;
   line-height: 20px;
   color: #808285;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .footer__list-link:hover {
+  color: #E04E39;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
   color: #E04E39;
 }
 
