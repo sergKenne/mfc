@@ -128,15 +128,10 @@ $brown:#623B2A;
     }
     &__left {
         display: flex;
-        //padding-top: 6px;
-        //height: 100%;
         justify-content: center;
     }
     &__burger {
-        // width: 30px;
-        // height: 25px;
         margin-right: 22px;
-        // padding-top: 6px;
         width: 52px;
         height: 52px;
         cursor: pointer;
@@ -145,15 +140,22 @@ $brown:#623B2A;
         border-radius: 11px;
         padding-left: 13px;
         padding-right: 13px;
+        transition: all .4s linear;
+        &:hover {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+        &:hover .header__burger-svg {
+            fill: $red
+        }
     }
     &__burger-svg {
         max-width: 100%;
         max-height: 100%;
         fill: white;
+        transition: all .4s linear;
     }
     &__logo {
-        // width: 94px;
-        // height: 32px;
         margin-right: 32px;
     }
     &__phone {
@@ -207,7 +209,6 @@ $brown:#623B2A;
             fill: $red!important;
             stroke: $red;
         }
-
     }
     &__icon {
        width: 36px;
@@ -240,7 +241,6 @@ $brown:#623B2A;
     &__sidebar {
         flex: 0 0 228px;
         padding-right: 15px;
-        
     }
     &__main {
         flex: 1 1 auto;
@@ -293,9 +293,6 @@ $brown:#623B2A;
         padding-left: 12px;
         &--active {
             border-color: $red;
-            // &:hover {
-            //     background: #fff!important;
-            // }
             &:hover .main-btn__icon--first {
                 fill: #ffffff;
                 stroke: #ffffff;
@@ -305,7 +302,6 @@ $brown:#623B2A;
         &:hover {
             background: $red;
             color: #fff;
-
         }
         &:hover .main-btn__icon  {
             fill: #fff;
@@ -381,7 +377,6 @@ $brown:#623B2A;
         color: $red;
     }
     &__phone {
-        //font-family: Circe;
         font-weight: bold;
         font-size: 31px;
         line-height: 46px;
@@ -486,26 +481,21 @@ $brown:#623B2A;
         width: 25%;
         padding: 0 16px;
         margin-bottom: 32px;
-        //overflow: hidden;
     }
     &__card {
         position: relative;
         height: 90px;
         width: 100%;
         background-color: #FDFDFD;
-        border-radius: 11px;
+        border-radius: 8px;
         overflow: hidden;
         cursor: pointer;
-        // border-left: 1px solid transparent;
-        // border-right: 1px solid transparent;
         transition: transform 0s linear;
-
-        //transition: all .4s ease-in-out;
         &::before {
             content: "";
             display: block;
             width: 100%;
-            height: 8px;
+            height: 6px;
             background: $red;
             position: absolute;
             top: 0;
@@ -516,7 +506,7 @@ $brown:#623B2A;
             content: "";
             display: block;
             width: 100%;
-            height: 8px;
+            height: 6px;
             background: $red;
             position: absolute;
             bottom: 0;
@@ -524,9 +514,7 @@ $brown:#623B2A;
             transition: right .7s linear;
         }
         &:hover {
-            transform: scale(1.05, 1.4);
-            // border-left: 2px solid $red;
-            // border-right: 2px solid $red;
+            transform: scale(1.05, 1.3);
         }
         
         &:hover::before {
@@ -579,8 +567,7 @@ $brown:#623B2A;
         display: block;
         width: 100%;
         height: 100%;
-        // min-width: 100%;
-        // max-height: 100%;
+        //border-radius: 8px;
         opacity: .3;
         transition: opacity 0s linear;
     }
@@ -653,6 +640,7 @@ $brown:#623B2A;
         border: 1px solid transparent;
          margin-bottom: 28px;
          transition: all .3s ease-in-out;
+         cursor: pointer;
         &:hover {
             border-radius: 11px;
             border-left-width: 13px;
@@ -969,6 +957,11 @@ $brown:#623B2A;
     &__img {
         height: 46px;
         width: 46px;
+        cursor: pointer;
+        transition: all .2s linear;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
     
 }
@@ -984,8 +977,9 @@ $brown:#623B2A;
     &__item {
        
         &:nth-child(2) {
+            width: 265px;
             margin-left: 40px;
-            margin-right: 90px;
+            margin-right: 70px;
             //background-color: red;
         }
     }
@@ -1024,5 +1018,45 @@ $brown:#623B2A;
         border-radius: 11px;
         display: inline-block;
         margin-left: 110px;
+    }
+}
+
+
+.fix-nav {
+    position: fixed;
+    left: 0;
+    top: 212px;
+    display: flex;
+    flex-direction: column;
+    &__item {
+        background-color: $red;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--img {
+            height: auto;
+            background-color: #ffffff;
+        }
+    }
+}
+
+.chat {
+    position: fixed;
+    bottom: 40px;
+    right: 80px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 110px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #F17757;
+    border: 1.82919px solid #E04E39;
+    box-shadow: 7.31675px 7.31675px 9.14593px rgba(55, 84, 170, 0.1);
+    &__img {
+        width: 38px;
+        height: 34px;
     }
 }

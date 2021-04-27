@@ -12,3 +12,7 @@ $(document).ready(function(){
     stopAutoOnClick: true,
   });
 });
+
+
+
+
