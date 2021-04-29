@@ -32,7 +32,7 @@
                     <div class="header__inner">
                         <div class="header__left">
                             <div class="header__burger"><svg class="header__burger-svg"><use xlink:href="sprite.svg#burger"></use></svg></div>
-                            <img class="header__logo" src="img/logo.png" alt="logo" />
+                            <img class="header__logo" src="img/logo1.png" alt="logo" />
                             <div class="header__phone">8 (343) 273-00-08<span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
                         </div>
                         <nav class="navbar header__navbar">
@@ -53,7 +53,8 @@
                 <div class="main-content__inner">
                     <aside class="sidebar main-content__sidebar">
                         <a href="#" class="sidebar__link">
-                            <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg>
+                            <!-- <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg> -->
+                            <a class="sidebar__link-logo" href=""><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
                         </a>
                         <ul class="sidebar__nav-list">
                             <li class="sidebar__nav-item">
@@ -66,6 +67,12 @@
                                 <a href="" class="main-btn sidebar__nav-link">
                                     <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
                                     <span class="main-btn__text">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
+                                    <span class="main-btn__text">Офисы</span>
                                 </a>
                             </li>
                             <li class="sidebar__nav-item">
@@ -280,8 +287,22 @@
                         </ul>
                     </div>
                     <div class="news main-content__main main-content__main--news">
+                       <div class="news__info">
+                           <h4 class="news__title">Новости</h4>
+                           <div class="news__info-card">
+                               <img src="img/info.png" alt="" class="news__info-image">
+                               <p class="news__info-text">Единовременная выплата семьям, имеющим детей в возрасте до 8 лет, в размере 5000 рублей на ребенка...</p>
+                           </div>
+                           <div class="news__info-card">
+                               <img src="img/info.png" alt="" class="news__info-image">
+                               <p class="news__info-text">Единовременная выплата семьям, имеющим детей в возрасте до 8 лет, в размере 5000 рублей на ребенка...</p>
+                           </div>
+                           <div>
+                            <a href="" class="news__slider-btn news__slider-btn--light">Все новости</a>
+                           </div>
+                       </div>
                        <div class="news__content">
-                            <ul class="news__nav-list">
+                            <!-- <ul class="news__nav-list">
                                 <li class="news__nav-item">
                                     <a href="" class="main-btn main-btn--active news__nav-link">
                                         <span class="main-btn__text main-btn__text--news main-btn__strong">Новости</span>
@@ -292,7 +313,8 @@
                                         <span class="main-btn__text main-btn__text--news">Объявления</span>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
+                            <h4 class="news__title">Объявления</h4>
                             <ul class="news__card-list">
                                 <li class="news__card-item">
                                     <p class="news__card-text">Опрос организаций для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</p>
@@ -330,52 +352,48 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a href="" class="news__content-btn news__slider-btn news__slider-btn--light">Все новости</a>
+                            <a href="" class="news__content-btn news__slider-btn news__slider-btn--light">Все объявления</a>
                        </div>
                        <div class="news__slider">
-                            <ul class="news__nav-list">
+                           <h4 class="news__title">Истории</h4>
+                            <!-- <ul class="news__nav-list">
                                 <li class="news__nav-item">
                                     <a href="" class="main-btn main-btn--active news__nav-link">
                                         <span class="main-btn__text main-btn__text--news main-btn__strong">Истории</span>
                                     </a>
                                 </li>
-                                <!-- <li class="news__nav-item">
-                                    <a href="" class="main-btn news__nav-link ">
-                                        <span class="main-btn__text main-btn__text--news">Объявления</span>
-                                    </a>
-                                </li> -->
-                            </ul>
+                            </ul> -->
                             <div class="news-slider slider news__slider-inner">
                                 <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
+                                    <img class="news__slider-img" src="img/new-slide2.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
                                         <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
+                                    <img class="news__slider-img" src="img/new-slide2.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
                                         <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
+                                    <img class="news__slider-img" src="img/new-slide2.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
                                         <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
+                                    <img class="news__slider-img" src="img/new-slide2.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
                                         <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
                                     </div>
                                 </div>
                                 <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide1.jpg" alt="">
+                                    <img class="news__slider-img" src="img/new-slide2.jpg" alt="">
                                     <div class="news__slider-caption">
                                         <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
                                         <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
@@ -416,49 +434,69 @@
                                 <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  другие</label>
                             </li>
                         </ul>
-
                     </div>
                     <div class="info main-content__main main-content__main--info">
                         <h3 class="info__title">Полезные ресурсы</h3>
                         <ul class="partener-slider info__partener-list">
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener1.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener1.svg" alt="">
+                                    <h5 class="info__partener-caption">Госуслуги</h5>
+                                </div>
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                    <h5 class="info__partener-caption">ФНС</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                    <h5 class="info__partener-caption">Росеестр</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                    <h5 class="info__partener-caption">Правительство СО</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener5.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener5.svg" alt="">
+                                    <h5 class="info__partener-caption">Портал Бизнес-навигатора МСП</h5>
+                                </div>
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener6.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener6.svg" alt="">
+                                    <h5 class="info__partener-caption">Информационный портал СО</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener7.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener7.svg" alt="">
+                                    <h5 class="info__partener-caption">Губернатор СО</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener8.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                    <h5 class="info__partener-caption">ФНС</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                    <h5 class="info__partener-caption">Росеестр</h5>
+                                </div>    
                             </li>
                             <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener4.svg" alt="">
-                            </li>
-                            <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener5.svg" alt="">
-                            </li>
-                            <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener6.svg" alt="">
-                            </li>
-                            <li class="info__partener-item">
-                                <img class="info__partener-img" src="img/partener7.svg" alt="">
+                                <div class="info__partener-inner">
+                                    <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                    <h5 class="info__partener-caption">Правительство СО</h5>
+                                </div>    
                             </li>
                         </ul>
                         <h3 class="info__title">Наши офисы и центры</h3>
@@ -483,7 +521,7 @@
                 </div>
             </div>
         </section>
-        <section class="socials">
+        <!-- <section class="socials">
             <div class="container">
                 <div class="socials__inner">
                     <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg>
@@ -510,11 +548,19 @@
                     </div>
                 </div> 
             </div>    
-        </section>
+        </section> -->
         <footer class="footer">
             <div class="container">
                 <ul class="footer__inner">
                     <li class="footer__item">
+                        <div>
+                            <!-- <a href="#" class="sidebar__link">
+                                <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg>
+                                
+                            </a> -->
+                            <a class="sidebar__link-logo" href=""><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
+                        </div>    
+                        <br/><br/>
                         <h4 class="footer__title">Мобильное приложение:</h4>
                         <div>
                             <img src="img/store1.png" alt="">
@@ -548,8 +594,32 @@
                             <li class="footer__list-item"><a href="" class="footer__list-link">Видео</a></li>
                         </ul>
                     </li>
-                    <li class="footer__item">
-                        <!-- <span class="footer__btn">Вакансии</span> -->
+                    <li class="socials footer__item">
+                        <div class="socials__inner">
+                            <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
+                            <div class="socials__contact">
+                                <p class="socials__phone">8 (343) 273-00-08</p>
+                                <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                            </div>
+                            <div class="socials__icons">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div> 
                     </li>
                 </ul>
             </div>
