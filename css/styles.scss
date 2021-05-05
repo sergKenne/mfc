@@ -700,6 +700,7 @@ $color_hover: #C39367;
     &__info-image {
         display: block;
         width: 100%;
+        height: 246px;
     }
     &__info-text {
         font-weight: normal;
@@ -765,13 +766,26 @@ $color_hover: #C39367;
             
         }
     }
+    &__slider-inner {
+       //width: 338px;
+       height: 678px;
+       //height: 597px;
+       //border: 2px solid #ad4;
+    }
     &__slider-item {
        position: relative;
+       height: 678px;
+       width: 338px;
+       //background-color: $red;
+       
+      //height: 100%;
     }
     &__slider-img {
-        width: 338px;
-        height: 678px;
-        //border: 2px solid #ad4;
+       width: 338px;
+       //height: 678px;
+       height: 597px;
+       //border: 2px solid #ad4;
+       
     }
     &__slider-caption {
         position: absolute;
@@ -780,6 +794,10 @@ $color_hover: #C39367;
         bottom: 0;
         padding: 24px 24px 8px 24px;
         text-align: right;
+        padding-top: 80px;
+        //background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #E04E39), to(rgba(224, 78, 57, 0)));
+        background: linear-gradient(to top, #E04E39 37%, rgba(224, 78, 57, 0) 100%);
+        border-radius: 11px;
     }
     &__slider-text {
         font-weight: normal;
@@ -841,7 +859,7 @@ $color_hover: #C39367;
 
     //bxslider
     .bx-wrapper {
-       
+        //height: 678px;
         box-shadow: none;
         border:none;
         background: transparent;
@@ -858,7 +876,7 @@ $color_hover: #C39367;
         background:  #E3CCB7;
     }
     .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
-        background: $red;
+        background: $brown;
     }
     .bx-next, .bx-prev {
         display: none;
@@ -1036,6 +1054,19 @@ $color_hover: #C39367;
         right: 0;
         //bottom: 77px;
         top: 450px;
+        //display: none;
+        cursor: pointer;
+    }
+    &__yandex-map {
+        position: absolute;
+        right: 0;
+        //bottom: 77px;
+        top: 450px;
+        width: 560px;
+        height: 600px;
+        display: none;
+        //opacity: 0;
+
     }
 
     //BXSLIDER
