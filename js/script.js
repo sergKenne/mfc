@@ -30,6 +30,82 @@ $(document).ready(function(){
       $("#modal-js").slideToggle(); 
     });
 
+    //OFFERS JS
+    $(".offers-title-js").bind({
+      click: function() {
+        const $this = $(this);
+        const $list = $(this).closest(".offers__list-item").find(".offers__sublist");
+        const $plus_icon =  $(this).find(".offers__plus-icon");
+        const $minus_icon =  $(this).find(".offers__minus-icon");
+
+        $list.slideToggle("fast", function(){
+          if($(this).is(":visible")) {
+            $this.addClass("offers__list-title--active");
+            $plus_icon.css({opacity: 0});
+            $minus_icon.css({opacity: 1});
+            
+          } else {
+            $this.removeClass("offers__list-title--active");
+            $plus_icon.css({opacity: 1});
+            $minus_icon.css({opacity: 0});
+          }
+        });
+      }
+    });
+
+    //SIDEBAR JS
+    $(".sidebar__sub-title").click(function(){
+      const $this = $(this);
+      const $subList = $(this).closest(".sidebar__item").find(".sidebar__sub-list");
+      $subList.slideToggle("fast", function() {
+        if($subList.is(":visible")) {
+          $this.find(".sidebar__fas-icon").css({
+            transform: "translate(20px, 5px) rotate(-180deg)",
+            "transform-origin": "center",
+          })
+        } else {
+          $this.find(".sidebar__fas-icon").css({
+            transform: "translate(0px, 5px) rotate(0deg)",
+            "transform-origin": "center",
+          })
+        } 
+      }); 
+    })
+
+
+    //SUBLIST
+    // $(".tes").click(function(){
+    //   const $list = $(this).next();
+    //   //const $check = $(this).find(".sidebar__input");
+    //   console.log($(this))
+    //   // if($check.is(':checked')) {
+    //   //   console.log("is checked")
+    //   // } else {
+    //   //   console.log("is not check")
+    //   // }
+
+    //   //$list.slideUp()
+    //   // if($list.is(":visible")) {
+    //   //   console.log("true")
+    //   //   //$list.slideUp();
+    //   //   //$list.addClass("hide")
+    //   // }else {
+    //   //   console.log("false")
+    //   //   //$list.slideDown();
+    //   //   //$list.removeClass("hide")
+    //   // }
+    // })
+
+    // $(".tes").each(function() {
+    //   $(this).click(function() {
+    //     console.log($(this))
+    //   })
+      
+    // })
+
+
+
+
     $("#map-svg path").each(function(){
       let color = $(this).attr("fill");
         $(this).hover(
