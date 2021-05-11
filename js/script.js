@@ -73,6 +73,23 @@ $(document).ready(function(){
     })
 
 
+
+    $(".sidebar__label-service").click(function(e){
+      e.preventDefault();
+      const $nextNode = $(this).next();
+      const $this = $(this);
+      $nextNode.slideToggle("fast", function(){
+        if($nextNode.is(":visible")) {
+          $this.find(".sidebar__minus-icon").css({opacity: 1});
+          $this.find(".sidebar__plus-icon").css({opacity: 0});
+        } else {
+          $this.find(".sidebar__minus-icon").css({opacity: 0});
+          $this.find(".sidebar__plus-icon").css({opacity: 1});
+        }
+      })
+    })
+
+
     //SUBLIST
     // $(".tes").click(function(){
     //   const $list = $(this).next();

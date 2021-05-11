@@ -144,21 +144,13 @@ a {
 
 .search-form__btn {
   border: none;
-  background-color: #E04E39;
-  color: #ffffff;
-  border-radius: 10px;
-  margin-left: 10px;
-  padding: 7px 30px;
-  font-family: 'PT Sans';
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 23px;
-  text-shadow: 0px 4px 4px rgba(232, 75, 55, 0.25);
+  background-color: #fff;
   cursor: pointer;
 }
 
-.search-form__btn:focus, .search-form__btn:active {
-  outline: none;
+.search-form__icon {
+  width: 23px;
+  height: 22px;
 }
 
 .breadcrumbs {
@@ -256,6 +248,29 @@ a {
   color: #2C2A29;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pagination__item {
+  padding: .5px 4px;
+  margin: 2px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #2C2A29;
+}
+
+.pagination__item--active {
+  border-bottom: 1px solid #E04E39;
+  color: #E04E39;
+}
+
 .header {
   padding-top: 80px;
 }
@@ -338,6 +353,12 @@ a {
   margin-top: 5px;
 }
 
+@media screen and (max-width: 1520px) {
+  .header__phone {
+    display: none;
+  }
+}
+
 .header__work-time {
   font-weight: normal;
   font-size: 18px;
@@ -387,6 +408,12 @@ a {
   stroke: #C39367;
 }
 
+@media screen and (max-width: 1202px) {
+  .navbar__link {
+    padding: 6px 5px;
+  }
+}
+
 .navbar__icon {
   width: 36px;
   height: 36px;
@@ -400,6 +427,12 @@ a {
   line-height: 1.27;
   color: #E04E39;
   padding-left: 16px;
+}
+
+@media screen and (max-width: 1202px) {
+  .navbar__text {
+    padding-left: 6px;
+  }
 }
 
 .main-content--news {
@@ -435,10 +468,18 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 38px;
   margin-left: -16px;
   margin-right: -16px;
   padding-bottom: 42px;
+}
+
+@media screen and (max-width: 1202px) {
+  .main-content__main--news {
+    margin-right: 0;
+  }
 }
 
 .sidebar {
@@ -563,8 +604,13 @@ a {
   margin-bottom: 23px;
 }
 
+.sidebar__sub-list {
+  cursor: pointer;
+}
+
 .sidebar__sub-list--child {
   margin-left: 40px;
+  display: none;
 }
 
 .sidebar__sub-item {
@@ -600,6 +646,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 10px;
+  cursor: pointer;
 }
 
 .sidebar__label-service--child {
@@ -710,6 +758,13 @@ a {
   color: #623B2A;
 }
 
+@media screen and (max-width: 1202px) {
+  .showcase__title {
+    font-size: 26.5093px;
+    line-height: 41px;
+  }
+}
+
 .showcase__strong {
   color: #E04E39;
 }
@@ -721,6 +776,14 @@ a {
   color: #E04E39;
 }
 
+@media screen and (max-width: 1202px) {
+  .showcase__phone {
+    font-size: 28px;
+    line-height: 46px;
+    text-align: right;
+  }
+}
+
 .showcase__work-time {
   font-style: italic;
   font-weight: normal;
@@ -729,6 +792,7 @@ a {
   display: block;
   text-align: right;
   color: #2C2A29;
+  margin-bottom: 20px;
 }
 
 .showcase__btn {
@@ -805,6 +869,20 @@ a {
   color: #E04E39;
 }
 
+@media screen and (max-width: 1520px) {
+  .showcase__slider-title {
+    font-size: 1.7rem;
+    line-height: 31px;
+  }
+}
+
+@media screen and (max-width: 1202px) {
+  .showcase__slider-title {
+    font-size: 1.2rem;
+    line-height: 23px;
+  }
+}
+
 .showcase__slider-title-strong {
   color: #623B2A;
 }
@@ -815,6 +893,13 @@ a {
   line-height: 31px;
   color: #623B2A;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 1202px) {
+  .showcase__slider-text {
+    font-size: 1.1rem;
+    line-height: 18px;
+  }
 }
 
 @-webkit-keyframes slidein {
@@ -846,13 +931,45 @@ a {
   border: none;
 }
 
+@media screen and (max-width: 1202px) {
+  .showcase .bx-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .showcase .bx-wrapper {
+    margin-bottom: 0px;
+  }
+}
+
 .showcase .bx-viewport {
   height: 340px !important;
+}
+
+@media screen and (max-width: 1202px) {
+  .showcase .bx-viewport {
+    height: 264px !important;
+  }
 }
 
 .showcase .bx-wrapper .bx-pager, .showcase .bx-wrapper .bx-controls-auto {
   bottom: 22px;
   right: -484px;
+}
+
+@media (max-width: 1520px) {
+  .showcase .bx-wrapper .bx-pager, .showcase .bx-wrapper .bx-controls-auto {
+    bottom: 55px;
+    right: -407px;
+  }
+}
+
+@media (max-width: 1202px) {
+  .showcase .bx-wrapper .bx-pager, .showcase .bx-wrapper .bx-controls-auto {
+    bottom: 50px;
+    right: -273px;
+  }
 }
 
 .showcase .bx-wrapper .bx-pager.bx-default-pager a {
@@ -878,6 +995,12 @@ a {
   width: 25%;
   padding: 0 16px;
   margin-bottom: 32px;
+}
+
+@media (max-width: 1202px) {
+  .services__item {
+    width: 33.333%;
+  }
 }
 
 .services__card {
@@ -1043,6 +1166,25 @@ a {
   position: relative;
 }
 
+@media screen and (max-width: 1202px) {
+  .news__info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1202px) {
+  .news__wrap-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .news__content {
   position: relative;
   width: 38.3%;
@@ -1071,6 +1213,12 @@ a {
 
 .news__info-card {
   width: 100%;
+}
+
+@media screen and (max-width: 1202px) {
+  .news__info-card {
+    width: 48%;
+  }
 }
 
 .news__info-image {
@@ -1612,7 +1760,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 6px 30px;
+  padding: 6px 15px;
   background: #FFFFFF;
   border: 1px solid #565554;
   border-radius: 10px;
@@ -1840,6 +1988,54 @@ a {
   margin-top: 18px;
 }
 
+.announce__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 37px;
+}
+
+.announce__item {
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.announce__item:after {
+  content: "";
+  display: block;
+  width: 57%;
+  height: 1px;
+  background-color: #A7A9AC;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.announce__text {
+  font-family: 'PT Sans';
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: #2C2A29;
+  margin-bottom: 16px;
+}
+
+.announce__date {
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 21px;
+  color: #808285;
+}
+
 .footer {
   padding-bottom: 55px;
 }
@@ -2042,49 +2238,74 @@ a {
   display: none;
 }
 
-.animated-button {
-  padding: 20px 40px;
-  margin: 12px;
+.animated-button1 {
+  background-color: #ffffff;
+  padding: 13px 20px;
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
   overflow: hidden;
-  color: #d4e0f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
+  border-radius: 11px;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+  color: #E04E39;
+  border: 0.5px solid #E04E39;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
 }
 
-.animated-button::before {
+.animated-button1:hover {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.animated-button1:hover::before {
+  z-index: -1;
+  border-radius: 11px;
+}
+
+.animated-button1:hover span:nth-child(1),
+.animated-button1:hover span:nth-child(2),
+.animated-button1:hover span:nth-child(3),
+.animated-button1:hover span:nth-child(4) {
+  -webkit-animation: none !important;
+          animation: none !important;
+  opacity: 0;
+}
+
+.animated-button1::before {
   content: '';
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: #8592ad;
-  opacity: 0;
+  background-color: #E04E39;
   -webkit-transition: .2s opacity ease-in-out;
   transition: .2s opacity ease-in-out;
+  opacity: 0;
 }
 
-.animated-button:hover::before {
-  opacity: 0.2;
+.animated-button1:hover::before {
+  opacity: 1;
 }
 
-.animated-button span {
+.animated-button1 span {
   position: absolute;
 }
 
-.animated-button span:nth-child(1) {
+.animated-button1 span:nth-child(1) {
   top: 0px;
   left: 0px;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(8, 20, 43, 0)), to(#2662d9));
-  background: linear-gradient(to left, rgba(8, 20, 43, 0), #2662d9);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateTop linear infinite;
   animation: 2s animateTop linear infinite;
 }
@@ -2111,13 +2332,13 @@ a {
   }
 }
 
-.animated-button span:nth-child(2) {
+.animated-button1 span:nth-child(2) {
   top: 0px;
   right: 0px;
   height: 100%;
   width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(8, 20, 43, 0)), to(#2662d9));
-  background: linear-gradient(to top, rgba(8, 20, 43, 0), #2662d9);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateRight linear -1s infinite;
   animation: 2s animateRight linear -1s infinite;
 }
@@ -2144,13 +2365,13 @@ a {
   }
 }
 
-.animated-button span:nth-child(3) {
+.animated-button1 span:nth-child(3) {
   bottom: 0px;
   left: 0px;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(8, 20, 43, 0)), to(#2662d9));
-  background: linear-gradient(to right, rgba(8, 20, 43, 0), #2662d9);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateBottom linear infinite;
   animation: 2s animateBottom linear infinite;
 }
@@ -2177,13 +2398,13 @@ a {
   }
 }
 
-.animated-button span:nth-child(4) {
+.animated-button1 span:nth-child(4) {
   top: 0px;
   left: 0px;
   height: 100%;
   width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 20, 43, 0)), to(#2662d9));
-  background: linear-gradient(to bottom, rgba(8, 20, 43, 0), #2662d9);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
+  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
   -webkit-animation: 2s animateLeft linear -1s infinite;
   animation: 2s animateLeft linear -1s infinite;
 }
@@ -2197,1528 +2418,6 @@ a {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button1 {
-  background-color: #EEE2D6;
-  padding: 20px 40px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #E04E39;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.animated-button1::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #ad8585;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button1:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button1 span {
-  position: absolute;
-}
-
-.animated-button1 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
-  background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button1 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
-  background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button1 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
-  background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button1 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
-  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button2 {
-  background: linear-gradient(-30deg, #3d240b 50%, #2b1a08 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #f7e6d4;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button2::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #ad9985;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button2:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button2 span {
-  position: absolute;
-}
-
-.animated-button2 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 26, 8, 0)), to(#d98026));
-  background: linear-gradient(to left, rgba(43, 26, 8, 0), #d98026);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button2 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 26, 8, 0)), to(#d98026));
-  background: linear-gradient(to top, rgba(43, 26, 8, 0), #d98026);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button2 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 26, 8, 0)), to(#d98026));
-  background: linear-gradient(to right, rgba(43, 26, 8, 0), #d98026);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button2 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 26, 8, 0)), to(#d98026));
-  background: linear-gradient(to bottom, rgba(43, 26, 8, 0), #d98026);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button3 {
-  background: linear-gradient(-30deg, #3d3d0b 50%, #2b2b08 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #f7f7d4;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button3::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #adad85;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button3:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button3 span {
-  position: absolute;
-}
-
-.animated-button3 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 43, 8, 0)), to(#d9d926));
-  background: linear-gradient(to left, rgba(43, 43, 8, 0), #d9d926);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button3 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 43, 8, 0)), to(#d9d926));
-  background: linear-gradient(to top, rgba(43, 43, 8, 0), #d9d926);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button3 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 43, 8, 0)), to(#d9d926));
-  background: linear-gradient(to right, rgba(43, 43, 8, 0), #d9d926);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button3 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 43, 8, 0)), to(#d9d926));
-  background: linear-gradient(to bottom, rgba(43, 43, 8, 0), #d9d926);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button4 {
-  background: linear-gradient(-30deg, #243d0b 50%, #1a2b08 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #e6f7d4;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button4::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #99ad85;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button4:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button4 span {
-  position: absolute;
-}
-
-.animated-button4 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(26, 43, 8, 0)), to(#80d926));
-  background: linear-gradient(to left, rgba(26, 43, 8, 0), #80d926);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button4 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(26, 43, 8, 0)), to(#80d926));
-  background: linear-gradient(to top, rgba(26, 43, 8, 0), #80d926);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button4 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(26, 43, 8, 0)), to(#80d926));
-  background: linear-gradient(to right, rgba(26, 43, 8, 0), #80d926);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button4 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 43, 8, 0)), to(#80d926));
-  background: linear-gradient(to bottom, rgba(26, 43, 8, 0), #80d926);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button5 {
-  background: linear-gradient(-30deg, #0b3d0b 50%, #082b08 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #d4f7d4;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button5::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #85ad85;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button5:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button5 span {
-  position: absolute;
-}
-
-.animated-button5 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(8, 43, 8, 0)), to(#26d926));
-  background: linear-gradient(to left, rgba(8, 43, 8, 0), #26d926);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button5 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(8, 43, 8, 0)), to(#26d926));
-  background: linear-gradient(to top, rgba(8, 43, 8, 0), #26d926);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button5 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(8, 43, 8, 0)), to(#26d926));
-  background: linear-gradient(to right, rgba(8, 43, 8, 0), #26d926);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button5 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 43, 8, 0)), to(#26d926));
-  background: linear-gradient(to bottom, rgba(8, 43, 8, 0), #26d926);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button6 {
-  background: linear-gradient(-30deg, #0b3d24 50%, #082b1a 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #d4f7e6;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button6::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #85ad99;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button6:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button6 span {
-  position: absolute;
-}
-
-.animated-button6 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(8, 43, 26, 0)), to(#26d980));
-  background: linear-gradient(to left, rgba(8, 43, 26, 0), #26d980);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button6 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(8, 43, 26, 0)), to(#26d980));
-  background: linear-gradient(to top, rgba(8, 43, 26, 0), #26d980);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button6 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(8, 43, 26, 0)), to(#26d980));
-  background: linear-gradient(to right, rgba(8, 43, 26, 0), #26d980);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button6 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 43, 26, 0)), to(#26d980));
-  background: linear-gradient(to bottom, rgba(8, 43, 26, 0), #26d980);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button7 {
-  background: linear-gradient(-30deg, #0b3d3d 50%, #082b2b 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #d4f7f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button7::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #85adad;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button7:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button7 span {
-  position: absolute;
-}
-
-.animated-button7 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(8, 43, 43, 0)), to(#26d9d9));
-  background: linear-gradient(to left, rgba(8, 43, 43, 0), #26d9d9);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button7 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(8, 43, 43, 0)), to(#26d9d9));
-  background: linear-gradient(to top, rgba(8, 43, 43, 0), #26d9d9);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button7 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(8, 43, 43, 0)), to(#26d9d9));
-  background: linear-gradient(to right, rgba(8, 43, 43, 0), #26d9d9);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button7 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 43, 43, 0)), to(#26d9d9));
-  background: linear-gradient(to bottom, rgba(8, 43, 43, 0), #26d9d9);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button8 {
-  background: linear-gradient(-30deg, #0b243d 50%, #081a2b 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #d4e6f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button8::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #8599ad;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button8:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button8 span {
-  position: absolute;
-}
-
-.animated-button8 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(8, 26, 43, 0)), to(#2680d9));
-  background: linear-gradient(to left, rgba(8, 26, 43, 0), #2680d9);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button8 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(8, 26, 43, 0)), to(#2680d9));
-  background: linear-gradient(to top, rgba(8, 26, 43, 0), #2680d9);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button8 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(8, 26, 43, 0)), to(#2680d9));
-  background: linear-gradient(to right, rgba(8, 26, 43, 0), #2680d9);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button8 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 26, 43, 0)), to(#2680d9));
-  background: linear-gradient(to bottom, rgba(8, 26, 43, 0), #2680d9);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button9 {
-  background: linear-gradient(-30deg, #0b0b3d 50%, #08082b 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #d4d4f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button9::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #8585ad;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button9:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button9 span {
-  position: absolute;
-}
-
-.animated-button9 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(8, 8, 43, 0)), to(#2626d9));
-  background: linear-gradient(to left, rgba(8, 8, 43, 0), #2626d9);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button9 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(8, 8, 43, 0)), to(#2626d9));
-  background: linear-gradient(to top, rgba(8, 8, 43, 0), #2626d9);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button9 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(8, 8, 43, 0)), to(#2626d9));
-  background: linear-gradient(to right, rgba(8, 8, 43, 0), #2626d9);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button9 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 8, 43, 0)), to(#2626d9));
-  background: linear-gradient(to bottom, rgba(8, 8, 43, 0), #2626d9);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button10 {
-  background: linear-gradient(-30deg, #240b3d 50%, #1a082b 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #e6d4f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button10::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #9985ad;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button10:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button10 span {
-  position: absolute;
-}
-
-.animated-button10 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(26, 8, 43, 0)), to(#8026d9));
-  background: linear-gradient(to left, rgba(26, 8, 43, 0), #8026d9);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button10 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(26, 8, 43, 0)), to(#8026d9));
-  background: linear-gradient(to top, rgba(26, 8, 43, 0), #8026d9);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button10 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(26, 8, 43, 0)), to(#8026d9));
-  background: linear-gradient(to right, rgba(26, 8, 43, 0), #8026d9);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button10 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 8, 43, 0)), to(#8026d9));
-  background: linear-gradient(to bottom, rgba(26, 8, 43, 0), #8026d9);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button11 {
-  background: linear-gradient(-30deg, #3d0b3d 50%, #2b082b 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #f7d4f7;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button11::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #ad85ad;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button11:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button11 span {
-  position: absolute;
-}
-
-.animated-button11 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 43, 0)), to(#d926d9));
-  background: linear-gradient(to left, rgba(43, 8, 43, 0), #d926d9);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button11 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 43, 0)), to(#d926d9));
-  background: linear-gradient(to top, rgba(43, 8, 43, 0), #d926d9);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button11 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 43, 0)), to(#d926d9));
-  background: linear-gradient(to right, rgba(43, 8, 43, 0), #d926d9);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button11 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 43, 0)), to(#d926d9));
-  background: linear-gradient(to bottom, rgba(43, 8, 43, 0), #d926d9);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
-}
-
-@keyframes animateLeft {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-}
-
-.animated-button12 {
-  background: linear-gradient(-30deg, #3d0b24 50%, #2b081a 50%);
-  padding: 20px 40px;
-  margin: 12px;
-  display: inline-block;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  overflow: hidden;
-  color: #f7d4e6;
-  font-size: 20px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.animated-button12::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #ad8599;
-  opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
-}
-
-.animated-button12:hover::before {
-  opacity: 0.2;
-}
-
-.animated-button12 span {
-  position: absolute;
-}
-
-.animated-button12 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 26, 0)), to(#d92680));
-  background: linear-gradient(to left, rgba(43, 8, 26, 0), #d92680);
-  -webkit-animation: 2s animateTop linear infinite;
-  animation: 2s animateTop linear infinite;
-}
-
-@keyframes animateTop {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-.animated-button12 span:nth-child(2) {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 26, 0)), to(#d92680));
-  background: linear-gradient(to top, rgba(43, 8, 26, 0), #d92680);
-  -webkit-animation: 2s animateRight linear -1s infinite;
-  animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-.animated-button12 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 26, 0)), to(#d92680));
-  background: linear-gradient(to right, rgba(43, 8, 26, 0), #d92680);
-  -webkit-animation: 2s animateBottom linear infinite;
-  animation: 2s animateBottom linear infinite;
-}
-
-@keyframes animateBottom {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.animated-button12 span:nth-child(4) {
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 26, 0)), to(#d92680));
-  background: linear-gradient(to bottom, rgba(43, 8, 26, 0), #d92680);
-  -webkit-animation: 2s animateLeft linear -1s infinite;
-  animation: 2s animateLeft linear -1s infinite;
 }
 
 @keyframes animateLeft {
