@@ -12,16 +12,44 @@ var cities = [
   },
 ];
 
+var minSlides;
+var maxSlides;
+function windowWidth() {
+    if ($(window).width() < 420) {
+        minSlides = 3;
+        maxSlides = 3;
+    }
+    else if ($(window).width() < 768) {
+        minSlides = 4;
+        maxSlides = 4;
+    }
+    else if ($(window).width() < 1200) {
+        minSlides = 5;
+        maxSlides = 5;
+    }
+    else {
+        minSlides = 8;
+        maxSlides = 8;
+    }
+}
+
+windowWidth();
 
 $(document).ready(function(){
-    $('.banner-slider').bxSlider();
+    $('.banner-slider').bxSlider({
+      minSlides: 1,
+      maxSlides: 1,
+      //slideWidth: ($(window).width() < 426)? 400 : $(window).width() - 20,
+    });
 
     $('.slider').bxSlider();
 
     $('.partener-slider').bxSlider({
       slideWidth: 170,
-      minSlides: 8,
-      maxSlides: 8,
+      // minSlides: 8,
+      // maxSlides: 8,
+      minSlides: minSlides,
+      maxSlides: maxSlides,
       slideMargin: 10,
       stopAutoOnClick: true,
     });

@@ -300,6 +300,13 @@ $color_hover: #C39367;
         &:hover .header__burger-svg {
             fill: $color_hover
         }
+        @media  (max-width: 580px) {
+            width: 36px;
+            height: 34px;
+            padding-left: 6px;
+            padding-right: 6px; 
+            margin-top: 9px;
+        }
     }
     &__burger-svg {
         max-width: 100%;
@@ -309,6 +316,10 @@ $color_hover: #C39367;
     }
     &__logo {
         margin-right: 32px;
+        @media  (max-width: 580px) {
+            height: 44px; 
+            margin-top: 9px;
+        }
     }
     &__phone {
         font-family: 'Circe';
@@ -321,6 +332,10 @@ $color_hover: #C39367;
         @media screen and (max-width: 1520px) {
             display: none;
         }
+        @media  (max-width: 580px) {
+            display: initial; 
+            font-size: 1.2rem;
+        }
     }
     &__work-time {
         font-weight: normal;
@@ -328,6 +343,11 @@ $color_hover: #C39367;
         line-height: 1;
         display: block;
         text-align: right;
+        @media  (max-width: 580px) {
+            font-size: 16px;
+            line-height: 100%;
+            color: #2C2A29;
+        }
     }
     &__time-strong {
         color: #2C2A29;
@@ -347,6 +367,26 @@ $color_hover: #C39367;
         &:first-child {
             margin-left: 0;
         }
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+        &--search {
+            @media screen and (max-width: 1024px) {
+                display: initial;
+            }
+            @media  (max-width: 580px) {
+                display: none; 
+            }
+        }
+        &--user {
+            @media screen and (max-width: 1024px) {
+                display: initial;
+            }
+            
+        }
+        
+
+        
     }
     &__link {
         display: flex;
@@ -388,6 +428,9 @@ $color_hover: #C39367;
         @media screen and (max-width: 1202px) {
             padding-left: 6px;
         }
+        @media  (max-width: 580px) {
+            display: none; 
+        }
     }
 }
 
@@ -428,6 +471,11 @@ $color_hover: #C39367;
 //SIDEBAR
 .sidebar {
     border-right: 1px solid #B8B6B6;
+    @media screen and (max-width: 1024px) {
+        margin-left: -243px;
+        //transform: translateX(-100%);
+        border: none;
+    }
     &__link {
          position: relative;
         &::after {
@@ -444,6 +492,22 @@ $color_hover: #C39367;
     &__link-logo {
         display: block;
         text-align: center;
+        &--top {
+            @media screen and (max-width: 1024px) {
+                position: relative;
+                left: 213px;
+                bottom: 16px;
+            }
+        }
+        
+    }
+    &__main-logo {
+        &--top {
+            @media screen and (max-width: 740px) {
+                height: 80px;
+            }
+        }
+        
     }
     &__nav-list {
         margin-top: 20px;
@@ -656,6 +720,15 @@ $color_hover: #C39367;
         display: flex;
         justify-content: space-between;
         padding-top: 13px;
+        @media screen and (max-width: 1024px) {
+            padding-left: 168px;
+        }
+        @media screen and (max-width: 740px) {
+            padding-left: 200px;
+        }
+        @media screen and (max-width: 558px) {
+            padding-left: 150px;
+        }
     }
     &__title {
         font-family: 'Circe';
@@ -667,9 +740,24 @@ $color_hover: #C39367;
             font-size: 26.5093px;
             line-height: 41px;
         }
+        @media screen and (max-width: 800px) {
+            font-size: 24px;
+            line-height: 32px;
+            padding-top: 10px;
+        }
+        @media screen and (max-width: 740px) {
+            padding-top: 30px;
+        }
+        
+        
     }
     &__strong {
         color: $red;
+    }
+    &__number {
+        @media screen and (max-width: 740px) {
+            display: none;
+        }
     }
     &__phone {
         font-weight: bold;
@@ -681,6 +769,10 @@ $color_hover: #C39367;
             line-height: 46px;
             text-align: right;
         }
+        @media screen and (max-width: 800px) {
+            font-size: 24px;
+        }
+        
     }
     &__work-time {
         font-style: italic;
@@ -691,6 +783,9 @@ $color_hover: #C39367;
         text-align: right;
         color: #2C2A29;
         margin-bottom: 20px;
+        @media  (max-width: 768px) {
+            display: inline-block;
+         }
 
     }
     &__btn {
@@ -755,6 +850,9 @@ $color_hover: #C39367;
         width:48%;
         padding-right: 32px;
         padding-top: 32px;
+        @media screen and (max-width: 558px) {
+            width: 98%;
+        }
     }
     &__slider-title {
         font-family: 'Circe';
@@ -771,6 +869,10 @@ $color_hover: #C39367;
             font-size: 1.2rem;
             line-height: 23px;
         }
+        @media screen and (max-width: 558px) {
+            font-size: 1.7rem;
+            line-height: 31px;
+        }
     }
     &__slider-title-strong {
         color: $brown;
@@ -784,6 +886,10 @@ $color_hover: #C39367;
         @media screen and (max-width: 1202px) {
             font-size: 1.1rem;
             line-height: 18px;
+        }
+        @media screen and (max-width: 558px) {
+            font-size: 1.3rem;
+            line-height: 30px;
         }
     }
 
@@ -815,6 +921,9 @@ $color_hover: #C39367;
         @media screen and (max-width: 1202px) {
             height: 264px!important;
         }
+        @media screen and (max-width: 558px) {
+            height: 439px!important;
+        }
     }
     .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
         bottom: 22px;
@@ -827,6 +936,9 @@ $color_hover: #C39367;
             bottom: 50px;
             right: -273px;
         }
+        @media screen and (max-width: 558px) {
+            display: none;
+        }
     }
     .bx-wrapper .bx-pager.bx-default-pager a {
         background: #E3CCB7;
@@ -835,6 +947,21 @@ $color_hover: #C39367;
     .bx-wrapper .bx-pager.bx-default-pager a:focus,
     .bx-wrapper .bx-pager.bx-default-pager a:hover {
         background: #CFA580;
+    }
+    .bx-wrapper img {
+        @media  (max-width: 1024px) {
+           height: 220px; 
+        }
+        @media screen and (max-width: 558px) {
+            height: 392px;
+           // margin-top: 124px;
+            position: relative;
+            top: 115px;
+
+            // left: -20px;
+            // display: initial;
+            // max-width: initial;
+        }
     }
 
     .bx-wrapper .bx-controls-direction a {
@@ -848,6 +975,7 @@ $color_hover: #C39367;
 .services {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
    // grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
     margin: 0 -16px;
     &__item {
@@ -856,6 +984,12 @@ $color_hover: #C39367;
         margin-bottom: 32px;
         @media  (max-width: 1202px) {
             width: 33.333%;
+        }
+        @media screen and (max-width: 558px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 425px) {
+           // width: 90%;
         }
     }
     &__card {
@@ -995,6 +1129,7 @@ $color_hover: #C39367;
         @media screen and (max-width: 1202px) {
             width: 100%;
             //padding-left: 0;
+            padding-bottom: 40px;
         }
     }
     &__wrap-card {
@@ -1014,6 +1149,13 @@ $color_hover: #C39367;
         padding-left: 16px;
         padding-right: 16px;
         position: relative;
+        @media screen and (max-width: 1202px) {
+            width: 50%;
+            padding-bottom: 100px;
+        }
+        @media screen and (max-width: 558px) {
+            width: 100%;
+        }
     }
     &__slider {
         //flex: 1;
@@ -1023,6 +1165,12 @@ $color_hover: #C39367;
         padding-right: 16px;
         margin-left: auto;
         position: relative;
+        @media screen and (max-width: 1202px) {
+            width: 45%;   
+        }
+        @media screen and (max-width: 558px) {
+            width: 100%;
+        }
        
     }
     &__title {
@@ -1042,6 +1190,9 @@ $color_hover: #C39367;
             // padding-right: 15px;
             width: 48%;
            
+        }
+        @media screen and (max-width: 425px) {
+            width: 100%;
         }
     }
     &__info-image {
@@ -1126,15 +1277,17 @@ $color_hover: #C39367;
        position: relative;
        height: 678px;
        width: 338px;
-       //background-color: $red;
-       
-      //height: 100%;
+       @media screen and (max-width: 1202px) {
+            width: 356px;
+        }
     }
     &__slider-img {
        width: 338px;
        //height: 678px;
        height: 597px;
-       //border: 2px solid #ad4;
+       @media screen and (max-width: 1202px) {
+            width: 396px;
+        }
        
     }
     &__slider-caption {
@@ -1148,6 +1301,9 @@ $color_hover: #C39367;
         //background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #E04E39), to(rgba(224, 78, 57, 0)));
         background: linear-gradient(to top, #E04E39 37%, rgba(224, 78, 57, 0) 100%);
         border-radius: 11px;
+        @media screen and (max-width: 558px) {
+            right: 121px;
+        }
     }
     &__slider-text {
         font-weight: normal;
@@ -1172,6 +1328,9 @@ $color_hover: #C39367;
         position: absolute;
         bottom: 0;
         left: 16px;
+        @media screen and (max-width: 1202px) {
+            bottom: 34px;
+        }
 
 
         &--show {
@@ -1205,6 +1364,9 @@ $color_hover: #C39367;
         position: absolute;
         left: 16px;
         bottom: 0px;
+        @media screen and (max-width: 1202px) {
+            bottom: 34px;
+        }
     }
 
     //bxslider
@@ -1317,6 +1479,11 @@ $color_hover: #C39367;
         width: 465px;
         margin-top: 30px;
         overflow: hidden;
+        @media screen and (max-width: 1202px) {
+            margin-bottom: 800px;
+            width: 100%;
+        }
+        
     }
     &__form-input {
 
@@ -1406,6 +1573,12 @@ $color_hover: #C39367;
         top: 450px;
         //display: none;
         cursor: pointer;
+        @media screen and (max-width: 1202px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 280px;
+            top:initial;
+        }
     }
     &__yandex-map {
         position: absolute;
@@ -1416,6 +1589,13 @@ $color_hover: #C39367;
         height: 600px;
         display: none;
         //opacity: 0;
+        @media screen and (max-width: 1202px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 280px;
+            top:initial;
+            width: 90%;
+        }
 
     }
 
@@ -1797,6 +1977,7 @@ $color_hover: #C39367;
     &__inner {
         display: flex;
         padding-top: 57px;
+        flex-wrap: wrap;
         //border-top: 1px solid #E0E2E5;
     }
     &__item {
@@ -1806,10 +1987,21 @@ $color_hover: #C39367;
             margin-left: 40px;
             margin-right: 70px;
             //background-color: red;
+            @media  (max-width: 1024px) {
+                margin: 0;
+            }
         }
         &:last-child {
             margin-left: auto;
         }
+        @media  (max-width: 768px) {
+             width: 50%;
+             margin: 0;
+             margin-bottom: 50px;
+         }
+         @media  (max-width: 550px) {
+           width: 100%; 
+         }
     }
     &__title {
         font-weight: normal;
@@ -1854,7 +2046,8 @@ $color_hover: #C39367;
     position: fixed;
     left: 0;
     top: 212px;
-    display: flex;
+   // display: flex;
+    display: none;
     flex-direction: column;
     &__item {
         background-color: $red;
@@ -2004,6 +2197,15 @@ $color_hover: #C39367;
     color: #E04E39;
     border: 0.5px solid #E04E39;
     transition: all .4s linear;
+    @media  (max-width: 900px) {
+       float: right;
+       font-size: 15px;
+       
+     }
+     @media  (max-width: 870px) {
+       font-size: 12px; 
+       line-height: 1;
+     }
    
   }
 
