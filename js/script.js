@@ -15,7 +15,7 @@ var cities = [
 var minSlides;
 var maxSlides;
 function windowWidth() {
-    if ($(window).width() < 420) {
+    if ($(window).width() < 426) {
         minSlides = 3;
         maxSlides = 3;
     }
@@ -103,7 +103,7 @@ $(document).ready(function(){
 
 
     $(".sidebar__label-service").click(function(e){
-      e.preventDefault();
+     // e.preventDefault();
       const $nextNode = $(this).next();
       const $this = $(this);
       $nextNode.slideToggle("fast", function(){
@@ -115,6 +115,48 @@ $(document).ready(function(){
           $this.find(".sidebar__plus-icon").css({opacity: 1});
         }
       })
+    })
+
+    //slide filter on 1024 adaptive
+    $(".our-services__filter-btn").bind({
+      click: function () {
+        const $plus = $(this).find(".our-services__filter-icon-plus");
+        const $minus = $(this).find(".our-services__filter-icon-minus");
+        const $sidebar = $(".our-services__sidebar");
+        
+        if($plus.is(":visible")) {
+          $sidebar.css({ left: 0 });
+          $plus.css({display: "none"}); 
+          $minus.css({display: "inline-block"})
+        } else {
+          $sidebar.css({ left: "-110%" });
+          $plus.css({display: "inline-block"}); 
+          $minus.css({display: "none"})
+        }
+      }
+    });
+
+    $(".our-services__name").click(function(){
+      const $this = $(this);
+      const $filter_list = $(".our-services__filter-list");
+      const $icon = $this.find(".our-services__sort-icon");
+      if($filter_list.is(":visible")) {
+        $filter_list.css({
+          display: "none",
+          height: "2px",
+          opacity: 0,
+        });
+        $icon.css({transform: "rotate(0deg)"})
+
+      } else {
+        $filter_list.css({
+          display: "block",
+          height: "initial",
+          opacity: 1, 
+        });
+        $icon.css({transform: "rotate(180deg)"})
+      }
+      //$(this).next()
     })
 
 
