@@ -196,10 +196,23 @@ a {
   padding: 0 23px;
 }
 
-@media screen and (max-width: 1024px) {
+.box-service__item--off h4 {
+  color: #717171;
+}
+
+.box-service__item--off a {
+  color: #717171;
+  border-color: #717171;
+}
+
+.box-service__item--off svg {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+@media screen and (max-width: 766px) {
   .box-service__item {
-    width: 50%;
-    margin-bottom: 50px;
+    width: 100%;
   }
 }
 
@@ -229,6 +242,26 @@ a {
   height: 59px;
 }
 
+@media screen and (max-width: 1024px) {
+  .box-service__icon {
+    bottom: -13px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .box-service__icon {
+    bottom: -83px;
+    left: 31px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .box-service__icon {
+    left: 20px;
+  }
+}
+
 .box-service__btn {
   display: block;
   text-align: center;
@@ -238,16 +271,43 @@ a {
   color: #E04E39;
   border: 1px solid #E04E39;
   border-radius: 11px;
-  padding: 11px;
+  padding: 11px 4px;
   margin-top: 32px;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
-.box-service__btn:hover {
-  background-color: #E04E39;
-  border-color: #E04E39;
-  color: #EEE2D6;
+@media screen and (max-width: 1024px) {
+  .box-service__btn {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .box-service__btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .box-service__btn {
+    font-size: 24px;
+    text-align: left;
+    padding-left: 120px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .box-service__btn {
+    font-size: 19px;
+    padding-left: 90px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .box-service__btn {
+    font-size: 15px;
+  }
 }
 
 .box-service__name {
@@ -255,6 +315,18 @@ a {
   font-size: 25px;
   line-height: 32px;
   color: #2C2A29;
+}
+
+@media screen and (max-width: 1024px) {
+  .box-service__name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .box-service__name {
+    display: none;
+  }
 }
 
 .pagination {
@@ -1460,6 +1532,29 @@ a {
   transition: all .5s linear;
 }
 
+.news__breadcrumbs {
+  margin-bottom: 16px;
+  margin-top: 30px;
+}
+
+.news__top-navlink {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 7px 20px;
+  color: #E04E39;
+  border: 1px solid #E04E39;
+  border-radius: 11px;
+}
+
+@media screen and (max-width: 425px) {
+  .news__top-navlink {
+    font-size: 18px;
+  }
+}
+
 .news__info {
   width: 33.3%;
   padding-left: 16px;
@@ -1562,8 +1657,10 @@ a {
 }
 
 .news__info-card {
+  position: relative;
   width: 100%;
-  margin-bottom: 30px;
+  min-height: 412px;
+  margin-bottom: -28px;
   padding: 3px;
   border-radius: 11px;
   -webkit-transition: all .2s linear;
@@ -1571,13 +1668,14 @@ a {
 }
 
 .news__info-card + .news__info-card {
-  margin-bottom: 90px;
+  margin-bottom: 10px;
 }
 
 .news__info-card:hover {
   background-color: #E04E39;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  z-index: 2;
 }
 
 .news__info-card:hover .news__info-text {
@@ -1612,10 +1710,34 @@ a {
   }
 }
 
+.news__info-card--news {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.news__info-card--news:hover .news__info-btn--news {
+  border: 1px solid #EEE2D6;
+  color: #EEE2D6;
+}
+
 .news__info-image {
   display: block;
   width: 100%;
   height: 246px;
+}
+
+.news__info-image--news {
+  height: 583px;
+  height: auto;
+}
+
+.news__inner-card {
+  position: absolute;
+  z-index: 2;
+}
+
+.news__inner-card--news {
+  position: static;
 }
 
 .news__info-text {
@@ -1648,6 +1770,12 @@ a {
   display: none;
 }
 
+.news__info-btn--news {
+  display: block;
+  color: #E04E39;
+  border-color: #E04E39;
+}
+
 .news__nav-item {
   margin-right: 30px;
 }
@@ -1667,12 +1795,34 @@ a {
   padding: 7px 22px;
 }
 
+.news__card-list--all-news {
+  margin-left: -20px;
+  margin-right: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.news__card-blog {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50%;
+}
+
+@media screen and (max-width: 690px) {
+  .news__card-blog {
+    width: 100%;
+  }
+}
+
 .news__card-item {
   border: 1px solid transparent;
   margin-bottom: 28px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  cursor: pointer;
+  display: block;
 }
 
 .news__card-item:hover {
@@ -1878,6 +2028,24 @@ a {
 
 .news .bx-next, .news .bx-prev {
   display: none;
+}
+
+.new-blog {
+  margin-top: 51px;
+}
+
+.new-blog__img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 1px;
+}
+
+.new-blog__text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #58595B;
+  margin-bottom: 20px;
 }
 
 .info {
@@ -2470,6 +2638,40 @@ a {
   color: #E04E39;
 }
 
+@media screen and (max-width: 1024px) {
+  .offers__title {
+    font-size: 24px;
+  }
+}
+
+.offers__inner-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.offers__date {
+  font-weight: normal;
+  font-size: 18px;
+  color: #58595B;
+}
+
+.offers__top-btn {
+  font-weight: normal;
+  font-size: 18px;
+  padding: 12px 61px;
+  color: #2C2A29;
+  background: #CFA580;
+  border-radius: 11px;
+}
+
 .offers__bar {
   font-family: 'Circe';
   font-weight: 800;
@@ -2498,6 +2700,15 @@ a {
 }
 
 .offers__list-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Circe';
   font-style: normal;
   font-weight: 800;
@@ -2519,7 +2730,6 @@ a {
 
 .offers__wrap-icon {
   display: inline-block;
-  float: right;
   position: relative;
   margin-top: 3px;
 }
@@ -2609,6 +2819,12 @@ a {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 632px) {
+  .announce__item {
+    width: 100%;
+  }
 }
 
 .announce__text {

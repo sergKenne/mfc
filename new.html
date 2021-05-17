@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="fonts/circe.fonts.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <title>MFC</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__left">
+                            <div class="header__burger"><svg class="header__burger-svg"><use xlink:href="sprite.svg#burger"></use></svg></div>
+                            <img class="header__logo" src="img/logo1.png" alt="logo" />
+                            <div class="header__phone">8 (343) 273-00-08<span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
+                        </div>
+                        <nav class="navbar header__navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#vacance"></use></svg><span class="navbar__text">Вакансии</span></a></li>
+                                <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#doc"></use></svg><span class="navbar__text">Документы</span></a></li>
+                                <li class="navbar__item"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
+                                <li class="navbar__item navbar__item--search"><a href="#" class="navbar__link" id="search-js"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
+                                <li class="navbar__item navbar__item--user"><a href="#" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#user"></use></svg></svg><span class="navbar__text">Личный кабинет</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main-content">
+            <div class="container">
+                <div class="main-content__inner">
+                    <aside class="sidebar main-content__sidebar">
+                        <a href="#" class="sidebar__link">
+                            <!-- <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg> -->
+                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.png" alt=""></a>
+                        </a>
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link sidebar__nav-link--active">
+                                    <svg class="main-btn__icon main-btn__icon--first"><use xlink:href="sprite.svg#clipboard"></use></svg>
+                                    <span class="main-btn__text main-btn__text--first">Проверить статус услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="services.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
+                                    <span class="main-btn__text">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
+                                    <span class="main-btn__text">Офисы</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#group"></use></svg>
+                                    <span class="main-btn__text">Об МФЦ</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#fixed"></use></svg>
+                                    <span class="main-btn__text">Выезд специалиста</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#static"></use></svg>
+                                    <span class="main-btn__text">Для бизнеса</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </aside>
+                    <main class="main main-content__main">
+                        <div class="showcase">
+                            <div class="showcase__content">
+                                <div>
+                                    <h1 class="showcase__title">МНОГОФУНКЦИОНАЛЬНЫЙ<br/><span class="showcase__strong">ЦЕНТР СВЕРДЛОВСКОЙ ОБЛАСТИ</span></h1>
+                                </div>
+                                <div class="showcase__number">
+                                    <div class="showcase__phone">8 (343) 273-00-08<span class="showcase__work-time">Ежедневно с <span class="header__time-strong">8:00</span> до <span class="header__time-strong">20:00</span></span></div>
+                                   
+                                    <a href="#" class="animated-button1">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Онлайн-запись в МФЦ
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="offers">
+                                <ul class="breadcrumbs offers__breadcrumbs">
+                                    <li class="breadcrumbs__item">Главная  </li>
+                                    <li class="breadcrumbs__item">Услуги</li>
+                                    <li class="breadcrumbs__item">Опрос организаций для обновления списка наиболее востребованных...</li>
+                                </ul>
+                                <h2 class="offers__title">Опрос организаций <span style="color: #000;">для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</span> </h2>
+                                <div class="offers__inner-btn">
+                                    <span class="offers__date">12.03.2023</span>
+                                    <a href="" class="offers__top-btn">Опросы</a>
+                                </div>
+                                <div class="new-blog">
+                                    <img class="new-blog__img" src="img/blog.jpg" alt="">
+                                    <p class="new-blog__text">Разнообразный и богатый опыт говорит нам, что повышение уровня гражданского сознания играет определяющее значение для соответствующих условий активизации. Для современного мира постоянное информационно-пропагандистское обеспечение нашей деятельности создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса существующих финансовых и административных условий. Учитывая ключевые сценарии поведения, убеждённость некоторых оппонентов позволяет выполнить важные задания по разработке экспериментов, поражающих по своей масштабности и грандиозности! Не будем забывать о вышесказанном, и неторопливо перейдем далее.
+                                        Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики выводы и по сей день остаются уделом либералов, которые жаждут быть объявлены нарушающими общечеловеческие нормы этики и морали. Господа, глубокий уровень погружения однозначно определяет каждого участника как способного принимать  собственные решения касаемо дальнейших направлений развития. Каждый из нас понимает очевидную вещь: курс на социально-ориентированный национальный проект создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса направлений прогрессивного развития. Учитывая ключевые сценарии поведения, повышение уровня гражданского сознания напрямую зависит от своевременного выполнения сверхзадачи. Значимость этих проблем настолько очевидна, что консультация с широким активом напрямую зависит от анализа существующих паттернов поведения. Внезапно, предприниматели в сети интернет призывают нас к новым свершениям, которые, в свою очередь, должны быть подвергнуты целой серии независимых исследований. </p>
+                                    <p class="new-blog__text">А ещё базовые сценарии поведения пользователей, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований! А также интерактивные прототипы являются только методом политического участия и рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Современные технологии достигли такого уровня, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании прогресса профессионального сообщества. Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности создаёт предпосылки для системы массового участия. Также как выбранный нами инновационный путь напрямую зависит от соответствующих условий активизации. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: глубокий уровень погружения требует определения и уточнения благоприятных перспектив.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer__inner">
+                    <li class="footer__item">
+                        <div>
+                            <!-- <a href="#" class="sidebar__link">
+                                <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg>
+                                
+                            </a> -->
+                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
+                        </div>    
+                        <br/><br/>
+                        <h4 class="footer__title">Мобильное приложение:</h4>
+                        <div>
+                            <img src="img/store1.png" alt="">
+                        </div>
+                        <br/>
+                        <div>
+                            <img src="img/store2.png" alt="">
+                        </div>
+                    </li>
+                    <li class="footer__item">
+                        <h4 class="footer__title">Наши сервисы:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Обратная связь</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Официальное обращение в МФЦ</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Вопрос-ответ</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Записаться на прием</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Статус обращения</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Реклама</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item">
+                        <h4 class="footer__title">Об МФЦ:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Цели и задачи</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Дирекция</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Вакансии</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Информация для граждан</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Новости</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Объявления</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Видео</a></li>
+                        </ul>
+                    </li>
+                    <li class="socials footer__item">
+                        <div class="socials__inner">
+                            <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
+                            <div class="socials__contact">
+                                <p class="socials__phone">8 (343) 273-00-08</p>
+                                <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                            </div>
+                            <div class="socials__icons">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div class="fix-nav">
+            <a href="" class="fix-nav__item">
+                <img src="img/v1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v4.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v5.png" alt="">
+            </a>
+        </div>
+        <div class="chat">
+            <svg class="chat__img"><use xlink:href="sprite.svg#chat"></use></svg>
+        </div>
+    </div>
+    <div class="modal" id="modal-js">
+        <form class="modal__form" action="">
+            <input class="modal__input" type="text" placeholder="Поиск">
+            <button class="modal__btn" id="modal-btn-js" type="submit"><svg class="modal__svg-icon"><use xlink:href="sprite.svg#icon-search"></use></svg></button>
+            <h5 class="modal__form-title">Быстрые ответы:</h5>
+            <ul class="modal__list">
+                <li class="modal__list-item">Офисы Екатеринбург</li>
+                <li class="modal__list-item">Документы для смены места жительства </li>
+                <li class="modal__list-item">Смена имени </li>
+                <li class="modal__list-item">Действия при утере документов</li>
+            </ul>
+        </form>
+    </div>
+    <section class="navbar-bottom">
+        <!-- <div class="container"> -->
+            <ul class="navbar-bottom__list">
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Горячая линия
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                               Найти отделение 
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                записаться онлайн
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Пойск
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Личный кабинет
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- Подключаем API -->
+    <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
