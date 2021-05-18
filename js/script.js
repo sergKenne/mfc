@@ -54,6 +54,12 @@ $(document).ready(function(){
       stopAutoOnClick: true,
     });
 
+    $('.newslider').bxSlider({
+      //mode: 'fade',
+      // captions: true,
+      // slideWidth: 600
+    });
+
     $("#search-js, #modal-btn-js, #modal-js").click(function(){
       $("#modal-js").slideToggle(); 
     });
@@ -98,6 +104,23 @@ $(document).ready(function(){
           })
         } 
       }); 
+    });
+
+    //SLIDE MENU
+    $(".header__burger-svg--bars").click(function(){
+      const $this = $(this);
+      $(".header__modal-menu").slideDown("fast", function(){
+        $this.css({display: "none"});
+        $(".header__burger-svg--close").css({display: "block"});
+      }) 
+    });
+
+    $(".header__burger-svg--close").click(function(){
+      const $this = $(this);
+      $(".header__modal-menu").slideUp("fast", function(){
+        $this.css({display: "none"});
+        $(".header__burger-svg--bars").css({display: "block"});
+      }) 
     })
 
 

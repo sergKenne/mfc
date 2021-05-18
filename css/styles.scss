@@ -320,6 +320,69 @@ $color_hover: #C39367;
 // HEADER
 .header {
     padding-top: 80px;
+
+    &__modal-menu {
+        display: none;
+        position: fixed;
+        top: 83px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, .2);
+        z-index: 99999;
+    }
+    &__menu-inner {
+        background-color: #ffffff;
+        //border: 2px solid rgb(119, 0, 255);
+        width: 60%;
+        padding: 25px 30px;
+        //height: 100vh;
+        @media screen and (max-width: 1400px) {
+            width: 80%;
+        }
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+    &__menu-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__menu-item {
+        margin-bottom: 12px;
+        width: 50%;
+        @media screen and (max-width: 550px) {
+            width: 100%;
+        }
+    }
+    &__menu-link {
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 150%;
+        color: #58595B;
+        transition: all .4s linear;
+        &:hover {
+            color: $red;
+        }
+    }
+    &__menu-footer {
+        display: flex;
+        @media screen and (max-width: 852px) {
+            flex-direction: column;
+        }
+    }
+    &__menu-social {
+        width: 50%;
+    }
+    &__menu-app {
+        width: 50%;
+        @media screen and (max-width: 852px) {
+            margin-top: 30px;
+        }
+    }
+    &__social-title {
+        font-size: 22px;
+    }
     &__top {
         background-color: #ffffff;
         position: fixed;
@@ -351,6 +414,7 @@ $color_hover: #C39367;
         padding-left: 13px;
         padding-right: 13px;
         transition: all .4s linear;
+        
         &:hover {
             //background-color: #ffffff;
             border-color: $color_hover;
@@ -374,6 +438,12 @@ $color_hover: #C39367;
         max-height: 100%;
         fill: $red;
         transition: all .4s linear;
+        &--bars {
+
+        }
+        &--close {
+            display: none;
+        }
     }
     &__logo {
         margin-right: 32px;
@@ -1657,10 +1727,19 @@ $color_hover: #C39367;
 //NEW BLOG
 .new-blog {
     margin-top: 51px;
+
     &__img {
         float: left;
         margin-right: 30px;
         margin-bottom: 1px;
+        @media screen and (max-width: 768px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 425px) {
+            width: 100%;
+            float: none;
+            margin-bottom: 10px;
+        }
     }
     &__text {
         font-weight: normal;
@@ -1668,6 +1747,62 @@ $color_hover: #C39367;
         line-height: 150%;
         color: #58595B;
         margin-bottom: 20px;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $red;
+        margin-bottom: 20px;
+
+    }
+    &__storie-slider {
+        width: 455px;
+        float: left;
+        margin-right: 30px;
+        @media screen and (max-width: 477px) {
+            width: 100%;
+            margin-right: 0;
+            float: none;
+           // margin-bottom: 10px;
+
+        }
+    }
+}
+
+//STORIES
+.stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(266px, 1fr));
+    grid-gap: 30px;
+    &__item {
+
+    }
+    &__card {
+
+    }
+    &__card-img {
+        display: block;
+        width: 100%;
+    }
+    &__card-text {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 150%;
+        color: #2C2A29;
+    }
+    &__card-btn {
+        float: right;
+        // margin-right: 30px;
+        // margin-bottom: 20px;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 24px;
+        padding: 7px 20px;
+        color: #E04E39;
+        border: 1px solid #E04E39;
+        border-radius: 11px;
     }
 }
 
@@ -2434,9 +2569,12 @@ $color_hover: #C39367;
 .fix-nav {
     position: fixed;
     left: 0;
-    top: 212px;
-   // display: flex;
-    display: none;
+    top: 552px;
+    display: flex;
+    //display: none;
+    @media  (max-width: 1024px) {
+        display: none; 
+    }
     flex-direction: column;
     &__item {
         background-color: $red;
@@ -2775,3 +2913,17 @@ $color_hover: #C39367;
 
   }
   
+
+
+
+  .call-to-action {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}

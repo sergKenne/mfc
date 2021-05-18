@@ -356,6 +356,100 @@ a {
   padding-top: 80px;
 }
 
+.header__modal-menu {
+  display: none;
+  position: fixed;
+  top: 83px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+}
+
+.header__menu-inner {
+  background-color: #ffffff;
+  width: 60%;
+  padding: 25px 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  .header__menu-inner {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header__menu-inner {
+    width: 100%;
+  }
+}
+
+.header__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__menu-item {
+  margin-bottom: 12px;
+  width: 50%;
+}
+
+@media screen and (max-width: 550px) {
+  .header__menu-item {
+    width: 100%;
+  }
+}
+
+.header__menu-link {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 150%;
+  color: #58595B;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.header__menu-link:hover {
+  color: #E04E39;
+}
+
+.header__menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 852px) {
+  .header__menu-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header__menu-social {
+  width: 50%;
+}
+
+.header__menu-app {
+  width: 50%;
+}
+
+@media screen and (max-width: 852px) {
+  .header__menu-app {
+    margin-top: 30px;
+  }
+}
+
+.header__social-title {
+  font-size: 22px;
+}
+
 .header__top {
   background-color: #ffffff;
   position: fixed;
@@ -434,6 +528,10 @@ a {
   fill: #E04E39;
   -webkit-transition: all .4s linear;
   transition: all .4s linear;
+}
+
+.header__burger-svg--close {
+  display: none;
 }
 
 .header__logo {
@@ -2040,12 +2138,80 @@ a {
   margin-bottom: 1px;
 }
 
+@media screen and (max-width: 768px) {
+  .new-blog__img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .new-blog__img {
+    width: 100%;
+    float: none;
+    margin-bottom: 10px;
+  }
+}
+
 .new-blog__text {
   font-weight: normal;
   font-size: 18px;
   line-height: 150%;
   color: #58595B;
   margin-bottom: 20px;
+}
+
+.new-blog__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #E04E39;
+  margin-bottom: 20px;
+}
+
+.new-blog__storie-slider {
+  width: 455px;
+  float: left;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 477px) {
+  .new-blog__storie-slider {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+}
+
+.stories {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(266px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(266px, 1fr));
+  grid-gap: 30px;
+}
+
+.stories__card-img {
+  display: block;
+  width: 100%;
+}
+
+.stories__card-text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #2C2A29;
+}
+
+.stories__card-btn {
+  float: right;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 7px 20px;
+  color: #E04E39;
+  border: 1px solid #E04E39;
+  border-radius: 11px;
 }
 
 .info {
@@ -2930,12 +3096,20 @@ a {
 .fix-nav {
   position: fixed;
   left: 0;
-  top: 212px;
-  display: none;
+  top: 552px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .fix-nav {
+    display: none;
+  }
 }
 
 .fix-nav__item {
@@ -3320,5 +3494,22 @@ a {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
+}
+
+.call-to-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 /*# sourceMappingURL=styles.css.map */
