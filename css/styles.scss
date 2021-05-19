@@ -70,6 +70,7 @@ $color_hover: #C39367;
         &--first  {
             color: $red;
             text-align: left;
+            line-height: 1.2;
         }
         &--news {
             color: #58595B;
@@ -139,21 +140,6 @@ $color_hover: #C39367;
         border: none;
         background-color: #fff;
         cursor: pointer;
-        //background-color: $red;
-        //color: #ffffff;
-        // border-radius: 10px;
-        // margin-left: 10px;
-        // padding: 7px 30px;
-        // font-family: 'PT Sans';
-        // font-weight: 700;
-        // font-size: 1.125rem;
-        // line-height: 23px;
-        // text-shadow: 0px 4px 4px rgba(232, 75, 55, 0.25);
-        // cursor: pointer;
-        // &:focus, &:active {
-        //     outline: none;
-        // }
-
     }
     &__icon {
         width: 23px;
@@ -464,13 +450,31 @@ $color_hover: #C39367;
         }
     }
     &__phone {
-        font-family: 'Circe';
+        // font-family: 'Circe';
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 24px;
-        line-height: 32px;
+        line-height: 22px;
         color: $red;
-        margin-top: 5px;
+        margin-top: 6px;
+
+
+
+
+
+        &--showcase {
+            // font-family: 'Circe';
+            // font-weight: 700;
+            // font-size: 31px;
+            // line-height: 46px;
+
+            font-family: 'Circe';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 31px;
+            line-height: 46px;
+            /* identical to box height */
+        }
         @media screen and (max-width: 1520px) {
             display: none;
         }
@@ -488,11 +492,30 @@ $color_hover: #C39367;
         }
     }
     &__work-time {
+        // font-weight: normal;
+        // font-size: 18px;
+        // line-height: 1;
+        // display: block;
+        // text-align: right;
+
+        // font-family: 'Circe';
+        // font-style: normal;
+        // font-weight: bold;
+        // font-size: 31px;
+        // line-height: 46px;
+
+        font-family: 'PT Sans';
+        font-style: normal;
         font-weight: normal;
         font-size: 18px;
-        line-height: 1;
-        display: block;
-        text-align: right;
+        line-height:1;
+        color: #E04E39;
+
+
+        
+
+
+
         @media  (max-width: 580px) {
             font-size: 16px;
             line-height: 100%;
@@ -516,10 +539,21 @@ $color_hover: #C39367;
 .navbar {
     &__list {
         display: flex;
-        padding: 6px 0;
+        //padding: 6px 0;
+        //border: 1px solid #adc234;
+        height: 100%;
+
+        //test
+        flex-wrap: wrap;
     }
     &__item {
-        margin-left: 6px;
+        //test
+        //border: 1px solid blue;
+        //flex:1;
+        //width: 184px;
+
+
+        //margin-left: 6px;
         &:first-child {
             margin-left: 0;
         }
@@ -545,20 +579,41 @@ $color_hover: #C39367;
         
     }
     &__link {
-        display: flex;
+        // display: flex;
         align-items: center;
-        padding: 6px 18px;
+        //padding: 6px 18px;
+
+        //test
+        //padding: 6px 0;
         transition: all .4s linear;
-        // &:hover {
-        //     background: #ffffff;
-        //     border-radius: 11px;
-        // }
+        display: block;
+        padding-left: 40px;
+        padding-right: 18px;
+        //padding-top: 10px;
+        position: relative;
+       // border: 1px solid #000 ;
+        height: 100%;
+        //line-height: 2;
+
+
+
+        //width: 120px;
         &:hover .navbar__text {
             color: $color_hover;
+            font-size: 24.3035px;
+            position: relative;
+            bottom: 4px;
+            //line-height: 38px;
+            //position: fixed;
+            //transform: scale(1.15);
         }
         &:hover .navbar__icon  {
             fill: $color_hover!important;
             stroke: $color_hover;
+            height: 40px;
+            width: 40px;
+
+            
 
         }
         @media screen and (max-width: 1202px) {
@@ -572,6 +627,16 @@ $color_hover: #C39367;
     //    fill: #EEE2D6;
        stroke: $red;
        fill: $red;
+
+       //test
+        position: absolute;
+        left: 2px;
+        top: -7px;
+        transition: all .1s linear;
+        @media  (max-width: 1024px) {
+            position: inherit;
+            top: 5px;
+        }
        
     }
     &__text {
@@ -580,9 +645,14 @@ $color_hover: #C39367;
         line-height: 1.27;
         //color: #EEE2D6;
         color: $red;
-        padding-left: 16px;
+        padding-left: 8px;
+        transition: all .1s linear;
         @media screen and (max-width: 1202px) {
             padding-left: 6px;
+        }
+        @media  (max-width: 1024px) {
+            position: relative;
+            bottom: 7px;
         }
         @media  (max-width: 580px) {
             display: none; 
@@ -658,6 +728,9 @@ $color_hover: #C39367;
                 left: 213px;
                 bottom: 16px;
             }
+            @media screen and (max-width: 768px) {
+                bottom: 27px;
+            }
             @media screen and (max-width: 740px) {
                 left: calc(100vw + 45px);
             }
@@ -686,6 +759,7 @@ $color_hover: #C39367;
         padding-left: 12px;
         &--active {
             border-color: $red;
+            height: 52px;
             &:hover .main-btn__icon--first {
                 fill: #ffffff;
                 stroke: #ffffff;
@@ -882,7 +956,7 @@ $color_hover: #C39367;
     &__content {
         display: flex;
         justify-content: space-between;
-        padding-top: 13px;
+        //padding-top: 13px;
         @media screen and (max-width: 1024px) {
             padding-left: 168px;
         }
@@ -901,12 +975,24 @@ $color_hover: #C39367;
     &__title {
         font-family: 'Circe';
         font-weight: 800;
-        font-size: 45.5093px;
-        line-height: 68px;
+        font-size: 46px;
+        line-height: 55px;
         color: #623B2A;
+        margin-top: 30px;
+        @media screen and (max-width: 1280px) {
+           
+            line-height: 41px;
+            font-size: 43px;
+            line-height: 120%;
+            margin-top: 5px;
+
+        }
         @media screen and (max-width: 1202px) {
             font-size: 26.5093px;
             line-height: 41px;
+        }
+        @media screen and (max-width: 1024px) {
+            width: 400px;
         }
         @media screen and (max-width: 800px) {
             font-size: 24px;
@@ -937,31 +1023,48 @@ $color_hover: #C39367;
         }
     }
     &__phone {
+        font-family: 'Circe';
         font-weight: bold;
         font-size: 31px;
         line-height: 46px;
         color: $red;
+        margin: 5px;
+        
         @media screen and (max-width: 1202px) {
             font-size: 28px;
-            line-height: 46px;
+            line-height: 33px;
             text-align: right;
         }
         @media screen and (max-width: 800px) {
-            font-size: 24px;
+            font-size: 20px;
+            line-height: 19px;
+            margin-top: 18px;
         }
         
     }
     &__work-time {
+        // font-style: italic;
+        // font-weight: normal;
+        // font-size: 18px;
+        // line-height: 1;
+        display: block;
+        // text-align: right;
+        // color: #2C2A29;
+        // margin-bottom: 20px;
+        font-family: 'PT Sans';
         font-style: italic;
         font-weight: normal;
         font-size: 18px;
-        line-height: 1;
-        display: block;
-        text-align: right;
         color: #2C2A29;
-        margin-bottom: 20px;
+        text-align: right;
+        line-height: 1;
+        //border: 1px solid ;
+        //line-height: 100%;
+
+        
         @media  (max-width: 768px) {
             display: inline-block;
+            font-size: 14px;
          }
 
     }
@@ -1095,6 +1198,7 @@ $color_hover: #C39367;
         box-shadow: none;
         background: transparent;
         border: none;
+        margin-bottom: 30px;
         @media screen and (max-width: 1202px) {
             margin-bottom: 30px;
         }
@@ -1104,6 +1208,7 @@ $color_hover: #C39367;
     }
     .bx-viewport {
         height: 340px!important;
+        margin-top: -12px;
         @media screen and (max-width: 1202px) {
             height: 264px!important;
         }
@@ -1149,12 +1254,11 @@ $color_hover: #C39367;
             // max-width: initial;
         }
     }
-
-    .bx-wrapper .bx-controls-direction a {
-        // @media screen and (max-width: 1202px) {
-        //     top: 37%;
-        // }
+    .bx-wrapper .bx-next, .bx-wrapper .bx-prev {
+       
+        display: none;
     }
+
 }
 
 //SERVICES
@@ -1370,6 +1474,9 @@ $color_hover: #C39367;
             width: 50%;
             padding-bottom: 100px;
         }
+        @media screen and (max-width: 768px) {
+           padding-bottom: 155px;
+        }
         @media screen and (max-width: 690px) {
             width: 100%;
         }
@@ -1408,19 +1515,21 @@ $color_hover: #C39367;
     
     &__info-card {
         position: relative;
+        display: block;
         width: 100%;
-        min-height: 412px;
+        min-height: 372px;
         //border: 1px solid red;
         //background-color: #d92626;
         //margin-bottom:30px;
-        margin-bottom: -28px;
+        margin-bottom: 18px;
         padding: 3px;
         border-radius: 11px;
         transition: all .2s linear;
         
 
         & + .news__info-card {
-            margin-bottom: 10px;
+            margin-bottom: 70px;
+            
         }
         
         &:hover {
@@ -2569,7 +2678,7 @@ $color_hover: #C39367;
 .fix-nav {
     position: fixed;
     left: 0;
-    top: 552px;
+    top: 200px;
     display: flex;
     //display: none;
     @media  (max-width: 1024px) {
@@ -2747,20 +2856,19 @@ $color_hover: #C39367;
   .animated-button1 {
     //background: linear-gradient(-30deg, #3d0b0b 50%, #2b0808 50%);
     background-color: #ffffff;
-    padding: 13px 20px;
+    height: 48px;
+    padding: 0px 20px;
+    margin-top: 11px;
     display: inline-block;
     transform: translate(0%, 0%);
-
     overflow: hidden;
     border-radius: 11px;
-
     text-align: center;
-    text-transform: uppercase;
-    font-family: 'PT Sans';
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 0.085em;
+    line-height: 48px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
     color: #E04E39;
     border: 0.5px solid #E04E39;
     transition: all .4s linear;
@@ -2770,8 +2878,10 @@ $color_hover: #C39367;
        
      }
      @media  (max-width: 870px) {
-       font-size: 12px; 
-       line-height: 1;
+       font-size: 13px; 
+       //line-height: 1;
+       height: 33px;
+       line-height: 33px;
      }
    
   }

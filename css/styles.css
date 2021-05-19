@@ -68,6 +68,7 @@ a {
 .main-btn__text--first {
   color: #E04E39;
   text-align: left;
+  line-height: 1.2;
 }
 
 .main-btn__text--news {
@@ -566,13 +567,21 @@ a {
 }
 
 .header__phone {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  color: #E04E39;
+  margin-top: 6px;
+}
+
+.header__phone--showcase {
   font-family: 'Circe';
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  color: #E04E39;
-  margin-top: 5px;
+  font-size: 31px;
+  line-height: 46px;
+  /* identical to box height */
 }
 
 @media screen and (max-width: 1520px) {
@@ -603,11 +612,12 @@ a {
 }
 
 .header__work-time {
+  font-family: 'PT Sans';
+  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 1;
-  display: block;
-  text-align: right;
+  color: #E04E39;
 }
 
 @media (max-width: 580px) {
@@ -639,11 +649,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 6px 0;
-}
-
-.navbar__item {
-  margin-left: 6px;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .navbar__item:first-child {
@@ -675,24 +683,30 @@ a {
 }
 
 .navbar__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 6px 18px;
   -webkit-transition: all .4s linear;
   transition: all .4s linear;
+  display: block;
+  padding-left: 40px;
+  padding-right: 18px;
+  position: relative;
+  height: 100%;
 }
 
 .navbar__link:hover .navbar__text {
   color: #C39367;
+  font-size: 24.3035px;
+  position: relative;
+  bottom: 4px;
 }
 
 .navbar__link:hover .navbar__icon {
   fill: #C39367 !important;
   stroke: #C39367;
+  height: 40px;
+  width: 40px;
 }
 
 @media screen and (max-width: 1202px) {
@@ -706,6 +720,18 @@ a {
   height: 36px;
   stroke: #E04E39;
   fill: #E04E39;
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+@media (max-width: 1024px) {
+  .navbar__icon {
+    position: inherit;
+    top: 5px;
+  }
 }
 
 .navbar__text {
@@ -713,12 +739,21 @@ a {
   font-size: 1.125rem;
   line-height: 1.27;
   color: #E04E39;
-  padding-left: 16px;
+  padding-left: 8px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 @media screen and (max-width: 1202px) {
   .navbar__text {
     padding-left: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar__text {
+    position: relative;
+    bottom: 7px;
   }
 }
 
@@ -823,6 +858,12 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .sidebar__link-logo--top {
+    bottom: 27px;
+  }
+}
+
 @media screen and (max-width: 740px) {
   .sidebar__link-logo--top {
     left: calc(100vw + 45px);
@@ -857,6 +898,7 @@ a {
 
 .sidebar__nav-link--active {
   border-color: #E04E39;
+  height: 52px;
 }
 
 .sidebar__nav-link--active:hover .main-btn__icon--first {
@@ -1076,7 +1118,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 13px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1101,15 +1142,31 @@ a {
 .showcase__title {
   font-family: 'Circe';
   font-weight: 800;
-  font-size: 45.5093px;
-  line-height: 68px;
+  font-size: 46px;
+  line-height: 55px;
   color: #623B2A;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1280px) {
+  .showcase__title {
+    line-height: 41px;
+    font-size: 43px;
+    line-height: 120%;
+    margin-top: 5px;
+  }
 }
 
 @media screen and (max-width: 1202px) {
   .showcase__title {
     font-size: 26.5093px;
     line-height: 41px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .showcase__title {
+    width: 400px;
   }
 }
 
@@ -1153,40 +1210,45 @@ a {
 }
 
 .showcase__phone {
+  font-family: 'Circe';
   font-weight: bold;
   font-size: 31px;
   line-height: 46px;
   color: #E04E39;
+  margin: 5px;
 }
 
 @media screen and (max-width: 1202px) {
   .showcase__phone {
     font-size: 28px;
-    line-height: 46px;
+    line-height: 33px;
     text-align: right;
   }
 }
 
 @media screen and (max-width: 800px) {
   .showcase__phone {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 19px;
+    margin-top: 18px;
   }
 }
 
 .showcase__work-time {
+  display: block;
+  font-family: 'PT Sans';
   font-style: italic;
   font-weight: normal;
   font-size: 18px;
-  line-height: 1;
-  display: block;
-  text-align: right;
   color: #2C2A29;
-  margin-bottom: 20px;
+  text-align: right;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
   .showcase__work-time {
     display: inline-block;
+    font-size: 14px;
   }
 }
 
@@ -1357,6 +1419,7 @@ a {
           box-shadow: none;
   background: transparent;
   border: none;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1202px) {
@@ -1373,6 +1436,7 @@ a {
 
 .showcase .bx-viewport {
   height: 340px !important;
+  margin-top: -12px;
 }
 
 @media screen and (max-width: 1202px) {
@@ -1434,6 +1498,10 @@ a {
     position: relative;
     top: 115px;
   }
+}
+
+.showcase .bx-wrapper .bx-next, .showcase .bx-wrapper .bx-prev {
+  display: none;
 }
 
 .services {
@@ -1706,6 +1774,12 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .news__content {
+    padding-bottom: 155px;
+  }
+}
+
 @media screen and (max-width: 690px) {
   .news__content {
     width: 100%;
@@ -1756,9 +1830,10 @@ a {
 
 .news__info-card {
   position: relative;
+  display: block;
   width: 100%;
-  min-height: 412px;
-  margin-bottom: -28px;
+  min-height: 372px;
+  margin-bottom: 18px;
   padding: 3px;
   border-radius: 11px;
   -webkit-transition: all .2s linear;
@@ -1766,7 +1841,7 @@ a {
 }
 
 .news__info-card + .news__info-card {
-  margin-bottom: 10px;
+  margin-bottom: 70px;
 }
 
 .news__info-card:hover {
@@ -3096,7 +3171,7 @@ a {
 .fix-nav {
   position: fixed;
   left: 0;
-  top: 552px;
+  top: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3291,19 +3366,20 @@ a {
 
 .animated-button1 {
   background-color: #ffffff;
-  padding: 13px 20px;
+  height: 48px;
+  padding: 0px 20px;
+  margin-top: 11px;
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
   overflow: hidden;
   border-radius: 11px;
   text-align: center;
-  text-transform: uppercase;
-  font-family: 'PT Sans';
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
-  letter-spacing: 0.085em;
+  line-height: 48px;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
   color: #E04E39;
   border: 0.5px solid #E04E39;
   -webkit-transition: all .4s linear;
@@ -3319,8 +3395,9 @@ a {
 
 @media (max-width: 870px) {
   .animated-button1 {
-    font-size: 12px;
-    line-height: 1;
+    font-size: 13px;
+    height: 33px;
+    line-height: 33px;
   }
 }
 
