@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="fonts/circe.fonts.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 
@@ -66,10 +67,10 @@
                                 <h5 class="socials__title">Мобильное приложение:</h5>
                                 <ul class="socials__list">
                                     <li class="socials__list-item">
-                                        <img src="img/store1.png" alt="">
+                                        <img class="socials__list-img" src="img/store1.png" alt="">
                                     </li>
                                     <li class="socials__list-item">
-                                        <img src="img/store2.png" alt="">
+                                        <img class="socials__list-img" src="img/store2.png" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -333,8 +334,10 @@
             </a>
         </div>
         <div class="chat">
-            <svg class="chat__img"><use xlink:href="sprite.svg#chat"></use></svg>
-        </div>
+            <button class="button">
+                <svg class="button__svg"><use xlink:href="sprite.svg#chat"></use></svg>
+            </button>
+        </div>   
     </div>
     <div class="modal" id="modal-js">
         <form class="modal__form" action="">
@@ -421,6 +424,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Подключаем API -->
     <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

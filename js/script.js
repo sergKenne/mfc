@@ -35,7 +35,10 @@ function windowWidth() {
 
 windowWidth();
 
+AOS.init();
+
 $(document).ready(function(){
+
     $('.banner-slider').bxSlider({
       minSlides: 1,
       maxSlides: 1,
@@ -121,6 +124,13 @@ $(document).ready(function(){
         $this.css({display: "none"});
         $(".header__burger-svg--bars").css({display: "block"});
       }) 
+    });
+
+    $(".header__modal-menu").click(function(){
+      $(this).slideUp("fast", function(){
+        $(".header__burger-svg--close").css({display: "none"});
+        $(".header__burger-svg--bars").css({display: "block"});
+      }) 
     })
 
 
@@ -183,39 +193,6 @@ $(document).ready(function(){
     })
 
 
-    //SUBLIST
-    // $(".tes").click(function(){
-    //   const $list = $(this).next();
-    //   //const $check = $(this).find(".sidebar__input");
-    //   console.log($(this))
-    //   // if($check.is(':checked')) {
-    //   //   console.log("is checked")
-    //   // } else {
-    //   //   console.log("is not check")
-    //   // }
-
-    //   //$list.slideUp()
-    //   // if($list.is(":visible")) {
-    //   //   console.log("true")
-    //   //   //$list.slideUp();
-    //   //   //$list.addClass("hide")
-    //   // }else {
-    //   //   console.log("false")
-    //   //   //$list.slideDown();
-    //   //   //$list.removeClass("hide")
-    //   // }
-    // })
-
-    // $(".tes").each(function() {
-    //   $(this).click(function() {
-    //     console.log($(this))
-    //   })
-      
-    // })
-
-
-
-
     $("#map-svg path").each(function(){
       let color = $(this).attr("fill");
         $(this).hover(
@@ -237,10 +214,7 @@ $(document).ready(function(){
                 const current_name = city.offices[0].name;
                 console.log("coordinates:", current_city);
                 ymaps.ready(init);
-                
-
-                
-
+ 
                 function init () {
                   $(".info__yandex-map").css({display: "block" });
                   $(".info__map").css({display: "none" });
@@ -274,26 +248,6 @@ $(document).ready(function(){
                         iconImageOffset: [-5, -38]
                     }),
 
-                    // myPlacemarkWithContent = new ymaps.Placemark(coordinates, {
-                    //     hintContent: 'Собственный значок метки с контентом',
-                    //     balloonContent: 'А эта — новогодняя',
-                    //     iconContent: '12'
-                    // }, {
-                    //     // Опции.
-                    //     // Необходимо указать данный тип макета.
-                    //     iconLayout: 'default#imageWithContent',
-                    //     // Своё изображение иконки метки.
-                    //     iconImageHref: '../img/geo.png',
-                    //     // Размеры метки.
-                    //     iconImageSize: [48, 48],
-                    //     // Смещение левого верхнего угла иконки относительно
-                    //     // её "ножки" (точки привязки).
-                    //     iconImageOffset: [-24, -24],
-                    //     // Смещение слоя с содержимым относительно слоя с картинкой.
-                    //     iconContentOffset: [15, 15],
-                    //     // Макет содержимого.
-                    //     iconContentLayout: MyIconContentLayout
-                    // });
 
                 myMap.geoObjects
                     .add(myPlacemark)
@@ -318,24 +272,16 @@ $(document).ready(function(){
 });
 
 
-// Дождёмся загрузки API и готовности DOM.
-// ymaps.ready(init);
 
-// function init () {
-  
-//     var myMap = new ymaps.Map('map', {
-//         center: [56.829374, 60.672699], 
-//         zoom: 10
-//     }, {
-//         searchControlProvider: 'yandex#search'
-//     });
-
-//     document.getElementById('destroyButton').onclick = function () {
-//         // Для уничтожения используется метод destroy.
-//         myMap.destroy();
-//     };
-
-// }
-
-
-
+fetch("https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "74ec274a6dmsh672f38dbce8dfa3p104fb5jsne0dc744ec624",
+		"x-rapidapi-host": "tasty.p.rapidapi.com"
+	}
+})
+.then(response => response.json())
+.then(data => console.log("data:", data))
+.catch(err => {
+	console.error(err);
+});

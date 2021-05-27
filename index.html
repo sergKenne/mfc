@@ -11,12 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="fonts/circe.fonts.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- <link rel="stylesheet" href="css/uikit.min.css" />
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script> -->
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <title>MFC</title>
 </head>
@@ -66,10 +62,10 @@
                                 <h5 class="socials__title">Мобильное приложение:</h5>
                                 <ul class="socials__list">
                                     <li class="socials__list-item">
-                                        <img src="img/store1.png" alt="">
+                                        <img class="socials__list-img" src="img/store1.png" alt="">
                                     </li>
                                     <li class="socials__list-item">
-                                        <img src="img/store2.png" alt="">
+                                        <img class="socials__list-img" src="img/store2.png" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -109,12 +105,11 @@
         <section class="main-content">
             <div class="container">
                 <div class="main-content__inner">
-                    <aside class="sidebar main-content__sidebar">
+                    <aside class="sidebar main-content__sidebar" >
                         <a href="#" class="sidebar__link">
-                            <!-- <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg> -->
                             <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.png" alt=""></a>
                         </a>
-                        <ul class="sidebar__nav-list">
+                        <ul class="sidebar__nav-list" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
                             <li class="sidebar__nav-item">
                                 <a href="" class="main-btn sidebar__nav-link sidebar__nav-link--active">
                                     <svg class="main-btn__icon main-btn__icon--first"><use xlink:href="sprite.svg#clipboard"></use></svg>
@@ -158,9 +153,9 @@
                         <div class="showcase">
                             <div class="showcase__content">
                                 <div>
-                                    <h1 class="showcase__title">МНОГОФУНКЦИОНАЛЬНЫЙ<br/><span class="showcase__strong">ЦЕНТР СВЕРДЛОВСКОЙ ОБЛАСТИ</span></h1>
+                                    <h1 class="showcase__title"  data-aos="fade-right"  data-aos-duration="1500">МНОГОФУНКЦИОНАЛЬНЫЙ<br/><span class="showcase__strong">ЦЕНТР СВЕРДЛОВСКОЙ ОБЛАСТИ</span></h1>
                                 </div>
-                                <div class="showcase__number">
+                                <div class="showcase__number"  data-aos="fade-left" data-aos-duration="1500">
                                     <div class="showcase__phone showcase__phone--showcase">8 (343) 273-00-08<span class="showcase__work-time showcase__work-time--showcase">Ежедневно с <span class="header__time-strong">8:00</span> до <span class="header__time-strong">20:00</span></span></div>
                                     <a href="#" class="animated-button1">
                                         <span></span>
@@ -226,8 +221,13 @@
                             </div>
                         </div>
                         <ul class="services">
-                            <li class="services__item">
-                                <div class="services__card">
+                            <li class="services__item" >
+                                <div class="services__card" 
+                                    data-aos="flip-left"
+                                    
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service3.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Рождение ребёнка</h4>
@@ -238,7 +238,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service7.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Смена имени</h4>
@@ -249,7 +254,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service5.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Смена места жительства</h4>
@@ -260,7 +270,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service8.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Сопровождение своего дела</h4>
@@ -271,7 +286,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                   
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service6.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Утрата близкого человека</h4>
@@ -282,7 +302,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                  
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service1.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Утрата документов</h4>
@@ -293,7 +318,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                   
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service2.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Выход на пенсию по старости</h4>
@@ -304,7 +334,12 @@
                                 </div>
                             </li>
                             <li class="services__item">
-                                <div class="services__card">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-delay="50"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
                                     <img src="img/service4.jpg" alt="" class="services__img">
                                     <div class="services__overlay">
                                         <h4 class="services__title">Все услуги нашего МФЦ</h4>
@@ -326,9 +361,22 @@
             <div class="container">
                 <div class="main-content__inner">
                     <div class="sidebar main-content__sidebar">
-                        <p class="sidebar__paragraphe">Соотношение заболевших в мире</p>
-                        <img src="img/stat1.svg" alt="" class="sidebar__stat">
-                        <ul class="sidebar__radio-list">
+                        <p class="sidebar__paragraphe" >Соотношение заболевших в мире</p>
+                        <img class="sidebar__stat" 
+                            src="img/stat1.svg" 
+                            alt="" 
+                            data-aos="fade-right"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            
+                            data-aos-easing="ease-in-sine"
+                        >
+                        <ul class="sidebar__radio-list"  
+                            data-aos="flip-left"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                        >
                             <li class="sidebar__radio-item">
                                 <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  в Области</label>
                             </li>
@@ -339,9 +387,19 @@
                                 <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В мире</label>
                             </li>
                         </ul>
-                        <p class="sidebar__paragraphe">Соотношение заболевших в мире</p>
-                        <img src="img/stat2.svg" alt="" class="sidebar__stat">
-                        <ul class="sidebar__radio-list">
+                        <p class="sidebar__paragraphe"  >Соотношение заболевших в мире</p>
+                        <img src="img/stat2.svg" alt="" class="sidebar__stat"
+                            data-aos="fade-up"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            
+                            data-aos-easing="ease-in-sine"
+                        >
+                        <ul class="sidebar__radio-list"
+                            data-aos="flip-left"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                        >
                             <li class="sidebar__radio-item">
                                 <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В России</label>
                             </li>
@@ -351,7 +409,11 @@
                         </ul>
                     </div>
                     <div class="news main-content__main main-content__main--news">
-                       <div class="news__info">
+                       <div class="news__info"
+                            data-aos="fade-right"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                       >
                            <h4 class="news__title">Новости</h4>
                            <div class="news__wrap-card">
                                <a href="new.html" class="news__info-card clearfix">
@@ -375,7 +437,11 @@
                             <a href="news.html" class="news__slider-btn news__slider-btn--light hide-news-btn">Все новости</a>
                            </div>
                        </div>
-                       <div class="news__content">
+                       <div class="news__content"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                       >
                             <h4 class="news__title">Объявления</h4>
                             <ul class="news__card-list">
                                 <a href="#" class="news__card-item">
@@ -416,7 +482,12 @@
                             </ul>
                             <a href="announce.html" class="news__content-btn news__slider-btn news__slider-btn--light">Все объявления</a>
                        </div>
-                       <div class="news__slider">
+                       <div class="news__slider"
+                            data-aos="fade-left"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                       >
                            <h4 class="news__title">Истории</h4>
                             <!-- <ul class="news__nav-list">
                                 <li class="news__nav-item">
@@ -425,7 +496,7 @@
                                     </a>
                                 </li>
                             </ul> -->
-                            <div class="slider news__slider-inner">
+                            <div class="slider news__slider-inner" data-aos="fade-up">
                                 <div class="news__slider-item">
                                     <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
                                     <div class="news__slider-caption">
@@ -629,7 +700,7 @@
                             <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--last"></span>  нет данных</label>
                         </div>
                         <div class="info__map">  
-                            <svg id="map-svg" width="564" height="681" viewBox="0 0 564 681" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="map-svg" viewBox="0 0 564 681" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M333.306 559.484L331.351 557.76L325.203 557.008L325.118 556.977L320.812 555.379L316.17 556.381L311.026 555.128L309.646 557.384L294.591 554L293.587 559.39L290.2 556.005L287.547 554.171L286.492 560.271L286.059 562.774L284.191 571.211L282.923 576.938L281.417 580.072V582.83L283.55 583.457L282.421 587.468L280.288 587.092L279.786 589.097V589.348L283.425 588.846L284.679 589.474L286.937 592.356L289.321 593.861L295.845 595.866L296.473 592.607L298.982 592.106L300.487 595.365L304.628 595.49L304 592.482L306.635 591.98L312.03 592.732L311.653 599.251L315.292 599.877L317.048 600.88L317.801 603.387L320.31 604.891L322.694 604.014L322.853 603.966L324.325 601.883L326.583 599.877L329.845 595.991L329.218 593.109L328.214 591.354L328.089 582.328L330.849 580.323L329.971 577.816L328.089 579.195L326.458 577.565L328.214 573.053L327.963 567.788L329.971 563.902L332.229 564.278L333.306 559.484Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.31641" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M238.094 475.449L239.322 472.586L241.718 461.488L241.773 461.46L234.531 456.266L227.778 455.177L227.561 457.136L224.511 457.571L220.809 456.483L221.027 448.65L227.996 443.862L228.868 441.034L232.788 439.728L237.144 439.51L243.678 440.163L244.113 438.204L243.46 435.594H246.509L249.994 432.547L253.624 430.129L253.479 429.936L253.914 427.324L255.657 424.496L258.271 424.061L259.142 418.62L260.924 417.258L245.856 413.398L247.163 409.263L229.564 404.046L230.392 407.522L229.739 410.569H225.818L223.423 416.662L218.413 419.708L215.8 421.449V424.496L218.413 424.713L212.097 433.635L208.177 434.723L206.434 441.686L207.741 442.774L208.468 442.693L209.701 442.557L211.443 439.945H212.968L217.324 437.334L217.978 434.07L218.849 431.677L222.987 429.936L227.996 433.418L228.432 436.028L226.254 435.811V438.422L223.641 437.769L222.333 442.121L208.177 456.048L204.2 457.257L203.603 460.835L207.959 463.011L204.474 467.799L202.949 474.327L216.671 476.721L217.76 474.544L220.809 475.198L223.641 474.109L229.521 476.285L238.094 475.449Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.31641" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M197.854 579.054L200.032 579.699L200.569 583.322L204.061 584.664L204.473 584.532L204.196 581.577L202.315 579.296L203.121 569.904L205.001 568.696L207.687 569.233L209.568 571.514L209.836 577.82L208.896 580.37L206.747 581.443L206.662 583.827L211.985 582.114L218.432 582.248L220.446 577.955L224.101 579.237L225.211 575.434L227.218 574.181L223.454 573.805L221.572 574.432L219.816 572.928L221.447 571.674L222.2 569.293L224.082 569.418L227.093 568.164L233.993 556.256L234.979 551.559L237.255 540.713L226.347 538.252L224.96 539.835L215.927 539.71L211.284 538.833L211.912 541.339L211.536 543.345L209.779 545.351L209.026 544.975L203.004 548.485L199.617 567.663H195.1L193.975 575.868L194.257 575.942L198.421 576.613L197.854 579.054Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.31641" stroke-linecap="round" stroke-linejoin="round"/>
@@ -723,12 +794,12 @@
         <footer class="footer">
             <div class="container">
                 <ul class="footer__inner">
-                    <li class="footer__item">
+                    <li class="footer__item"
+                        data-aos="fade-right"
+                        data-aos-duration="500"
+                        data-aos-easing="linear"
+                    >
                         <div>
-                            <!-- <a href="#" class="sidebar__link">
-                                <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg>
-                                
-                            </a> -->
                             <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
                         </div>    
                         <br/><br/>
@@ -741,7 +812,11 @@
                             <img src="img/store2.png" alt="">
                         </div>
                     </li>
-                    <li class="footer__item">
+                    <li class="footer__item"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-easing="linear"
+                    >
                         <h4 class="footer__title">Наши сервисы:</h4>
                         <ul class="footer__list">
                             <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
@@ -753,7 +828,11 @@
                             <li class="footer__list-item"><a href="" class="footer__list-link">Реклама</a></li>
                         </ul>
                     </li>
-                    <li class="footer__item">
+                    <li class="footer__item"
+                        data-aos="fade-down"
+                        data-aos-duration="500"
+                        data-aos-easing="linear"
+                    >
                         <h4 class="footer__title">Об МФЦ:</h4>
                         <ul class="footer__list">
                             <li class="footer__list-item"><a href="" class="footer__list-link">Цели и задачи</a></li>
@@ -765,7 +844,11 @@
                             <li class="footer__list-item"><a href="" class="footer__list-link">Видео</a></li>
                         </ul>
                     </li>
-                    <li class="socials footer__item">
+                    <li class="socials footer__item"
+                        data-aos="fade-left"
+                        data-aos-duration="500"
+                        data-aos-easing="linear"
+                    >
                         <div class="socials__inner">
                             <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
                             <div class="socials__contact">
@@ -789,7 +872,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            
                         </div> 
                     </li>
                 </ul>
@@ -822,8 +904,10 @@
             </a>
         </div>
         <div class="chat">
-            <svg class="chat__img"><use xlink:href="sprite.svg#chat"></use></svg>
-        </div>
+            <button class="button">
+                <svg class="button__svg"><use xlink:href="sprite.svg#chat"></use></svg>
+            </button>
+        </div>    
     </div>
     <div class="modal" id="modal-js">
         <form class="modal__form" action="">
@@ -844,11 +928,11 @@
                 <li class="navbar-bottom__item">
                     <a href="" class="navbar-bottom__link">
                         <div class="navbar-bottom__picture">
-                            <svg class="" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
+                            <svg class="navbar-bottom__svg" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
                         </div>
                         <div class="navbar-bottom__text">
                             <span class="navbar-bottom__paragraph">
-                                Горячая линия
+                                Горячая<br> линия
                             </span>
                         </div>
                     </a>
@@ -856,11 +940,11 @@
                 <li class="navbar-bottom__item">
                     <a href="" class="navbar-bottom__link">
                         <div class="navbar-bottom__picture">
-                            <svg class="" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
+                            <svg class="navbar-bottom__svg" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
                         </div>
                         <div class="navbar-bottom__text">
                             <span class="navbar-bottom__paragraph">
-                               Найти отделение 
+                               Найти<br> отделение 
                             </span>
                         </div>
                     </a>
@@ -868,11 +952,11 @@
                 <li class="navbar-bottom__item">
                     <a href="" class="navbar-bottom__link">
                         <div class="navbar-bottom__picture">
-                            <svg class="" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
+                            <svg class="navbar-bottom__svg" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
                         </div>
                         <div class="navbar-bottom__text">
                             <span class="navbar-bottom__paragraph">
-                                записаться онлайн
+                                записаться <br> онлайн
                             </span>
                         </div>
                     </a>
@@ -880,7 +964,7 @@
                 <li class="navbar-bottom__item">
                     <a href="" class="navbar-bottom__link">
                         <div class="navbar-bottom__picture">
-                            <svg class="" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
+                            <svg class="navbar-bottom__svg" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
                         </div>
                         <div class="navbar-bottom__text">
                             <span class="navbar-bottom__paragraph">
@@ -892,11 +976,11 @@
                 <li class="navbar-bottom__item">
                     <a href="" class="navbar-bottom__link">
                         <div class="navbar-bottom__picture">
-                            <svg class="" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
+                            <svg class="navbar-bottom__svg" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
                         </div>
                         <div class="navbar-bottom__text">
                             <span class="navbar-bottom__paragraph">
-                                Личный кабинет
+                                Личный <br> кабинет
                             </span>
                         </div>
                     </a>
@@ -910,6 +994,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Подключаем API -->
     <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
