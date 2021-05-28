@@ -970,6 +970,10 @@ $color_hover: #C39367;
         display: flex;
         justify-content: space-between;
         //padding-top: 13px;
+        &--services {
+            //align-items: center;
+
+        }
         @media screen and (max-width: 1024px) {
             padding-left: 168px;
         }
@@ -1024,6 +1028,19 @@ $color_hover: #C39367;
             font-size: 16px;
             width: 150px;
         }
+
+        &--services {
+            @media screen and (max-width: 1024px) {
+                font-size: 36px;
+                margin-top: 80px;
+            }
+            @media screen and (max-width: 768px) { 
+                margin-top: 63px;
+            }
+            @media screen and (max-width: 745px) { 
+                margin-top: 23px;
+            }
+        }
         
         
     }
@@ -1031,6 +1048,21 @@ $color_hover: #C39367;
         color: $red;
     }
     &__number {
+
+        &--services {
+            margin-top: 5px;
+            #echo {
+                position: relative;
+                animation: echo-anim 4s linear infinite;
+                border: 2px solid red;
+            }
+        }
+        &--announce {
+            margin-top: 20px;
+        }
+        &--news {
+            margin-top: 20px;
+        }
         @media screen and (max-width: 740px) {
             display: none;
         }
@@ -1194,6 +1226,19 @@ $color_hover: #C39367;
             line-height: 30px;
         }
     }
+
+    @keyframes echo-anim {
+        0% {
+            transform: translateY(0px);
+        }
+      
+        50% {
+            transform: translateY(-10px)
+        }
+        100% {
+            transform: translateY(0px)
+        }
+      }
 
 
     @keyframes slidein {
@@ -1422,6 +1467,16 @@ $color_hover: #C39367;
 
 //NEWS
 .news {
+    margin-top: -45px;
+    @media screen and (max-width: 1024px) {
+        margin-top: -20px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: -40px;
+    }
+    @media screen and (max-width: 425px) {
+        margin-top: 47px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 16px;
@@ -2226,11 +2281,22 @@ $color_hover: #C39367;
         margin-left: 30px
     }
     &__list-img {
+
+        width: 140.7px;
+        height: 41px;
+        cursor: pointer;
+        transition: all .2s linear;
+        
+
         @media screen and (max-width: 425px) {
                 width: 155px;
         }
         @media screen and (max-width: 320px) {
             width: 125px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
     &__phone {
@@ -2249,8 +2315,8 @@ $color_hover: #C39367;
 
     }
     &__img {
-        height: 46px;
-        width: 46px;
+        height: 40px;
+        width: 40px;
         cursor: pointer;
         transition: all .2s linear;
         &:hover {
@@ -2263,9 +2329,20 @@ $color_hover: #C39367;
 //our services
 .our-services{
     //border-top: 1px solid rgba(44, 42, 41, 0.2);
-    padding-top: 40px;
+    //padding-top: 40px;
+    margin-top: -52px;
+    @media screen and (max-width: 745px) {
+        margin-top: 33px;
+    }
+    @media screen and (max-width: 425px) {
+        margin-top: 56px;
+    }
     &__breadcrumbs {
         margin-bottom: 20px;
+        @media screen and (max-width: 1024px) {
+            margin-top: 20px;
+        }
+
     }
     &__content {
         display: flex;
@@ -2458,6 +2535,23 @@ $color_hover: #C39367;
 //OFFERS
 .offers {
 
+    margin-top: -90px;
+    @media screen and (max-width: 1024px) {
+        margin-top: -56px;
+    }
+    @media screen and (max-width: 425px) {
+        margin-top: 50px;
+    }
+    &--new {
+        margin-top: -59px;
+        @media screen and (max-width: 1024px) {
+            margin-top: -33px;
+        }
+        @media screen and (max-width: 425px) {
+            margin-top: 55px;
+        }
+    }
+
     &__breadcrumbs{
         margin-bottom: 16px;
         margin-top: 30px;
@@ -2604,6 +2698,14 @@ $color_hover: #C39367;
 
 //ANNOUNCE
 .announce {
+    margin-top: -87px;
+    @media  (max-width: 1024px) {
+        margin-top: -42px;
+    }
+    @media  (max-width: 425px) {
+        margin-top: 50px;
+    }
+    
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -3010,11 +3112,84 @@ $color_hover: #C39367;
 }
 
 
+//scale btn
+.btn-animation {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #E04E39;
+    border: 2px solid #E04E39;
+    border-radius: 11px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    margin-top: 15px;
+    animation: anim-btn 3s infinite linear;
+    //transform: scale(1.2);
+
+    float: right;
+    margin-right: 20px;
+
+
+    @media  (max-width: 900px) {
+        float: right;
+        font-size: 15px;
+        
+    }
+    @media  (max-width: 870px) {
+        // font-size: 13px; 
+        // //line-height: 1;
+        // height: 33px;
+        // line-height: 33px;
+
+        font-size: 11px;
+        height: 33px;
+        line-height: 13px;
+    }
+
+    &:hover {
+
+        float: none;
+        margin-right: 0;
+        animation: none;
+        height: 48px;
+        line-height: 48px;
+        padding: 0px 20px;
+        margin-top: 11px;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: $red;
+        transform: none;
+
+        @media  (max-width: 870px) {
+            
+            font-size: 11px;
+            height: 33px;
+            line-height: 33px;
+            float: right;
+        }
+    
+
+    }
+}
+
+@keyframes anim-btn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 
-// //test button
-
+//test button
   .animated-button1 {
     //background: linear-gradient(-30deg, #3d0b0b 50%, #2b0808 50%);
     background-color: #ffffff;
