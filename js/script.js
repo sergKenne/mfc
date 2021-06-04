@@ -42,6 +42,7 @@ $(document).ready(function(){
     $('.banner-slider').bxSlider({
       minSlides: 1,
       maxSlides: 1,
+      auto: true
       //slideWidth: ($(window).width() < 426)? 400 : $(window).width() - 20,
     });
 
@@ -225,8 +226,6 @@ $(document).ready(function(){
                     }, {
                         searchControlProvider: 'yandex#search'
                     });
-
-
                     // Создаём макет содержимого.
                     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
                         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
@@ -236,31 +235,13 @@ $(document).ready(function(){
                         hintContent: current_name,
                         balloonContent: current_city
                     }, {
-                        // Опции.
-                        // Необходимо указать данный тип макета.
                         iconLayout: 'default#image',
-                        // Своё изображение иконки метки.
                         iconImageHref: '../img/geo.png',
-                        // Размеры метки.
                         iconImageSize: [40, 48],
-                        // Смещение левого верхнего угла иконки относительно
-                        // её "ножки" (точки привязки).
                         iconImageOffset: [-5, -38]
                     }),
 
-
-                myMap.geoObjects
-                    .add(myPlacemark)
-                    //.add(myPlacemarkWithContent);
-
-
-
-
-                    // document.getElementById('destroyButton').onclick = function () {
-                    //     // Для уничтожения используется метод destroy.
-                    //     myMap.destroy();
-                    // };
-
+                    myMap.geoObjects.add(myPlacemark)
                 }
 
 
@@ -268,20 +249,188 @@ $(document).ready(function(){
             alert("no Data")
           }
         })
-    })
-});
+    });
+
+    //MAP OFFICES
+    ymaps.ready(init);
+    function init(){
+
+        var myGeoObject1 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [57.852779, 61.703516] // координаты точки
+            }
+        });
+
+        var myGeoObject2 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [56.701512, 60.841187] // координаты точки
+            }
+        });
+
+        var myGeoObject3 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [57.339111, 61.895989] // координаты точки
+            }
+        });
+
+        var myGeoObject4 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [57.380439, 62.330199] // координаты точки
+            }
+        });
 
 
+        var myGeoObject5 = new ymaps.GeoObject({
+              geometry: {
+                  type: "Point", // тип геометрии - точка
+                  coordinates: [57.009063, 61.466693] // координаты точки
+              }
+          });
 
-fetch("https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "74ec274a6dmsh672f38dbce8dfa3p104fb5jsne0dc744ec624",
-		"x-rapidapi-host": "tasty.p.rapidapi.com"
-	}
-})
-.then(response => response.json())
-.then(data => console.log("data:", data))
-.catch(err => {
-	console.error(err);
-});
+          var myGeoObject6 = new ymaps.GeoObject({
+              geometry: {
+                  type: "Point", // тип геометрии - точка
+                  coordinates: [57.002373, 61.454674] // координаты точки
+              }
+          });
+
+          var myGeoObject7 = new ymaps.GeoObject({
+              geometry: {
+                  type: "Point", // тип геометрии - точка
+                  coordinates: [56.660270, 59.302409] // координаты точки
+              }
+          });
+
+          var myGeoObject8 = new ymaps.GeoObject({
+              geometry: {
+                  type: "Point", // тип геометрии - точка
+                  coordinates: [56.798561, 57.896519] // координаты точки
+              }
+          });
+
+
+          var myGeoObject9 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [57.397572, 63.771052] // координаты точки
+            }
+        });
+
+        var myGeoObject10 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [56.805732, 62.790783] // координаты точки
+            }
+        });
+
+        var myGeoObject11 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [57.339111, 61.895989] // координаты точки
+            }
+        });
+
+        var myGeoObject12 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [57.380439, 62.330199] // координаты точки
+            }
+        });
+
+        var myGeoObject13 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+        var myGeoObject14 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+        var myGeoObject15 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+        var myGeoObject16 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+        var myGeoObject17 = new ymaps.GeoObject({
+          geometry: {
+              type: "Point",
+              coordinates: []
+          }
+        });
+        var myGeoObject18 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+        var myGeoObject19 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+        var myGeoObject1 = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: []
+            }
+        });
+
+        var myMapOffices = new ymaps.Map("map-offices", {
+              center: [56.829374, 60.672699],
+              zoom: 7
+          }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+        myMapOffices.behaviors.disable(["drag", "scrollZoom"]);
+
+        myMapOffices.geoObjects
+                   .add(myGeoObject1)
+                   .add(myGeoObject2)
+                   .add(myGeoObject3)
+                   .add(myGeoObject4)
+                   .add(myGeoObject5)
+                   .add(myGeoObject6)
+                   .add(myGeoObject7)
+                   .add(myGeoObject9)
+                   .add(myGeoObject10)
+                   .add(myGeoObject11)
+                   .add(myGeoObject12)
+                   .add(myGeoObject13);
+    }
+
+    //FOR ONE OFFICE
+    function myMapOffice() {
+      ymaps.ready(init);
+      function init(){
+          var myMapOffice = new ymaps.Map("map-office", {
+                center: [56.829374, 60.672699],
+                zoom: 4
+            }, {
+              searchControlProvider: 'yandex#search'
+          });
+
+          myMapOffice.behaviors.disable(["drag", "scrollZoom"]);
+      }
+    }
+    myMapOffice();
+    
+
+
+}); //end ready
+
