@@ -1297,6 +1297,14 @@ $(document).ready(function(){
       // slideWidth: 600
     });
 
+    $('.folder-slider').bxSlider({
+      slideWidth: 1200,
+      maxSlides: 4,
+      minSlides : 4,
+      slideMargin: 100,
+      //auto: true
+    });
+
     $("#search-js, #modal-btn-js, #modal-js").click(function(){
       $("#modal-js").slideToggle(); 
     });
