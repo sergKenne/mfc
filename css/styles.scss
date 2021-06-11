@@ -49,6 +49,11 @@ $color_hover: #C39367;
     max-width: 1456px;
     margin: 0 auto;
     padding: 0 10px;
+    &--pub {
+        @media screen and (max-width: 1440px) {
+            padding: 0 70px;
+        }
+    }
 }
 
 //ОБЩИЕ СТИЛУ
@@ -3258,6 +3263,9 @@ $color_hover: #C39367;
         position: absolute;
         right: 60px;
         top: 110px;
+        @media screen and (max-width: 1440px) {
+            width: 670px;
+        }
     }
     &__banner-list {
         display: flex;
@@ -3366,11 +3374,15 @@ $color_hover: #C39367;
         //padding-bottom: 350px;
     }
     &__service {
-        border:1px solid red;
+        
         background: url(../img/pub-service-bg.png) no-repeat;
         background-size: cover;
         background-position: center -120px;
         padding-top: 350px;
+        padding-bottom: 700px;
+        @media screen and (max-width: 1440px) {
+            padding-bottom: 476px;
+        }
     }
     &__service-list {
         display: flex;
@@ -3379,35 +3391,136 @@ $color_hover: #C39367;
     &__service-item {
         flex: 1;
     }
+    &__service-img {
+
+        @media screen and (max-width: 1440px) {
+            width: 535px;
+        }
+    }
+    &__offer-list {
+        position: relative;
+        //border:1px solid red;
+        //height: 200px;
+    }
+    &__offer-item {
+        position: absolute;
+        &--e1 {
+            top: -370px;
+            left: 0;
+        }
+        &--e2 {
+            top:-70px;
+            left: 80px;
+        }
+        &--e3 {
+            top: 180px;
+            left: 320px;
+            @media screen and (max-width: 1440px) {
+                top: 40px;
+                left: 360px;
+            }
+        }
+        &--e4 {
+           top:380px ; 
+           left: 640px;
+           @media screen and (max-width: 1440px) {
+                left: 680px;
+                top: 100px;
+           }
+        }
+        &--e5 {
+            top: 300px;
+            right: 300px;
+            @media screen and (max-width: 1440px) {
+                top: 50px;
+                right: 120px;
+            }
+        }
+
+    }
+    &__offer-inner {
+        font-family: 'Circe';
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 150%;
+        color: $red;
+        position: relative;
+        z-index: 1;
+    }
+    &__offer-icon {
+        position: absolute;
+        left: 65px;
+        top: -60px;
+        z-index: -1;
+    }
+    &__placement {
+        
+        //border: 2px solid blue;
+        padding-bottom: 350px;
+    }
+    &__placement-inner {
+        position: relative;
+        padding-left: 780px;
+    }
+    &__maket {
+        background: url(../img/pub-bg-maket.png) no-repeat center/cover;
+        background-position-y: top;
+        padding-bottom: 700px;
+    }
+    &__maket-inner {
+        position: relative;
+    }
+    &__inner-slider {
+        position: relative;
+        padding-left: 250px;
+    }
+    &__partener {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-row-gap: 80px;
+        margin-top: 70px;
+        margin-bottom: 140px;
+        //border: 2px solid red;
+    }
+    &__partener-item {
+       // text-align: center;
+        filter: grayscale(100%);
+
+        img {
+            max-width: 100%;
+        }
+    }
 
     //BXSLIDER
-    .bx-wrapper {
-        box-shadow: none;
-        border: none;
-        background: transparent;
-    }
-    .bx-wrapper .bx-pager {
-        display: none;
-    }
-
-    .bx-wrapper .bx-prev {
-        top: -30px;
-        background: url(../img/prev.png) no-repeat ;
-        background-position: 0 0;
-        &:hover {
-            background-position: 0 0;
+    .pub__main {
+        .bx-wrapper {
+            box-shadow: none;
+            border: none;
+            background: transparent;
         }
-    }
-    .bx-wrapper .bx-next {
-        right: initial;
-        left: 60px;
-        top: -30px;
-        background: url(../img/next.png) no-repeat ;
-        background-position: 0 0;
-        &:hover, &:focus {
-            background-position: 0 0;
+        .bx-wrapper .bx-pager {
+            display: none;
         }
 
+        .bx-wrapper .bx-prev {
+            top: -30px;
+            background: url(../img/prev.png) no-repeat ;
+            background-position: 0 0;
+            &:hover {
+                background-position: 0 0;
+            }
+        }
+        .bx-wrapper .bx-next {
+            right: initial;
+            left: 60px;
+            top: -30px;
+            background: url(../img/next.png) no-repeat ;
+            background-position: 0 0;
+            &:hover, &:focus {
+                background-position: 0 0;
+            }
+
+        }
     }
 }
 
@@ -3428,6 +3541,12 @@ $color_hover: #C39367;
         }
         &--role {
             margin-bottom: 81px;
+        }
+        &--maket {
+            padding-top: 110px;
+        }
+        &--office-slider {
+            margin-bottom: 120px;
         }
     }
     &__subtitle {
@@ -3452,6 +3571,10 @@ $color_hover: #C39367;
         line-height: 150%;
         color: #58595B;
         width: 826px;
+        &--maket {
+            padding-left: 40px;
+            width: 645px;
+        }
     }
     &__description {
         font-weight: 400;
@@ -3486,6 +3609,21 @@ $color_hover: #C39367;
         &--talon {
             line-height: 150%;
             padding-left: 130px;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background: url(../img/check.png) no-repeat center/cover;
+                margin-right: 12px;
+               
+            }
+        }
+        &--placement {
+            line-height: 150%;
+            padding-left: 60px;
+            
+            //width: 600px;
             &::before {
                 content: "";
                 display: inline-block;
@@ -3551,6 +3689,11 @@ $color_hover: #C39367;
             //transform: translateX(50%);
             margin-right: -50px;
         }
+        &--maket {
+            text-align: left;
+            margin-top: 61px;
+            margin-left: 140px;
+        }
     }
     &__picture {
         position: absolute;
@@ -3573,6 +3716,18 @@ $color_hover: #C39367;
             left: initial;
             right: 0;
             top: -340px;
+        }
+        &--placement {
+            left: 0;
+            top: -150px;
+        }
+        &--maket {
+            left: initial;
+            right: -60px;
+            top: 210px;
+        }
+        &--office-slider {
+            top: 20px;
         }
     }
     &__btn {
