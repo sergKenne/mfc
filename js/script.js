@@ -1237,6 +1237,7 @@ const dataLocation = [
 
 var minSlides;
 var maxSlides;
+var minSliderFolder, maxSliderFolder;
 var minNavSlider = $(window).width();
     minNavSlider =  (minNavSlider < 469) ? 2 : 3;
 function windowWidth() {
@@ -1258,7 +1259,28 @@ function windowWidth() {
     }
 }
 
+function resizeFolderSlider() {
+  if ($(window).width() < 426) {
+      
+      minSliderFolder= 1;
+      maxSliderFolder =1
+  }
+  else if ($(window).width() < 768) {
+     minSliderFolder = 2;
+     maxSliderFolder = 2;
+  }
+  else if ($(window).width() < 1200) {
+    minSliderFolder= 3;
+    maxSliderFolder =3;
+  }
+  else {
+    minSliderFolder= 4;
+    maxSliderFolder =4;
+  }
+}
+
 windowWidth();
+resizeFolderSlider();
 
 AOS.init();
 
@@ -1283,6 +1305,7 @@ $(document).ready(function(){
 
     $('.partener-slider').bxSlider({
       slideWidth: 170,
+
       // minSlides: 8,
       // maxSlides: 8,
       minSlides: minSlides,
@@ -1299,8 +1322,8 @@ $(document).ready(function(){
 
     $('.folder-slider').bxSlider({
       slideWidth: 1200,
-      maxSlides: 4,
-      minSlides : 4,
+      maxSlides: minSliderFolder,
+      minSlides : maxSliderFolder,
       slideMargin: 100,
       //auto: true
     });
