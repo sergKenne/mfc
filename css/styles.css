@@ -22,6 +22,7 @@ body {
   font-size: 1rem;
   font-style: normal;
   font-family: 'PT Sans', sans-serif;
+  color: #58595B;
 }
 
 a {
@@ -57,6 +58,12 @@ a {
 @media screen and (max-width: 768px) {
   .container--pub {
     padding: 0 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container--pub {
+    padding: 0 6px;
   }
 }
 
@@ -623,7 +630,7 @@ a {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .header__logo {
     margin-right: 6px;
     width: 70px;
@@ -1302,6 +1309,10 @@ a {
 }
 
 .showcase__number--news {
+  margin-top: 20px;
+}
+
+.showcase__number--jobs {
   margin-top: 20px;
 }
 
@@ -3539,6 +3550,12 @@ a {
   position: relative;
 }
 
+.our-services__filter--jobs {
+  border-bottom: 1px solid #C39367;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
 .our-services__name {
   font-family: 'PT Sans';
   font-weight: normal;
@@ -3642,6 +3659,11 @@ a {
   color: #717171;
 }
 
+.our-services__filter-item--jobs {
+  text-align: left;
+  margin-left: 30px;
+}
+
 .our-services__fas-icon {
   padding-left: 10px;
   -webkit-transform: translateY(2px);
@@ -3740,6 +3762,10 @@ a {
 .offers__breadcrumbs {
   margin-bottom: 16px;
   margin-top: 30px;
+}
+
+.offers__breadcrumbs--jobs {
+  margin-top: 0;
 }
 
 .offers__title {
@@ -3980,6 +4006,175 @@ a {
   display: block;
 }
 
+.jobs__banner {
+  background: url(../img/jobs-bg.svg) no-repeat;
+  background-size: contain;
+  background-position: center top;
+  min-height: 700px;
+  margin-top: -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jobs__title {
+  font-family: 'Circe';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #E04E39;
+}
+
+.jobs__description {
+  position: relative;
+}
+
+.jobs__description-img {
+  position: absolute;
+  right: 0;
+  top: -70px;
+}
+
+.jobs__title-price {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 150%;
+  color: #2C2A29;
+  float: right;
+  margin-top: 11px;
+}
+
+.jobs__list {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jobs__list-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.jobs__list-picture {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jobs__list-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #58595B;
+}
+
+.jobs__info {
+  margin-bottom: 30px;
+}
+
+.jobs__info--job {
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.jobs__info-title {
+  font-family: 'Circe';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 35px;
+  color: #E04E39;
+}
+
+.jobs__info-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #58595B;
+}
+
+.jobs__info-text--sub::before {
+  content: "-";
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.jobs__info-text--job {
+  width: 504px;
+}
+
+.jobs__card-item {
+  background: #FAFAFA;
+  border: 1px solid #EEE2D6;
+  -webkit-box-shadow: 4px 4px 5px rgba(55, 84, 170, 0.1);
+          box-shadow: 4px 4px 5px rgba(55, 84, 170, 0.1);
+  border-radius: 11px;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.jobs__card-item:hover {
+  border: 1px solid #CFA580;
+  -webkit-box-shadow: 9px 8px 9px rgba(44, 65, 130, 0.2);
+          box-shadow: 9px 8px 9px rgba(44, 65, 130, 0.2);
+}
+
+.jobs__card-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  color: #E04E39;
+}
+
+.jobs__card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.jobs__card-strong {
+  font-weight: 700;
+  color: #2C2A29;
+}
+
+.jobs__card-price {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  color: #2C2A29;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.jobs__card-date {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #58595B;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
 .pub__banner {
   background: url(../img/bg-banner-pub.png) no-repeat;
   background-size: cover;
@@ -4016,6 +4211,12 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 17px;
+}
+
+@media screen and (max-width: 320px) {
+  .pub__logo {
+    width: 120px;
+  }
 }
 
 .pub__contact {
@@ -4065,6 +4266,12 @@ a {
 @media screen and (max-width: 425px) {
   .pub__title {
     font-size: 31px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .pub__title {
+    font-size: 28px;
   }
 }
 
@@ -4780,6 +4987,12 @@ a {
   padding-left: 250px;
 }
 
+@media screen and (max-width: 425px) {
+  .pub__inner-slider {
+    padding-left: 0px;
+  }
+}
+
 .pub__partener {
   display: -ms-grid;
   display: grid;
@@ -4860,6 +5073,13 @@ a {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .market__title--role {
+    margin-bottom: 0;
+    font-size: 30px !important;
+  }
+}
+
 .market__title--maket {
   padding-top: 110px;
 }
@@ -4898,6 +5118,12 @@ a {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .market__title {
+    font-size: 35px;
+  }
+}
+
 .market__subtitle {
   font-weight: 700;
   font-size: 36px;
@@ -4931,10 +5157,23 @@ a {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .market__subtitle--service {
+    font-size: 27px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .market__subtitle--talon {
     padding-left: 0;
     margin-bottom: 700px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .market__subtitle--talon {
+    font-size: 25px;
+    margin-bottom: 520px;
   }
 }
 
@@ -5259,6 +5498,18 @@ a {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .market__price--promo {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .market__price--promo {
+    font-size: 30px;
+  }
+}
+
 .market__picture {
   position: absolute;
   left: -60px;
@@ -5318,6 +5569,12 @@ a {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .market__picture--talon {
+    top: 225px;
+  }
+}
+
 .market__picture--post {
   left: initial;
   right: 0;
@@ -5357,6 +5614,12 @@ a {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .market__picture--affiche {
+    top: -728px;
+  }
+}
+
 .market__picture--placement {
   left: 0;
   top: -150px;
@@ -5386,6 +5649,12 @@ a {
   .market__picture--maket {
     width: 100%;
     top: 400px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .market__picture--maket {
+    top: 520px;
   }
 }
 

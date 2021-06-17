@@ -1,3 +1,5 @@
+
+
 var cities = [
   {
       'cityName': 'Екатеринбург',
@@ -1282,9 +1284,9 @@ function resizeFolderSlider() {
 windowWidth();
 resizeFolderSlider();
 
-AOS.init();
 
 $(document).ready(function(){
+  
 
     $('.banner-slider').bxSlider({
       minSlides: 1,
@@ -1318,6 +1320,11 @@ $(document).ready(function(){
       //mode: 'fade',
       // captions: true,
       // slideWidth: 600
+    });
+
+    $('.pubSlider').bxSlider({
+      minSlides: 1,
+      maxSlides: 1
     });
 
     $('.folder-slider').bxSlider({
