@@ -1339,6 +1339,13 @@ $(document).ready(function(){
       $("#modal-js").slideToggle(); 
     });
 
+    $("#send-code").click(function(){
+      $("#modal-send-js").slideDown();
+    });
+    $("#modal-close-js").click(function(){
+      $("#modal-send-js").slideUp();
+    })
+
     //OFFERS JS
     $(".offers-title-js").bind({
       click: function() {
