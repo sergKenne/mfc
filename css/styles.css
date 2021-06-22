@@ -1462,16 +1462,17 @@ a {
 .showcase__slider-caption {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 34px;
   width: 48%;
   padding-right: 32px;
-  padding-top: 32px;
+  padding-top: 43px;
 }
 
 @media screen and (max-width: 558px) {
   .showcase__slider-caption {
     width: 98%;
     padding-right: 16px;
+    left: 5px;
   }
 }
 
@@ -1527,6 +1528,7 @@ a {
   line-height: 31px;
   color: #623B2A;
   margin-top: 15px;
+  width: 385px;
 }
 
 @media screen and (max-width: 1202px) {
@@ -1540,6 +1542,7 @@ a {
   .showcase__slider-text {
     font-size: 1.3rem;
     line-height: 30px;
+    width: 100%;
   }
 }
 
@@ -1763,38 +1766,44 @@ a {
 }
 
 .showcase .bx-viewport {
-  height: 340px !important;
+  height: 505px !important;
   margin-top: -12px;
 }
 
 @media screen and (max-width: 1202px) {
   .showcase .bx-viewport {
-    height: 264px !important;
+    height: 460px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .showcase .bx-viewport {
+    height: 360px !important;
   }
 }
 
 @media screen and (max-width: 558px) {
   .showcase .bx-viewport {
-    height: 439px !important;
+    height: 330px !important;
   }
 }
 
 .showcase .bx-wrapper .bx-pager, .showcase .bx-wrapper .bx-controls-auto {
   bottom: 22px;
-  right: -484px;
+  left: -484px;
 }
 
 @media (max-width: 1520px) {
   .showcase .bx-wrapper .bx-pager, .showcase .bx-wrapper .bx-controls-auto {
     bottom: 55px;
-    right: -407px;
+    left: -407px;
   }
 }
 
 @media (max-width: 1202px) {
   .showcase .bx-wrapper .bx-pager, .showcase .bx-wrapper .bx-controls-auto {
-    bottom: 50px;
-    right: -273px;
+    bottom: 51px;
+    left: -273px;
   }
 }
 
@@ -1814,17 +1823,14 @@ a {
   background: #CFA580;
 }
 
-@media (max-width: 1024px) {
-  .showcase .bx-wrapper img {
-    height: 220px;
-  }
+.showcase .bx-wrapper img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 558px) {
   .showcase .bx-wrapper img {
-    height: 392px;
     position: relative;
-    top: 115px;
   }
 }
 
@@ -1970,9 +1976,12 @@ a {
   transition: bottom .7s linear;
 }
 
+.services__wrap-img {
+  text-align: right;
+  background-color: #fff;
+}
+
 .services__img {
-  display: block;
-  width: 100%;
   height: 100%;
   opacity: .3;
   -webkit-transition: opacity 0s linear;
@@ -4040,9 +4049,8 @@ a {
 
 .jobs__banner {
   background: url(../img/jobs-bg.svg) no-repeat;
-  background-size: cover;
-  background-position: center top;
-  height: 780px;
+  background-size: contain;
+  background-position: center;
   margin-top: -30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4065,10 +4073,13 @@ a {
   }
 }
 
+.jobs__banner-img {
+  padding: 0 40px;
+}
+
 @media (max-width: 1320px) {
   .jobs__banner-img {
     max-width: 100%;
-    max-height: 100%;
   }
 }
 
@@ -4663,6 +4674,11 @@ a {
   padding: 12px 8px;
 }
 
+.search__form-input:focus {
+  outline: none;
+  border-color: lightcoral;
+}
+
 @media screen and (max-width: 550px) {
   .search__form-input {
     width: 100%;
@@ -4680,6 +4696,7 @@ a {
   margin-top: 30px;
   text-align: center;
   cursor: pointer;
+  display: inline-block;
 }
 
 .search__form-btn--question {
@@ -6654,7 +6671,6 @@ button.button:hover::after, button.button:focus::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid red;
 }
 
 .modal__card {

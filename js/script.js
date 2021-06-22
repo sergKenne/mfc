@@ -1291,7 +1291,9 @@ $(document).ready(function(){
     $('.banner-slider').bxSlider({
       minSlides: 1,
       maxSlides: 1,
-      auto: true
+      auto: true,
+      speed: 2500,
+      pause: 8000
       //slideWidth: ($(window).width() < 426)? 400 : $(window).width() - 20,
     });
 

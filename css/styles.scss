@@ -1235,13 +1235,15 @@ a {
     &__slider-caption {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 34px;
         width:48%;
         padding-right: 32px;
-        padding-top: 32px;
+        padding-top: 43px;
         @media screen and (max-width: 558px) {
             width: 98%;
             padding-right: 16px;
+            left: 5px;
+            
         }
     }
     &__slider-title {
@@ -1251,6 +1253,7 @@ a {
         font-size: 2.25rem;
         line-height: 50px;
         color:$red;
+
         @media screen and (max-width: 1520px) {
             font-size: 1.7rem;
             line-height: 31px;
@@ -1281,6 +1284,7 @@ a {
         line-height: 31px;
         color: $brown;
         margin-top: 15px;
+        width: 385px;
         @media screen and (max-width: 1202px) {
             font-size: 1.1rem;
             line-height: 18px;
@@ -1288,6 +1292,7 @@ a {
         @media screen and (max-width: 558px) {
             font-size: 1.3rem;
             line-height: 30px;
+            width: 100%;
         }
     }
 
@@ -1406,25 +1411,29 @@ a {
         }
     }
     .bx-viewport {
-        height: 340px!important;
+        height: 505px!important;
         margin-top: -12px;
         @media screen and (max-width: 1202px) {
-            height: 264px!important;
+            height: 460px!important;
+        }
+        @media screen and (max-width: 768px) {
+            height: 360px!important;
         }
         @media screen and (max-width: 558px) {
-            height: 439px!important;
+            height: 330px!important;
+           
         }
     }
     .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
         bottom: 22px;
-        right: -484px;
+        left: -484px;
         @media  (max-width: 1520px) {
             bottom: 55px;
-            right: -407px;
+            left: -407px;
         }
         @media  (max-width: 1202px) {
-            bottom: 50px;
-            right: -273px;
+            bottom: 51px;
+            left: -273px;
         }
         @media screen and (max-width: 768px) {
             display: none;
@@ -1439,18 +1448,16 @@ a {
         background: #CFA580;
     }
     .bx-wrapper img {
+        width: 100%;
+        height: auto;
         @media  (max-width: 1024px) {
-           height: 220px; 
+           //height: 220px; 
         }
         @media screen and (max-width: 558px) {
-            height: 392px;
-           // margin-top: 124px;
+            
+            //height: 275px;
             position: relative;
-            top: 115px;
-
-            // left: -20px;
-            // display: initial;
-            // max-width: initial;
+            //top: 115px;
         }
     }
     .bx-wrapper .bx-next, .bx-wrapper .bx-prev {
@@ -1471,6 +1478,8 @@ a {
         width: 25%;
         padding: 0 16px;
         margin-bottom: 32px;
+        //
+        //text-align: right;
         @media  (max-width: 1202px) {
             width: 33.333%;
         }
@@ -1562,9 +1571,13 @@ a {
         transition: bottom .7s linear;
 
     }
+    &__wrap-img {
+        text-align: right; 
+        background-color: #fff;
+    }
     &__img {
-        display: block;
-        width: 100%;
+        //display: block;
+        //width: 100%;
         height: 100%;
         //border-radius: 8px;
         opacity: .3;
@@ -3246,10 +3259,9 @@ a {
     //margin-top: -30px;
     &__banner {
         background: url(../img/jobs-bg.svg) no-repeat;
-        //background-size: contain;
-        background-size: cover;
-        background-position: center top;
-        height: 780px;
+        background-size: contain;
+        background-position: center;
+        //height: 780px;
         margin-top: -30px;
         display: flex;
         justify-content: center;
@@ -3262,9 +3274,12 @@ a {
         }
     }
     &__banner-img {
+        padding: 0 40px;
+        //height: 500px;
         @media  (max-width: 1320px) {
             max-width: 100%;
-            max-height: 100%;
+            //max-height: 100%;
+            
         }
     }
     &__title {
@@ -3740,6 +3755,10 @@ a {
         border: 2px solid #808285;
         border-radius: 11px;
         padding: 12px 8px;
+        &:focus {
+            outline: none;
+            border-color: lightcoral;
+        }
         @media screen and (max-width: 550px) { 
            width: 100%;
         }
@@ -3757,6 +3776,7 @@ a {
         margin-top: 30px;
         text-align: center;
         cursor: pointer;
+        display: inline-block;
         &--question {
             width: 100%;
         }
@@ -5188,7 +5208,7 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid red;
+       
     }
     &__card {
         position: relative;
