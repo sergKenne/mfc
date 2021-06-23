@@ -1341,7 +1341,7 @@ $(document).ready(function(){
       $("#modal-js").slideToggle(); 
     });
 
-    $("#send-code").click(function(){
+    $(".send-code").click(function(){
       $("#modal-send-js").slideDown();
     });
     $("#modal-close-js").click(function(){
@@ -1511,6 +1511,18 @@ $(document).ready(function(){
               $(this).css({fill: color})
             }
         );
+       
+        $(this).mousemove((e) => {
+          console.log(e.clientX, "X : Y", e.clientY)
+          $("#tooltip").text($(this).data("city")).css({
+            left: e.offsetX - 40,
+            top: e.offsetY - 40,
+            zIndex: 99999,
+            opacity:1
+           
+          })
+        })
+
 
         $(this).click(function(){
           if($(this).data("city")) {
@@ -1554,7 +1566,7 @@ $(document).ready(function(){
 
 
           } else {
-            alert("no Data")
+            //alert("no Data")
           }
         })
     });
