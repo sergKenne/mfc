@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="fonts/circe.fonts.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <title>MFC</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__modal-menu">
+                <div class="container">
+                    <div class="header__menu-inner">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
+                            <li class="header__menu-item"><a href="announce.html" class="header__menu-link">Объявления</a></li>
+                            <li class="header__menu-item"><a href="offices.html" class="header__menu-link">Офисы</a></li>
+                            <li class="header__menu-item"><a href="jobs.html" class="header__menu-link">Вакансии</a></li>
+                            <li class="header__menu-item"><a href="services.html" class="header__menu-link">Услуги</a></li>
+                            <li class="header__menu-item"><a href="search.html" class="header__menu-link">Проверить статус услуги</a></li>
+                            <li class="header__menu-item"><a href="directories.html" class="header__menu-link">Дирекция</a></li>
+                            <li class="header__menu-item"><a href="business.html" class="header__menu-link">Для бизнеса</a></li>
+                            <li class="header__menu-item"><a href="about.html" class="header__menu-link">О МФЦ</a></li>
+                            <li class="header__menu-item"><a href="documents.html" class="header__menu-link">Документы</a></li>
+                            <li class="header__menu-item"><a href="overservices.html" class="header__menu-link">Дополнительные услуги</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Доступная среда</a></li>
+                            <li class="header__menu-item"><a href="news.html" class="header__menu-link">Новости</a></li>
+                            <li class="header__menu-item"><a href="question.html" class="header__menu-link">Задать вопрос</a></li>
+                            <li class="header__menu-item"><a href="stories.html" class="header__menu-link">Истории</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Личный кабинет</a></li>
+                        </ul>
+                        <div class="header__menu-footer">
+                            <div class="header__menu-social">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__menu-app">
+                                <h5 class="socials__title">Мобильное приложение:</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store1.png" alt="">
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store2.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__left">
+                            <div class="header__burger">
+                                <svg class="header__burger-svg header__burger-svg--bars"><use xlink:href="sprite.svg#burger"></use></svg>
+                                <svg class="header__burger-svg header__burger-svg--close"><use xlink:href="sprite.svg#close"></use></svg>
+                            </div>
+                            <img class="header__logo" src="img/logo1.png" alt="logo" />
+                            <div class="header__phone">8 (343) 273-00-08<br><span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
+                        </div>
+                        <nav class="navbar header__navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item">
+                                    <a href="jobs.html" class="navbar__link"><svg class="navbar__icon">
+                                        <use xlink:href="sprite.svg#vacance"></use></svg>
+                                        <span class="navbar__text">Вакансии</span>
+                                    </a>
+                                </li>
+                                <li class="navbar__item"><a href="documents.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#doc"></use></svg><span class="navbar__text">Документы</span></a></li>
+                                <li class="navbar__item"><a href="question.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
+                                <li class="navbar__item navbar__item--search"><a href="#" class="navbar__link" id="search-js"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
+                                <li class="navbar__item navbar__item--user"><a href="user.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#user"></use></svg></svg><span class="navbar__text">Личный кабинет</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main-content">
+            <div class="container">
+                <div class="main-content__inner">
+                    <aside class="sidebar main-content__sidebar">
+                        <a href="#" class="sidebar__link">
+                            <!-- <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg> -->
+                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.png" alt=""></a>
+                        </a>
+                        <ul class="sidebar__nav-list" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                            <li class="sidebar__nav-item">
+                                <a href="search.html" class="main-btn sidebar__nav-link sidebar__nav-link--active">
+                                    <svg class="main-btn__icon main-btn__icon--first"><use xlink:href="sprite.svg#clipboard"></use></svg>
+                                    <span class="main-btn__text main-btn__text--first">Проверить статус услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="offices.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
+                                    <span class="main-btn__text">Офисы</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="services.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
+                                    <span class="main-btn__text">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="about.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#group"></use></svg>
+                                    <span class="main-btn__text">О МФЦ</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="overservices.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#over-services"></use></svg>
+                                    <span class="main-btn__text">Дополнительные услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#car"></use></svg>
+                                    <span class="main-btn__text">Выезд специалиста</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="business.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#static"></use></svg>
+                                    <span class="main-btn__text">Для бизнеса</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="pub.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#pub"></use></svg>
+                                    <span class="main-btn__text">Реклама в МФЦ</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </aside>
+                    <main class="main main-content__main">
+                        <div class="showcase">
+                            <div class="showcase__content">
+                                <div>
+                                    <h1 class="showcase__title showcase__title--access">Доступная среда</h1>
+                                </div>
+                                <div class="showcase__number showcase__number--jobs">
+                                    <svg width="145" height="142" viewBox="0 0 145 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M130.005 63.9407C119.937 51.2549 101.376 62.9265 88.0232 53.4064C80.9925 48.3937 76.0837 33.5014 68.7545 29.0839C41.5573 12.6916 17.2502 33.9125 17.7183 60.0139C18.5473 106.243 78.7026 118.191 107.346 108.321C126.129 101.848 145.814 83.86 130.005 63.9407Z" fill="url(#paint0_linear)"/>
+                                        <path d="M69.6165 65.8815C69.6165 69.0416 67.6924 72.7006 65.3501 74.0312C62.9241 75.4449 61 74.0312 61 70.8711C61 67.711 62.9241 64.052 65.2664 62.7214C67.6924 61.3077 69.6165 62.8046 69.6165 65.8815Z" fill="#2C2A29"/>
+                                        <path d="M62.5059 74.281L63.928 75.1126V73.8652L62.5059 74.281Z" fill="#2C2A29"/>
+                                        <path d="M68.0273 62.3887L69.6168 63.3034L68.9475 63.6361L67.7764 62.555L68.0273 62.3887Z" fill="#2C2A29"/>
+                                        <path d="M71.0387 66.713C71.0387 69.8731 69.1146 73.5322 66.7723 74.8627C64.4299 76.1933 62.5059 74.7796 62.5059 71.6195C62.5059 68.4594 64.4299 64.8004 66.7723 63.4698C69.1146 62.1392 71.0387 63.553 71.0387 66.713Z" fill="#623B2A"/>
+                                        <path d="M68.5295 68.1261C68.5295 69.4567 67.6929 70.9536 66.689 71.5357C65.6852 72.1178 64.8486 71.5357 64.8486 70.2051C64.8486 68.8746 65.6852 67.3777 66.689 66.7956C67.6929 66.2135 68.5295 66.7956 68.5295 68.1261Z" fill="#EEE2D6"/>
+                                        <path d="M98.0592 49.5822C98.0592 52.7423 96.1351 56.4013 93.7928 57.7319C91.4504 59.0624 89.5264 57.6487 89.5264 54.4886C89.5264 51.3285 91.4504 47.6695 93.7928 46.3389C96.1351 45.0084 98.0592 46.4221 98.0592 49.5822Z" fill="#2C2A29"/>
+                                        <path d="M90.8652 57.9822L92.371 58.8138V57.5664L90.8652 57.9822Z" fill="#2C2A29"/>
+                                        <path d="M96.4697 46.0898L98.0592 47.0046L97.3063 47.3372L96.2188 46.2562L96.4697 46.0898Z" fill="#2C2A29"/>
+                                        <path d="M99.3981 50.4142C99.3981 53.5743 97.474 57.2333 95.1316 58.5639C92.7893 59.8945 90.8652 58.4807 90.8652 55.3207C90.8652 52.1606 92.7893 48.5015 95.1316 47.171C97.474 45.8404 99.3981 47.2541 99.3981 50.4142Z" fill="#623B2A"/>
+                                        <path d="M96.9718 51.8273C96.9718 53.1579 96.1353 54.6548 95.1314 55.2369C94.1276 55.819 93.291 55.2369 93.291 53.9063C93.291 52.5758 94.1276 51.0789 95.1314 50.4968C96.1353 49.9146 96.9718 50.4968 96.9718 51.8273Z" fill="#EEE2D6"/>
+                                        <path d="M67.8593 70.3716L67.1064 69.041L98.3934 50.9121L118.22 62.1387L117.885 63.7188L98.3934 52.6585L67.8593 70.3716Z" fill="#CFA580"/>
+                                        <path d="M75.2489 65.0762L74.4658 66.4512L94.3393 77.6368L95.1224 76.2618L75.2489 65.0762Z" fill="#D8B89A"/>
+                                        <path d="M75.3046 65.3823C75.3046 65.7981 75.0537 66.2139 74.8027 66.3802C74.5517 66.5466 74.3008 66.3802 74.3008 65.9644C74.3008 65.5486 74.5517 65.1328 74.8027 64.9665C75.1373 64.8833 75.3046 65.0497 75.3046 65.3823Z" fill="#D8B89A"/>
+                                        <path d="M82.8193 60.6954L82.0361 62.0703L101.91 73.2559L102.693 71.881L82.8193 60.6954Z" fill="#D8B89A"/>
+                                        <path d="M82.8339 61.0581C82.8339 61.4739 82.583 61.8897 82.332 62.056C82.081 62.2223 81.8301 62.056 81.8301 61.6402C81.8301 61.2244 82.081 60.8086 82.332 60.6423C82.6666 60.5591 82.8339 60.7254 82.8339 61.0581Z" fill="#D8B89A"/>
+                                        <path d="M89.6073 56.5176L88.8242 57.8926L108.698 69.0782L109.481 67.7033L89.6073 56.5176Z" fill="#D8B89A"/>
+                                        <path d="M89.6103 56.9004C89.6103 57.3162 89.3593 57.732 89.1084 57.8983C88.8574 58.0646 88.6064 57.8983 88.6064 57.4825C88.6064 57.0667 88.8574 56.6509 89.1084 56.4846C89.443 56.3183 89.6103 56.5677 89.6103 56.9004Z" fill="#D8B89A"/>
+                                        <path d="M97.223 52.6574L95.5499 53.5722C95.5499 51.4932 95.2989 49.7468 94.4624 49.1647C93.1239 48.1668 90.2796 48.9984 86.9334 49.9131C85.5949 50.3289 84.1728 50.6616 82.667 50.9942C74.4688 52.9069 68.5293 48.2499 68.2783 48.0836L69.7841 47.252C70.286 47.6678 74.8871 51.2437 82.416 49.5805C83.9218 49.2478 85.2603 48.832 86.5988 48.4994C90.4469 47.4183 93.5422 46.5867 95.4662 48.0004C96.721 48.832 97.223 50.0794 97.223 52.6574Z" fill="#CFA580"/>
+                                        <path d="M103.831 9.99805C101.656 12.6592 96.2186 19.6446 94.7128 24.6342L94.4618 25.3827C92.8724 30.7881 91.0319 36.9419 88.5223 41.0168C85.2597 46.4222 80.4077 49.8317 76.1413 52.8255C73.2971 54.8213 70.8711 56.5677 69.2816 58.5635C66.1864 62.3057 66.6883 69.9565 66.6883 70.206L68.1941 69.2912C68.1941 69.208 67.7758 62.7215 70.4528 59.4783C71.9586 57.6488 74.3009 55.9856 77.0615 54.0729C81.4116 50.996 86.4309 47.4201 89.8608 41.8484C92.4541 37.6072 94.2945 31.3702 95.9676 25.8816L96.2186 25.1332C97.6407 20.3931 103.078 13.4076 105.086 10.9128C104.668 10.5802 104.249 10.2475 103.831 9.99805Z" fill="#CFA580"/>
+                                        <path d="M117.3 64.3011L115.627 65.2159C115.627 63.1369 115.376 61.3905 114.54 60.8084C113.201 59.8105 110.357 60.6421 107.011 61.5568C105.672 61.9726 104.25 62.3053 102.744 62.6379C94.4626 64.5506 88.4394 59.8936 88.1885 59.6442L89.6943 58.8126C90.1962 59.2284 94.7972 62.8042 102.326 61.141C103.832 60.8084 105.17 60.3926 106.509 60.06C110.357 58.9789 113.452 58.1473 115.376 59.561C116.715 60.4758 117.3 61.64 117.3 64.3011Z" fill="#D8B89A"/>
+                                        <path d="M65.5175 54.7383H64.5137V56.2352H65.5175V54.7383Z" fill="#623B2A"/>
+                                        <path d="M114.372 43.6777H113.368V45.1746H114.372V43.6777Z" fill="#623B2A"/>
+                                        <path d="M113.285 46.838L82.9186 64.2185C81.2455 65.2164 78.3175 65.0501 76.3935 63.969L66.1039 58.0646C64.1798 56.9835 63.9289 55.2372 65.602 54.3224L95.9688 36.9419C97.6419 35.944 100.57 36.1103 102.494 37.1914L112.783 43.0958C114.708 44.1769 114.875 45.8401 113.285 46.838Z" fill="#623B2A"/>
+                                        <path d="M115.293 44.176L83.0016 62.7207C81.2449 63.7186 78.066 63.6355 76.0583 62.4713L65.0995 56.1511C63.0081 54.9868 62.8408 53.1573 64.5975 52.1594L96.8884 33.6147C98.6451 32.6168 101.824 32.6999 103.832 33.8642L114.791 40.1843C116.882 41.3486 117.133 43.1781 115.293 44.176Z" fill="#E04E39"/>
+                                        <path d="M70.7048 49.582H63.4268V53.9895H70.7048V49.582Z" fill="#E04E39"/>
+                                        <path d="M70.7048 43.9277H63.4268V49.8321H70.7048V43.9277Z" fill="#CFA580"/>
+                                        <path d="M116.548 32.6172H109.27V38.5216H116.548V32.6172Z" fill="#CFA580"/>
+                                        <path d="M116.547 38.1074H102.911V42.5149H116.547V38.1074Z" fill="#E04E39"/>
+                                        <path d="M115.293 39.9358L83.0016 58.4805C81.2449 59.4784 78.066 59.3953 76.0583 58.231L65.0995 51.9108C63.0081 50.7466 62.8408 48.9171 64.5975 47.9192L96.8884 29.3745C98.6451 28.3765 101.824 28.4597 103.832 29.6239L114.791 35.9441C116.882 37.1084 117.133 38.9379 115.293 39.9358Z" fill="#CFA580"/>
+                                        <path d="M114.791 30.5363L103.832 24.2161C101.741 23.0519 98.6454 22.8856 96.8886 23.9666L95.6338 24.7151C97.3905 27.0436 98.3944 29.9542 98.3944 32.9479V44.2577L115.293 34.528C117.133 33.4469 116.882 31.7005 114.791 30.5363Z" fill="#E3CCB7"/>
+                                        <path d="M102.827 41.6795C102.827 41.6795 108.014 41.2637 111.695 38.852C115.459 36.3572 115.961 36.2741 117.3 35.1098C118.973 33.613 118.387 31.8666 112.448 27.5423C106.592 23.2179 102.66 20.5568 99.1466 22.3863C96.8043 23.6337 87.5186 27.9581 87.5186 27.9581C87.5186 27.9581 95.6331 41.0142 98.3101 41.6795C101.154 42.3448 102.827 41.6795 102.827 41.6795Z" fill="#F17757"/>
+                                        <path d="M90.698 39.6012C90.1124 36.0254 88.3556 32.7821 85.7623 30.2873C84.8421 29.4557 83.8383 28.7073 82.7508 28.042L71.6246 21.6387C71.6246 21.6387 69.115 25.2146 66.8563 28.7904C65.0159 31.7842 63.3428 34.778 63.3428 35.9422C63.3428 36.4412 63.3428 41.0981 63.3428 44.0919C63.3428 44.9235 63.9284 45.7551 65.0159 46.3372L76.0583 52.7405C78.1497 53.9048 81.245 54.0711 83.0017 52.99L91.9528 47.9173L90.698 39.6012Z" fill="#F17757"/>
+                                        <path d="M95.7173 24.6323C94.6298 23.1354 93.124 21.8048 91.4509 20.8901L82.0816 15.4847C80.7431 14.7362 78.9863 14.9025 77.8151 15.9836L71.541 21.7217L82.7508 28.125C83.8383 28.7903 84.8422 29.5387 85.7624 30.3703C88.3557 32.782 90.1124 36.0252 90.698 39.6842L91.9529 48.0003L93.4586 47.0855L98.3943 44.2581V32.8651C98.3943 29.8714 97.3904 26.9608 95.7173 24.6323Z" fill="#F49678"/>
+                                        <path d="M94.0439 46.7544L102.828 41.6816C102.828 41.6816 102.828 44.4259 101.071 45.4238C98.9796 46.6712 97.3902 47.5028 96.3026 48.1681C95.1315 48.8334 94.0439 46.7544 94.0439 46.7544Z" fill="#623B2A"/>
+                                        <path d="M98.3936 36.9414V44.2595L102.827 41.7647C102.827 41.6815 102.827 39.4362 98.3936 36.9414Z" fill="#E04E39"/>
+                                        <path d="M112.197 37.7718L114.791 36.0254C114.791 36.0254 115.125 37.6054 113.87 38.437C112.699 39.1855 112.197 37.7718 112.197 37.7718Z" fill="#623B2A"/>
+                                        <path d="M102.827 34.6121C102.827 34.6121 107.01 32.5331 109.018 31.2857C111.025 30.0383 112.029 30.7036 110.607 31.951C109.185 33.1152 104.919 34.8616 102.827 34.6121Z" fill="#E04E39"/>
+                                        <path d="M99.5654 34.363C99.5654 34.363 101.908 31.0366 104.919 29.3734C107.931 27.7102 109.353 27.7934 108.266 28.9576C107.178 30.205 105.84 30.5377 104.083 31.7019C102.577 32.6998 99.5654 34.363 99.5654 34.363Z" fill="#E04E39"/>
+                                        <path d="M90.6133 35.9434C90.6133 35.9434 91.4498 39.3529 92.5373 41.6814C93.5412 44.0099 94.8797 45.0078 94.8797 45.0078C94.8797 45.0078 94.4614 41.7646 93.2902 39.8519C92.1191 37.856 90.6133 35.9434 90.6133 35.9434Z" fill="#F17757"/>
+                                        <path d="M95.299 30.8711C95.299 30.8711 95.1317 34.7796 95.299 37.7734C95.4663 40.7671 95.6336 44.2599 95.6336 44.2599C95.6336 44.2599 96.6375 41.2661 96.4701 37.3576C96.3865 33.3659 95.299 30.8711 95.299 30.8711Z" fill="#F17757"/>
+                                        <path d="M81.4121 43.9258C81.4121 43.9258 84.4237 45.9216 86.6824 46.8364C88.9411 47.7511 91.1161 47.5017 91.1161 47.5017C91.1161 47.5017 89.9449 46.9195 87.6026 45.4227C85.2602 44.0089 81.4121 43.9258 81.4121 43.9258Z" fill="#E04E39"/>
+                                        <path d="M88.7737 48.1679C88.7737 48.1679 84.4236 47.6689 82.5832 48.3342C80.7428 48.9995 80.1572 49.5816 80.1572 49.5816C80.1572 49.5816 82.2486 50.2469 84.5909 49.5816C86.9333 48.9163 88.7737 48.1679 88.7737 48.1679Z" fill="#E04E39"/>
+                                        <path d="M123.825 22.1384L103.831 10.6623L105.922 9.49805L125.832 20.9741L123.825 22.1384Z" fill="#623B2A"/>
+                                        <path d="M123.574 21.9727C121.231 24.8001 116.212 31.3697 114.79 36.193L114.539 37.0246C112.949 42.43 111.109 48.5839 108.599 52.6587C105.337 57.981 100.485 61.3905 96.2185 64.4675C93.3742 66.4633 90.9482 68.2097 89.3588 70.2055C86.2635 73.9477 86.7655 81.5984 86.7655 81.8479L88.2712 80.9332C88.2712 80.85 87.853 74.3635 90.5299 71.1203C92.0357 69.2907 94.3781 67.6275 97.1387 65.7149C101.489 62.6379 106.508 59.0621 109.938 53.4903C112.531 49.2492 114.372 43.0122 116.045 37.5236L116.296 36.7752C117.634 32.1182 122.821 25.4654 124.996 22.8043C124.494 22.3885 123.992 22.2221 123.574 21.9727Z" fill="#D8B89A"/>
+                                        <path d="M87.5186 82.1802L66.6885 70.2052L67.8596 69.041L87.5186 80.4339L118.22 62.1387V63.9682L87.5186 82.1802Z" fill="#CFA580"/>
+                                        <path d="M93.3746 79.5197C93.3746 82.6798 91.4505 86.3388 89.1082 87.6694C86.7659 88.9999 84.8418 87.5862 84.8418 84.4261C84.8418 81.266 86.7659 77.607 89.1082 76.2764C91.4505 74.9459 93.3746 76.3596 93.3746 79.5197Z" fill="#2C2A29"/>
+                                        <path d="M86.2637 87.9197L87.7695 88.7513V87.5039L86.2637 87.9197Z" fill="#2C2A29"/>
+                                        <path d="M91.8691 76.0273L93.3749 76.9421L92.7057 77.2747L91.6182 76.1937L91.8691 76.0273Z" fill="#2C2A29"/>
+                                        <path d="M94.7965 80.3517C94.7965 83.5118 92.8724 87.1708 90.5301 88.5014C88.1877 89.832 86.2637 88.4182 86.2637 85.2581C86.2637 82.0981 88.1877 78.439 90.5301 77.1085C92.8724 75.7779 94.7965 77.1916 94.7965 80.3517Z" fill="#623B2A"/>
+                                        <path d="M92.3713 81.7648C92.3713 83.0954 91.5347 84.5923 90.5308 85.1744C89.527 85.7565 88.6904 85.1744 88.6904 83.8438C88.6904 82.5133 89.527 81.0164 90.5308 80.4343C91.5347 79.8521 92.3713 80.4343 92.3713 81.7648Z" fill="#EEE2D6"/>
+                                        <path d="M121.817 63.2189C121.817 66.379 119.893 70.038 117.551 71.3686C115.208 72.6991 113.284 71.2854 113.284 68.1253C113.284 64.9653 115.208 61.3062 117.551 59.9757C119.893 58.6451 121.817 60.0588 121.817 63.2189Z" fill="#2C2A29"/>
+                                        <path d="M114.706 71.6189L116.212 72.4505V71.2031L114.706 71.6189Z" fill="#2C2A29"/>
+                                        <path d="M120.228 59.7266L121.817 60.6413L121.148 60.974L119.977 59.8929L120.228 59.7266Z" fill="#2C2A29"/>
+                                        <path d="M123.239 64.0509C123.239 67.211 121.315 70.8701 118.972 72.2006C116.63 73.5312 114.706 72.1175 114.706 68.9574C114.706 65.7973 116.63 62.1382 118.972 60.8077C121.315 59.4771 123.239 60.8908 123.239 64.0509Z" fill="#623B2A"/>
+                                        <path d="M120.73 65.464C120.73 66.7946 119.893 68.2915 118.889 68.8736C117.885 69.4557 117.049 68.8736 117.049 67.543C117.049 66.2125 117.885 64.7156 118.889 64.1335C119.977 63.5514 120.73 64.1335 120.73 65.464Z" fill="#EEE2D6"/>
+                                        <path d="M102.493 11.245L104.166 12.3261C104.166 12.3261 105.923 10.4134 106.174 10.0808C106.425 9.74815 106.007 9.49867 106.007 9.49867C106.007 9.49867 104.919 8.41759 104.166 9.33235C103.33 10.2471 102.493 11.245 102.493 11.245Z" fill="#623B2A"/>
+                                        <path d="M122.486 22.721L124.159 23.8021C124.159 23.8021 125.582 22.3052 125.833 21.9725C126.084 21.6399 126.334 21.0578 125.498 20.7251C124.912 20.4757 124.159 20.5588 123.908 20.8915C123.239 21.8062 122.486 22.721 122.486 22.721Z" fill="#623B2A"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear" x1="21.1663" y1="72.7908" x2="75.7684" y2="14.9975" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ECE0D4"/>
+                                        <stop offset="1" stop-color="#FAEAD9"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="offers  offers--new">
+                                <ul class="breadcrumbs offers__breadcrumbs offers__breadcrumbs--jobs">
+                                    <li class="breadcrumbs__item">Главная  </li>
+                                    <li class="breadcrumbs__item">Доступная среда</li>
+                                </ul>
+                            </div>
+                            <div class="jobs jobs--access">
+                                <h5 class="jobs__info-title jobs__info-title--information">ОРГАНИЗАЦИЯ ДОСТУПНОЙ СРЕДЫ ДЛЯ ИНВАЛИДОВ И МАЛОМОБИЛЬНЫХ ГРУПП НАСЕЛЕНИЯ В ЦЕНТРАХ «МОИ ДОКУМЕНТЫ» САНКТ-ПЕТЕРБУРГА</h5>      
+                                <p class="jobs__paragraph">Особое внимание в центрах «Мои документы» уделяется комфорту лиц с ограниченными возможностями здоровья.</p>
+                                <p class="jobs__paragraph">Сотрудники всех отделений МФЦ прошли инструктаж и обучение по правилам общения и оказания помощи маломобильным группам населения.</p>
+                                <p class="jobs__paragraph">Офисы МФЦ оснащены пандусами, подъемными механизмами, аппарелями или лифтами.</p>
+                                <p class="jobs__paragraph">Внутри центров также имеется все необходимое, чтобы сделать посещение каждого МФЦ максимального комфортным для всех групп населения. На внутренних лестницах размещена тактильная плитка, а все прозрачные полотна дверей оснащены контрастными кругами для слабовидящих. Туалеты для маломобильных групп населения также оборудованы в соответствии со всеми необходимыми требованиями.</p>
+                                <p class="jobs__paragraph">Каждый из центров МФЦ оснащен кнопкой вызова персонала. Кроме того, любого заявителя, обладающего ограниченными возможностями, сотрудники готовы встретить и помочь оформить все необходимые документы.</p>
+                                <p class="jobs__paragraph">Для того, чтобы узнать какими элементами доступной среды оснащены центры «Мои документы» перейдите в раздел «Офисы МФЦ». В появившемся слева меню «Выбрать по критериям» установите фильтры сортировки центров по одному или нескольким адресам, а также установите одну или несколько отметок напротив нужного элементам инфраструктуры. Например, вы можете выбрать МФЦ Адмиралтейского района и установить отметку напротив критерия «Центр оснащен лифтом» и «Центр оснащен подъемной платформой». В появившемся окне вы увидите все центры Адмиралтейского района, в которых установлены лифты и подъемные платформы.</p>
+                                <p class="jobs__paragraph">Получить дополнительную информацию о порядке получения государственных услуг можно по телефону Центра телефонного обслуживания – 573-90-00. В автоматическом голосовом меню предусмотрен раздел с информацией для инвалидов и маломобильных групп населения. Для вызова раздела необходимо в тональном режиме нажать кнопку «6».</p>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer__inner">
+                    <li class="footer__item"
+                        data-aos="fade-right"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div>
+                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
+                        </div>    
+                        <br/><br/>
+                        <h4 class="footer__title">Мобильное приложение:</h4>
+                        <div>
+                            <img src="img/store1.png" alt="">
+                        </div>
+                        <br/>
+                        <div>
+                            <img src="img/store2.png" alt="">
+                        </div>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-up"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">Наши сервисы:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
+                            <li class="footer__list-item"><a href="answer.html" class="footer__list-link">Обратная связь</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Официальное обращение в МФЦ</a></li>
+                            <li class="footer__list-item"><a href="chat.html" class="footer__list-link">Вопрос-ответ</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Записаться на прием</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Статус обращения</a></li>
+                            <li class="footer__list-item"><a href="pub.html" class="footer__list-link">Реклама в МФЦ</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-down"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">О МФЦ:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="about.html" class="footer__list-link">Цели и задачи</a></li>
+                            <li class="footer__list-item"><a href="directories.html" class="footer__list-link">Дирекция</a></li>
+                            <li class="footer__list-item"><a href="jobs.html" class="footer__list-link">Вакансии</a></li>
+                            <li class="footer__list-item"><a href="information.html" class="footer__list-link">Информация для граждан</a></li>
+                            <li class="footer__list-item"><a href="news.html" class="footer__list-link">Новости</a></li>
+                            <li class="footer__list-item"><a href="announce.html" class="footer__list-link">Объявления</a></li>
+                            <li class="footer__list-item"><a href="video.html" class="footer__list-link">Видео</a></li>
+                        </ul>
+                    </li>
+                    <li class="socials footer__item"
+                        data-aos="fade-left"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div class="socials__inner">
+                            <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
+                            <div class="socials__contact">
+                                <p class="socials__phone">8 (343) 273-00-08</p>
+                                <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                            </div>
+                            <div class="socials__icons">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div class="fix-nav">
+            <a href="" class="fix-nav__item">
+                <img src="img/v1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v4.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v5.png" alt="">
+            </a>
+        </div>
+        <div class="chat">
+            <button class="button">
+                <svg class="button__svg"><use xlink:href="sprite.svg#chat"></use></svg>
+            </button>
+        </div>   
+    </div>
+    <div class="modal" id="modal-js">
+        <form class="modal__form" action="">
+            <input class="modal__input" type="text" placeholder="Поиск">
+            <button class="modal__btn" id="modal-btn-js" type="submit"><svg class="modal__svg-icon"><use xlink:href="sprite.svg#icon-search"></use></svg></button>
+            <h5 class="modal__form-title">Быстрые ответы:</h5>
+            <ul class="modal__list">
+                <li class="modal__list-item">Офисы Екатеринбург</li>
+                <li class="modal__list-item">Документы для смены места жительства </li>
+                <li class="modal__list-item">Смена имени </li>
+                <li class="modal__list-item">Действия при утере документов</li>
+            </ul>
+        </form>
+    </div>
+    <section class="navbar-bottom">
+        <!-- <div class="container"> -->
+            <ul class="navbar-bottom__list">
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Горячая линия
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                               Найти отделение 
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                записаться онлайн
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Пойск
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Личный кабинет
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Подключаем API -->
+    <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script> $(function() { AOS.init(); }); </script>
+</body>
+</html>

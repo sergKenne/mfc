@@ -2,16 +2,979 @@
 
 var cities = [
   {
-      'cityName': 'Екатеринбург',
-      'offices': [
+      cityName: 'город Екатеринбург',
+      offices: [
           {
-            'coordinates': [56.829374, 60.672699],
-            'city': 'Екатеринбург, Свердловская область, Россия', 'name': 'Сибирский тракт (дублёр), 2',
-            "phone": '8 (343) 273-00-08'
+              coordinates: [56.829374, 60.672699],
+              city: 'Екатеринбург, Свердловская область, Россия', 
+              name: 'Сибирский тракт (дублёр), 2',
+              phone: '8 (343) 273-00-08',
+              balloon: {
+                      balloonContentHeader: 'город Екатеринбург',
+                      balloonContentBody: 'Екатеринбург, Свердловская область, Россия',
+                      hintContent: 'Сибирский тракт (дублёр), 2'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
           },
-          //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+          {
+              coordinates: [56.798048, 60.560114],
+              city: '620146, г. Екатеринбург, ул. Громова, д. 145', 
+              phone: '',
+              balloon: {
+                  balloonContentHeader: '',
+                  balloonContentBody: '',
+                  hintContent: ''
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              'coordinates': [56.781996, 60.520767],
+              'city': '620105, Свердловская область, г. Екатеринбург, пр-кт Академика Сахарова, д. 45', 
+              "phone": '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург, ',
+                  balloonContentBody: '620105, Свердловская область, г. Екатеринбург, пр-кт Академика Сахарова, д. 45',
+                  hintContent: 'пр-кт Академика Сахарова, д. 45'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              'coordinates': [56.836357, 60.600322],
+              'city': '620014, г. Екатеринбург, ул. 8 Марта, д. 13', 
+              "phone": '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург,',
+                  balloonContentBody: '620014, г. Екатеринбург, ул. 8 Марта, д. 13',
+                  hintContent: ' ул. 8 Марта, д. 13'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              'coordinates': [56.782882, 60.664773],
+              'city': '620023, г. Екатеринбург, ул. Рощинская, д. 21', 
+              "phone": '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург,',
+                  balloonContentBody: '620023, г. Екатеринбург, ул. Рощинская, д. 21',
+                  hintContent: ' ул. Рощинская, д. 21'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              coordinates: [56.856717, 60.597978],
+              city: '620107, г. Екатеринбург, ул. Героев России, 2', 
+              phone: '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург ',
+                  balloonContentBody: '620107, г. Екатеринбург, ул. Героев России, 2',
+                  hintContent: 'ул. Героев России, 2'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              coordinates: [56.895845, 60.608785],
+              city: '620012, г. Екатеринбург, ул. Победы, 14А', 
+              phone: '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург',
+                  balloonContentBody: '620012, г. Екатеринбург, ул. Победы, 14А',
+                  hintContent: 'ул. Победы, 14А'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              coordinates: [56.888505, 60.616375],
+              city: '620017, г. Екатеринбург, ул. Баумана, д. 5', 
+              phone: '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург',
+                  balloonContentBody: '620017, г. Екатеринбург, ул. Баумана, д. 5',
+                  hintContent: ' ул. Баумана, д. 5'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
+          {
+              coordinates: [56.858464, 60.632024],
+              city: '620137, г. Екатеринбург, ул. Учителей, д. 2Б', 
+              phone: '',
+              balloon: {
+                  balloonContentHeader: 'г. Екатеринбург ',
+                  balloonContentBody: '620137, г. Екатеринбург, ул. Учителей, д. 2Б',
+                  hintContent: 'ул. Учителей, д. 2Б'
+              },
+              icon: {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../img/geo_red.png',
+                  iconImageSize: [38, 48],
+                  iconImageOffset: [-15, -62]
+              }
+          },
       ]
   },
+  {
+    'cityName': 'Артемовский район',
+    'offices': [
+        {
+            coordinates: [57.339111, 61.895980],
+            city: '623785, Свердловская область, г. Артемовский, ул. Почтовая, д. 2',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Артемовский,',
+                balloonContentBody: '623785, Свердловская область, г. Артемовский, ул. Почтовая, д. 2',
+                hintContent: ' ул. Почтовая, д. 2'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'Артинский район',
+    'offices': [
+        {
+            coordinates: [56.414802, 58.532867],
+            city: '623340, Свердловская область, пгт. Арти, ул. Рабочей Молодежи, д. 113А',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: ' Свердловская область, пгт. Арти, ',
+                balloonContentBody: '623340, Свердловская область, пгт. Арти, ул. Рабочей Молодежи, д. 113А',
+                hintContent: 'ул. Рабочей Молодежи, д. 113А'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'Байкаловский район',
+    'offices': [
+        {
+            coordinates: [57.535714, 63.647938],
+            city: '623881, Свердловская область, Байкаловский р-н, с. Краснополянское, ул. Советская, д. 26',
+            phone: '0',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, Байкаловский р-н ',
+                balloonContentBody: '623881, Свердловская область, Байкаловский р-н, с. Краснополянское, ул. Советская, д. 26',
+                hintContent: 'с. Краснополянское, ул. Советская, д. 26'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [57.397572, 63.771043],
+            city: '623870, Свердловская область, с. Байкалово, ул. Революции, д. 25',
+            phone: '0',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, с. Байкалово, ',
+                balloonContentBody: '623870, Свердловская область, с. Байкалово, ул. Революции, д. 25',
+                hintContent: 'ул. Революции, д. 25'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'Белоярский район',
+    'offices': [
+        {
+            coordinates: [56.759715, 61.415094],
+            city: '624030, Свердловская область, пгт. Белоярский, ул. Милицейская, д. 3',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Белоярский район',
+                balloonContentBody: '624030, Свердловская область, пгт. Белоярский, ул. Милицейская, д. 3',
+                hintContent: 'пгт. Белоярский, ул. Милицейская, д3. '
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'город Березовский',
+    'offices': [
+        {
+            coordinates: [56.896544, 60.741942],
+            city: '623704, Свердловская область, г. Березовский, ул. Героев Труда, д. 23',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'город Березовский',
+                balloonContentBody: '623704, Свердловская область, г. Березовский, ул. Героев Труда, д. 23',
+                hintContent: 'г. Березовский, ул. Героев Труда, д. 23'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'город Асбест',
+    'offices': [
+        {
+            coordinates: [57.009068, 61.466648],
+            city: '624261, Свердловская область, г. Асбест, ул. Уральская, д. 63',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'город Асбест',
+                balloonContentBody: '624261, Свердловская область, г. Асбест, ул. Уральская, д. 63',
+                hintContent: 'г. Асбест, ул. Уральская, д. 63'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [57.002377, 61.454629],
+            city: '624262, Свердловская область, г. Асбест, ул. Чапаева, д. 39',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Асбест,',
+                balloonContentBody: '624262, Свердловская область, г. Асбест, ул. Чапаева, д. 39',
+                hintContent: ' ул. Чапаева, д. 39'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'Ачитский район',
+    'offices': [
+        {
+            coordinates: [56.798556, 57.896510],
+            city: '623230, Свердловская область, пгт. Ачит, ул. Кривозубова, д. 8',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Ачитский район',
+                balloonContentBody: '623230, Свердловская область, пгт. Ачит, ул. Кривозубова, д. 8',
+                hintContent: 'ул. Кривозубова, д. 8'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'Верхнесалдинский район',
+    'offices': [
+        {
+            coordinates: [58.047468, 60.544141],
+            city: '624760, Свердловская область, г. Верхняя Салда, ул. Карла Маркса, д. 3',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Верхнесалдинский район',
+                balloonContentBody: '624760, Свердловская область, г. Верхняя Салда, ул. Карла Маркса, д. 3',
+                hintContent: 'ул. Карла Маркса, д. 3'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'Гаринский район',
+    'offices': [
+        {
+            coordinates: [59.427064, 62.352603],
+            city: '624910, Свердловская область, пгт. Гари, ул. Комсомольская, д. 52',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, пгт. Гари',
+                balloonContentBody: '624910, Свердловская область, пгт. Гари, ул. Комсомольская, д. 52',
+                hintContent: 'ул. Комсомольская, д. 52'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'Богдановичский район',
+    'offices': [
+        {
+            coordinates: [56.773193, 62.051784],
+            city: '623530, Свердловская область, г. Богданович, ул. Партизанская, д. 9',
+            phone: '8 (343) ',
+            balloon: {
+                balloonContentHeader: '623530, Свердловская область, Богданович,',
+                balloonContentBody: '623530, Свердловская область, г. Богданович, ул. Партизанскаг.',
+                hintContent: 'ул. Партизанская, д. 9я, д. 9'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'город Верхняя Пышма',
+    'offices': [
+        {
+            coordinates: [56.976809, 60.556709],
+            city: '624090, Свердловская область, г. Верхняя Пышма, ул. Юбилейная, д. 20',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Верхняя Пышма, ',
+                balloonContentBody: '624090, Свердловская область, г. Верхняя Пышма, ул. Юбилейная, д. 20',
+                hintContent: 'ул. Юбилейная, д. 20'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [56.963700, 60.612485],
+            city: '624092, Свердловская область, г. Верхняя Пышма, ул. Победы, д. 11',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Верхняя Пышма,',
+                balloonContentBody: '624092, Свердловская область, г. Верхняя Пышма, ул. Победы, д. 11',
+                hintContent: 'ул. Победы, д. 11'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'Верхотурский район',
+    'offices': [
+        {
+            coordinates: [58.860513, 60.811534],
+            city: '624380, Свердловская область, г. Верхотурье, ул. Карла Маркса, д. 2',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Верхотурье',
+                balloonContentBody: '624380, Свердловская область, г. Верхотурье, ул. Карла Маркса, д. 2',
+                hintContent: 'ул. Карла Маркса, д. 2'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [58.879281, 60.727515],
+            city: '624390, Свердловская область, п. Привокзальный, ул. Советская, д 6А',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, п. Привокзальный, ',
+                balloonContentBody: '624390, Свердловская область, п. Привокзальный, ул. Советская, д 6А',
+                hintContent: 'ул. Советская, д 6А'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+      ]
+  },
+  {
+    'cityName': 'город Нижняя Тура',
+    'offices': [
+        {
+            coordinates: [57.915872, 60.133036],
+            city: '622052, Свердловская область, г. Нижний Тагил, пр-кт. Вагоностроителей, д. 64',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Нижний Тагил, ',
+                balloonContentBody: '622052, Свердловская область, г. Нижний Тагил, пр-кт. Вагоностроителей, д. 64',
+                hintContent: 'пр-кт. Вагоностроителей, д. 64'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [57.923267, 59.934958],
+            city: '622002, Свердловская область, г. Нижний Тагил, ул. Космонавтов, д. 45',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: ' Свердловская область, г. Нижний Тагил, ',
+                balloonContentBody: '622002, Свердловская область, г. Нижний Тагил, ул. Космонавтов, д. 45',
+                hintContent: 'ул. Космонавтов, д. 45'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [57.940765, 60.000894],
+            city: '622005, Свердловская область, г. Нижний Тагил, ул. Металлургов, д. 46Б',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: '622005, Свердловская область, г. Нижний Тагил, ',
+                balloonContentBody: '622005, Свердловская область, г. Нижний Тагил, ул. Металлургов, д. 46Б',
+                hintContent: 'ул. Металлургов, д. 46Б'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'город Заречный',
+    'offices': [
+        {
+            coordinates: [56.802731, 61.312902],
+            city: '624250, Свердловская область, г. Заречный, ул. Курчатова, д. 23',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Заречный,',
+                balloonContentBody: '624250, Свердловская область, г. Заречный, ул. Курчатова, д. 23',
+                hintContent: 'ул. Курчатова, д. 23'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'Ирбитский район',
+    'offices': [
+        {
+            coordinates: [57.560539, 62.760860],
+            city: '623847, Свердловская область, п. Зайково, ул. Коммунистическая, д. 181',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, п. Зайково, ',
+                balloonContentBody: '623847, Свердловская область, п. Зайково, ул. Коммунистическая, д. 181',
+                hintContent: 'ул. Коммунистическая, д. 181'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [57.881310, 62.758453],
+            city: '623834, Свердловская область, Ирбитский р-н, с. Ницинское, ул. Центральная, д. 60',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, Ирбитский р-н, с. Ницинское, ',
+                balloonContentBody: '623834, Свердловская область, Ирбитский р-н, с. Ницинское, ул. Центральная, д. 60',
+                hintContent: 'ул. Центральная, д. 60'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        
+    ]
+  },
+  {
+    'cityName': 'город Карпинск',
+    'offices': [
+        {
+            coordinates: [59.769732, 59.994040],
+            city: '624930, Свердловская область, г. Карпинск, ул. Луначарского, д. 88',
+            phone: '8 (343) 273-00-08',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Карпинск, ',
+                balloonContentBody: '624930, Свердловская область, г. Карпинск, ул. Луначарского, д. 88',
+                hintContent: 'ул. Луначарского, д. 88'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'город Краснотурьинск',
+    'offices': [
+        {
+            coordinates: [59.763597, 60.181554],
+            city: '624447, Свердловская область, г. Краснотурьинск, ул. Ленина, д. 4',
+            phone: '',
+            balloon: {
+                balloonContentHeader: 'Свердловская область, г. Краснотурьинск, ',
+                balloonContentBody: '624447, Свердловская область, г. Краснотурьинск, ул. Ленина, д. 4',
+                hintContent: 'ул. Ленина, д. 4'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+        {
+            coordinates: [59.698699, 60.292946],
+            city: '624465, Свердловская область, п.Рудничный, ул. Первомайская, д. 2',
+            phone: '',
+            balloon: {
+                balloonContentHeader: ' Свердловская область, п.Рудничный,',
+                balloonContentBody: '624465, Свердловская область, п.Рудничный, ул. Первомайская, д. 2',
+                hintContent: ' ул. Первомайская, д. 2'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': 'город Красноуральск',
+    'offices': [
+        {
+          coordinates: [58.356301, 60.034437],
+          city: '624330, Свердловская область, г. Красноуральск, ул. Иллариона Янкина, д. 7',
+          phone: '',
+          balloon: {
+              balloonContentHeader: 'Свердловская область, г. Красноуральск, ',
+              balloonContentBody: '624330, Свердловская область, г. Красноуральск, ул. Иллариона Янкина, д. 7',
+              hintContent: 'ул. Иллариона Янкина, д. 7'
+          },
+          icon: {
+              iconLayout: 'default#image',
+              iconImageHref: '../img/geo_red.png',
+              iconImageSize: [38, 48],
+              iconImageOffset: [-15, -62]
+          }
+        },
+    ]
+  },
+  {
+    'cityName': 'город Красноуфимск',
+    'offices': [
+        {
+            coordinates: [56.612856, 57.779289],
+            city: '623300, Свердловская область, г. Красноуфимск, ул. Манчажская, д. 15',
+            phone: '',
+            balloon: {
+                balloonContentHeader: '623300, Свердловская область, г. Красноуфимск, ',
+                balloonContentBody: '623300, Свердловская область, г. Красноуфимск, ул. Манчажская, д. 15',
+                hintContent: 'ул. Манчажская, д. 15'
+            },
+            icon: {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/geo_red.png',
+                iconImageSize: [38, 48],
+                iconImageOffset: [-15, -62]
+            }
+        },
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  {
+    'cityName': '',
+    'offices': [
+        {
+          'coordinates': [],
+          'city': '',
+          "phone": '8 (343) 273-00-08'
+        },
+        //{'coordinates': [55.701677873469, 37.57358050756649], 'name': 'Ленинский проспект, 47с2'}
+    ]
+  },
+  
+
+  
+
 ];
 
 
@@ -1344,9 +2307,17 @@ $(document).ready(function(){
     $(".send-code").click(function(){
       $("#modal-send-js").slideDown();
     });
+
     $("#modal-close-js").click(function(){
       $("#modal-send-js").slideUp();
+    });
+
+    $("#doc-js").click(function(){
+      $("#modal-doc-js").slideDown();
     })
+    $("#modal-close-js").click(function(){
+      $("#modal-doc-js").slideUp();
+    });
 
     //OFFERS JS
     $(".offers-title-js").bind({
@@ -1512,16 +2483,49 @@ $(document).ready(function(){
             }
         );
        
-        $(this).mousemove((e) => {
-          console.log(e.clientX, "X : Y", e.clientY)
-          $("#tooltip").text($(this).data("city")).css({
-            left: e.offsetX - 40,
-            top: e.offsetY - 40,
-            zIndex: 99999,
-            opacity:1
+        // $(this).mousemove((e) => {
+        //   console.log(e.clientX, "X : Y", e.clientY)
+        //   $("#tooltip").text($(this).data("city")).css({
+        //     left: e.offsetX-60,
+        //     top: e.offsetY + 30,
+        //     zIndex: 99999,
+        //     opacity:1
            
+        //   })
+        // });
+
+        // $(this).mouseout(function(){
+        //   $("#tooltip").text("").css({
+        //     left: 0,
+        //     top: 0,
+        //     zIndex: 99999,
+        //     opacity:0
+           
+        //   })
+        // })
+
+
+
+        $(this)
+          .mouseenter((e) => {
+              console.log(e.clientX, "X : Y", e.clientY)
+              $("#tooltip").text($(this).data("city")).css({
+                left: e.offsetX-60,
+                top: e.offsetY + 30,
+                zIndex: 99999,
+                opacity:1
+              
+             })
           })
-        })
+          .mouseout(function(){
+            $("#tooltip").text("").css({
+              left: 0,
+              top: 0,
+              zIndex: 99999,
+              opacity:0
+             
+            })
+          });
 
 
         $(this).click(function(){
@@ -1530,43 +2534,63 @@ $(document).ready(function(){
             //alert($(this).data("city"));
             let city = $(this).data("city");
                 city = cities.find(c => c.cityName === city )
-                const {coordinates} = city.offices[0]
-                const current_city = city.offices[0].city;
-                const current_name = city.offices[0].name;
-                console.log("coordinates:", current_city);
-                ymaps.ready(init);
- 
-                function init () {
-                  $(".info__yandex-map").css({display: "block" });
-                  $(".info__map").css({display: "none" });
-                    var myMap = new ymaps.Map('map', {
-                        //center: [56.829374, 60.672699], 
-                        center: coordinates,
-                        zoom: 10
-                    }, {
-                        searchControlProvider: 'yandex#search'
-                    });
-                    // Создаём макет содержимого.
-                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-                    ),
 
-                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                        hintContent: current_name,
-                        balloonContent: current_city
-                    }, {
-                        iconLayout: 'default#image',
-                        iconImageHref: '../img/geo.png',
-                        iconImageSize: [40, 48],
-                        iconImageOffset: [-5, -38]
-                    }),
+                //city && city.offices.forEach(office => {
 
-                    myMap.geoObjects.add(myPlacemark)
-                }
+                  // const {coordinates} = office;
+                  // const current_city = office.city;
+                  //const current_name = office.name;
+                
+
+                  const {coordinates} = city.offices[0]
+                  const current_city = city.offices[0].city;
+                  const current_name = city.offices[0].name;
+                  console.log("coordinates:", current_city);
+                  ymaps.ready(init);
+  
+                  function init () {
+                    $(".info__yandex-map").css({display: "block" });
+                    $(".info__map").css({display: "none" });
+                      var myMap = new ymaps.Map('map', {
+                          //center: [56.829374, 60.672699], 
+                          center: coordinates,
+                          zoom: 10
+                      }, {
+                          searchControlProvider: 'yandex#search'
+                      });
+                      
+                      // Создаём макет содержимого.
+                      // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                      //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                      // ),
+
+                      // myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                      //     hintContent: current_name,
+                      //     balloonContent: current_city
+                      // }, {
+                      //     iconLayout: 'default#image',
+                      //     iconImageHref: '../img/geo.png',
+                      //     iconImageSize: [40, 48],
+                      //     iconImageOffset: [-5, -38]
+                      // }),
+
+                      // myMap.geoObjects.add(myPlacemark)
+
+
+
+                      city.offices.forEach(office => {
+                        console.log(office)
+                          const myPlacemark = new ymaps.Placemark(office.coordinates, office.balloon, office.icon);
+                          myMap.geoObjects.add(myPlacemark);
+                      })
+          
+                  }
+
+              //})
 
 
           } else {
-            //alert("no Data")
+            alert("no Data address")
           }
         })
     });

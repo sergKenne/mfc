@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="fonts/circe.fonts.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <title>MFC</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__modal-menu">
+                <div class="container">
+                    <div class="header__menu-inner">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
+                            <li class="header__menu-item"><a href="announce.html" class="header__menu-link">Объявления</a></li>
+                            <li class="header__menu-item"><a href="offices.html" class="header__menu-link">Офисы</a></li>
+                            <li class="header__menu-item"><a href="jobs.html" class="header__menu-link">Вакансии</a></li>
+                            <li class="header__menu-item"><a href="services.html" class="header__menu-link">Услуги</a></li>
+                            <li class="header__menu-item"><a href="search.html" class="header__menu-link">Проверить статус услуги</a></li>
+                            <li class="header__menu-item"><a href="directories.html" class="header__menu-link">Дирекция</a></li>
+                            <li class="header__menu-item"><a href="business.html" class="header__menu-link">Для бизнеса</a></li>
+                            <li class="header__menu-item"><a href="about.html" class="header__menu-link">О МФЦ</a></li>
+                            <li class="header__menu-item"><a href="documents.html" class="header__menu-link">Документы</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Дополнительные услуги</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Доступная среда</a></li>
+                            <li class="header__menu-item"><a href="news.html" class="header__menu-link">Новости</a></li>
+                            <li class="header__menu-item"><a href="question.html" class="header__menu-link">Задать вопрос</a></li>
+                            <li class="header__menu-item"><a href="stories.html" class="header__menu-link">Истории</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Личный кабинет</a></li>
+                        </ul>
+                        <div class="header__menu-footer">
+                            <div class="header__menu-social">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__menu-app">
+                                <h5 class="socials__title">Мобильное приложение:</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store1.png" alt="">
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store2.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__left">
+                            <div class="header__burger">
+                                <svg class="header__burger-svg header__burger-svg--bars"><use xlink:href="sprite.svg#burger"></use></svg>
+                                <svg class="header__burger-svg header__burger-svg--close"><use xlink:href="sprite.svg#close"></use></svg>
+                            </div>
+                            <img class="header__logo" src="img/logo1.png" alt="logo" />
+                            <div class="header__phone">8 (343) 273-00-08<br><span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
+                        </div>
+                        <nav class="navbar header__navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item">
+                                    <a href="jobs.html" class="navbar__link"><svg class="navbar__icon">
+                                        <use xlink:href="sprite.svg#vacance"></use></svg>
+                                        <span class="navbar__text">Вакансии</span>
+                                    </a>
+                                </li>
+                                <li class="navbar__item"><a href="documents.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#doc"></use></svg><span class="navbar__text">Документы</span></a></li>
+                                <li class="navbar__item"><a href="question.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
+                                <li class="navbar__item navbar__item--search"><a href="#" class="navbar__link" id="search-js"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
+                                <li class="navbar__item navbar__item--user"><a href="user.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#user"></use></svg></svg><span class="navbar__text">Личный кабинет</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main-content">
+            <div class="container">
+                <div class="main-content__inner">
+                    <aside class="sidebar main-content__sidebar">
+                        <a href="#" class="sidebar__link">
+                            <!-- <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg> -->
+                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.png" alt=""></a>
+                        </a>
+                        <ul class="sidebar__nav-list" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                            <li class="sidebar__nav-item">
+                                <a href="search.html" class="main-btn sidebar__nav-link sidebar__nav-link--active">
+                                    <svg class="main-btn__icon main-btn__icon--first"><use xlink:href="sprite.svg#clipboard"></use></svg>
+                                    <span class="main-btn__text main-btn__text--first">Проверить статус услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="offices.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
+                                    <span class="main-btn__text">Офисы</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="services.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
+                                    <span class="main-btn__text">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="about.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#group"></use></svg>
+                                    <span class="main-btn__text">О МФЦ</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#over-services"></use></svg>
+                                    <span class="main-btn__text">Дополнительные услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#car"></use></svg>
+                                    <span class="main-btn__text">Выезд специалиста</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="business.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#static"></use></svg>
+                                    <span class="main-btn__text">Для бизнеса</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="pub.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#pub"></use></svg>
+                                    <span class="main-btn__text">Реклама в МФЦ</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <main class="main main-content__main">
+                        <div class="showcase">
+                            <div class="showcase__content">
+                                <div>
+                                    <h1 class="showcase__title showcase__title--services">Вопрос-Ответ</h1>
+                                </div>
+                                <div class="showcase__number showcase__number--news" >
+                                    <svg width="145" height="142" viewBox="0 0 145 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M130.005 63.9407C119.937 51.2549 101.376 62.9265 88.0232 53.4064C80.9925 48.3937 76.0837 33.5014 68.7545 29.0839C41.5573 12.6916 17.2502 33.9125 17.7183 60.0139C18.5473 106.243 78.7026 118.191 107.346 108.321C126.129 101.848 145.814 83.86 130.005 63.9407Z" fill="url(#paint0_linear)"/>
+                                        <path d="M59.3462 47.6348C58.1439 51.8429 56.115 57.1782 52.8086 61.6118L56.1901 63.5656C59.4965 59.132 61.5254 53.7967 62.8029 49.5885L59.3462 47.6348Z" fill="white"/>
+                                        <path d="M86.775 4.27601C82.8674 2.02166 76.5552 2.69796 69.4915 6.75581C57.6186 13.594 48 27.4959 48 37.7908C48 41.9238 49.5781 44.8545 52.2833 46.4325C53.4105 47.1088 54.5376 47.71 55.6648 48.3863C52.9596 46.8082 51.3815 43.8776 51.3815 39.7446C51.3064 29.4497 60.925 15.6229 72.7979 8.70958C79.8616 4.65174 86.1738 3.97543 90.0813 6.22979C89.0293 5.62863 87.9021 4.95232 86.775 4.27601Z" fill="white"/>
+                                        <path d="M72.7957 8.70947C60.9228 15.6228 51.3042 29.4496 51.3793 39.7445C51.3793 46.8081 55.9632 50.3399 62.7263 49.5885C61.524 53.7966 59.4199 59.1319 56.1135 63.5655C60.6222 60.4094 67.235 53.4209 72.1194 46.3572C72.42 46.207 72.6455 46.0567 72.946 45.9064C84.819 39.0681 94.4376 25.1663 94.4376 14.8714C94.3624 4.65162 84.7438 1.87125 72.7957 8.70947Z" fill="#D1D3D4"/>
+                                        <path d="M98.1875 71.8926L100.592 70.4648C101.193 73.0949 102.546 77.3782 105.101 80.7597L102.696 82.1875C100.066 78.7308 98.7887 74.5227 98.1875 71.8926Z" fill="#AEAEAE"/>
+                                        <path d="M103.523 78.355C101.945 75.4995 101.043 72.4937 100.517 70.3896L98.1875 71.8926C98.6384 73.9215 99.6153 77.0024 101.193 79.858C101.644 80.6845 102.17 81.436 102.696 82.1875L105.101 80.7597C104.5 80.0082 103.974 79.1816 103.523 78.355Z" fill="#D1D3D4"/>
+                                        <path d="M84.807 45.7425C83.9804 46.1934 83.1538 46.7194 82.4023 47.1703C84.6567 45.8177 88.3388 46.2685 92.4718 48.6732C100.512 53.3322 106.524 63.1762 104.57 68.737C104.194 69.8641 103.443 70.6907 102.541 71.2168C103.368 70.7659 104.194 70.2399 104.946 69.789C106.449 68.8873 107.351 67.3092 107.351 64.9797C107.426 54.6097 91.7955 41.7598 84.807 45.7425Z" fill="#D1D3D4"/>
+                                        <path d="M92.4741 48.6733C99.3875 52.656 104.948 60.5462 104.948 66.4076C104.948 70.4654 102.168 72.4192 98.1852 71.8932C98.7863 74.5232 100.139 78.8065 102.694 82.1881C99.3875 79.8586 94.1273 74.0724 91.2718 69.0376C84.8844 64.8295 80 57.4653 80 51.9797C80 46.1935 85.6359 44.6906 92.4741 48.6733Z" fill="white"/>
+                                        <path d="M72.1958 38.8425L69.9414 37.4899V34.0332L72.1958 35.3858V38.8425Z" fill="#E04E39"/>
+                                        <path d="M72.1958 35.3865L69.9414 34.0339L73.3981 32.0801L75.6524 33.3575L72.1958 35.3865Z" fill="#E04E39"/>
+                                        <path d="M72.1953 38.843V35.3863L75.652 33.3574V36.8892L72.1953 38.843Z" fill="#F17757"/>
+                                        <path d="M72.1958 18.7039C72.1958 18.7039 73.0224 22.0103 73.0224 22.9872C73.0224 23.9641 72.1958 25.3918 72.1958 25.3918C71.294 26.7444 70.6929 27.8716 70.3923 28.6982C70.0917 29.5248 69.9414 30.5017 69.9414 31.7792L72.1958 33.0566C72.1958 31.7792 72.3461 30.7271 72.6466 29.9757C72.9472 29.1491 73.5484 28.0971 74.4501 26.6693H75.953V18.4033L72.1958 18.7039Z" fill="#E04E39"/>
+                                        <path d="M75.8046 15.0974C74.9029 14.5713 73.5503 14.7216 71.9722 15.6985C70.4693 16.6003 69.267 17.7274 68.2901 19.2304C67.3884 20.7333 66.9375 22.3865 66.9375 24.1899V24.2651L69.1167 25.5426V25.4674C69.1167 23.6639 69.5676 21.9356 70.4693 20.5078C71.3711 19.0049 72.6485 17.8026 74.1514 16.976C75.8046 15.9991 77.0821 15.8488 77.9839 16.3748L75.8046 15.0974Z" fill="#E04E39"/>
+                                        <path d="M78.0585 16.2996C78.9603 16.8256 79.4863 18.0279 79.4863 19.9066C79.4863 21.1089 79.2609 22.3112 78.7349 23.5887C78.2088 24.8662 77.5325 26.0685 76.7811 27.1957C76.3302 27.872 76.1048 28.4731 75.9545 28.9991C75.8042 29.5252 75.729 30.2015 75.729 30.9529L72.1972 33.057C72.1972 31.7795 72.3475 30.7275 72.6481 29.976C72.9487 29.1494 73.5498 28.0974 74.4516 26.6696C74.9024 25.9182 75.2782 25.0916 75.5036 24.3401C75.8042 23.5887 75.8793 22.7621 75.8793 21.9355C75.8793 21.0337 75.729 20.5077 75.4285 20.132C75.1279 19.8314 74.677 19.8314 74.151 20.132C73.7001 20.3574 73.3244 20.8083 73.0238 21.4095C72.7232 22.0106 72.5729 22.7621 72.5729 23.5887L69.1914 25.5425V25.4673C69.1914 23.6638 69.6423 21.9355 70.544 20.5077C71.4458 19.0048 72.7232 17.8025 74.2261 16.9759C75.8042 15.999 77.0817 15.7736 78.0585 16.2996Z" fill="#F17757"/>
+                                        <path d="M86.6154 54.0088C86.1645 53.7082 85.7136 53.7082 85.4131 53.8585L83.9102 54.7602C84.2107 54.6099 84.6616 54.6099 85.1125 54.9105C86.0894 55.4365 86.8408 56.7891 86.8408 57.8412C86.8408 58.3672 86.6154 58.7429 86.3148 58.9684L87.8177 58.0666C88.1183 57.9163 88.3437 57.5406 88.3437 56.9394C88.3437 55.8874 87.5171 54.6099 86.6154 54.0088Z" fill="#D8B89A"/>
+                                        <path d="M85.1112 54.9108C86.088 55.4368 86.8395 56.7895 86.8395 57.8415C86.8395 58.8935 86.088 59.3444 85.1112 58.8184C84.1343 58.2924 83.3828 56.9397 83.3828 55.8877C83.3828 54.8357 84.1343 54.3848 85.1112 54.9108Z" fill="#C39367"/>
+                                        <path d="M91.9513 57.0898C91.5005 56.7892 91.0496 56.7892 90.749 56.9395L89.2461 57.8413C89.5467 57.691 89.9975 57.691 90.4484 57.9916C91.4253 58.5176 92.1768 59.8702 92.1768 60.9222C92.1768 61.4483 91.9513 61.824 91.6507 62.0494L93.1536 61.1477C93.4542 60.9974 93.6797 60.6217 93.6797 60.0205C93.6797 58.9685 92.8531 57.691 91.9513 57.0898Z" fill="#D8B89A"/>
+                                        <path d="M90.4471 57.9918C91.424 58.5178 92.1754 59.8705 92.1754 60.9225C92.1754 61.9745 91.424 62.4254 90.4471 61.8994C89.4702 61.3734 88.7188 60.0207 88.7188 58.9687C88.7188 57.8415 89.4702 57.4658 90.4471 57.9918Z" fill="#C39367"/>
+                                        <path d="M97.2834 60.1709C96.8325 59.8703 96.3816 59.8703 96.081 60.0206L94.5781 60.9223C94.8787 60.772 95.3296 60.772 95.7804 61.0726C96.7573 61.5986 97.5088 62.9513 97.5088 64.0033C97.5088 64.5293 97.2834 64.905 96.9828 65.1305L98.4857 64.2287C98.7863 64.0784 99.0117 63.7027 99.0117 63.1015C98.9365 62.0495 98.1851 60.772 97.2834 60.1709Z" fill="#D8B89A"/>
+                                        <path d="M95.783 61.0729C96.7599 61.5989 97.5114 62.9515 97.5114 64.0035C97.5114 65.0556 96.7599 65.5064 95.783 64.9804C94.8061 64.4544 94.0547 63.1018 94.0547 62.0498C94.0547 60.9226 94.8061 60.5469 95.783 61.0729Z" fill="#C39367"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear" x1="21.1663" y1="72.7908" x2="75.7684" y2="14.9975" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ECE0D4"/>
+                                        <stop offset="1" stop-color="#FAEAD9"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news news--offices">
+                            <div class="">
+                                <ul class="breadcrumbs news__breadcrumbs">
+                                    <li class="breadcrumbs__item">Главная  </li>
+                                    <li class="breadcrumbs__item">Вопрос-Ответ</li>
+                                </ul>
+                            </div>
+                            <div class="documents">
+                                <div class="documents__bar documents__bar--chat" id="doc-js">Выберете рубрику<i class="fas fa-angle-down documents__bar-icon"></i></div>
+                                <div class="jobs">
+                                    <ul class="jobs__card-list">
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+                                        <li class="jobs__card-item">
+                                            <a href="job.html">
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Дата: </span>3 июня 2021</p>
+                                                <p class="jobs__card-description"><span class="jobs__card-strong">Вопрос: </span> Добрый день. Подскажите, пожалуйста, какие документы необходимо приложить при оформлении права собственности на квартиру на основании документа о праве на наследстве, выданное нотариусом?</p>
+                                            </a>
+                                            <div class="jobs__wrap-btn">
+                                                <button class="jobs__card-btn">Показать ответ</button>
+                                                <button class="jobs__card-btn jobs__card-btn--good-doc">Личные документы</button>
+                                            </div>
+                                        </li>
+
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="pagination">
+                                <li class="pagination__item pagination__item--active">1</li>
+                                <li class="pagination__item">2</li>
+                                <li class="pagination__item">3</li>
+                                <li class="pagination__item">4</li>
+                                <li class="pagination__item">5</li>
+                                <li class="pagination__item">6</li>
+                            </ul>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer__inner">
+                    <li class="footer__item"
+                        data-aos="fade-right"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div>
+                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
+                        </div>    
+                        <br/><br/>
+                        <h4 class="footer__title">Мобильное приложение:</h4>
+                        <div>
+                            <img src="img/store1.png" alt="">
+                        </div>
+                        <br/>
+                        <div>
+                            <img src="img/store2.png" alt="">
+                        </div>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-up"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">Наши сервисы:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
+                            <li class="footer__list-item"><a href="answer.html" class="footer__list-link">Обратная связь</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Официальное обращение в МФЦ</a></li>
+                            <li class="footer__list-item"><a href="chat.html" class="footer__list-link">Вопрос-ответ</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Записаться на прием</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Статус обращения</a></li>
+                            <li class="footer__list-item"><a href="pub.html" class="footer__list-link">Реклама в МФЦ</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-down"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">О МФЦ:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="about.html" class="footer__list-link">Цели и задачи</a></li>
+                            <li class="footer__list-item"><a href="directories.html" class="footer__list-link">Дирекция</a></li>
+                            <li class="footer__list-item"><a href="jobs.html" class="footer__list-link">Вакансии</a></li>
+                            <li class="footer__list-item"><a href="information.html" class="footer__list-link">Информация для граждан</a></li>
+                            <li class="footer__list-item"><a href="news.html" class="footer__list-link">Новости</a></li>
+                            <li class="footer__list-item"><a href="announce.html" class="footer__list-link">Объявления</a></li>
+                            <li class="footer__list-item"><a href="video.html" class="footer__list-link">Видео</a></li>
+                        </ul>
+                    </li>
+                    <li class="socials footer__item"
+                        data-aos="fade-left"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div class="socials__inner">
+                            <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
+                            <div class="socials__contact">
+                                <p class="socials__phone">8 (343) 273-00-08</p>
+                                <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                            </div>
+                            <div class="socials__icons">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div class="fix-nav">
+            <a href="" class="fix-nav__item">
+                <img src="img/v1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v4.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v5.png" alt="">
+            </a>
+        </div>
+        <div class="chat">
+            <button class="button">
+                <svg class="button__svg"><use xlink:href="sprite.svg#chat"></use></svg>
+            </button>
+        </div>   
+    </div>
+    <div class="modal" id="modal-js">
+        <form class="modal__form" action="">
+            <input class="modal__input" type="text" placeholder="Поиск">
+            <button class="modal__btn" id="modal-btn-js" type="submit"><svg class="modal__svg-icon"><use xlink:href="sprite.svg#icon-search"></use></svg></button>
+            <h5 class="modal__form-title">Быстрые ответы:</h5>
+            <ul class="modal__list">
+                <li class="modal__list-item">Офисы Екатеринбург</li>
+                <li class="modal__list-item">Документы для смены места жительства </li>
+                <li class="modal__list-item">Смена имени </li>
+                <li class="modal__list-item">Действия при утере документов</li>
+            </ul>
+        </form>
+    </div>
+    <!-- model for documents -->
+    <div class="modal" id="modal-doc-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--doc">
+                <ul class="documents__list documents__list--doc clearfix">
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Информация  для граждан</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Нормативные правовые акты</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Учредительные документы</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Политика обработкиперсональных данных</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Платная деятельность</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Реестр соглашений</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Противодействие коррупции</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Профилактика терроризма</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Формы заявлений</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">СОУТ</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+                <span class="modal__card-close" id="modal-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
+    <section class="navbar-bottom">
+        <!-- <div class="container"> -->
+            <ul class="navbar-bottom__list">
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Горячая линия
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                               Найти отделение 
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                записаться онлайн
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Пойск
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Личный кабинет
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Подключаем API -->
+    <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script> $(function() { AOS.init(); }); </script>
+</body>
+</html>
