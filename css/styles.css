@@ -3410,6 +3410,50 @@ a {
   }
 }
 
+.user__list-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.user__item-number {
+  font-family: 'Circe';
+  font-weight: 700;
+  font-size: 24px;
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  background: #EEE2D6;
+  border: 2px solid #E04E39;
+}
+
+.user__item-number + .user__item-number {
+  margin-left: 16px;
+}
+
+.user__inner-title {
+  font-family: 'Circe';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 150%;
+  color: #E04E39;
+  width: 582px;
+}
+
+.user__inner-title--status {
+  font-size: 34px;
+}
+
+@media screen and (max-width: 585px) {
+  .user__inner-title {
+    width: 100%;
+  }
+}
+
 .user__inner-text {
   font-weight: 400;
   font-size: 18px;
@@ -3424,6 +3468,11 @@ a {
 .user__bottom-btn {
   text-align: right;
   margin-top: 60px;
+}
+
+.user__bottom-btn--master {
+  text-align: left;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 425px) {
@@ -3545,6 +3594,19 @@ a {
   line-height: 150%;
   color: #58595B;
   margin-bottom: 10px;
+  display: block;
+}
+
+.user__form-select {
+  position: relative;
+}
+
+.user__fas-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  z-index: -1;
+  cursor: pointer;
 }
 
 .user__form-input {
@@ -3566,6 +3628,13 @@ a {
     padding: 12px 2px;
     font-size: 16px;
   }
+}
+
+.user__form-input--select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
 }
 
 .user__inner-info {
@@ -4262,6 +4331,12 @@ a {
 
 .our-services__filter--jobs {
   border-bottom: 1px solid #C39367;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.our-services__filter--status {
+  border-bottom: none;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -5070,6 +5145,12 @@ a {
   position: relative;
 }
 
+@media (max-width: 580px) {
+  .jobs__card-item--status {
+    padding-bottom: 90px;
+  }
+}
+
 .jobs__card-item:hover {
   border: 1px solid #CFA580;
   -webkit-box-shadow: 9px 8px 9px rgba(44, 65, 130, 0.2);
@@ -5089,6 +5170,14 @@ a {
   }
 }
 
+.jobs__card-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #E04E39;
+  margin: 8px 0;
+}
+
 .jobs__card-description {
   font-weight: 400;
   font-size: 16px;
@@ -5097,6 +5186,11 @@ a {
 
 .jobs__card-description + .jobs__card-description {
   margin-top: 10px;
+}
+
+.jobs__card-description--status {
+  font-weight: 700;
+  color: #8e9095;
 }
 
 @media (max-width: 820px) {
@@ -5185,6 +5279,12 @@ a {
           justify-content: space-between;
 }
 
+.jobs__wrap-card-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
 .jobs__card-btn {
   font-weight: 400;
   font-size: 18px;
@@ -5234,6 +5334,20 @@ a {
   color: #CFA580;
   background: #000;
   border-color: #000000;
+}
+
+.jobs__card-btn--status {
+  padding: 6px 28px;
+}
+
+.jobs__card-btn--status + .jobs__card-btn--status {
+  margin-left: 15px;
+}
+
+@media (max-width: 321px) {
+  .jobs__card-btn--status {
+    padding: 3px 17px;
+  }
 }
 
 .jobs__require-list {
@@ -5701,6 +5815,11 @@ a {
   }
 }
 
+.search__form--status {
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .search__row-item {
   margin-bottom: 19px;
 }
@@ -5732,6 +5851,28 @@ a {
   }
 }
 
+.search__form-input--status {
+  width: 75%;
+}
+
+@media screen and (max-width: 668px) {
+  .search__form-input--status {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .search__form-input--status {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .search__form-input--status {
+    width: 100%;
+  }
+}
+
 .search__form-btn {
   font-weight: 400;
   font-size: 24px;
@@ -5748,6 +5889,20 @@ a {
 
 .search__form-btn--question {
   width: 100%;
+}
+
+.search__form-btn--status {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 425px) {
+  .search__form-btn--status {
+    position: initial;
+    width: 100%;
+    margin-top: 16px;
+  }
 }
 
 .search__form-btn:hover {
