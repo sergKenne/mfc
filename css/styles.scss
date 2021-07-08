@@ -2592,6 +2592,18 @@ a {
         margin-bottom: 20px;
         //padding-left: 25px;
     }
+    &__agree {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #58595B;
+    }
+    &__agree-paragraph {
+        margin-bottom: 20px;
+    }
+    &__agree-bold {
+        font-weight: 700;
+    }
     &__inner {
         display: flex;
         margin-left: -16px;
@@ -2626,11 +2638,17 @@ a {
         line-height: 55px;
         text-align: center;
         border-radius: 50%;
-        background: #EEE2D6;
-        border: 2px solid #E04E39;
+        color: #959393;
+        background: #D8D6D6;
+        border: 2px solid #8C8A8A;
 
         &+.user__item-number {
             margin-left: 16px;
+        }
+        &--success {
+            background: #EEE2D6;
+            border: 2px solid #E04E39;
+            color: $red
         }
     }
     &__inner-title {
@@ -2678,10 +2696,16 @@ a {
         border: 1px solid #58595B;
         border-radius: 11px;
         margin-top: 20px;
+        
         &--form {
             margin-top: 0;
             color: $red;
             border-color: $red;
+            transition: all .4s linear;
+            &:hover {
+                color: #ffffff;
+                background-color: $red;
+            }
             @media screen and (max-width: 425px) {
                 margin-top: 15px;
             }
@@ -2744,6 +2768,13 @@ a {
                 width: 100%;
             }
         }
+        &--level-2 {
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 714px) {
+                flex-direction: column;
+            }
+        }
        
     }
     &__form-label {
@@ -2754,9 +2785,16 @@ a {
         color: #58595B;
         margin-bottom: 10px;
         display: block;
+        
     }
     &__form-select {
         position: relative;
+        &--level-2 {
+            width: 180px;
+            @media screen and (max-width: 714px) {
+                width: 100%;
+            }
+        }
     }
     &__fas-icon {
         position: absolute;
@@ -2764,6 +2802,10 @@ a {
         bottom: 15px;
         z-index: -1;
         cursor: pointer;
+        &--level-2 {
+            bottom: initial;
+            top: 16px;
+        }
     }
     &__form-input {
         width: 100%;
@@ -2800,6 +2842,7 @@ a {
     &__portrait {
         // height: 141px;
         // width: 141px;
+        padding-bottom: 30px;
     }
     &__name {
         font-weight: 700;
@@ -2822,6 +2865,11 @@ a {
         padding-top: 12px;
         padding-bottom: 12px;
         margin-bottom: 15px;
+        &--fixed {
+            line-height: 80%;
+            padding-top: 7px;
+            padding-bottom: 6px;
+        }
         &:hover, &--active {
             background: #FCD9C9;
             border: 1px solid #E04E39;
@@ -6677,4 +6725,10 @@ a {
     opacity: 0;
     border-radius: 4px;
     border: 1px solid #363635
+}
+
+
+.p-lg {
+    padding-left: 74px;
+    padding-right: 74px;
 }

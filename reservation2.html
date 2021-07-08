@@ -28,7 +28,7 @@
                 <div class="container">
                     <div class="header__menu-inner">
                         <ul class="header__menu-list">
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
+                            <li class="header__menu-item"><a href="reservation1.html" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
                             <li class="header__menu-item"><a href="announce.html" class="header__menu-link">Объявления</a></li>
                             <li class="header__menu-item"><a href="offices.html" class="header__menu-link">Офисы</a></li>
                             <li class="header__menu-item"><a href="jobs.html" class="header__menu-link">Вакансии</a></li>
@@ -39,11 +39,11 @@
                             <li class="header__menu-item"><a href="about.html" class="header__menu-link">О МФЦ</a></li>
                             <li class="header__menu-item"><a href="documents.html" class="header__menu-link">Документы</a></li>
                             <li class="header__menu-item"><a href="overservices.html" class="header__menu-link">Дополнительные услуги</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Доступная среда</a></li>
+                            <li class="header__menu-item"><a href="access.html" class="header__menu-link">Доступная среда</a></li>
                             <li class="header__menu-item"><a href="news.html" class="header__menu-link">Новости</a></li>
                             <li class="header__menu-item"><a href="question.html" class="header__menu-link">Задать вопрос</a></li>
                             <li class="header__menu-item"><a href="stories.html" class="header__menu-link">Истории</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Личный кабинет</a></li>
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Личный кабинет</a></li>
                         </ul>
                         <div class="header__menu-footer">
                             <div class="header__menu-social">
@@ -262,66 +262,285 @@
                                 <div class="user__inner">
                                     <div class="user__inner-left">
                                         <ul class="user__list-number">
-                                            <li class="user__item-number">1</li>
+                                            <li class="user__item-number user__item-number--success">1</li>
                                             <li class="user__item-number">2</li>
                                             <li class="user__item-number">3</li>
                                             <li class="user__item-number">4</li>
                                             <li class="user__item-number">5</li>
                                         </ul>
-                                        <form action="" class="user__inner-form">
-                                            <div class="user__form-item">
-                                                <label class="user__form-label" for="">Выбор района Свердловской области<span style="color: red">*</span></label>
-                                                <div class="user__form-select">
-                                                    <i class="fas fa-angle-down user__fas-icon"></i>
-                                                    <select class="user__form-input user__form-input--select" name="" id="">
-                                                        <option value="Услуга 1">Услуга 1</option>
-                                                        <option value="Услуга 2">Услуга 2</option>
-                                                        <option value="Услуга 3">Услуга 4</option>
-                                                    </select>
+                                        <form action="" class="user__inner-form" >
+                                            <!-- level-1 -->
+                                            <div class="user__form-level">
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Выбор района Свердловской области<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Выбор города<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Выбор офиса ГБУ СО "МФЦ"<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <label class="user__inner-text user__inner-text--input" for="input-agree"><input id="input-agree" type="checkbox">&nbsp; Я согласен с условиями <span style="font-weight: 700; text-decoration: underline;">публичной оферты</span></label>
+                                                </div>
+                                                <div class="user__bottom-btn user__bottom-btn--master">
+                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
                                                 </div>
                                             </div>
-                                            <div class="user__form-item">
-                                                <label class="user__form-label" for="">Выбор города*<span style="color: red">*</span></label>
-                                                <div class="user__form-select">
-                                                    <i class="fas fa-angle-down user__fas-icon"></i>
-                                                    <select class="user__form-input user__form-input--select" name="" id="">
-                                                        <option value="Услуга 1">Услуга 1</option>
-                                                        <option value="Услуга 2">Услуга 2</option>
-                                                        <option value="Услуга 3">Услуга 4</option>
-                                                    </select>
+
+                                            <!-- level-2 -->
+                                            <br><hr><br>level2
+                                            <div class="user__form-level">
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Сфера услуг<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Услуга<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Подуслуга<span style="color: red">*</span></label>
+                                                    <div><input class="user__form-input" type="text" placeholder=""></div>
+                                                </div>
+                                                <div class="user__form-item user__form-item--level-2">
+                                                    <label class="user__form-label user__form-label--level-2" for="">Выберите количество получаемых результатов по ранее поданным обращениям</label>
+                                                    <div class="user__form-select user__form-select--level-2">
+                                                        <i class="fas fa-angle-down user__fas-icon user__fas-icon--level-2"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__bottom-btn user__bottom-btn--master">
+                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
                                                 </div>
                                             </div>
-                                            <div class="user__form-item">
-                                                <label class="user__form-label" for="">Выбор офиса ГБУ СО "МФЦ"<span style="color: red">*</span></label>
-                                                <div class="user__form-select">
-                                                    <i class="fas fa-angle-down user__fas-icon"></i>
-                                                    <select class="user__form-input user__form-input--select" name="" id="">
-                                                        <option value="Услуга 1">Услуга 1</option>
-                                                        <option value="Услуга 2">Услуга 2</option>
-                                                        <option value="Услуга 3">Услуга 4</option>
-                                                    </select>
+
+                                            <!-- level-3 -->
+                                            <br><hr><br>
+                                            level 3
+                                            <div class="user__form-level">
+                                                <div class="user__wrap-form-item">
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Фамилия<span style="color: red">*</span></label>
+                                                        <div><input class="user__form-input" type="text" placeholder="Иванов"></div>
+                                                    </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Имя<span style="color: red">*</span></label>
+                                                        <div><input class="user__form-input" type="text" placeholder="Иван"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="user__wrap-form-item">
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Отчество<span style="color: red">*</span></label>
+                                                        <div><input class="user__form-input" type="text" placeholder="Иванович"></div>
+                                                    </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Адресс электронной почты</label>
+                                                        <div><input class="user__form-input" type="text" placeholder="ivan@Ivanov.ru"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="user__wrap-form-item">
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Номер телефона<span style="color: red">*</span></label>
+                                                        <div><input class="user__form-input" type="text" placeholder="8 800 555 35 35"></div>
+                                                    </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Категория заявителя<span style="color: red">*</span></label>
+                                                        <!-- <div><input class="user__form-input" type="text" placeholder="123-456"></div> -->
+                                                        <div class="user__form-select">
+                                                            <i class="fas fa-angle-down user__fas-icon"></i>
+                                                            <select class="user__form-input user__form-input--select" name="" id="">
+                                                                <option value="Услуга 1">Услуга 1</option>
+                                                                <option value="Услуга 2">Услуга 2</option>
+                                                                <option value="Услуга 3">Услуга 4</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="user__wrap-form-item">
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Тип обращения<span style="color: red">*</span></label>
+                                                        <!-- <div><input class="user__form-input" type="text" placeholder="01.01.2000"></div> -->
+                                                        <div class="user__form-select">
+                                                            <i class="fas fa-angle-down user__fas-icon"></i>
+                                                            <select class="user__form-input user__form-input--select" name="" id="">
+                                                                <option value="Услуга 1">Услуга 1</option>
+                                                                <option value="Услуга 2">Услуга 2</option>
+                                                                <option value="Услуга 3">Услуга 4</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <!-- <label class="user__form-label" for="">Электронная почта (при наличии)</label>
+                                                        <div><input class="user__form-input" type="text" placeholder="123-456"></div> -->
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="user__bottom-btn user__bottom-btn--master">
+                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
                                                 </div>
                                             </div>
-                                            <div>
-                                                <label class="user__inner-text user__inner-text--input" for="input-agree"><input id="input-agree" type="checkbox">&nbsp; Я согласен с условиями <span style="font-weight: 700; text-decoration: underline;">публичной оферты</span></label>
+
+                                            <!-- level-4 -->
+                                            <br><hr><br>
+                                            level-4
+                                            <div class="user__form-level">
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Дата предварительной записи<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <div class="user__form-input user__form-input--select">
+                                                            data
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Сфера услуг<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Услуга<span style="color: red">*</span></label>
+                                                    <div class="user__form-select">
+                                                        <i class="fas fa-angle-down user__fas-icon"></i>
+                                                        <select class="user__form-input user__form-input--select" name="" id="">
+                                                            <option value="Услуга 1">Услуга 1</option>
+                                                            <option value="Услуга 2">Услуга 2</option>
+                                                            <option value="Услуга 3">Услуга 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="user__bottom-btn user__bottom-btn--master">
+                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
+                                                </div>
                                             </div>
-                                            <div class="user__bottom-btn user__bottom-btn--master">
-                                                <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom">Далее</button>
+
+                                            <!-- level-5 -->
+                                            <br><hr><br>
+                                            <div class="user__form-level">
+                                                <div class="user__form-result">
+                                                    <ul class="user__form-result-list">
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Фамилия</p>
+                                                            <p class="user__form-result-inner">Иванов</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Имя</p>
+                                                            <p class="user__form-result-inner">Иван</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Отчество</p>
+                                                            <p class="user__form-result-inner"> Иванович</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Адрес электронной почты</p>
+                                                            <p class="user__form-result-inner">ivan@ivanov.ru</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Номер телефона</p>
+                                                            <p class="user__form-result-inner">8 800 555 3535</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Тип заявителя</p>
+                                                            <p class="user__form-result-inner">Физическое лицо</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Тип обращения</p>
+                                                            <p class="user__form-result-inner">Другие</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Услуга</p>
+                                                            <p class="user__form-result-inner">Получение результата услуги</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Офис МФЦ </p>
+                                                            <p class="user__form-result-inner">Свердловская область, г. Екатеринбург</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Адрес офиса МФЦ</p>
+                                                            <p class="user__form-result-inner">1-Советская, д. 1</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Дата предварительной записи</p>
+                                                            <p class="user__form-result-inner">01.01.2000</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Время предварительной записи</p>
+                                                            <p class="user__form-result-inner">12:00</p>
+                                                        </li>
+                                                       
+                                                    </ul>
+                                                    <p class="">Заявленное количество обращений по услуге на подачу документов или получение результата — 1</p>
+                                                    <div>
+                                                        <label class="user__inner-text user__inner-text--input" for="level"><input id="level" type="checkbox">&nbsp; Подтверждаю, что данные внесены верно<span style="color: red">*</span></label>
+                                                    </div>
+                                                    <div class="user__bottom-btn user__bottom-btn--master">
+                                                        <button  class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Зарегистрировать талон</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="user__inner-right">
                                         <div class="user__inner-info">
                                             <img src="img/user.png" alt="" class="user__portrait">
-                                            <h4 class="user__name">Иванов Иван Иванович</h4>
-                                            <a href="#" class="user__btn user__btn--active">Записаться на прием</a>
-                                            <a href="#" class="user__btn">Отказаться  от приема</a>
-                                            <a href="#" class="user__btn">Статус заявления</a>
-                                            <a href="#" class="user__btn">Официальное обращение в МФЦ</a>
-                                            <a href="#" class="user__btn">Отозвать обращение</a>
-                                            <a href="#" class="user__btn">Выезд специалиста</a>
-                                            <a href="user.html" class="user__btn">Бесплатный выезд специалиста</a>
-                                            <a href="#" class="user__btn">Личная информация</a>
+                                            <!-- <h4 class="user__name">Иванов Иван Иванович</h4> -->
+                                            <a href="reservation1.html" class="user__btn">Записаться на прием</a>
+                                            <a href="annulation.html" class="user__btn">Отказаться  от приема</a>
+                                            <a href="status.html" class="user__btn user__btn--active">Статус заявления</a>
+                                            <a href="request.html" class="user__btn">Официальное обращение в МФЦ</a>
+                                            <a href="" class="user__btn">Отозвать обращение</a>
+                                            <a href="master.html" class="user__btn">Выезд специалиста</a>
+                                            <a href="freemaster.html" class="user__btn">Бесплатный выезд специалиста</a>
+                                            <a href="" class="user__btn user__btn--fixed">Отзыв согласия на обработку персональных данных</a>
+                                            <a href="user.html" class="user__btn">Личная информация</a>
                                         </div>
                                     </div>
                                 </div>
