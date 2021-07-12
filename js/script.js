@@ -2653,6 +2653,44 @@ $(document).ready(function(){
           //       myMapOffice.geoObjects.add(myPlacemark);
     }
     myMapOffice();
+
+
+
+
+
+
+
+
+
+
+
+    //LEVEL-js
+
+    $(".user__inner-form .user__inner-btn--form").each(function(ind, btn){
+      console.log(btn);
+      const $this = $(btn);
+      $this.click(function(){
+        $(`.user__list-number .user__item-number:nth-child(${ind+2})`).addClass("user__item-number--success");
+        $(".user__form-level").removeClass("level-js");
+        $(`.user__form-level:nth-child(${ind+2})`).addClass("level-js");
+
+      })
+    })
+
+    $(".user__list-number .user__item-number").each(function(ind, elt){
+      const $this = $(elt);
+      const $ind = ind;
+      $this.click(function(){
+        $(".user__form-level").removeClass("level-js");
+        $(`.user__form-level:nth-child(${ind+1})`).addClass("level-js");
+        
+        $(".user__list-number .user__item-number").each((ind,item) => {
+          if(ind >$ind) {
+            $(item).removeClass("user__item-number--success");
+          }
+        })
+      })
+    })
     
 
 

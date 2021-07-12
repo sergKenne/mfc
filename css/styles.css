@@ -3445,6 +3445,7 @@ a {
   color: #959393;
   background: #D8D6D6;
   border: 2px solid #8C8A8A;
+  cursor: pointer;
 }
 
 .user__item-number + .user__item-number {
@@ -3512,6 +3513,7 @@ a {
   border: 1px solid #58595B;
   border-radius: 11px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .user__inner-btn--form {
@@ -3568,12 +3570,25 @@ a {
 .user__inner-form {
   margin-top: 32px;
   width: 85%;
+  position: relative;
+  min-height: 94vh;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1024px) {
   .user__inner-form {
     width: 100%;
   }
+}
+
+.user__form-level {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  opacity: 0;
 }
 
 .user__wrap-form-item {
@@ -3646,6 +3661,7 @@ a {
 
 .user__form-select {
   position: relative;
+  cursor: pointer;
 }
 
 .user__form-select--level-2 {
@@ -3669,6 +3685,11 @@ a {
 .user__fas-icon--level-2 {
   bottom: initial;
   top: 16px;
+}
+
+.user__fas-icon--calender {
+  bottom: 8px;
+  right: 15px;
 }
 
 .user__form-input {
@@ -3697,6 +3718,53 @@ a {
      -moz-appearance: none;
           appearance: none;
   background-color: transparent;
+}
+
+.user__form-result-list {
+  width: 118%;
+}
+
+@media screen and (max-width: 1024px) {
+  .user__form-result-list {
+    width: 100%;
+  }
+}
+
+.user__form-result-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #A7A9AC;
+}
+
+.user__form-result-inner {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #58595B;
+  width: 50%;
+  padding: 14px 0;
+}
+
+@media screen and (max-width: 425px) {
+  .user__form-result-inner {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .user__form-result-inner {
+    font-size: 14px;
+  }
+}
+
+.user__form-result-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #58595B;
+  padding: 14px 0;
 }
 
 .user__inner-info {
@@ -8730,5 +8798,10 @@ button.button:hover::after, button.button:focus::after {
 .p-lg {
   padding-left: 74px;
   padding-right: 74px;
+}
+
+.level-js {
+  z-index: 2;
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

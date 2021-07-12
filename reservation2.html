@@ -270,7 +270,7 @@
                                         </ul>
                                         <form action="" class="user__inner-form" >
                                             <!-- level-1 -->
-                                            <div class="user__form-level">
+                                            <div class="user__form-level level-js">
                                                 <div class="user__form-item">
                                                     <label class="user__form-label" for="">Выбор района Свердловской области<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
@@ -308,13 +308,12 @@
                                                     <label class="user__inner-text user__inner-text--input" for="input-agree"><input id="input-agree" type="checkbox">&nbsp; Я согласен с условиями <span style="font-weight: 700; text-decoration: underline;">публичной оферты</span></label>
                                                 </div>
                                                 <div class="user__bottom-btn user__bottom-btn--master">
-                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
+                                                    <span data-level="1" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
                                                 </div>
                                             </div>
 
                                             <!-- level-2 -->
-                                            <br><hr><br>level2
-                                            <div class="user__form-level">
+                                            <div class="user__form-level ">
                                                 <div class="user__form-item">
                                                     <label class="user__form-label" for="">Сфера услуг<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
@@ -353,14 +352,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="user__bottom-btn user__bottom-btn--master">
-                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
+                                                    <span data-level="2" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
                                                 </div>
                                             </div>
 
                                             <!-- level-3 -->
-                                            <br><hr><br>
-                                            level 3
-                                            <div class="user__form-level">
+                                            <div class="user__form-level ">
                                                 <div class="user__wrap-form-item">
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
                                                         <label class="user__form-label" for="">Фамилия<span style="color: red">*</span></label>
@@ -419,19 +416,18 @@
                                                 </div>
                                                 
                                                 <div class="user__bottom-btn user__bottom-btn--master">
-                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
+                                                    <span data-level="3" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
                                                 </div>
                                             </div>
 
                                             <!-- level-4 -->
-                                            <br><hr><br>
-                                            level-4
-                                            <div class="user__form-level">
+                                            <div class="user__form-level ">
                                                 <div class="user__form-item">
                                                     <label class="user__form-label" for="">Дата предварительной записи<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
+                                                        <img src="img/calender-icon.png" class="user__fas-icon user__fas-icon--calender" alt="">
                                                         <div class="user__form-input user__form-input--select">
-                                                            data
+                                                            <span>date</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -458,13 +454,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="user__bottom-btn user__bottom-btn--master">
-                                                    <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</button>
+                                                    <span data-level="4" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
                                                 </div>
                                             </div>
 
                                             <!-- level-5 -->
-                                            <br><hr><br>
-                                            <div class="user__form-level">
+                                            <div class="user__form-level ">
                                                 <div class="user__form-result">
                                                     <ul class="user__form-result-list">
                                                         <li class="user__form-result-item">
@@ -485,7 +480,7 @@
                                                         </li>
                                                         <li class="user__form-result-item">
                                                             <p class="user__form-result-inner">Номер телефона</p>
-                                                            <p class="user__form-result-inner">8 800 555 3535</p>
+                                                            <p class="user__form-result-inner" style="font-weight: 700; color: #2C2A29;">8 800 555 3535</p>
                                                         </li>
                                                         <li class="user__form-result-item">
                                                             <p class="user__form-result-inner">Тип заявителя</p>
@@ -508,21 +503,21 @@
                                                             <p class="user__form-result-inner">1-Советская, д. 1</p>
                                                         </li>
                                                         <li class="user__form-result-item">
-                                                            <p class="user__form-result-inner">Дата предварительной записи</p>
-                                                            <p class="user__form-result-inner">01.01.2000</p>
+                                                            <p class="user__form-result-inner" style="font-weight: 700; color: #58595B;">Дата предварительной записи</p>
+                                                            <p class="user__form-result-inner" style="color: #E04E39;">01.01.2000</p>
                                                         </li>
                                                         <li class="user__form-result-item">
-                                                            <p class="user__form-result-inner">Время предварительной записи</p>
-                                                            <p class="user__form-result-inner">12:00</p>
+                                                            <p class="user__form-result-inner" style="font-weight: 700; color: #58595B;">Время предварительной записи</p>
+                                                            <p class="user__form-result-inner" style="color: #E04E39;">12:00</p>
                                                         </li>
                                                        
                                                     </ul>
-                                                    <p class="">Заявленное количество обращений по услуге на подачу документов или получение результата — 1</p>
+                                                    <p class="user__form-result-description">Заявленное количество обращений<br/> по услуге на подачу документов или получение результата — 1</p>
                                                     <div>
                                                         <label class="user__inner-text user__inner-text--input" for="level"><input id="level" type="checkbox">&nbsp; Подтверждаю, что данные внесены верно<span style="color: red">*</span></label>
                                                     </div>
                                                     <div class="user__bottom-btn user__bottom-btn--master">
-                                                        <button  class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Зарегистрировать талон</button>
+                                                        <button type="submit"  class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Зарегистрировать талон</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -532,9 +527,9 @@
                                         <div class="user__inner-info">
                                             <img src="img/user.png" alt="" class="user__portrait">
                                             <!-- <h4 class="user__name">Иванов Иван Иванович</h4> -->
-                                            <a href="reservation1.html" class="user__btn">Записаться на прием</a>
+                                            <a href="reservation1.html" class="user__btn user__btn--active">Записаться на прием</a>
                                             <a href="annulation.html" class="user__btn">Отказаться  от приема</a>
-                                            <a href="status.html" class="user__btn user__btn--active">Статус заявления</a>
+                                            <a href="status.html" class="user__btn">Статус заявления</a>
                                             <a href="request.html" class="user__btn">Официальное обращение в МФЦ</a>
                                             <a href="" class="user__btn">Отозвать обращение</a>
                                             <a href="master.html" class="user__btn">Выезд специалиста</a>

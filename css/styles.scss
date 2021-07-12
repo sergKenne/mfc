@@ -2641,6 +2641,7 @@ a {
         color: #959393;
         background: #D8D6D6;
         border: 2px solid #8C8A8A;
+        cursor: pointer;
 
         &+.user__item-number {
             margin-left: 16px;
@@ -2696,6 +2697,7 @@ a {
         border: 1px solid #58595B;
         border-radius: 11px;
         margin-top: 20px;
+        cursor: pointer;
         
         &--form {
             margin-top: 0;
@@ -2737,10 +2739,23 @@ a {
     &__inner-form {
         margin-top: 32px;
         width: 85%;
+        position: relative;
+        //border: 2px solid red;
+        min-height: 94vh;
+        z-index: 1;
         @media screen and (max-width: 1024px) {
             width: 100%;
         }
        
+    }
+    &__form-level {
+        position: absolute;
+        top: 47px;  //by default top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        opacity: 0;
     }
     &__wrap-form-item {
         display: flex;
@@ -2789,6 +2804,7 @@ a {
     }
     &__form-select {
         position: relative;
+        cursor: pointer;
         &--level-2 {
             width: 180px;
             @media screen and (max-width: 714px) {
@@ -2805,6 +2821,10 @@ a {
         &--level-2 {
             bottom: initial;
             top: 16px;
+        }
+        &--calender {
+            bottom: 8px;
+            right: 15px;
         }
     }
     &__form-input {
@@ -2830,6 +2850,38 @@ a {
            background-color: transparent;
         }
 
+    }
+    &__form-result-list {
+        width: 118%;
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+    &__form-result-item {
+        display: flex;
+        border-bottom: 1px solid #A7A9AC;
+    }
+    &__form-result-inner {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #58595B;
+        width: 50%;
+        padding: 14px 0;
+        @media screen and (max-width: 425px) {
+            font-size: 16px;
+            padding: 10px 0;
+        }
+        @media screen and (max-width: 375px) {
+            font-size: 14px;
+        }
+    }
+    &__form-result-description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #58595B;
+        padding: 14px 0;
     }
     // &__form-select {
     //     border-radius: 11px;
@@ -6731,4 +6783,9 @@ a {
 .p-lg {
     padding-left: 74px;
     padding-right: 74px;
+}
+
+.level-js {
+    z-index: 2;
+    opacity: 1;
 }
