@@ -3821,6 +3821,10 @@ a {
   margin-bottom: 50px;
 }
 
+.over__title--top {
+  line-height: 150%;
+}
+
 .over__list {
   display: -ms-grid;
   display: grid;
@@ -4650,6 +4654,36 @@ a {
   .our-services__list-type {
     display: none;
   }
+}
+
+.our-services__over-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.our-services__over-col {
+  padding-left: 35px;
+  position: relative;
+  border: 1px solid red;
+  width: 260px;
+  margin-right: 20px;
+}
+
+.our-services__over-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #58595B;
+  z-index: 1;
+}
+
+.our-services__over-svg {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  z-index: -1;
 }
 
 .offers {

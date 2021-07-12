@@ -2940,6 +2940,9 @@ a {
         color: #E04E39;
         margin-top: 20px;
         margin-bottom: 50px;
+        &--top {
+            line-height: 150%;
+        }
     }
     &__list {
         display: grid;
@@ -3634,6 +3637,31 @@ a {
         }
         
     }
+    &__over-row {
+        display: flex;
+        margin-bottom: 70px;
+    }
+    &__over-col {
+        padding-left: 35px;
+        position: relative;
+        border: 1px solid red;
+        width: 260px;
+        margin-right: 20px;
+    }
+    &__over-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #58595B;
+        z-index: 1;
+    }
+    &__over-svg {
+        position: absolute;
+        left: 0;
+        top: -25px;
+        z-index: -1;
+    }
+
 }
 
 //OFFERS
