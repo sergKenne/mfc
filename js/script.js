@@ -2281,6 +2281,18 @@ $(document).ready(function(){
       stopAutoOnClick: true,
     });
 
+    $('.over-slider').bxSlider({
+      slideWidth: ($(window).width() < 376 ) ? 300 : ($(window).width() < 426 ) ? 200 : 380, //380,
+      minSlides: ($(window).width() < 376 ) ? 1 : ($(window).width() < 426 ) ? 2 : 3, //3,
+      maxSlides: ($(window).width() < 376 ) ? 1 : ($(window).width() < 426 ) ? 2 : 3, //($(window).width() < 426 ) ? 2 : ($(window).width() < 376 ) ? 1 : 3,//3,
+
+      // minSlides: minSlides,
+      // maxSlides: maxSlides,
+
+      slideMargin: 10,
+      stopAutoOnClick: true,
+    });
+
     $('.newslider').bxSlider({
       //mode: 'fade',
       // captions: true,
@@ -2304,6 +2316,10 @@ $(document).ready(function(){
       $("#modal-js").slideToggle(); 
     });
 
+    $('.calender-js').click(function(){
+      $("#modal-calender-js").slideDown();
+    });
+
     $(".send-code").click(function(){
       $("#modal-send-js").slideDown();
     });
@@ -2317,6 +2333,10 @@ $(document).ready(function(){
     })
     $("#modal-close-js").click(function(){
       $("#modal-doc-js").slideUp();
+    });
+
+    $("#modal-close-calender-js").click(function(){
+      $("#modal-calender-js").slideUp();
     });
 
     //OFFERS JS
@@ -2627,32 +2647,99 @@ $(document).ready(function(){
 
 
     //FOR ONE OFFICE
-    function myMapOffice() {
-      ymaps.ready(init);
-      function init(){
-          var myMapOffice = new ymaps.Map("map-office", {
-                    center: [56.829374, 60.672699],
-                    zoom: 4
-                }, {
-                  searchControlProvider: 'yandex#search'
-              });
+    // function myMapOffice1() {
+    //   ymaps.ready(init);
+    //   function init(){
+    //       var myMapOffice = new ymaps.Map("map-office", {
+    //                 center: [56.829374, 60.672699],
+    //                 zoom: 4
+    //             }, {
+    //               searchControlProvider: 'yandex#search'
+    //           });
 
-              myMapOffice.behaviors.disable(["drag", "scrollZoom"]);
-          }
+    //           myMapOffice.behaviors.disable(["drag", "scrollZoom"]);
+    //       }
 
-          // const myPlacemark = new ymaps.Placemark(
-          //         [56.829374, 60.672699], 
+    //       const myPlacemark = new ymaps.Placemark(
+    //               [56.829374, 60.672699], 
                   
-          //         {
-          //             iconLayout: 'default#image',
-          //             iconImageHref: '../img/geo.png',
-          //             iconImageSize: [40, 48],
-          //             iconImageOffset: [-5, -38]
-          //         }
-          //       );
-          //       myMapOffice.geoObjects.add(myPlacemark);
-    }
-    myMapOffice();
+    //               {
+    //                   iconLayout: 'default#image',
+    //                   iconImageHref: '../img/geo.png',
+    //                   iconImageSize: [40, 48],
+    //                   iconImageOffset: [-5, -38]
+    //               }
+    //             );
+    //             myMapOffice.geoObjects.add(myPlacemark);
+    // }
+    // myMapOffice1();
+
+
+
+
+
+
+
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map-office', {
+              center: [56.829374, 60.672699],//[55.751574, 37.573856],
+              zoom: 9
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+          
+  
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+  
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Собственный значок метки',
+              balloonContent: 'Это красивая метка'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              //iconImageHref: 'images/myIcon.gif',
+              iconImageHref: '../img/geo.png',
+
+              iconImageSize: [40, 48],
+              iconImageOffset:[-50, -75] //[-5, -38]
+
+              // Размеры метки.
+              //iconImageSize: [30, 42],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              //iconImageOffset: [-5, -38]
+          }),
+  
+          myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+              hintContent: 'Собственный значок метки с контентом',
+              balloonContent: 'А эта — новогодняя',
+              iconContent: '12'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#imageWithContent',
+              // Своё изображение иконки метки.
+              iconImageHref: 'images/ball.png',
+              // Размеры метки.
+              iconImageSize: [48, 48],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-24, -24],
+              // Смещение слоя с содержимым относительно слоя с картинкой.
+              iconContentOffset: [15, 15],
+              // Макет содержимого.
+              iconContentLayout: MyIconContentLayout
+          });
+  
+      myMap.geoObjects
+          .add(myPlacemark)
+          .add(myPlacemarkWithContent);
+  });
 
 
 
@@ -2691,8 +2778,131 @@ $(document).ready(function(){
         })
       })
     })
+
+
+    //USER TAB
+    const tabs = document.querySelectorAll(".user__tab-item");
+
+    tabs.forEach((item, id) => {
+      item.addEventListener("click", function() {
+        const elt = this.dataset.tab;
+
+        tabs.forEach(tab => tab.classList.remove("user__tab-item--active"));
+        this.classList.add("user__tab-item--active");
+        document.querySelectorAll(".user__tab-content").forEach(el => {
+          el.classList.add("hide");
+          if(el.classList.contains(elt)) {
+            el.classList.remove("hide")
+          }
+        })
+      })
+    })
     
 
 
 }); //end ready
 
+
+
+
+
+
+
+
+
+
+//CALENDAR
+
+
+let calendar = document.querySelector('.calendar')
+
+const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+isLeapYear = (year) => {
+    return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 ===0)
+}
+
+getFebDays = (year) => {
+    return isLeapYear(year) ? 29 : 28
+}
+
+generateCalendar = (month, year) => {
+
+    let calendar_days = calendar.querySelector('.calendar-days')
+    let calendar_header_year = calendar.querySelector('#year')
+
+    let days_of_month = [31, getFebDays(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    calendar_days.innerHTML = ''
+
+    let currDate = new Date()
+    if (!month) month = currDate.getMonth()
+    if (!year) year = currDate.getFullYear()
+
+    let curr_month = `${month_names[month]}`
+    month_picker.innerHTML = curr_month
+    calendar_header_year.innerHTML = year
+
+    // get first day of month
+    
+    let first_day = new Date(year, month, 1)
+
+    for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
+        let day = document.createElement('div')
+        if (i >= first_day.getDay()) {
+            day.classList.add('calendar-day-hover')
+            day.innerHTML = i - first_day.getDay() + 1
+            day.innerHTML += `<span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>`
+            if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
+                day.classList.add('curr-date')
+            }
+        }
+        calendar_days.appendChild(day)
+    }
+}
+
+let month_list = calendar.querySelector('.month-list')
+
+month_names.forEach((e, index) => {
+    let month = document.createElement('div')
+    month.innerHTML = `<div data-month="${index}">${e}</div>`
+    month.querySelector('div').onclick = () => {
+        month_list.classList.remove('show')
+        curr_month.value = index
+        generateCalendar(index, curr_year.value)
+    }
+    month_list.appendChild(month)
+})
+
+let month_picker = calendar.querySelector('#month-picker')
+
+month_picker.onclick = () => {
+    month_list.classList.add('show')
+}
+
+let currDate = new Date()
+
+let curr_month = {value: currDate.getMonth()}
+let curr_year = {value: currDate.getFullYear()}
+
+generateCalendar(curr_month.value, curr_year.value)
+
+document.querySelector('#prev-year').onclick = () => {
+    --curr_year.value
+    generateCalendar(curr_month.value, curr_year.value)
+}
+
+document.querySelector('#next-year').onclick = () => {
+    ++curr_year.value
+    generateCalendar(curr_month.value, curr_year.value)
+}
+
+let dark_mode_toggle = document.querySelector('.dark-mode-switch')
+
+dark_mode_toggle.onclick = () => {
+    document.querySelector('body').classList.toggle('light')
+    document.querySelector('body').classList.toggle('dark')
+}

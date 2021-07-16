@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="fonts/circe.fonts.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -255,7 +256,7 @@
                             <div class="offers  offers--new">
                                 <ul class="breadcrumbs offers__breadcrumbs offers__breadcrumbs--jobs">
                                     <li class="breadcrumbs__item">Главная</li>
-                                    <li class="breadcrumbs__item">выезд специалиста</li>
+                                    <li class="breadcrumbs__item">Записаться на прием</li>
                                 </ul>
                             </div>
                             <div class="user">
@@ -272,6 +273,7 @@
                                             <!-- level-1 -->
                                             <div class="user__form-level level-js">
                                                 <div class="user__form-item">
+                                                    <p class="user__form-label" style="margin-bottom: 30px; font-size: 24px;"><span style="color: red">*</span>- поля, обязательные для заполнения</p>
                                                     <label class="user__form-label" for="">Выбор района Свердловской области<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
@@ -425,31 +427,31 @@
                                                 <div class="user__form-item">
                                                     <label class="user__form-label" for="">Дата предварительной записи<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
-                                                        <img src="img/calender-icon.png" class="user__fas-icon user__fas-icon--calender" alt="">
+                                                        <img src="img/calender-icon.png" class="user__fas-icon user__fas-icon--calender calender-js" alt="">
                                                         <div class="user__form-input user__form-input--select">
-                                                            <span>date</span>
+                                                            <span>12.07.2021</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="user__form-item">
-                                                    <label class="user__form-label" for="">Сфера услуг<span style="color: red">*</span></label>
+                                                <!-- <div class="user__form-item">
+                                                    <label class="user__form-label" for="">Выберите временной диапазон<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
                                                         <select class="user__form-input user__form-input--select" name="" id="">
-                                                            <option value="Услуга 1">Услуга 1</option>
-                                                            <option value="Услуга 2">Услуга 2</option>
-                                                            <option value="Услуга 3">Услуга 4</option>
+                                                            <option value="Услуга 1">12:00</option>
+                                                            <option value="Услуга 2">13:00</option>
+                                                            <option value="Услуга 3">14:00</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="user__form-item">
-                                                    <label class="user__form-label" for="">Услуга<span style="color: red">*</span></label>
+                                                    <label class="user__form-label" for="">Выберите желаемое время<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
                                                         <select class="user__form-input user__form-input--select" name="" id="">
-                                                            <option value="Услуга 1">Услуга 1</option>
-                                                            <option value="Услуга 2">Услуга 2</option>
-                                                            <option value="Услуга 3">Услуга 4</option>
+                                                            <option value="Услуга 1">09:00</option>
+                                                            <option value="Услуга 2">19:00</option>
+                                                            <option value="Услуга 3">20:00</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -531,10 +533,10 @@
                                             <a href="annulation.html" class="user__btn">Отказаться  от приема</a>
                                             <a href="status.html" class="user__btn">Статус заявления</a>
                                             <a href="request.html" class="user__btn">Официальное обращение в МФЦ</a>
-                                            <a href="" class="user__btn">Отозвать обращение</a>
+                                            <a href="annulation2.html" class="user__btn">Отозвать обращение</a>
                                             <a href="master.html" class="user__btn">Выезд специалиста</a>
                                             <a href="freemaster.html" class="user__btn">Бесплатный выезд специалиста</a>
-                                            <a href="" class="user__btn user__btn--fixed">Отзыв согласия на обработку персональных данных</a>
+                                            <a href="formdata.html" class="user__btn user__btn--fixed">Отзыв согласия на обработку персональных данных</a>
                                             <a href="user.html" class="user__btn">Личная информация</a>
                                         </div>
                                     </div>
@@ -693,6 +695,122 @@
            </div>
        </div>
     </div>
+
+    <!-- model calender -->
+    <div class="modal" id="modal-calender-js">
+        <div class="modal__card-inner" >
+            <div class="modal__card modal__card--calender">
+                <p class="modal__card-span">Малый проспект Васильевского острова, 57, корп. 2</p>
+                <div class="calender">
+                    <div class="calender__list">
+                        <span class="calender__list-item">1</span>
+                        <span class="calender__list-item">2</span>
+                        <span class="calender__list-item">3</span>
+                        <span class="calender__list-item">4</span>
+                        <span class="calender__list-item">5</span>
+                        <span class="calender__list-item">6</span>
+                        <span class="calender__list-item">7</span>
+                        <span class="calender__list-item">8</span>
+                        <span class="calender__list-item">9</span>
+                        <span class="calender__list-item">10</span>
+                        <span class="calender__list-item">11</span>
+                        <span class="calender__list-item">12</span>
+                        <span class="calender__list-item">13</span>
+                        <span class="calender__list-item">14</span>
+                        <span class="calender__list-item">15</span>
+                    </div>
+                    <div class="calender__inner">
+                        <div class="calender__inner-item">
+
+
+                            <div class="light">
+
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        
+                                        <div class="year-picker">
+                                            <span class="year-change" id="prev-year">
+                                                <pre><</pre>
+                                            </span>
+                                           <div>
+                                                <span class="month-picker" id="month-picker">February</span>
+                                                <span id="year">2021</span>
+                                           </div>
+                                            <span class="year-change" id="next-year">
+                                                <pre>></pre>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-body">
+                                        <div class="calendar-week-day">
+                                            <div>Вс</div>
+                                            <div>Мн</div>
+                                            <div>Вт</div>
+                                            <div>Ср</div>
+                                            <div>Чт</div>
+                                            <div>Пт</div>
+                                            <div>Сб</div>
+                                        </div>
+                                        <div class="calendar-days"></div>
+                                    </div>
+                                    <!-- <div class="calendar-footer">
+                                        <div class="toggle">
+                                            <span>Dark Mode</span>
+                                            <div class="dark-mode-switch">
+                                                <div class="dark-mode-switch-ident"></div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="month-list"></div>
+                                </div>
+                            
+                               
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <div class="calender__inner-item">
+                            <div class="calender__list calender__list--time">
+                                <span class="calender__list-item calender__list-item--time">8:00</span>
+                                <span class="calender__list-item calender__list-item--time">8:20</span>
+                                <span class="calender__list-item calender__list-item--time">8:40</span>
+                                <span class="calender__list-item calender__list-item--time calender__list-item--checked">9:00</span>
+                                <span class="calender__list-item calender__list-item--time">9:20</span>
+                                <span class="calender__list-item calender__list-item--time">9:40</span>
+                                <span class="calender__list-item calender__list-item--time">10:00</span>
+                                <span class="calender__list-item calender__list-item--time">10:20</span>
+                                <span class="calender__list-item calender__list-item--time">10:40</span>
+                                <span class="calender__list-item calender__list-item--time calender__list-item--active">11:00</span>
+                                <span class="calender__list-item calender__list-item--time">11:20</span>
+                                <span class="calender__list-item calender__list-item--time">11:40</span>
+                                <span class="calender__list-item calender__list-item--time">12:00</span>
+                                <span class="calender__list-item calender__list-item--time">12:20</span>
+                                <span class="calender__list-item calender__list-item--time">12:40</span>
+                                <span class="calender__list-item calender__list-item--time">13:00</span>
+                                <span class="calender__list-item calender__list-item--time">13:20</span>
+                                <span class="calender__list-item calender__list-item--time">13:40</span>
+                                <span class="calender__list-item calender__list-item--time">14:00</span>
+                                <span class="calender__list-item calender__list-item--time">14:20</span>
+                                <span class="calender__list-item calender__list-item--time">14:40</span>
+                                <span class="calender__list-item calender__list-item--time">15:00</span>
+                                <span class="calender__list-item calender__list-item--time">15:20</span>
+                                <span class="calender__list-item calender__list-item--time">15:40</span>
+                                <span class="calender__list-item calender__list-item--time">16:00</span>
+                                <span class="calender__list-item calender__list-item--time">16:20</span>
+                                <span class="calender__list-item calender__list-item--time">16:40</span>
+                                <span class="calender__list-item calender__list-item--time">17:00</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <span class="modal__card-close modal__card-close--calender" id="modal-close-calender-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
 
     <section class="navbar-bottom">
         <!-- <div class="container"> -->
