@@ -121,7 +121,7 @@
 }
 
 .calendar-days div {
-    /* width: 40px; */
+    width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -131,13 +131,12 @@
     cursor: pointer;
     animation: to-top 1s forwards;
     /* border-radius: 50%; */
-
     font-family: 'PT Sans';
     font-weight: normal;
     font-size: 18px;
     color: #58595B;
-
-
+    margin: auto;
+    
 }
 
 .calendar-days div span {

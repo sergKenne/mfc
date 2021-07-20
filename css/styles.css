@@ -3441,7 +3441,10 @@ a {
   margin-left: -16px;
   margin-right: -16px;
   margin-bottom: 120px;
-  width: 130vh;
+}
+
+.user__inner--reservation {
+  height: 130vh;
 }
 
 .user__inner-left {
@@ -3802,6 +3805,10 @@ a {
   width: 118%;
 }
 
+.user__form-result-list--info {
+  width: 100%;
+}
+
 @media screen and (max-width: 1024px) {
   .user__form-result-list {
     width: 100%;
@@ -3931,6 +3938,40 @@ a {
   margin-bottom: 90px;
 }
 
+.user__board {
+  margin-top: 40px;
+  position: relative;
+}
+
+.user__board-result {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #E04E39;
+  margin-bottom: 28px;
+}
+
+.user__board-title {
+  display: inline-block;
+  width: 164px;
+  color: #58595B;
+}
+
+.user__board-image {
+  position: absolute;
+  right: 0;
+  top: -80px;
+  width: 350px;
+}
+
+@media screen and (max-width: 630px) {
+  .user__board-image {
+    position: initial;
+    margin-top: 40px;
+  }
+}
+
 .over__title {
   font-family: 'Circe';
   font-weight: 800;
@@ -4039,12 +4080,14 @@ a {
   border: 1px solid #C39367;
   border-radius: 4px;
   padding: 0 9px;
+  margin-bottom: 4px;
 }
 
 .calender__list-item--time {
   text-align: center;
   padding-top: 2px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 .calender__list-item--active {
@@ -4583,6 +4626,10 @@ a {
   margin-top: -52px;
 }
 
+.our-services--services {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 745px) {
   .our-services {
     margin-top: 33px;
@@ -4597,6 +4644,10 @@ a {
 
 .our-services__breadcrumbs {
   margin-bottom: 20px;
+}
+
+.our-services__breadcrumbs--over {
+  margin-top: 32px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -4865,6 +4916,13 @@ a {
   margin-left: 30px;
 }
 
+.our-services__filter-item--over {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin-left: 14px;
+}
+
 .our-services__fas-icon {
   padding-left: 10px;
   -webkit-transform: translateY(2px);
@@ -4939,82 +4997,31 @@ a {
   }
 }
 
-.our-services__over-item:nth-child(2) {
-  margin-left: 20px;
+.our-services__over-list {
+  width: 70%;
+  margin-top: 30px;
+  margin-bottom: 160px;
 }
 
-@media screen and (max-width: 1000px) {
-  .our-services__over-item:nth-child(2) {
-    margin-left: 0;
-  }
-}
-
-.our-services__over-item:nth-child(3) {
-  margin-left: 80px;
-}
-
-@media screen and (max-width: 1000px) {
-  .our-services__over-item:nth-child(3) {
-    margin-left: 0;
-  }
-}
-
-.our-services__over-item:nth-child(4) {
-  margin-left: 120px;
-}
-
-@media screen and (max-width: 1000px) {
-  .our-services__over-item:nth-child(4) {
-    margin-left: 0;
-  }
-}
-
-.our-services__over-item:nth-child(5) {
-  margin-left: 160px;
-}
-
-@media screen and (max-width: 1000px) {
-  .our-services__over-item:nth-child(5) {
-    margin-left: 0;
+@media screen and (max-width: 1024px) {
+  .our-services__over-list {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
 .our-services__over-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 50px;
-}
-
-@media screen and (max-width: 1000px) {
-  .our-services__over-row {
-    margin-bottom: 70px;
-  }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 20px;
 }
 
 .our-services__over-col {
   padding-left: 35px;
   position: relative;
-  width: 260px;
-  margin-right: 90px;
-}
-
-@media screen and (max-width: 1024px) {
-  .our-services__over-col {
-    margin-right: 60px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .our-services__over-col {
-    margin-right: 30px;
-  }
-}
-
-.our-services__over-col:last-child {
-  margin-top: 60px;
+  height: 80px;
 }
 
 .our-services__over-text {
@@ -5034,21 +5041,30 @@ a {
 
 .our-services__over-img {
   position: absolute;
-  top: -140px;
-  right: 0;
+  top: -70px;
+  right: -120px;
   z-index: -1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1440px) {
   .our-services__over-img {
-    width: 250px;
+    right: -40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .our-services__over-img {
+    position: initial;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (max-width: 425px) {
   .our-services__over-img {
-    top: initial;
-    bottom: -170px;
+    width: 100%;
   }
 }
 
@@ -5739,6 +5755,12 @@ a {
 }
 
 @media (max-width: 820px) {
+  .jobs__card-description--cancel {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 820px) {
   .jobs__card-description {
     padding-right: 200px;
   }
@@ -5769,6 +5791,16 @@ a {
   font-weight: 700;
   color: #2C2A29;
   padding-right: 6px;
+}
+
+.jobs__card-strong--cancel {
+  font-size: 24px;
+}
+
+@media (max-width: 425px) {
+  .jobs__card-strong--cancel {
+    font-size: 18px;
+  }
 }
 
 .jobs__card-price {
@@ -5843,6 +5875,10 @@ a {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+.jobs__wrap-card-btn--cancel {
+  position: initial;
 }
 
 .jobs__card-btn {
@@ -8636,6 +8672,17 @@ button.button:hover::after, button.button:focus::after {
   overflow-y: scroll;
 }
 
+.modal__card--cancel {
+  padding: 30px 60px;
+  border: 1px solid #E3CCB7;
+}
+
+.modal__card--info {
+  border: 1px solid #E3CCB7;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
 @media screen and (max-width: 1024px) {
   .modal__card {
     width: 60%;
@@ -8703,6 +8750,10 @@ button.button:hover::after, button.button:focus::after {
 .modal__card-span {
   font-weight: 400;
   font-size: 16px;
+}
+
+.modal__card-cancel {
+  text-align: center;
 }
 
 .navbar-bottom {

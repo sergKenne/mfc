@@ -260,7 +260,7 @@
                                 </ul>
                             </div>
                             <div class="user">
-                                <div class="user__inner">
+                                <div class="user__inner user__inner--reservation">
                                     <div class="user__inner-left">
                                         <ul class="user__list-number">
                                             <li class="user__item-number user__item-number--success">1</li>
@@ -274,7 +274,7 @@
                                             <div class="user__form-level level-js">
                                                 <div class="user__form-item">
                                                     <p class="user__form-label" style="margin-bottom: 30px; font-size: 24px;"><span style="color: red">*</span>- поля, обязательные для заполнения</p>
-                                                    <label class="user__form-label" for="">Выбор района Свердловской области<span style="color: red">*</span></label>
+                                                    <label class="user__form-label" for="">Выбор Муниципального образования Свердловской области<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
                                                         <select class="user__form-input user__form-input--select" name="" id="">
@@ -285,7 +285,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="user__form-item">
-                                                    <label class="user__form-label" for="">Выбор города<span style="color: red">*</span></label>
+                                                    <label class="user__form-label" for="">Выбор населенного пункта<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
                                                         <select class="user__form-input user__form-input--select" name="" id="">
@@ -316,7 +316,7 @@
 
                                             <!-- level-2 -->
                                             <div class="user__form-level ">
-                                                <div class="user__form-item">
+                                                <!-- <div class="user__form-item">
                                                     <label class="user__form-label" for="">Сфера услуг<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
@@ -326,7 +326,7 @@
                                                             <option value="Услуга 3">Услуга 4</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="user__form-item">
                                                     <label class="user__form-label" for="">Услуга<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
@@ -339,10 +339,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="user__form-item">
-                                                    <label class="user__form-label" for="">Подуслуга<span style="color: red">*</span></label>
+                                                    <label class="user__form-label" for="">Подуслуга</label>
                                                     <div><input class="user__form-input" type="text" placeholder=""></div>
                                                 </div>
-                                                <div class="user__form-item user__form-item--level-2">
+                                                <!-- <div class="user__form-item user__form-item--level-2">
                                                     <label class="user__form-label user__form-label--level-2" for="">Выберите количество получаемых результатов по ранее поданным обращениям</label>
                                                     <div class="user__form-select user__form-select--level-2">
                                                         <i class="fas fa-angle-down user__fas-icon user__fas-icon--level-2"></i>
@@ -352,7 +352,7 @@
                                                             <option value="Услуга 3">Услуга 4</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="user__bottom-btn user__bottom-btn--master">
                                                     <span data-level="2" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
                                                 </div>
@@ -372,19 +372,35 @@
                                                 </div>
                                                 <div class="user__wrap-form-item">
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
-                                                        <label class="user__form-label" for="">Отчество<span style="color: red">*</span></label>
+                                                        <label class="user__form-label" for="">Отчество</label>
                                                         <div><input class="user__form-input" type="text" placeholder="Иванович"></div>
                                                     </div>
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
-                                                        <label class="user__form-label" for="">Адресс электронной почты</label>
-                                                        <div><input class="user__form-input" type="text" placeholder="ivan@Ivanov.ru"></div>
+                                                        <label class="user__form-label" for="">Дата рождения</label>
+                                                        <div><input class="user__form-input" type="text" placeholder="01.01.2000"></div>
                                                     </div>
                                                 </div>
                                                 <div class="user__wrap-form-item">
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Паспорт (серия, номер)</label>
+                                                        <div><input class="user__form-input" type="text" placeholder="1234 567891"></div>
+                                                    </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">СНИЛС</label>
+                                                        <div><input class="user__form-input" type="text" placeholder="123456789"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="user__wrap-form-item">
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <label class="user__form-label" for="">Адрес электронной почты<span style="color: red">*</span></label>
+                                                        <div><input class="user__form-input" type="text" placeholder="ivan@Ivanov.ru"></div>
+                                                    </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
                                                         <label class="user__form-label" for="">Номер телефона<span style="color: red">*</span></label>
                                                         <div><input class="user__form-input" type="text" placeholder="8 800 555 35 35"></div>
                                                     </div>
+                                                </div>
+                                                <div class="user__wrap-form-item">
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
                                                         <label class="user__form-label" for="">Категория заявителя<span style="color: red">*</span></label>
                                                         <!-- <div><input class="user__form-input" type="text" placeholder="123-456"></div> -->
@@ -397,11 +413,15 @@
                                                             </select>
                                                         </div>
                                                     </div>
+                                                    <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                                                        <!-- <label class="user__form-label" for="">Номер телефона<span style="color: red">*</span></label>
+                                                        <div><input class="user__form-input" type="text" placeholder="8 800 555 35 35"></div> -->
+                                                    </div>
                                                 </div>
-                                                <div class="user__wrap-form-item">
+                                                <!-- <div class="user__wrap-form-item">
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
                                                         <label class="user__form-label" for="">Тип обращения<span style="color: red">*</span></label>
-                                                        <!-- <div><input class="user__form-input" type="text" placeholder="01.01.2000"></div> -->
+                                                       
                                                         <div class="user__form-select">
                                                             <i class="fas fa-angle-down user__fas-icon"></i>
                                                             <select class="user__form-input user__form-input--select" name="" id="">
@@ -412,10 +432,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="user__form-item user__form-item--wrap user__form-item--fluid">
-                                                        <!-- <label class="user__form-label" for="">Электронная почта (при наличии)</label>
-                                                        <div><input class="user__form-input" type="text" placeholder="123-456"></div> -->
+                                                       
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 
                                                 <div class="user__bottom-btn user__bottom-btn--master">
                                                     <span data-level="3" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
@@ -424,7 +443,100 @@
 
                                             <!-- level-4 -->
                                             <div class="user__form-level ">
-                                                <div class="user__form-item">
+
+                                                <div class="">
+                                                    <p class="modal__card-span">Количество (пакетов документов, человек, услуг, объектов)</p>
+                                                    <div class="calender">
+                                                        <div class="calender__list">
+                                                            <span class="calender__list-item">1</span>
+                                                            <span class="calender__list-item">2</span>
+                                                            <span class="calender__list-item">3</span>
+                                                            <span class="calender__list-item">4</span>
+                                                            <span class="calender__list-item">5</span>
+                                                            <span class="calender__list-item">6</span>
+                                                            <span class="calender__list-item">7</span>
+                                                            <span class="calender__list-item">8</span>
+                                                            <span class="calender__list-item">9</span>
+                                                            <span class="calender__list-item">10</span>
+                                                            <span class="calender__list-item">11</span>
+                                                            <span class="calender__list-item">12</span>
+                                                            <span class="calender__list-item">13</span>
+                                                            <span class="calender__list-item">14</span>
+                                                            <span class="calender__list-item">15</span>
+                                                        </div>
+                                                        <div class="calender__inner">
+                                                            <div class="calender__inner-item">
+                                                                <div class="light">
+                                                                    <div class="calendar">
+                                                                        <div class="calendar-header">
+                                                                            
+                                                                            <div class="year-picker">
+                                                                                <span class="year-change" id="prev-year">
+                                                                                    <pre><</pre>
+                                                                                </span>
+                                                                               <div>
+                                                                                    <span class="month-picker" id="month-picker">February</span>
+                                                                                    <span id="year">2021</span>
+                                                                               </div>
+                                                                                <span class="year-change" id="next-year">
+                                                                                    <pre>></pre>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="calendar-body">
+                                                                            <div class="calendar-week-day">
+                                                                                
+                                                                                <div>Пн</div>
+                                                                                <div>Вт</div>
+                                                                                <div>Ср</div>
+                                                                                <div>Чт</div>
+                                                                                <div>Пт</div>
+                                                                                <div>Сб</div>
+                                                                                <div>Вс</div>
+                                                                            </div>
+                                                                            <div class="calendar-days"></div>
+                                                                        </div>
+                                                                        <div class="month-list"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="calender__inner-item">
+                                                                <div class="calender__list calender__list--time">
+                                                                    <span class="calender__list-item calender__list-item--time">8:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">8:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">8:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">9:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">9:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">9:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">10:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">10:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">10:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time calender__list-item--active">11:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">11:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">11:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">12:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">12:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">12:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">13:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">13:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">13:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">14:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">14:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">14:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">15:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">15:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">15:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">16:00</span>
+                                                                    <span class="calender__list-item calender__list-item--time">16:20</span>
+                                                                    <span class="calender__list-item calender__list-item--time">16:40</span>
+                                                                    <span class="calender__list-item calender__list-item--time">17:00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                    <!-- <span class="modal__card-close modal__card-close--calender" id="modal-close-calender-js"><i class="fas fa-times"></i></span> -->
+                                                </div>
+                                                <!-- <div class="user__form-item">
                                                     <label class="user__form-label" for="">Дата предварительной записи<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <img src="img/calender-icon.png" class="user__fas-icon user__fas-icon--calender calender-js" alt="">
@@ -432,7 +544,7 @@
                                                             <span>12.07.2021</span>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <!-- <div class="user__form-item">
                                                     <label class="user__form-label" for="">Выберите временной диапазон<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
@@ -444,7 +556,7 @@
                                                         </select>
                                                     </div>
                                                 </div> -->
-                                                <div class="user__form-item">
+                                                <!-- <div class="user__form-item">
                                                     <label class="user__form-label" for="">Выберите желаемое время<span style="color: red">*</span></label>
                                                     <div class="user__form-select">
                                                         <i class="fas fa-angle-down user__fas-icon"></i>
@@ -454,7 +566,7 @@
                                                             <option value="Услуга 3">20:00</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="user__bottom-btn user__bottom-btn--master">
                                                     <span data-level="4" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Далее</span>
                                                 </div>
@@ -477,6 +589,19 @@
                                                             <p class="user__form-result-inner"> Иванович</p>
                                                         </li>
                                                         <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Дата Рождения</p>
+                                                            <p class="user__form-result-inner"> 01.01.2000</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">Паспорт</p>
+                                                            <p class="user__form-result-inner">1234 567891</p>
+                                                        </li>
+                                                        <li class="user__form-result-item">
+                                                            <p class="user__form-result-inner">СНИЛС</p>
+                                                            <p class="user__form-result-inner" >123456789</p>
+                                                        </li>
+
+                                                        <li class="user__form-result-item">
                                                             <p class="user__form-result-inner">Адрес электронной почты</p>
                                                             <p class="user__form-result-inner">ivan@ivanov.ru</p>
                                                         </li>
@@ -484,6 +609,9 @@
                                                             <p class="user__form-result-inner">Номер телефона</p>
                                                             <p class="user__form-result-inner" style="font-weight: 700; color: #2C2A29;">8 800 555 3535</p>
                                                         </li>
+
+                                                        
+
                                                         <li class="user__form-result-item">
                                                             <p class="user__form-result-inner">Тип заявителя</p>
                                                             <p class="user__form-result-inner">Физическое лицо</p>
@@ -519,7 +647,7 @@
                                                         <label class="user__inner-text user__inner-text--input" for="level"><input id="level" type="checkbox">&nbsp; Подтверждаю, что данные внесены верно<span style="color: red">*</span></label>
                                                     </div>
                                                     <div class="user__bottom-btn user__bottom-btn--master">
-                                                        <button type="submit"  class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Зарегистрировать талон</button>
+                                                        <a href="confirm.html" type="submit"  class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Зарегистрировать запись</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -699,7 +827,7 @@
     <!-- model calender -->
     <div class="modal" id="modal-calender-js">
         <div class="modal__card-inner" >
-            <div class="modal__card modal__card--calender">
+            <!-- <div class="modal__card modal__card--calender">
                 <p class="modal__card-span">Малый проспект Васильевского острова, 57, корп. 2</p>
                 <div class="calender">
                     <div class="calender__list">
@@ -721,10 +849,7 @@
                     </div>
                     <div class="calender__inner">
                         <div class="calender__inner-item">
-
-
                             <div class="light">
-
                                 <div class="calendar">
                                     <div class="calendar-header">
                                         
@@ -743,42 +868,27 @@
                                     </div>
                                     <div class="calendar-body">
                                         <div class="calendar-week-day">
-                                            <div>Вс</div>
-                                            <div>Мн</div>
+                                            
+                                            <div>Пн</div>
                                             <div>Вт</div>
                                             <div>Ср</div>
                                             <div>Чт</div>
                                             <div>Пт</div>
                                             <div>Сб</div>
+                                            <div>Вс</div>
                                         </div>
                                         <div class="calendar-days"></div>
                                     </div>
-                                    <!-- <div class="calendar-footer">
-                                        <div class="toggle">
-                                            <span>Dark Mode</span>
-                                            <div class="dark-mode-switch">
-                                                <div class="dark-mode-switch-ident"></div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                     <div class="month-list"></div>
                                 </div>
-                            
-                               
                             </div>
-
-
-
-
-
-
                         </div>
                         <div class="calender__inner-item">
                             <div class="calender__list calender__list--time">
                                 <span class="calender__list-item calender__list-item--time">8:00</span>
                                 <span class="calender__list-item calender__list-item--time">8:20</span>
                                 <span class="calender__list-item calender__list-item--time">8:40</span>
-                                <span class="calender__list-item calender__list-item--time calender__list-item--checked">9:00</span>
+                                <span class="calender__list-item calender__list-item--time">9:00</span>
                                 <span class="calender__list-item calender__list-item--time">9:20</span>
                                 <span class="calender__list-item calender__list-item--time">9:40</span>
                                 <span class="calender__list-item calender__list-item--time">10:00</span>
@@ -808,7 +918,7 @@
                     </div> 
                 </div>
                 <span class="modal__card-close modal__card-close--calender" id="modal-close-calender-js"><i class="fas fa-times"></i></span>
-            </div>
+            </div> -->
         </div>
      </div>
 

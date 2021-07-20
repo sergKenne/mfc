@@ -2328,6 +2328,27 @@ $(document).ready(function(){
       $("#modal-send-js").slideUp();
     });
 
+
+
+    $(".cancel-js").click(function(){
+      $("#modal-cancel-js").slideDown();
+    });
+
+    $("#cancel-close-js").click(function(){
+      $("#modal-cancel-js").slideUp();
+    });
+
+
+    $(".info-js").click(function(){
+      $("#modal-info-js").slideDown();
+    });
+
+    $("#info-close-js").click(function(){
+      $("#modal-info-js").slideUp();
+    });
+
+    
+
     $("#doc-js").click(function(){
       $("#modal-doc-js").slideDown();
     })
@@ -2805,18 +2826,12 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
 //CALENDAR
 
 
 let calendar = document.querySelector('.calendar')
 
-const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const month_names = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
 
 isLeapYear = (year) => {
     return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 ===0)
@@ -2845,13 +2860,13 @@ generateCalendar = (month, year) => {
 
     // get first day of month
     
-    let first_day = new Date(year, month, 1)
+    let first_day = new Date(year, month, 0)
 
     for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
         let day = document.createElement('div')
         if (i >= first_day.getDay()) {
             day.classList.add('calendar-day-hover')
-            day.innerHTML = i - first_day.getDay() + 1
+            day.innerHTML = i - first_day.getDay() + 1 //+ 1
             day.innerHTML += `<span></span>
                             <span></span>
                             <span></span>
