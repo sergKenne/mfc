@@ -2642,10 +2642,16 @@ a {
         display: flex;
         margin-left: -16px;
         margin-right: -16px;
+<<<<<<< HEAD
         margin-bottom: 120px; 
         &--reservation {
             height: 130vh;
         }
+=======
+        margin-bottom: 120px;
+        //width: 130vh;
+        height: 130vh;
+>>>>>>> 7f928189c8efbb771cb6c261e37d973c7bbb6a2c
     }
     &__inner-left {
         flex: 2;
@@ -6561,6 +6567,7 @@ a {
      position: fixed;
      bottom: 60px;
      right: 60px;
+     z-index: 9999;
      //cursor: pointer;
   }
   .button {
