@@ -186,6 +186,14 @@ a {
             margin-right: 8px;
             transform: translateY(-3px);
         }
+        &:last-child {
+            max-width: 700px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            
+        }
     }
 }
 
@@ -328,6 +336,9 @@ a {
         &--active {
             color: $red;
             border-color: $red;
+        }
+        a {
+            color: #58595B; 
         }
     }
 }
@@ -2642,16 +2653,10 @@ a {
         display: flex;
         margin-left: -16px;
         margin-right: -16px;
-<<<<<<< HEAD
         margin-bottom: 120px; 
         &--reservation {
             height: 130vh;
         }
-=======
-        margin-bottom: 120px;
-        //width: 130vh;
-        height: 130vh;
->>>>>>> 7f928189c8efbb771cb6c261e37d973c7bbb6a2c
     }
     &__inner-left {
         flex: 2;
@@ -4684,7 +4689,7 @@ a {
     }
 
     &__card-btn {
-    
+        cursor: pointer;
         font-weight: 400;
         font-size: 18px;
         line-height: 150%;
@@ -6567,7 +6572,8 @@ a {
      position: fixed;
      bottom: 60px;
      right: 60px;
-     z-index: 9999;
+     z-index: 9;
+
      //cursor: pointer;
   }
   .button {
@@ -6766,6 +6772,9 @@ a {
             height: 90vh;
             overflow-y: scroll;
         }
+        &--success {
+            border: 1px solid #E3CCB7;
+        }
         @media screen and (max-width: 1024px) { 
             width: 60%;
             
@@ -6825,6 +6834,37 @@ a {
     }
     &__card-cancel {
         text-align: center;
+    }
+    &__success {
+        text-align: center;
+    }
+    &__success-description {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        color: #2C2A29;
+    }
+    &__counter-description {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: #58595B;
+    }
+    &__counter-number {
+        font-family: 'Circe';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 104px;
+        line-height: 150%;
+        color: #E04E39;
+    }
+    &__counter-title {
+        font-family: 'Circe';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 34px;
+        line-height: 150%;
+        color: #E04E39;
     }
 
 }
@@ -7243,4 +7283,19 @@ a {
 .level-js {
     z-index: 2;
     opacity: 1;
+}
+
+
+
+.article {
+
+    &__text {
+
+        strong {
+            font-weight: 700; 
+        }
+        em {
+            font-style: italic;
+        }
+    }
 }

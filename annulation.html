@@ -530,7 +530,7 @@
                         <!-- <p class="jobs__card-description jobs__card-description--status"><span class="jobs__card-strong">Офис:</span> г. Екатеринбург, 1-я Советская, д.1</p> -->
                     </a>
                     <div class="jobs__wrap-card-btn jobs__wrap-card-btn--cancel">
-                        <button class="jobs__card-btn jobs__card-btn--status cancel-js">Да, отменить запись</button>
+                        <button class="jobs__card-btn jobs__card-btn--status confirm-js">Да, отменить запись</button>
                     </div>
                 </div>
                 <span class="modal__card-close" id="cancel-close-js"><i class="fas fa-times"></i></span>
@@ -616,15 +616,50 @@
                         
                     </ul>
                     <p class="user__form-result-description">Заявленное количество обращений<br/> по услуге на подачу документов или получение результата — 1</p>
-                    <!-- <div>
-                        <label class="user__inner-text user__inner-text--input" for="level"><input id="level" type="checkbox">&nbsp; Подтверждаю, что данные внесены верно<span style="color: red">*</span></label>
-                    </div>
-                    <div class="user__bottom-btn user__bottom-btn--master">
-                        <a href="confirm.html" type="submit"  class="user__inner-btn user__inner-btn--form user__inner-btn--bottom p-lg">Зарегистрировать запись</a>
-                    </div>
-                     -->
                </div>
                 <span class="modal__card-close" id="info-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for success -->
+    <div class="modal" id="modal-success-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--success">
+               <div class="modal__success">
+                    <img class="modal__success-img" src="img/success.svg" alt="">
+                    <p class="modal__success-description">Ваша запись успешна отменена!</p>
+               </div>
+                <!-- <span class="modal__card-close" id="cancel-close-js"><i class="fas fa-times"></i></span> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for error -->
+    <div class="modal" id="modal-error-js" >
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--success">
+               <div class="modal__success">
+                    <img class="modal__success-img" src="img/error.svg" alt="">
+                    <p class="modal__success-description">Похоже что то пошло не так!<br>Попробуйте повторить попытку позже</p>
+               </div>
+                <!-- <span class="modal__card-close" id="cancel-close-js"><i class="fas fa-times"></i></span> -->
+            </div>
+        </div>
+     </div>
+
+     <!-- modal for counter -->
+    <div class="modal" id="modal-success-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--success">
+               <div class="modal__success">
+                    <p class="modal__counter-description">Более 500 000 посетителей сейчас<br> заказывают услуги</p>
+                    <h4 class="modal__counter-title">Вы сможете зайте через</h4>
+                    <h5 class="modal__counter-number">30:00</h5>
+                    <p class="modal__counter-description">Подождите, здесь появится ссылка<br> для входа на портал</p>
+                    
+               </div>
+                <!-- <span class="modal__card-close" id="cancel-close-js"><i class="fas fa-times"></i></span> -->
             </div>
         </div>
      </div>

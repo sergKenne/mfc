@@ -204,6 +204,13 @@ a {
           transform: translateY(-3px);
 }
 
+.breadcrumbs__item:last-child {
+  max-width: 700px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .box-service {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,6 +391,10 @@ a {
 .filter-letter__item--active {
   color: #E04E39;
   border-color: #E04E39;
+}
+
+.filter-letter__item a {
+  color: #58595B;
 }
 
 .pagination {
@@ -3441,12 +3452,9 @@ a {
   margin-left: -16px;
   margin-right: -16px;
   margin-bottom: 120px;
-<<<<<<< HEAD
 }
 
 .user__inner--reservation {
-=======
->>>>>>> 7f928189c8efbb771cb6c261e37d973c7bbb6a2c
   height: 130vh;
 }
 
@@ -5885,6 +5893,7 @@ a {
 }
 
 .jobs__card-btn {
+  cursor: pointer;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
@@ -8445,6 +8454,7 @@ a {
   position: fixed;
   bottom: 60px;
   right: 60px;
+  z-index: 9;
 }
 
 .button {
@@ -8686,6 +8696,10 @@ button.button:hover::after, button.button:focus::after {
   overflow-y: scroll;
 }
 
+.modal__card--success {
+  border: 1px solid #E3CCB7;
+}
+
 @media screen and (max-width: 1024px) {
   .modal__card {
     width: 60%;
@@ -8757,6 +8771,42 @@ button.button:hover::after, button.button:focus::after {
 
 .modal__card-cancel {
   text-align: center;
+}
+
+.modal__success {
+  text-align: center;
+}
+
+.modal__success-description {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #2C2A29;
+}
+
+.modal__counter-description {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #58595B;
+}
+
+.modal__counter-number {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 104px;
+  line-height: 150%;
+  color: #E04E39;
+}
+
+.modal__counter-title {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 150%;
+  color: #E04E39;
 }
 
 .navbar-bottom {
@@ -9312,5 +9362,13 @@ button.button:hover::after, button.button:focus::after {
 .level-js {
   z-index: 2;
   opacity: 1;
+}
+
+.article__text strong {
+  font-weight: 700;
+}
+
+.article__text em {
+  font-style: italic;
 }
 /*# sourceMappingURL=styles.css.map */

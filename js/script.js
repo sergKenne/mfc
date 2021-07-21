@@ -2360,6 +2360,21 @@ $(document).ready(function(){
       $("#modal-calender-js").slideUp();
     });
 
+
+    //отменить запись
+    $(".confirm-js").click(function(){
+      $("#modal-cancel-js").css({display: "none"});
+      $("#modal-success-js").css({display:"block"});
+      setTimeout(()=> {
+        $("#modal-success-js").css({display:"none"});
+      }, 2000)
+    })
+
+
+
+
+
+
     //OFFERS JS
     $(".offers-title-js").bind({
       click: function() {
