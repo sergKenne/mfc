@@ -321,24 +321,27 @@ a {
     margin-right: -2px;
     &__item {
         //font-family: 'PT Sans';
-        color: #58595B;
+        //color: #58595B;
+        margin: 2px;
+        cursor: pointer;
+    }
+    &__link {
+        color: #58595B; 
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 4px;
         font-style: normal;
         font-weight: 700;
         font-size: 26.8839px;
         text-transform: uppercase;
         line-height: 35px;
         border: 1px solid #58595B;
-        padding-left: 6px;
-        padding-right: 6px;
-        border-radius: 4px;
-        margin: 2px;
-        cursor: pointer;
+        display: block;
+        width: 100%;
         &--active {
             color: $red;
             border-color: $red;
-        }
-        a {
-            color: #58595B; 
+           
         }
     }
 }
@@ -401,7 +404,7 @@ a {
     &__menu-list {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     &__menu-item {
         margin-bottom: 12px;
@@ -3345,7 +3348,13 @@ a {
         }
     }
     &__form {
-        margin-bottom: 207px;
+        margin-bottom: 20px;
+        //min-height: 300px;
+        //border: 1px solid greenyellow;
+        min-height: 671px;
+        position: relative;
+        z-index: 3;
+
         
     }
     &__form-btn {
@@ -3373,8 +3382,11 @@ a {
         background-color: #ffffff;
         border: 2px solid #E04E39;
         width: 465px;
+        max-height: 241px;
         margin-top: 30px;
         overflow: hidden;
+        //z-index: 99;
+        
         @media screen and (max-width: 1202px) {
             margin-bottom: 800px;
             width: 100%;
@@ -3401,8 +3413,27 @@ a {
     }
     &__form-list {
         margin-left: 8px;
+        overflow-y: scroll;
+        height: auto;
+        //max-height: 78%;
+        min-height: 0px;
+        max-height: 180px;
+        background: #ffffff;
+        //border: 2px solid blueviolet;
+        
+        
+    }
+    &__list-offices {
+        position: absolute;
+        bottom: 0;
+        left: 8px;
+        overflow: initial;
+        height: auto;
+        background: #ffffff;
+        z-index: -1;
     }
     &__form-list-item {
+        display: block;
         height: 30px;
        // border:1px solid;
         line-height: 30px;
@@ -3410,6 +3441,7 @@ a {
         font-weight: 400;
         font-size: 13px;
         color: #58595B;
+        //z-index: 1;
         
     }
     &__form-city {
@@ -3475,6 +3507,7 @@ a {
         top: 450px;
         //display: none;
         cursor: pointer;
+        z-index: 4;
         @media screen and (max-width: 1202px) {
             right: 50%;
             transform: translateX(50%);
@@ -4873,6 +4906,9 @@ a {
         border-radius: 11px;
         padding-bottom: 10px;
         transition: all .2s linear;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
         &:hover .video__item {
             border-radius: 11px;
             
@@ -4886,7 +4922,7 @@ a {
         &:hover {
             
             //padding: 4px;
-            border-color: $red;
+            //border-color: $red;
         }
     }
     &__src {
@@ -4907,6 +4943,16 @@ a {
         line-height: 21px;
         color: #58595B;
         margin-top: 6px;
+    }
+    &__icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+        background-color: #ffffff;
+        color: $red;
+        display: none;
     }
 }
 
@@ -6748,7 +6794,7 @@ a {
         padding: 75px 60px;
         width: 45%;
         &--calender {
-            border: 1px solid #808285;
+            border: 1px solid #dce7f6;
             padding-top: 30px;
             padding-bottom: 36px;
             
@@ -6774,6 +6820,10 @@ a {
         }
         &--success {
             border: 1px solid #E3CCB7;
+        }
+        &--video {
+            border: 1px solid #dce7f6;
+            width: 70%;
         }
         @media screen and (max-width: 1024px) { 
             width: 60%;
@@ -6866,6 +6916,13 @@ a {
         line-height: 150%;
         color: #E04E39;
     }
+    &__iframe {
+        width: 100%;
+        height: 615px;
+        @media  (max-width: 1024px) {
+            height: 420px;
+        }
+    }
 
 }
 
@@ -6879,6 +6936,7 @@ a {
     right: 0;
     background: linear-gradient(180deg, #EEEEEE 0%, #DEDEDE 100%);
     border: 1px solid #A7A9AC;
+    z-index: 9999;
     
    padding-top: 3px;
     @media  (max-width: 425px) {
@@ -7297,5 +7355,18 @@ a {
         em {
             font-style: italic;
         }
+    }
+}
+
+
+
+
+.red {
+    color: $red;
+    &-bg {
+        background-color: $red;
+    }
+    &-bd {
+        border: 1px solid $red;
     }
 }

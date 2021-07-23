@@ -2367,7 +2367,26 @@ $(document).ready(function(){
       $("#modal-success-js").css({display:"block"});
       setTimeout(()=> {
         $("#modal-success-js").css({display:"none"});
-      }, 2000)
+      }, 1400)
+    })
+
+
+    //video js
+
+    $(".video-js").each(function(ind, elt){
+      $(elt).click(function(){
+        const src = $(elt).data("video");
+        //alert(src);
+        $(".modal__iframe").attr("src", src)
+        $("#modal-video-js").css({display: "block"});
+
+        $("#video-close-js").click(function(){
+          $(".modal__iframe").attr("src", $(".modal__iframe").attr("src")).attr("src", "");
+          $("#modal-video-js").css({display: "none"});
+          
+          
+        })
+      })
     })
 
 
@@ -2584,96 +2603,96 @@ $(document).ready(function(){
           });
 
 
-        $(this).click(function(){
-          if($(this).data("city")) {
-            console.log(cities);
-            //alert($(this).data("city"));
-            let city = $(this).data("city");
-                city = cities.find(c => c.cityName === city )
+        // $(this).click(function(){
+        //   if($(this).data("city")) {
+        //     console.log(cities);
+        //     //alert($(this).data("city"));
+        //     let city = $(this).data("city");
+        //         city = cities.find(c => c.cityName === city )
 
-                //city && city.offices.forEach(office => {
+        //         //city && city.offices.forEach(office => {
 
-                  // const {coordinates} = office;
-                  // const current_city = office.city;
-                  //const current_name = office.name;
+        //           // const {coordinates} = office;
+        //           // const current_city = office.city;
+        //           //const current_name = office.name;
                 
 
-                  const {coordinates} = city.offices[0]
-                  const current_city = city.offices[0].city;
-                  const current_name = city.offices[0].name;
-                  console.log("coordinates:", current_city);
-                  ymaps.ready(init);
+        //           const {coordinates} = city.offices[0]
+        //           const current_city = city.offices[0].city;
+        //           const current_name = city.offices[0].name;
+        //           console.log("coordinates:", current_city);
+        //           ymaps.ready(init);
   
-                  function init () {
-                    $(".info__yandex-map").css({display: "block" });
-                    $(".info__map").css({display: "none" });
-                      var myMap = new ymaps.Map('map', {
-                          //center: [56.829374, 60.672699], 
-                          center: coordinates,
-                          zoom: 10
-                      }, {
-                          searchControlProvider: 'yandex#search'
-                      });
+        //           function init () {
+        //             $(".info__yandex-map").css({display: "block" });
+        //             $(".info__map").css({display: "none" });
+        //               var myMap = new ymaps.Map('map', {
+        //                   //center: [56.829374, 60.672699], 
+        //                   center: coordinates,
+        //                   zoom: 10
+        //               }, {
+        //                   searchControlProvider: 'yandex#search'
+        //               });
                       
-                      // Создаём макет содержимого.
-                      // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                      //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-                      // ),
+        //               // Создаём макет содержимого.
+        //               // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        //               //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        //               // ),
 
-                      // myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                      //     hintContent: current_name,
-                      //     balloonContent: current_city
-                      // }, {
-                      //     iconLayout: 'default#image',
-                      //     iconImageHref: '../img/geo.png',
-                      //     iconImageSize: [40, 48],
-                      //     iconImageOffset: [-5, -38]
-                      // }),
+        //               // myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        //               //     hintContent: current_name,
+        //               //     balloonContent: current_city
+        //               // }, {
+        //               //     iconLayout: 'default#image',
+        //               //     iconImageHref: '../img/geo.png',
+        //               //     iconImageSize: [40, 48],
+        //               //     iconImageOffset: [-5, -38]
+        //               // }),
 
-                      // myMap.geoObjects.add(myPlacemark)
+        //               // myMap.geoObjects.add(myPlacemark)
 
 
 
-                      city.offices.forEach(office => {
-                        console.log(office)
-                          const myPlacemark = new ymaps.Placemark(office.coordinates, office.balloon, office.icon);
-                          myMap.geoObjects.add(myPlacemark);
-                      })
+        //               city.offices.forEach(office => {
+        //                 console.log(office)
+        //                   const myPlacemark = new ymaps.Placemark(office.coordinates, office.balloon, office.icon);
+        //                   myMap.geoObjects.add(myPlacemark);
+        //               })
           
-                  }
+        //           }
 
-              //})
+        //       //})
 
 
-          } else {
-            alert("no Data address")
-          }
-        })
+        //   } else {
+        //     alert("no Data address")
+        //   }
+        // })
     });
 
     //MAP OFFICES
-    ymaps.ready(init);
+    // ymaps.ready(init);
 
-    function init(){
-      var myMapOffices = new ymaps.Map("map-offices", {
-                  center: [56.829374, 60.672699],
-                  zoom: 7
-                }, {
-                  searchControlProvider: 'yandex#search'
-              });
+    // function init(){
+    //   var myMapOffices = new ymaps.Map("map-offices", {
+    //               center: [56.829374, 60.672699],
+    //               zoom: 7
+    //             }, {
+    //               searchControlProvider: 'yandex#search'
+    //           });
     
-            myMapOffices.behaviors.disable(["drag", "scrollZoom"]);
+    //         myMapOffices.behaviors.disable(["drag", "scrollZoom"]);
 
 
-            dataLocation.forEach(elt => {
-              console.log(elt)
-                const myPlacemark = new ymaps.Placemark(elt.coordinate, elt.balloon, elt.icon);
-                myMapOffices.geoObjects.add(myPlacemark);
-            })
+    //         dataLocation.forEach(elt => {
+    //           console.log(elt)
+    //             const myPlacemark = new ymaps.Placemark(elt.coordinate, elt.balloon, elt.icon);
+    //             myMapOffices.geoObjects.add(myPlacemark);
+    //         })
 
 
 
-    }
+    // }
 
 
 
@@ -2716,66 +2735,66 @@ $(document).ready(function(){
 
 
 
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map('map-office', {
-              center: [56.829374, 60.672699],//[55.751574, 37.573856],
-              zoom: 9
-          }, {
-              searchControlProvider: 'yandex#search'
-          }),
+  //   ymaps.ready(function () {
+  //     var myMap = new ymaps.Map('map-office', {
+  //             center: [56.829374, 60.672699],//[55.751574, 37.573856],
+  //             zoom: 9
+  //         }, {
+  //             searchControlProvider: 'yandex#search'
+  //         }),
           
   
-          // Создаём макет содержимого.
-          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-          ),
+  //         // Создаём макет содержимого.
+  //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  //             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  //         ),
   
-          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'Собственный значок метки',
-              balloonContent: 'Это красивая метка'
-          }, {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: 'default#image',
-              // Своё изображение иконки метки.
-              //iconImageHref: 'images/myIcon.gif',
-              iconImageHref: '../img/geo.png',
+  //         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  //             hintContent: 'Собственный значок метки',
+  //             balloonContent: 'Это красивая метка'
+  //         }, {
+  //             // Опции.
+  //             // Необходимо указать данный тип макета.
+  //             iconLayout: 'default#image',
+  //             // Своё изображение иконки метки.
+  //             //iconImageHref: 'images/myIcon.gif',
+  //             iconImageHref: '../img/geo.png',
 
-              iconImageSize: [40, 48],
-              iconImageOffset:[-50, -75] //[-5, -38]
+  //             iconImageSize: [40, 48],
+  //             iconImageOffset:[-50, -75] //[-5, -38]
 
-              // Размеры метки.
-              //iconImageSize: [30, 42],
-              // Смещение левого верхнего угла иконки относительно
-              // её "ножки" (точки привязки).
-              //iconImageOffset: [-5, -38]
-          }),
+  //             // Размеры метки.
+  //             //iconImageSize: [30, 42],
+  //             // Смещение левого верхнего угла иконки относительно
+  //             // её "ножки" (точки привязки).
+  //             //iconImageOffset: [-5, -38]
+  //         }),
   
-          myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-              hintContent: 'Собственный значок метки с контентом',
-              balloonContent: 'А эта — новогодняя',
-              iconContent: '12'
-          }, {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: 'default#imageWithContent',
-              // Своё изображение иконки метки.
-              iconImageHref: 'images/ball.png',
-              // Размеры метки.
-              iconImageSize: [48, 48],
-              // Смещение левого верхнего угла иконки относительно
-              // её "ножки" (точки привязки).
-              iconImageOffset: [-24, -24],
-              // Смещение слоя с содержимым относительно слоя с картинкой.
-              iconContentOffset: [15, 15],
-              // Макет содержимого.
-              iconContentLayout: MyIconContentLayout
-          });
+  //         myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+  //             hintContent: 'Собственный значок метки с контентом',
+  //             balloonContent: 'А эта — новогодняя',
+  //             iconContent: '12'
+  //         }, {
+  //             // Опции.
+  //             // Необходимо указать данный тип макета.
+  //             iconLayout: 'default#imageWithContent',
+  //             // Своё изображение иконки метки.
+  //             iconImageHref: 'images/ball.png',
+  //             // Размеры метки.
+  //             iconImageSize: [48, 48],
+  //             // Смещение левого верхнего угла иконки относительно
+  //             // её "ножки" (точки привязки).
+  //             iconImageOffset: [-24, -24],
+  //             // Смещение слоя с содержимым относительно слоя с картинкой.
+  //             iconContentOffset: [15, 15],
+  //             // Макет содержимого.
+  //             iconContentLayout: MyIconContentLayout
+  //         });
   
-      myMap.geoObjects
-          .add(myPlacemark)
-          .add(myPlacemarkWithContent);
-  });
+  //     myMap.geoObjects
+  //         .add(myPlacemark)
+  //         .add(myPlacemarkWithContent);
+  // });
 
 
 

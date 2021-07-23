@@ -374,27 +374,28 @@ a {
 }
 
 .filter-letter__item {
+  margin: 2px;
+  cursor: pointer;
+}
+
+.filter-letter__link {
   color: #58595B;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 4px;
   font-style: normal;
   font-weight: 700;
   font-size: 26.8839px;
   text-transform: uppercase;
   line-height: 35px;
   border: 1px solid #58595B;
-  padding-left: 6px;
-  padding-right: 6px;
-  border-radius: 4px;
-  margin: 2px;
-  cursor: pointer;
+  display: block;
+  width: 100%;
 }
 
-.filter-letter__item--active {
+.filter-letter__link--active {
   color: #E04E39;
   border-color: #E04E39;
-}
-
-.filter-letter__item a {
-  color: #58595B;
 }
 
 .pagination {
@@ -471,7 +472,7 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .header__menu-item {
@@ -4308,7 +4309,10 @@ a {
 }
 
 .info__form {
-  margin-bottom: 207px;
+  margin-bottom: 20px;
+  min-height: 671px;
+  position: relative;
+  z-index: 3;
 }
 
 .info__form-btn {
@@ -4339,6 +4343,7 @@ a {
   background-color: #ffffff;
   border: 2px solid #E04E39;
   width: 465px;
+  max-height: 241px;
   margin-top: 30px;
   overflow: hidden;
 }
@@ -4373,9 +4378,25 @@ a {
 
 .info__form-list {
   margin-left: 8px;
+  overflow-y: scroll;
+  height: auto;
+  min-height: 0px;
+  max-height: 180px;
+  background: #ffffff;
+}
+
+.info__list-offices {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  overflow: initial;
+  height: auto;
+  background: #ffffff;
+  z-index: -1;
 }
 
 .info__form-list-item {
+  display: block;
   height: 30px;
   line-height: 30px;
   margin: 6px 0;
@@ -4455,6 +4476,7 @@ a {
   right: 0;
   top: 450px;
   cursor: pointer;
+  z-index: 4;
 }
 
 @media screen and (max-width: 1202px) {
@@ -6140,6 +6162,9 @@ a {
   padding-bottom: 10px;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
 }
 
 .video__item:hover .video__item {
@@ -6152,10 +6177,6 @@ a {
 
 .video__item:hover .video__description, .video__item:hover .video__date {
   padding-left: 12px;
-}
-
-.video__item:hover {
-  border-color: #E04E39;
 }
 
 .video__src {
@@ -6177,6 +6198,18 @@ a {
   line-height: 21px;
   color: #58595B;
   margin-top: 6px;
+}
+
+.video__icon {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4rem;
+  background-color: #ffffff;
+  color: #E04E39;
+  display: none;
 }
 
 .directories {
@@ -8667,7 +8700,7 @@ button.button:hover::after, button.button:focus::after {
 }
 
 .modal__card--calender {
-  border: 1px solid #808285;
+  border: 1px solid #dce7f6;
   padding-top: 30px;
   padding-bottom: 36px;
 }
@@ -8698,6 +8731,11 @@ button.button:hover::after, button.button:focus::after {
 
 .modal__card--success {
   border: 1px solid #E3CCB7;
+}
+
+.modal__card--video {
+  border: 1px solid #dce7f6;
+  width: 70%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -8809,6 +8847,17 @@ button.button:hover::after, button.button:focus::after {
   color: #E04E39;
 }
 
+.modal__iframe {
+  width: 100%;
+  height: 615px;
+}
+
+@media (max-width: 1024px) {
+  .modal__iframe {
+    height: 420px;
+  }
+}
+
 .navbar-bottom {
   display: none;
   position: fixed;
@@ -8819,6 +8868,7 @@ button.button:hover::after, button.button:focus::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#DEDEDE));
   background: linear-gradient(180deg, #EEEEEE 0%, #DEDEDE 100%);
   border: 1px solid #A7A9AC;
+  z-index: 9999;
   padding-top: 3px;
 }
 
@@ -9370,5 +9420,17 @@ button.button:hover::after, button.button:focus::after {
 
 .article__text em {
   font-style: italic;
+}
+
+.red {
+  color: #E04E39;
+}
+
+.red-bg {
+  background-color: #E04E39;
+}
+
+.red-bd {
+  border: 1px solid #E04E39;
 }
 /*# sourceMappingURL=styles.css.map */
