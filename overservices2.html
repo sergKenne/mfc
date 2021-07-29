@@ -491,7 +491,7 @@
                                                 <p class="our-services__banner-text"><span style="font-weight: bold;">Стоимость:</span><span style="color:#E04E39;font-family:'Circe';font-style: normal;font-weight: 800;font-size: 36px; padding-left: 7px;">3000 ₽ в месяц</span></p>
                                                 <div class="">
                                                     <button class="jobs__card-btn jobs__card-btn--over">Оплатить</button>
-                                                    <button class="jobs__card-btn jobs__card-btn--over">Оставить заявку</button>
+                                                    <button class="jobs__card-btn jobs__card-btn--over send-code">Оставить заявку</button>
                                                 </div>
                                             
                                             </div>
@@ -782,6 +782,39 @@
             </ul>
         </form>
     </div>
+    <!-- model for leave request -->
+    <div class="modal" id="modal-send-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--leave">
+                <h5 class="modal__card-title modal__card-title--leave">Оставьте свои данные и мы свяжемся с вами!</h5>
+                <form action="" >
+                    <div class="user__form-item">
+                        <label class="user__form-label" for="">ФИО</label>
+                        <div><input class="user__form-input" type="text" placeholder=""></div>
+                    </div>
+                    <div class="user__wrap-form-item user__wrap-form-item--leave">
+                        <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                            <label class="user__form-label" for="">Номер телефона<span style="color: red">*</span></label>
+                            <div><input class="user__form-input" type="text" placeholder=""></div>
+                        </div>
+                        <div class="user__form-item user__form-item--wrap user__form-item--fluid">
+                            <label class="user__form-label" for="">Электронная почта (при наличии)</label>
+                            <div><input class="user__form-input" type="text" placeholder=""></div>
+                        </div>
+                    </div>
+                    <div class="user__form-item">
+                        <label class="user__form-label" for="">Предподчтительное время для связи</label>
+                        <div><input class="user__form-input" type="text" placeholder=""></div>
+                    </div>
+                    
+                    <div class="user__bottom-btn">
+                        <button class="user__inner-btn user__inner-btn--form user__inner-btn--bottom">Заказать</button>
+                    </div>
+                </form>
+                <span class="modal__card-close" id="modal-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
     <section class="navbar-bottom">
         <!-- <div class="container"> -->
             <ul class="navbar-bottom__list">

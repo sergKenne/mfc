@@ -83,7 +83,7 @@
                                 <svg class="header__burger-svg header__burger-svg--bars"><use xlink:href="sprite.svg#burger"></use></svg>
                                 <svg class="header__burger-svg header__burger-svg--close"><use xlink:href="sprite.svg#close"></use></svg>
                             </div>
-                            <img class="header__logo" src="img/logo1.png" alt="logo" />
+                            <img class="header__logo" src="img/logo1.svg" alt="logo" />
                             <div class="header__phone">8 (343) 273-00-08<br><span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
                         </div>
                         <nav class="navbar header__navbar">
@@ -109,7 +109,7 @@
                 <div class="main-content__inner">
                     <aside class="sidebar main-content__sidebar" >
                         <a href="#" class="sidebar__link">
-                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.png" alt=""></a>
+                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.svg" alt=""></a>
                         </a>
                         <ul class="sidebar__nav-list" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
                             <li class="sidebar__nav-item">
@@ -236,15 +236,18 @@
                                     data-aos-duration="1500"
                                     data-aos-easing="linear"
                                 >
-                                    <div class="services__wrap-img">
-                                        <img src="img/serv1.svg" alt="" class="services__img">
-                                    </div>
+                                    
                                     <div class="services__overlay">
                                         <h4 class="services__title">Рождение ребёнка</h4>
                                         <div class="services__text"><span>8</span> услуг</div>
                                     </div>
+                                    
                                     <span class="services__left"></span>
                                     <span class="services__right"></span>
+                                    <img src="img/serv1.svg" alt="" class="services__img">
+                                    <!-- <div class="services__wrap-img">
+                                        
+                                    </div> -->
                                 </div>
                             </li>
                             <li class="services__item">
@@ -276,7 +279,7 @@
                                         <img src="img/serv3.svg" alt="" class="services__img">
                                     </div>
                                     <div class="services__overlay">
-                                        <h4 class="services__title">Смена места жительства</h4>
+                                        <h4 class="services__title">Смена места <br> жительства</h4>
                                         <div class="services__text"><span>8</span> услуг</div>
                                     </div>
                                     <span class="services__left"></span>
@@ -294,7 +297,7 @@
                                         <img src="img/serv4.svg" alt="" class="services__img">
                                     </div>
                                     <div class="services__overlay">
-                                        <h4 class="services__title">Сопровождение своего дела</h4>
+                                        <h4 class="services__title">Сопровождение <br> своего дела</h4>
                                         <div class="services__text"><span>8</span> услуг</div>
                                     </div>
                                     <span class="services__left"></span>
@@ -312,7 +315,7 @@
                                         <img src="img/serv5.svg" alt="" class="services__img">
                                     </div>
                                     <div class="services__overlay">
-                                        <h4 class="services__title">Утрата близкого человека</h4>
+                                        <h4 class="services__title">Утрата близкого <br> человека</h4>
                                         <div class="services__text"><span>8</span> услуг</div>
                                     </div>
                                     <span class="services__left"></span>
@@ -348,7 +351,7 @@
                                         <img src="img/serv7.svg" alt="" class="services__img">
                                     </div>
                                     <div class="services__overlay">
-                                        <h4 class="services__title">Выход на пенсию по старости</h4>
+                                        <h4 class="services__title">Выход на пенсию <br> по старости</h4>
                                         <div class="services__text"><span>8</span> услуг</div>
                                     </div>
                                     <span class="services__left"></span>
@@ -367,7 +370,7 @@
                                         <img src="img/serv8.svg" alt="" class="services__img">
                                     </div>
                                     <div class="services__overlay">
-                                        <h4 class="services__title">Все услуги нашего МФЦ</h4>
+                                        <h4 class="services__title">Все услуги нашего <br> МФЦ</h4>
                                         <div class="services__text"><span>8</span> услуг</div>
                                     </div>
                                     <span class="services__left"></span>
@@ -681,8 +684,10 @@
                         </ul>
                         <h3 class="info__title">Наши офисы и центры</h3>
                         <form class="info__form">
-                            <span class="info__form-btn" >На карте</span>
-                            <span class="info__form-btn">Списком</span>
+                            <div class="info__top-btn">
+                                <span class="info__form-btn" >На карте</span>
+                                <span class="info__form-btn">Списком</span>
+                            </div>
                             <div class="info__wrap-list">
                                 <div>
                                     <input class="info__form-input" type="text" placeholder="Начните вводить адрес...">
@@ -727,6 +732,8 @@
                                     
                                 </div>
                             </div>
+                            <div id="map-offices1" class="info__yandex-map">  
+                        </div>
                             <div class="info__list-offices" id="office_list">
                                 <!-- <a href="#" class="info__form-list-item">
                                     <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
@@ -775,14 +782,16 @@
                             </div>
                         </form>
                         
-                        <h4 class="info__time-title">Выберите время ожидания:</h4>
-                        <div>
-                            <label class="info__label" ><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--first"></span>  менее 5 минут</label>
-                            <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--second"></span>  от 15 до 30 минут</label>
-                        </div>
-                        <div>
-                            <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--middle"></span>  более 30 минут</label>
-                            <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--last"></span>  нет данных</label>
+                        <div class="info__wrap-radio">
+                            <h4 class="info__time-title">Выберите время ожидания:</h4>
+                            <div>
+                                <label class="info__label" ><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--first"></span>  менее 5 минут</label>
+                                <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--second"></span>  от 15 до 30 минут</label>
+                            </div>
+                            <div>
+                                <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--middle"></span>  более 30 минут</label>
+                                <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--last"></span>  нет данных</label>
+                            </div>
                         </div>
                         <div class="info__map">
                             <div id="tooltip">testing</div>  
@@ -857,9 +866,8 @@
                                 </defs>
                             </svg>
                         </div>
-                        <div id="map" class="info__yandex-map">
-                            
-                        </div>
+                        <!-- <div id="map-offices" class="info__yandex-map">  
+                        </div> -->
                         <!-- <img class="info__map" src="img/map2.svg" alt=""> -->
                     </div>
                 </div>
@@ -875,16 +883,16 @@
                         data-aos-once="true"
                     >
                         <div>
-                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
+                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.svg" alt=""></a>
                         </div>    
                         <br/><br/>
                         <h4 class="footer__title">Мобильное приложение:</h4>
                         <div>
-                            <img src="img/store1.png" alt="">
+                            <img src="img/store1.svg" alt="">
                         </div>
                         <br/>
                         <div>
-                            <img src="img/store2.png" alt="">
+                            <img src="img/store2.svg" alt="">
                         </div>
                     </li>
                     <li class="footer__item"

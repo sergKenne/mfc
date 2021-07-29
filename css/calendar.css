@@ -116,7 +116,7 @@
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
+    gap: 6px;
     color: var(--color-txt);
 }
 
@@ -203,14 +203,14 @@
     transition-delay: 0.6s;
 }
 
-.calendar-days div.curr-date,
-.calendar-days div.curr-date:hover {
+.calendar-days button.curr-date,
+.calendar-days button.curr-date:hover {
     background-color: var(--red);
     color: var(--white);
     border-radius: 50%;
 }
 
-.calendar-days div.curr-date span {
+.calendar-days button.curr-date span {
     display: none;
 }
 
@@ -338,4 +338,20 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+
+
+
+.calendar-day-hover {
+    border: none;
+    border-radius: 50%;
+    height: 39.11px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.day-active {
+    background-color: initial;
+    border: 1px solid #4d4c5a;
 }

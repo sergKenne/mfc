@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <title>MFC</title>
 </head>
-<body>
+<body onload="renderDate()">
     <div class="wrapper">
         <header class="header">
             <div class="header__modal-menu">
@@ -271,7 +271,7 @@
                                         </ul>
                                         <form action="" class="user__inner-form" >
                                             <!-- level-1 -->
-                                            <div class="user__form-level level-js">
+                                            <div class="user__form-level ">
                                                 <div class="user__form-item">
                                                     <p class="user__form-label" style="margin-bottom: 30px; font-size: 24px;"><span style="color: red">*</span>- поля, обязательные для заполнения</p>
                                                     <label class="user__form-label" for="">Выбор Муниципального образования Свердловской области<span style="color: red">*</span></label>
@@ -442,7 +442,7 @@
                                             </div>
 
                                             <!-- level-4 -->
-                                            <div class="user__form-level ">
+                                            <div class="user__form-level level-js" >
 
                                                 <div class="">
                                                     <p class="modal__card-span">Количество (пакетов документов, человек, услуг, объектов)</p>
@@ -465,7 +465,7 @@
                                                             <span class="calender__list-item">15</span>
                                                         </div>
                                                         <div class="calender__inner">
-                                                            <div class="calender__inner-item">
+                                                            <div   class="calender__inner-item">
                                                                 <div class="light">
                                                                     <div class="calendar">
                                                                         <div class="calendar-header">
@@ -498,6 +498,35 @@
                                                                         </div>
                                                                         <div class="month-list"></div>
                                                                     </div>
+
+                                                                    <!-- <div class="calendar">
+                                                                        <div class="month">
+                                                                            <div class="prev" onclick="moveDate('prev')">
+                                                                                <span>&#10094;</span>
+                                                                            </div>
+                                                                            <div class="current-date">
+                                                                                <h2 id="month"></h2>
+                                                                                <p id="date_str"></p>
+                                                                            </div>
+                                                                            <div class="next" onclick="moveDate('next')">
+                                                                                <span>&#10095;</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="weekdays">
+                                                                                
+                                                                                <div>Пн</div>
+                                                                                <div>Вт</div>
+                                                                                <div>Ср</div>
+                                                                                <div>Чт</div>
+                                                                                <div>Пт</div>
+                                                                                <div>Сб</div>
+                                                                                <div>Вс</div>
+                                                                                
+                                                                        </div>
+                                                                        <div class="days">
+                                                            
+                                                                        </div>
+                                                                    </div> -->
                                                                 </div>
                                                             </div>
                                                             <div class="calender__inner-item">
@@ -1001,6 +1030,7 @@
 
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- <script type="text/javascript" src="js/calendar.js"></script> -->
     <script> $(function() { AOS.init(); }); </script>
 </body>
 </html>
