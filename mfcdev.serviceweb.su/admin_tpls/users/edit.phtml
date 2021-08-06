@@ -1,0 +1,67 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<div class="main_content_container">
+    <h1>Редактировать <span id="itemName">«<?=$_RESPONSE['edit']->getName()?>»</span></h1>
+
+    <form action="/admin/users/edit/<?=$_RESPONSE['edit']->getId()?>" method="POST" id="form" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Логин</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <input required="" class="form-control" type="text" name="name" value="<?=$_RESPONSE['edit']->getName()?>" id="input_name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_email" class="col-sm-4 col-xl-3 col-form-label">Email</label>
+            <div class="col-sm-8 col-md-8 col-lg-9 col-xl-9">
+                <input type="text" class="form-control" name="email" id="input_email" value="<?=$_RESPONSE['edit']->getValue('email')?>">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_password" class="col-sm-4 col-xl-3 col-form-label">Пароль</label>
+            <div class="col-sm-8 col-md-8 col-lg-9 col-xl-9">
+
+                <input type="text" class="form-control" name="password" id="input_password" value="">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_type" class="col-sm-4 col-xl-3 col-form-label">Тип пользователя</label>
+            <div class="col-sm-8 col-md-8 col-lg-9 col-xl-9">
+                <select name="type" class="form-control" id="input_type">
+                    <?php foreach($_RESPONSE['_allTypes'] as $type):?>
+                        <option <?=$this->optSel($_RESPONSE['edit']->getValue('type'), $type)?>><?=$type?></option>
+                    <?php endforeach;?>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_activation" class="col-sm-4 col-xl-3 col-form-label">Активация</label>
+            <div class="col-sm-8 col-md-8 col-lg-9 col-xl-9">
+                <?php if($_RESPONSE['edit']->getValue('activation') == 1):?>
+                    Да
+                <?php else:?>
+                    <a href="/admin/users/activate/<?=$_RESPONSE['edit']->getValue('activation')?>">Активировать вручную</a>
+                <?php endif;?>
+            </div>
+        </div>
+
+        <?php $fields = $_RESPONSE['edit']->getValue('_guideFields');?>
+        <?php foreach($fields as $field):?>
+            <?php $this->getTemplate('guides','format_fields', array('field'=>$field, 'value'=>$_RESPONSE['edit']->getValue($field['name'])))?>
+        <?php endforeach;?>
+
+        <div class="form_buttons">
+            <div class="row">
+                <div class="col-auto">
+                    <button class="btn btn-success saveOutpost">Сохранить</button>
+                </div>
+                <div class="col-auto">
+                    <a class="btn btn-danger" href="/admin/guides/del_item/<?=$_RESPONSE['guide']->getId()?>/<?=$_RESPONSE['edit']->getId()?>">Удалить</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

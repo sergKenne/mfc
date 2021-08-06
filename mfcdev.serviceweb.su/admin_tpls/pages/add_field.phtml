@@ -1,0 +1,112 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Добавить</h1>
+
+    <form action="/admin/pages/add_field/" method="POST" id="form">
+        <div class="main_content_container_wrap">
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Название поля</p>
+                    <small>Системное название для использования в коде</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input class="form_input" type="text" name="name" id="name" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Описание</p>
+                    <small>Человекочитаемое название справочника</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input required class="form_input" type="text" name="descr" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Приоритет вывода</p>
+                    <small>Чем меньше число, тем выше поле будет отображаться в форме</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input required class="form_input" type="number" name="priority" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Принадлежит странице</p>
+                    <small>С какой страницей будет связано</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input type="hidden" name="pageId" value="">
+                        <a class="selectPage" href="/admin/pages/lists_modal/?tpl=1">Выбрать страницу</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <p class="form_label">Тип поля</p>
+                </div>
+                <div class="col-3">
+                    <div class="form_wrapper">
+                        <select name="field_type">
+                            <option value="varchar">Строка</option>
+                            <option value="text">Текст</option>
+                            <option value="htmltext">HTML-Текст</option>
+                            <option value="date">Дата</option>
+                            <option value="datetime">Дата и время</option>
+                            <option value="int">Число</option>
+                            <option value="float">Число с точкой</option>
+                            <option value="boolean">Галочка</option>
+                            <option value="file">Файл</option>
+                            <option value="filelist">Набор файлов</option>
+                            <option value="list">Список определенных значений</option>
+                            <option value="guide">Список значений другого справочника</option>
+                            <option value="json">JSON</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-3 selectGuide" style="display: none">
+                    <p class="form_label">Выбрать справочник</p>
+                </div>
+                <div class="col-3 selectGuide" style="display: none;">
+                    <select name="guide">
+                        <?php foreach($_RESPONSE['guides']['data'] as $guide):?>
+                            <option value="<?=$guide->getId()?>"><?=$guide->getValue('descr')?></option>
+                        <?php endforeach;?>
+                    </select>
+                    <p class="form_label"><input type="checkbox" name="guideAsTable" value="1">Отображать как список</p>
+                    <p class="form_label"><input type="checkbox" name="multiple" value="1">Можно выбрать несколько значений</p>
+                </div>
+
+                <div class="col-3 selectListItems" style="display: none">
+                    <p class="form_label">Заполнить список</p>
+                </div>
+                <div class="col-3 selectListItems" style="display: none;">
+                    <p class="listItemWrp">
+                        <input type="text" name="field_values[]" placeholder="введите значение">
+                        <a href="#" class="delListItem">[удалить]</a>
+                    </p>
+                    <a class="btn_sky addAnotherListItem" href="#">Добавить еще значение</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_buttons">
+            <div class="row">
+                <div class="col-6 align-self-center right_side">
+                    <button class="btn_sky saveOutpost"><i class="fas fa-download"></i>Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

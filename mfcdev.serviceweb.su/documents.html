@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="fonts/circe.fonts.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <title>MFC</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__modal-menu">
+                <div class="container">
+                    <div class="header__menu-inner">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
+                            <li class="header__menu-item"><a href="announce.html" class="header__menu-link">Объявления</a></li>
+                            <li class="header__menu-item"><a href="offices.html" class="header__menu-link">Офисы</a></li>
+                            <li class="header__menu-item"><a href="jobs.html" class="header__menu-link">Вакансии</a></li>
+                            <li class="header__menu-item"><a href="services.html" class="header__menu-link">Услуги</a></li>
+                            <li class="header__menu-item"><a href="search.html" class="header__menu-link">Проверить статус услуги</a></li>
+                            <li class="header__menu-item"><a href="directories.html" class="header__menu-link">Дирекция</a></li>
+                            <li class="header__menu-item"><a href="business.html" class="header__menu-link">Для бизнеса</a></li>
+                            <li class="header__menu-item"><a href="about.html" class="header__menu-link">О МФЦ</a></li>
+                            <li class="header__menu-item"><a href="documents.html" class="header__menu-link">Документы</a></li>
+                            <li class="header__menu-item"><a href="overservices.html" class="header__menu-link">Дополнительные услуги</a></li>
+                            <li class="header__menu-item"><a href="access.html" class="header__menu-link">Доступная среда</a></li>
+                            <li class="header__menu-item"><a href="news.html" class="header__menu-link">Новости</a></li>
+                            <li class="header__menu-item"><a href="question.html" class="header__menu-link">Задать вопрос</a></li>
+                            <li class="header__menu-item"><a href="stories.html" class="header__menu-link">Истории</a></li>
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Личный кабинет</a></li>
+                        </ul>
+                        <div class="header__menu-footer">
+                            <div class="header__menu-social">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__menu-app">
+                                <h5 class="socials__title">Мобильное приложение:</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store1.png" alt="">
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store2.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__left">
+                            <div class="header__burger">
+                                <svg class="header__burger-svg header__burger-svg--bars"><use xlink:href="sprite.svg#burger"></use></svg>
+                                <svg class="header__burger-svg header__burger-svg--close"><use xlink:href="sprite.svg#close"></use></svg>
+                            </div>
+                            <img class="header__logo" src="img/logo1.png" alt="logo" />
+                            <div class="header__phone">8 (343) 273-00-08<br><span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
+                        </div>
+                        <nav class="navbar header__navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item">
+                                    <a href="jobs.html" class="navbar__link"><svg class="navbar__icon">
+                                        <use xlink:href="sprite.svg#vacance"></use></svg>
+                                        <span class="navbar__text">Вакансии</span>
+                                    </a>
+                                </li>
+                                <li class="navbar__item"><a href="documents.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#doc"></use></svg><span class="navbar__text">Документы</span></a></li>
+                                <li class="navbar__item"><a href="question.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
+                                <li class="navbar__item navbar__item--search"><a href="#" class="navbar__link" id="search-js"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
+                                <li class="navbar__item navbar__item--user"><a href="user.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#user"></use></svg></svg><span class="navbar__text">Личный кабинет</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main-content">
+            <div class="container">
+                <div class="main-content__inner">
+                    <aside class="sidebar main-content__sidebar">
+                        <a href="#" class="sidebar__link">
+                            <!-- <svg class="sidebar__main-logo"><use xlink:href="sprite.svg#main-logo"></use></svg></svg> -->
+                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.png" alt=""></a>
+                        </a>
+                        <ul class="sidebar__nav-list" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                            <li class="sidebar__nav-item">
+                                <a href="search.html" class="main-btn sidebar__nav-link sidebar__nav-link--active">
+                                    <svg class="main-btn__icon main-btn__icon--first"><use xlink:href="sprite.svg#clipboard"></use></svg>
+                                    <span class="main-btn__text main-btn__text--first">Проверить статус услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="offices.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
+                                    <span class="main-btn__text">Офисы</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="services.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
+                                    <span class="main-btn__text">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="about.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#group"></use></svg>
+                                    <span class="main-btn__text">О МФЦ</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#over-services"></use></svg>
+                                    <span class="main-btn__text">Дополнительные услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="master.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#car"></use></svg>
+                                    <span class="main-btn__text">Выезд специалиста</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="business.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#static"></use></svg>
+                                    <span class="main-btn__text">Для бизнеса</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="pub.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#pub"></use></svg>
+                                    <span class="main-btn__text">Реклама в МФЦ</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <main class="main main-content__main">
+                        <div class="showcase">
+                            <div class="showcase__content">
+                                <div>
+                                    <h1 class="showcase__title showcase__title--services">Документы</h1>
+                                </div>
+                                <div class="showcase__number showcase__number--news" >
+                                    <svg width="145" height="142" viewBox="0 0 145 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M130.005 63.9466C119.937 51.2607 101.376 62.9324 88.0232 53.4122C80.9925 48.3996 76.0837 33.5072 68.7545 29.0898C41.5573 12.6975 17.2502 33.9184 17.7183 60.0197C18.5473 106.249 78.7026 118.197 107.346 108.326C126.129 101.854 145.814 83.8659 130.005 63.9466Z" fill="url(#paint0_linear)"/>
+                                        <path d="M127.914 30.0846L79.2527 1.83008L79.3802 29.1513C79.3802 32.7574 76.8303 37.1695 73.6854 38.9937C72.1129 39.9271 70.6679 40.0119 69.6055 39.3755L118.309 67.6301C119.329 68.224 120.774 68.1392 122.389 67.2483C125.534 65.424 128.084 61.0119 128.084 57.4058L127.914 30.0846Z" fill="#623B2A"/>
+                                        <path d="M84.3989 5.64844L83.3789 6.24238L121.968 28.5575L121.883 66.6969L122.86 66.103L122.988 27.9636L84.3989 5.64844Z" fill="#EFD1B1"/>
+                                        <path d="M121.967 28.5573L121.882 66.6967L83.293 44.3816L83.378 6.24219L121.967 28.5573Z" fill="#FFEACF"/>
+                                        <path d="M76.5331 4.0791L75.6406 4.71547L114.187 27.0306L114.102 65.17L114.995 64.5336L115.122 26.3943L76.5331 4.0791Z" fill="#C9BEB5"/>
+                                        <path d="M114.186 27.031L114.101 65.1704L75.5117 42.8552L75.6392 4.71582L114.186 27.031Z" fill="#E2D8CF"/>
+                                        <path d="M79.1294 9.08496L78.1094 9.6789L116.698 31.9941L116.571 69.4547L117.591 68.8607L117.676 31.4001L79.1294 9.08496Z" fill="#EFD1B1"/>
+                                        <path d="M116.697 31.9939L116.57 69.4545L77.9805 47.1393L78.108 9.67871L116.697 31.9939Z" fill="#FFEACF"/>
+                                        <path d="M129.871 28.9394C129.871 28.6424 129.743 28.3879 129.573 28.303L80.9118 0.0908893C80.7418 0.00604086 80.4868 0.00604086 80.2318 0.175738C79.6793 0.472708 79.2544 1.23634 79.2544 1.87271L127.958 30.1273L128.086 57.4485C128.086 61.0545 125.536 65.4666 122.391 67.2909C119.246 69.1151 116.653 67.6727 116.653 64.0242L116.526 37.0424C116.526 36.7454 116.398 36.4909 116.228 36.406L67.5246 8.1515C67.3547 8.06665 67.0997 8.06665 66.8447 8.23634C66.2922 8.53331 65.8672 9.29695 65.8672 9.93331L114.528 38.1879L114.656 65.1697C114.656 70.006 118.141 72 122.348 69.5394C126.598 67.1212 129.998 61.1394 129.998 56.303L129.871 28.9394ZM129.403 28.2606C129.361 28.2606 129.318 28.2182 129.276 28.2606C129.318 28.2606 129.361 28.2606 129.403 28.2606Z" fill="#D8B89A"/>
+                                        <path d="M114.655 65.1275L114.528 38.1881L65.8242 9.93359L65.9517 36.9154C65.9517 39.3336 66.8017 41.0306 68.2042 41.8366L116.908 70.0912C115.505 69.2427 114.655 67.5457 114.655 65.1275Z" fill="#C39367"/>
+                                        <path d="M126.003 24.7814C126.003 24.6966 125.961 24.6117 125.961 24.5269C125.876 24.1875 125.748 23.8056 125.621 23.4663C125.621 23.4663 125.621 23.4238 125.578 23.4238C125.451 23.1269 125.281 22.8723 125.111 22.5753C125.068 22.4905 124.983 22.4056 124.941 22.3208C124.813 22.1087 124.643 21.8966 124.473 21.6844C124.431 21.642 124.388 21.5996 124.346 21.5572C124.303 21.5147 124.303 21.5147 124.261 21.4723C124.133 21.3026 123.963 21.1753 123.836 21.0481C123.751 21.0056 123.708 20.9208 123.623 20.8784C123.411 20.7087 123.198 20.539 122.943 20.4117L115.676 16.2117C114.784 15.7026 114.019 15.6602 113.424 15.9996L111.469 17.145C112.021 16.8057 112.829 16.8481 113.721 17.3572L120.989 21.5572C121.244 21.6844 121.456 21.8541 121.668 22.0238C121.753 22.0663 121.796 22.1511 121.881 22.1935C122.008 22.3208 122.178 22.4481 122.306 22.6178C122.348 22.7026 122.433 22.745 122.476 22.8299C122.646 23.042 122.773 23.2117 122.943 23.4663C122.986 23.5511 123.071 23.636 123.113 23.7208C123.283 23.9753 123.453 24.2723 123.581 24.5693C123.581 24.5693 123.623 24.6117 123.623 24.6541C123.793 24.9935 123.878 25.3753 123.963 25.7147C124.006 25.7996 124.006 25.8844 124.006 25.9693C124.091 26.3087 124.133 26.6905 124.133 27.0299V28.0905L126.088 26.945V25.8844C126.131 25.5026 126.046 25.1208 126.003 24.7814Z" fill="#D8B89A"/>
+                                        <path d="M121.029 21.5152C122.772 22.5334 124.174 24.9516 124.174 26.9455V28.0061L110.617 20.2001V19.1395C110.617 17.1455 112.02 16.3395 113.805 17.3152L121.029 21.5152Z" fill="#623B2A"/>
+                                        <path d="M109.175 43.4059L60.514 15.1514L60.599 42.4726C60.599 46.0786 58.049 50.4908 54.9041 52.315C53.3317 53.2483 51.8867 53.3332 50.8242 52.6968L99.4855 80.9514C100.505 81.5453 101.95 81.4605 103.565 80.5695C106.71 78.7453 109.26 74.3332 109.26 70.7271L109.175 43.4059Z" fill="#E04E39"/>
+                                        <path d="M65.6572 18.9697L64.6797 19.5637L103.226 41.8788L103.099 80.0182L104.119 79.4243L104.246 41.2849L65.6572 18.9697Z" fill="#EFD1B1"/>
+                                        <path d="M103.225 41.8786L103.097 80.018L64.5508 57.7029L64.6783 19.5635L103.225 41.8786Z" fill="#FFEACF"/>
+                                        <path d="M57.7948 17.3994L56.9023 17.9934L95.4489 40.3509L95.3214 78.4903L96.2564 77.854L96.3839 39.7146L57.7948 17.3994Z" fill="#C9BEB5"/>
+                                        <path d="M95.4475 40.3507L95.32 78.4901L56.7734 56.1326L56.9009 17.9932L95.4475 40.3507Z" fill="#E2D8CF"/>
+                                        <path d="M60.3872 22.4053L59.3672 22.9992L97.9562 45.3144L97.8287 82.775L98.8062 82.181L98.9337 44.7204L60.3872 22.4053Z" fill="#EFD1B1"/>
+                                        <path d="M97.9548 45.3142L97.8273 82.7748L59.2383 60.4596L59.3658 22.999L97.9548 45.3142Z" fill="#FFEACF"/>
+                                        <path d="M111.128 42.3025C111.128 42.0056 111.001 41.751 110.831 41.6662L62.1696 13.3692C61.9996 13.2844 61.7446 13.2844 61.4896 13.4541C60.9372 13.751 60.5122 14.5147 60.5122 15.151L109.173 43.4056L109.258 70.7268C109.258 74.3328 106.709 78.745 103.564 80.5692C100.419 82.3934 97.8262 80.9086 97.8262 77.3025L97.7412 50.3631C97.7412 50.0662 97.6137 49.8116 97.4437 49.7268L48.7825 21.4722C48.6125 21.3874 48.3575 21.3874 48.1025 21.5571C47.55 21.8541 47.125 22.6177 47.125 23.2541L95.7863 51.5086L95.8713 78.4904C95.8713 83.3268 99.3562 85.3207 103.564 82.8601C107.813 80.4419 111.213 74.5025 111.213 69.6238L111.128 42.3025ZM110.661 41.6238C110.618 41.6238 110.576 41.5813 110.533 41.5813C110.576 41.5813 110.618 41.5813 110.661 41.6238Z" fill="#F49678"/>
+                                        <path d="M95.8713 78.4483L95.7863 51.4665L47.125 23.2119L47.21 50.1513C47.21 52.5695 48.06 54.2665 49.4624 55.0725L98.1237 83.3271C96.7213 82.5634 95.8713 80.8665 95.8713 78.4483Z" fill="#F17757"/>
+                                        <path d="M107.261 38.1022C107.261 38.0173 107.219 37.9325 107.219 37.8476C107.134 37.5082 107.006 37.1264 106.879 36.787C106.879 36.787 106.879 36.7446 106.836 36.7446C106.709 36.4476 106.539 36.1931 106.369 35.8961C106.326 35.8112 106.241 35.7264 106.199 35.6415C106.071 35.4294 105.901 35.2173 105.731 35.0052C105.689 34.9628 105.646 34.9203 105.604 34.8355C105.561 34.7931 105.561 34.7931 105.519 34.7506C105.391 34.5809 105.221 34.4537 105.094 34.3264C105.009 34.284 104.966 34.1991 104.881 34.1567C104.669 33.987 104.414 33.8173 104.201 33.69L96.934 29.49C96.0415 28.9809 95.2765 28.9385 94.6815 29.2779L92.7266 30.4234C93.3215 30.084 94.0865 30.1264 94.979 30.6355L102.246 34.8355C102.501 34.9628 102.714 35.1325 102.926 35.3022C103.011 35.3446 103.054 35.4294 103.139 35.4718C103.266 35.5991 103.436 35.7264 103.564 35.8961C103.606 35.9809 103.691 36.0234 103.734 36.1082C103.904 36.3203 104.031 36.49 104.201 36.7446C104.244 36.8294 104.329 36.9143 104.371 36.9991C104.541 37.2537 104.711 37.5506 104.839 37.8476C104.839 37.89 104.881 37.89 104.881 37.9325C105.051 38.2719 105.136 38.6537 105.221 38.9931C105.264 39.0779 105.264 39.1628 105.264 39.2476C105.349 39.587 105.391 39.9688 105.391 40.3082V41.3688L107.346 40.2234V39.1628C107.389 38.8234 107.304 38.4415 107.261 38.1022Z" fill="#F49678"/>
+                                        <path d="M102.287 34.8351C104.03 35.8533 105.432 38.2714 105.432 40.2654V41.326L91.875 33.5199V32.4593C91.875 30.4654 93.2775 29.6593 95.0624 30.6775L102.287 34.8351Z" fill="#E04E39"/>
+                                        <path d="M92.0893 57.5338L43.3855 29.2793L43.513 56.6005C43.513 60.2066 40.9631 64.6187 37.8182 66.4429C36.2457 67.3763 34.8008 67.4611 33.7383 66.8247L82.4421 95.0793C83.462 95.6732 84.907 95.5884 86.522 94.6975C89.6669 92.8732 92.2168 88.4611 92.2168 84.855L92.0893 57.5338Z" fill="#C39367"/>
+                                        <path d="M48.5747 33.0977L47.5547 33.6916L86.1437 56.0067L86.0162 94.1461L87.0362 93.5522L87.1637 55.4128L48.5747 33.0977Z" fill="#EFD1B1"/>
+                                        <path d="M86.1423 56.0066L86.0148 94.146L47.4258 71.8308L47.5533 33.6914L86.1423 56.0066Z" fill="#FFEACF"/>
+                                        <path d="M40.6659 31.5273L39.7734 32.1213L78.3625 54.4364L78.235 92.5758L79.17 91.9819L79.255 53.8425L40.6659 31.5273Z" fill="#C9BEB5"/>
+                                        <path d="M78.3615 54.4362L78.234 92.5756L39.6875 70.2605L39.7725 32.1211L78.3615 54.4362Z" fill="#E2D8CF"/>
+                                        <path d="M43.2626 36.5332L42.2852 37.1271L80.8317 59.4423L80.7467 96.9029L81.7667 96.309L81.8517 58.8484L43.2626 36.5332Z" fill="#EFD1B1"/>
+                                        <path d="M80.8303 59.4421L80.7453 96.9027L42.1562 74.5876L42.2837 37.127L80.8303 59.4421Z" fill="#FFEACF"/>
+                                        <path d="M94.0459 56.388C94.0459 56.0911 93.9184 55.8365 93.7484 55.7517L45.0446 27.4971C44.8746 27.4123 44.6196 27.4123 44.3646 27.582C43.8122 27.879 43.3872 28.6426 43.3872 29.279L92.091 57.5335L92.2184 84.8547C92.2184 88.4608 89.6685 92.8729 86.5236 94.6971C83.3787 96.5214 80.7862 95.0365 80.7862 91.4305L80.6587 64.4911C80.6587 64.1941 80.5312 63.9396 80.3612 63.8547L31.6575 35.6002C31.4875 35.5153 31.2325 35.5153 30.9775 35.685C30.425 35.982 30 36.7456 30 37.382L78.7038 65.6365L78.8313 92.6183C78.8313 97.4547 82.3162 99.4487 86.5236 96.988C90.7735 94.5274 94.1734 88.588 94.1734 83.7517L94.0459 56.388ZM93.5359 55.7093C93.4934 55.7093 93.4509 55.6668 93.4084 55.6668C93.4934 55.6668 93.4934 55.7093 93.5359 55.7093Z" fill="#D8B89A"/>
+                                        <path d="M78.7888 92.5758L78.6613 65.594L30 37.3818L30.1275 64.3637C30.1275 66.7818 30.9775 68.4788 32.3799 69.2849L81.0837 97.5394C79.6813 96.6909 78.7888 94.994 78.7888 92.5758Z" fill="#CFA580"/>
+                                        <path d="M90.1362 52.1877C90.1362 52.1028 90.0937 52.018 90.0937 51.9331C90.0087 51.5937 89.8812 51.2119 89.7537 50.8725L89.7112 50.8301C89.5837 50.5331 89.4137 50.2786 89.2437 49.9816C89.2012 49.8968 89.1162 49.8119 89.0737 49.7271C88.9462 49.5149 88.7762 49.3028 88.6062 49.0907C88.5637 49.0483 88.5212 49.0058 88.4787 48.9634C88.4787 48.921 88.4362 48.921 88.3937 48.8786C88.2662 48.7089 88.0962 48.5816 87.9688 48.4543C87.8838 48.4119 87.8413 48.3271 87.7563 48.2846C87.5438 48.1149 87.2888 47.9452 87.0763 47.818L79.809 43.618C78.9165 43.1089 78.1515 43.0664 77.5565 43.4058L75.6016 44.5513C76.1965 44.2119 76.9615 44.2543 77.854 44.7634L85.1213 48.9634C85.3338 49.0907 85.5888 49.2604 85.8013 49.4301C85.8863 49.4725 85.9288 49.5574 86.0138 49.5998C86.1413 49.7271 86.3113 49.8543 86.4388 50.024C86.4813 50.1089 86.5663 50.1513 86.6088 50.2361C86.7788 50.4483 86.9063 50.618 87.0763 50.8725C87.1188 50.9574 87.2038 51.0422 87.2463 51.1271C87.4163 51.3816 87.5863 51.6786 87.7138 51.9755C87.7138 52.018 87.7563 52.018 87.7563 52.018C87.9263 52.3574 88.0113 52.7392 88.0962 53.0786C88.1387 53.1634 88.1388 53.2483 88.1388 53.3331C88.2237 53.6725 88.2662 54.0543 88.2662 54.3937V55.4543L90.2212 54.3089V53.2483C90.2637 52.9089 90.2212 52.5695 90.1362 52.1877Z" fill="#D8B89A"/>
+                                        <path d="M85.1622 48.963C86.9047 49.9812 88.3072 52.3994 88.3072 54.3933V55.4539L74.75 47.6479V46.5872C74.75 44.5933 76.1525 43.7872 77.9374 44.8054L85.1622 48.963Z" fill="#C39367"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear" x1="21.1663" y1="72.7966" x2="75.7684" y2="15.0034" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ECE0D4"/>
+                                        <stop offset="1" stop-color="#FAEAD9"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news news--offices">
+                            <div class="">
+                                <ul class="breadcrumbs news__breadcrumbs">
+                                    <li class="breadcrumbs__item">Главная  </li>
+                                    <li class="breadcrumbs__item">Документы</li>
+                                </ul>
+                            </div>
+                            <form action="" class=" search-form our-services__search-form">
+                                <input class="search-form__input" type="text" placeholder="Поиск">
+                                <button class="search-form__btn"><svg class="search-form__icon"><use xlink:href="sprite.svg#input-search"></use></svg></button>
+                            </form>
+                            <div class="documents">
+                                <div class="documents__bar" id="doc-js">Выберите категорию документа<i class="fas fa-angle-down documents__bar-icon"></i></div>
+                                <div class="documents__list">
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">График выездов мобильных офисов в мае 2021</h6>
+                                            <p class="documents__inner-text">Информационный материал 29 апреля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">Заявление форма КНД 1112019</h6>
+                                            <p class="documents__inner-text">Форма заявления 28 апреля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">Как записаться в МФЦ</h6>
+                                            <p class="documents__inner-text">Информационный материал 28 апреля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">Всероссийский конкурс лучших региональных практик поддержки волонтерства «Регион добрых дел»</h6>
+                                            <p class="documents__inner-text">Информационный материал 19 апреля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">Информация по услугам предоставления компенсации расходов на оплату жилого помещения и коммунальных услуг</h6>
+                                            <p class="documents__inner-text">Информационный материал 7 апреля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">График выездов мобильных офисов в апреле 2021</h6>
+                                            <p class="documents__inner-text">Информационный материал 24 марта 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">О заключении агентского договора для реализации населению услуг страховых организаций</h6>
+                                            <p class="documents__inner-text">Информационный материал 12 февраля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">Оферта Терминалы с постерминалом</h6>
+                                            <p class="documents__inner-text">Информационный материал 11 февраля 2021</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="documents__item">
+                                        <img src="img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title">Реестр соглашений о взаимодействии</h6>
+                                            <p class="documents__inner-text">Локальный нормативный акт 12 ноября 2019</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="pagination">
+                                <li class="pagination__item pagination__item--active">1</li>
+                                <li class="pagination__item">2</li>
+                                <li class="pagination__item">3</li>
+                                <li class="pagination__item">4</li>
+                                <li class="pagination__item">5</li>
+                                <li class="pagination__item">6</li>
+                            </ul>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer__inner">
+                    <li class="footer__item"
+                        data-aos="fade-right"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div>
+                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.png" alt=""></a>
+                        </div>    
+                        <br/><br/>
+                        <h4 class="footer__title">Мобильное приложение:</h4>
+                        <div>
+                            <img src="img/store1.png" alt="">
+                        </div>
+                        <br/>
+                        <div>
+                            <img src="img/store2.png" alt="">
+                        </div>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-up"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">Наши сервисы:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
+                            <li class="footer__list-item"><a href="answer.html" class="footer__list-link">Обратная связь</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Официальное обращение в МФЦ</a></li>
+                            <li class="footer__list-item"><a href="chat.html" class="footer__list-link">Вопрос-ответ</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Записаться на прием</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Статус обращения</a></li>
+                            <li class="footer__list-item"><a href="pub.html" class="footer__list-link">Реклама в МФЦ</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-down"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">О МФЦ:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="about.html" class="footer__list-link">Цели и задачи</a></li>
+                            <li class="footer__list-item"><a href="directories.html" class="footer__list-link">Дирекция</a></li>
+                            <li class="footer__list-item"><a href="jobs.html" class="footer__list-link">Вакансии</a></li>
+                            <li class="footer__list-item"><a href="information.html" class="footer__list-link">Информация для граждан</a></li>
+                            <li class="footer__list-item"><a href="news.html" class="footer__list-link">Новости</a></li>
+                            <li class="footer__list-item"><a href="announce.html" class="footer__list-link">Объявления</a></li>
+                            <li class="footer__list-item"><a href="video.html" class="footer__list-link">Видео</a></li>
+                        </ul>
+                    </li>
+                    <li class="socials footer__item"
+                        data-aos="fade-left"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div class="socials__inner">
+                            <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
+                            <div class="socials__contact">
+                                <p class="socials__phone">8 (343) 273-00-08</p>
+                                <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                            </div>
+                            <div class="socials__icons">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div class="fix-nav">
+            <a href="" class="fix-nav__item">
+                <img src="img/v1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v4.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v5.png" alt="">
+            </a>
+        </div>
+        <div class="chat">
+            <button class="button">
+                <svg class="button__svg"><use xlink:href="sprite.svg#chat"></use></svg>
+            </button>
+        </div>   
+    </div>
+    <div class="modal" id="modal-js">
+        <form class="modal__form" action="">
+            <input class="modal__input" type="text" placeholder="Поиск">
+            <button class="modal__btn" id="modal-btn-js" type="submit"><svg class="modal__svg-icon"><use xlink:href="sprite.svg#icon-search"></use></svg></button>
+            <h5 class="modal__form-title">Быстрые ответы:</h5>
+            <ul class="modal__list">
+                <li class="modal__list-item">Офисы Екатеринбург</li>
+                <li class="modal__list-item">Документы для смены места жительства </li>
+                <li class="modal__list-item">Смена имени </li>
+                <li class="modal__list-item">Действия при утере документов</li>
+            </ul>
+        </form>
+    </div>
+    <!-- model for documents -->
+    <div class="modal" id="modal-doc-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--doc">
+                <ul class="documents__list documents__list--doc clearfix">
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Информация  для граждан</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Нормативные правовые акты</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Учредительные документы</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Политика обработкиперсональных данных</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Платная деятельность</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Реестр соглашений</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Противодействие коррупции</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Профилактика терроризма</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Формы заявлений</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">СОУТ</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+                <span class="modal__card-close" id="modal-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
+    <section class="navbar-bottom">
+        <!-- <div class="container"> -->
+            <ul class="navbar-bottom__list">
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Горячая линия
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                               Найти отделение 
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                записаться онлайн
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Пойск
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Личный кабинет
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Подключаем API -->
+    <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script> $(function() { AOS.init(); }); </script>
+</body>
+</html>

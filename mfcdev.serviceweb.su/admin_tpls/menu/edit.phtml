@@ -1,0 +1,89 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Редактировать меню</h1>
+
+    <form action="/admin/menu/edit/<?=$_RESPONSE['edit']->getId()?>" method="POST" id="form" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Название</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <input required class="form-control" type="text" name="name" value="<?=$_RESPONSE['edit']->getName()?>" id="input_name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Структура</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <div class="menu_wrapper">
+                    <?php $structure = $_RESPONSE['edit']->getValue('structure'); renderChildren($structure)?>
+                    <?php
+                        function renderChildren($childArray){
+                            if(count($childArray)>0){
+                                echo '<ul>';
+                                foreach($childArray as $child){?>
+                                    <li>
+                                        <a draggable="true" class="menu_item" id="<?=$child['id']?>" href="<?=$child['href']?>"><?=$child['name']?></a>
+                                        <a class="move_in" href="#" style="display: none"> [вложить]</a>
+                                        <a class="edit_item" href="#"> [ред.]</a>
+                                        <a class="del_item" href="#"> [удал.]</a>
+                                        <?php renderChildren($child['children']);?>
+                                    </li>
+                                <?}
+                                echo '</ul>';
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+        <textarea name="structure" style="display: none"></textarea>
+
+
+        <div class="new_item_wrapper">
+            <h3>Добавить пункт</h3>
+
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Страница</p>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input type="hidden" name="pageId" value="">
+                        <a class="selectPage" href="#">Выбрать страницу</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-xl-3 col-form-label">Название</label>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" name="item_name" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-xl-3 col-form-label">Ссылка</label>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" name="item_link" value="">
+                </div>
+            </div>
+
+            <button class="btn btn-primary addItem">Добавить</button>
+            <button class="btn btn-secondary cancel" style="display:none">Отменить</button>
+        </div>
+
+        <div class="form_buttons">
+            <div class="row">
+                <?php  $this->getTemplate('pages','langSwitcher',array()); ?>
+                <div class="col-4">
+                    <button class="btn btn-primary">Сохранить</button>
+                </div>
+                <div class="col-4">
+                    <a class="btn btn-danger" href="/admin/guides/del_item/<?=$_RESPONSE['guide']->getId()?>/<?=$_RESPONSE['edit']->getId()?>">Удалить</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,5 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+Шаблон просмотра объекта
+Объект: <?=$this->getName($_RESPONSE['source'])?>

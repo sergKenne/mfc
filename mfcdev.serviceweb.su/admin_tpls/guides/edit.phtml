@@ -1,0 +1,382 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Редактировать справочник</h1>
+
+    <form action="/admin/guides/edit/<?=$_RESPONSE['edit']->getId()?>" method="POST" id="form">
+        <div class="main_content_container_wrap">
+            <div class="row form-group">
+                <div class="col-sm-4 col-xl-3 col-form-label">
+                    <label for="input_name">Внутреннее название справочника</label>
+                    <small>Системное название, может содержать только английские буквы и цифры</small>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" name="name" id="input_name" value="<?=$_RESPONSE['edit']->getValue('name')?>">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-sm-4 col-xl-3 col-form-label">
+                    <label for="input_descr">Описание</label>
+                    <small>Человекочитаемое название справочника</small>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <input required class="form-control" type="text" name="descr" value="<?=$_RESPONSE['edit']->getValue('descr')?>">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-sm-4 col-xl-3 col-form-label">
+                    <label for="input_is_module">Является модулем</label>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <?=($_RESPONSE['edit']->getValue('is_module')) ? 'Да': 'Нет'?>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Создавать страницы для объектов</p>
+                    <small>Объекты будут автоматически получать страницу с url-адресом</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input type="checkbox" name="auto_page" value="1" style="display: block" <?=($_RESPONSE['edit']->getValue('auto_page')) ? 'checked':''?>>
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Отображать в меню</p>
+                    <small>Вывести ссылку в левое меню админки на список объектов этого справочника</small>
+                </div>
+                <div class="col-3">
+                    <div class="form_wrapper">
+                        <input type="checkbox" name="show_in_menu" value="1" style="display: block" <?=($_RESPONSE['edit']->getValue('show_in_menu')) ? 'checked':''?>>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <p class="form_label">Класс для значка</p>
+                    <small>Этот класс будет применен к пункту меню, если включено отображение</small>
+                </div>
+                <div class="col-3">
+                    <div class="form_wrapper">
+                        <input class="form_input" type="text" name="icon_class" id="icon_class" value="<?=$_RESPONSE['edit']->getValue('icon_class', false, true)?>">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2>Поля данных</h2>
+            <hr>
+            <?php $fields = $_RESPONSE['fields']?>
+            <div id="fields">
+            <!--шаблон для добавления новых полей-->
+                <div class="fieldWrp" style="margin-bottom: 20px" data-count="%id%">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Название поля</p>
+                            <small>Системное название, может содержать только английские буквы и цифры</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="text" name="field_name[%id%]" id="field_name[%id%]" value="">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p class="form_label">Описание поля</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="text" name="field_descr[%id%]" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Тип поля</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <select name="field_type[%id%]">
+                                    <option value="varchar">Строка</option>
+                                    <option value="text">Текст</option>
+                                    <option value="htmltext">HTML-Текст</option>
+                                    <option value="date">Дата</option>
+                                    <option value="datetime">Дата и время</option>
+                                    <option value="int">Число</option>
+                                    <option value="float">Число с точкой</option>
+                                    <option value="boolean">Галочка</option>
+                                    <option value="file">Файл</option>
+                                    <option value="filelist">Набор файлов</option>
+                                    <option value="list">Список определенных значений</option>
+                                    <option value="guide">Список значений другого справочника</option>
+                                    <option value="json">JSON</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-3 selectGuide" style="display: none">
+                            <p class="form_label">Выбрать справочник</p>
+                        </div>
+                        <div class="col-3 selectGuide" style="display: none;">
+                            <select name="guide[%id%]">
+                                <?php foreach($_RESPONSE['guides'] as $guide):?>
+                                    <option value="<?=$guide->getId()?>"><?=$guide->getValue('descr')?></option>
+                                <?php endforeach;?>
+                            </select>
+                            <p class="form_label"><input type="checkbox" name="guideAsTable[%id%]">Отображать как список</p>
+                            <p class="form_label"><input type="checkbox" name="multiple[%id%]">Можно выбрать несколько значений</p>
+                        </div>
+
+                        <div class="col-3 selectListItems" style="display: none">
+                            <p class="form_label">Заполнить список</p>
+                        </div>
+                        <div class="col-3 selectListItems" style="display: none;">
+                            <p class="listItemWrp">
+                                <input type="text" name="field_values[%id%][]" placeholder="введите значение">
+                                <a href="#" class="delListItem">[удалить]</a>
+                            </p>
+                            <a class="btn_sky addAnotherListItem" href="#">Добавить еще значение</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Приоритет вывода</p>
+                            <small>Порядок, в котором поле будет отображаться в форме</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="number" name="field_index[%id%]" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Отображать в таблице</p>
+                            <small>Значение поля будет отображаться в таблице элементов</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="checkbox" name="field_table[%id%]" value="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Поле обязательно для заполнения</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="checkbox" name="field_required[%id%]" value="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Скрытое поле</p>
+                            <small>Поле не будет отображаться на страницах добавления/редактирования</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="checkbox" name="field_hidden[%id%]" value="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="delField btn_sky">Удалить</a>
+                    <hr>
+                </div>
+                <!--конец шаблона-->
+
+                <div style="margin-bottom: 20px">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Название поля</p>
+                            <small>Системное название, может содержать только английские буквы и цифры</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="text" value="name" disabled>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p class="form_label">Описание поля</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <input class="form_input" type="text" value="Название" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="form_label">Тип поля</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="form_wrapper">
+                                <select disabled>
+                                    <option selected>Строка</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <?php foreach($fields as $key=>$field):?>
+                    <div class="fieldWrp" style="margin-bottom: 20px" data-count="<?=$key?>">                    
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="form_label">Название поля</p>
+                                <small>Системное название, может содержать только английские буквы и цифры</small>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <input class="form_input" type="text" name="field_name[<?=$key?>]" id="field_name[<?=$key?>]" value="<?=$field['name']?>">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <p class="form_label">Описание поля</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <input class="form_input" type="text" name="field_descr[<?=$key?>]" value="<?=$field['descr']?>">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="form_label">Тип поля</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <?php $types = array(
+                                        "varchar"=>"Строка",
+                                        "text"=>"Текст",
+                                        "htmltext"=>'HTML-текст',
+                                        "date"=>"Дата",
+                                        "datetime"=>"Дата и время",
+                                        "int"=>"Число",
+                                        "float"=>"Число с точкой",
+                                        "boolean"=>"Галочка",
+                                        "file"=>"Файл",
+                                        "filelist"=>"Набор файлов",
+                                        "list"=>"Список определенных значений",
+                                        "guide"=>"Список значений другого справочника",
+                                        "json"=>"JSON",
+                                        );
+                                    ?>
+                                    <select name="field_type[<?=$key?>]">
+                                        <?php foreach($types as $typeName=>$typeString):?>
+                                            <option <?=$this->optSel($typeName, $field['type'])?> value="<?=$typeName?>"><?=$typeString?></option>
+                                        <?php endforeach;?>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="col-3 selectGuide" style="<?=($field['type'] == 'guide') ? '':'display: none'?>">
+                                <p class="form_label">Выбрать справочник</p>
+                            </div>
+                            <div class="col-3 selectGuide" style="<?=($field['type'] == 'guide') ? '':'display: none'?>">
+                                <select name="guide[<?=$key?>]">
+                                    <?php foreach($_RESPONSE['guides'] as $guide):?>
+                                        <option <?=$this->optSel($guide->getId(), @$field['fromId'])?> value="<?=$guide->getId()?>"><?=$guide->getValue('descr')?></option>
+                                    <?php endforeach;?>
+                                </select>
+                                <p class="form_label"><input type="checkbox" name="guideAsTable[<?=$key?>]" <?=(isset($field['guideAsTable'])? 'checked':'')?>>Отображать как список</p>
+                                <p class="form_label"><input type="checkbox" name="multiple[<?=$key?>]" <?=(isset($field['multiple'])? 'checked':'')?>>Можно выбрать несколько значений</p>
+
+                            </div>
+    
+                            <div class="col-3 selectListItems" style="<?=($field['type'] == 'list') ? '':'display: none'?>">
+                                <p class="form_label">Заполнить список</p>
+                            </div>
+                            <div class="col-3 selectListItems" style="<?=($field['type'] == 'list') ? '':'display: none'?>">
+                                <?php if(isset($field['list'])):?>
+                                    <?php foreach($field['list'] as $listItem):?>
+                                        <p class="listItemWrp">
+                                            <input type="text" name="field_values[<?=$key?>][]" value="<?=$listItem?>" placeholder="введите значение">
+                                            <a href="#" class="delListItem">[удалить]</a>
+                                        </p>
+                                    <?php endforeach;?>
+                                <?php else:?>
+                                    <p class="listItemWrp">
+                                        <input type="text" name="field_values[<?=$key?>][]" placeholder="введите значение">
+                                        <a href="#" class="delListItem">[удалить]</a>
+                                    </p>
+                                <?php endif;?>
+                                <a class="btn_sky addAnotherListItem" href="#">Добавить еще значение</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="form_label">Приоритет вывода</p>
+                                <small>Порядок, в котором поле будет отображаться в форме</small>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <input class="form_input" type="number" name="field_index[<?=$key?>]" value="<?=(int)@$field['index']?>">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="form_label">Отображать в таблице</p>
+                                <small>Значение поля будет отображаться в таблице элементов</small>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <input class="form_input" type="checkbox" name="field_table[<?=$key?>]" value="1" <?=(isset($field['table']) and $field['table']) ? 'checked':''?>>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="form_label">Поле обязательно для заполнения</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <input class="form_input" type="checkbox" name="field_required[<?=$key?>]" value="1" <?=(isset($field['required']) and $field['required']) ? 'checked':''?>>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="form_label">Скрытое поле</p>
+                                <small>Поле не будет отображаться на страницах добавления/редактирования</small>
+                            </div>
+                            <div class="col-3">
+                                <div class="form_wrapper">
+                                    <input class="form_input" type="checkbox" name="field_hidden[<?=$key?>]" value="1" <?=(isset($field['hidden']) and $field['hidden']) ? 'checked':''?>>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <a href="#" class="delField btn_sky">Удалить</a>
+                        <hr>
+                        
+                    </div>
+                <?php endforeach;?>
+            </div>
+
+            <a href="#" class="btn_sky" id="addfield">Добавить поле</a>
+        </div>
+
+        <div class="form_buttons">
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-success">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

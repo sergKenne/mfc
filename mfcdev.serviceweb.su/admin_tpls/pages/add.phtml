@@ -1,0 +1,25 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Добавить страницу</h1>
+
+    <form action="/admin/pages/add/" method="POST" id="form" enctype="multipart/form-data">
+        <?php $this->getTemplate('pages','standard_page_fields',array());?>
+
+        <?php if($_RESPONSE['fields']):?>
+            <?php foreach($_RESPONSE['fields'] as $field):?>
+                <?php $this->getTemplate('guides','format_fields',array('field'=>$field));?>
+            <?php endforeach;?>
+        <?php endif;?>
+
+        <div class="form_buttons">
+            <div class="row">
+                <?php  $this->getTemplate('pages','langSwitcher',array()); ?>
+                <div class="col-6">
+                    <button class="btn btn-primary saveOutpost">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

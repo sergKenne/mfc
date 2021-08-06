@@ -1,0 +1,66 @@
+<body class="auth_page">
+  <section id="auth">
+        <div class="auth-wrapper">
+          <div class="auth-wrapper-centered zoomer">
+            <?php if(isset($_RESPONSE['info'])):?>
+              <?=$_RESPONSE['info']?>
+            <?php endif;?>
+
+            <h1>Авторизация</h1>
+              <form method="post" action="/users/enter">
+                <div class="main_content_container_wrap">
+                  <div class="row form_row">
+                    <div class="col-12">
+                    </div>
+                    <div class="col-12">
+                      <div class="form_wrapper">
+                        <input type="email" class="form_input" id="exampleInputEmail1"  name="email" placeholder="E-mail">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form_row">
+                    <div class="col-12">
+                    </div>
+                    <div class="col-12">
+                      <div class="form_wrapper">
+                        <input type="password" class="form_input" name="password" placeholder="Пароль" id="exampleInputPassword1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form_row">
+                    <div class="col-12">
+                      <label class="custom_check_box" for="remember">
+                          <input checked="checked" type="checkbox" name="remember" id="remember" value="1">
+                          <div class="check_box" style="float:left;"><i class="fas fa-check"></i></div> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form_register_buttons">
+                      <div class="row">
+                          <div class="col-12 align-self-center">
+                              <button class="btn_sky auth">Войти</button>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+              </form>
+          </div>
+        </div>
+      </section>
+
+  <script>
+      var site = {
+          module: '<?=$this->module?>',
+          method: '<?=$this->method?>',
+          <?php if(router::$currentUser):?>
+          user: {
+              type: '<?=router::$currentUser->getValue('type')?>',
+              id: <?=router::$currentUser->getId()?>
+          }
+          <?php endif;?>
+      }
+  </script>
+
+<script src="/assets/js/modules/<?= $this->module ?>.js"></script>
+

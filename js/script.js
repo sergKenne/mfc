@@ -1273,6 +1273,12 @@ resizeFolderSlider();
 
 
 $(document).ready(function(){
+
+    // $(".news__slider-item").each((ind, item)=> {
+    //   $(item).click(function(e){
+    //     alert("yes")
+    //   })
+    // })
   
 
     $('.banner-slider').bxSlider({
@@ -1284,7 +1290,77 @@ $(document).ready(function(){
       //slideWidth: ($(window).width() < 426)? 400 : $(window).width() - 20,
     });
 
-    $('.slider').bxSlider();
+    // $('.slider').bxSlider({
+     
+    // });
+
+    $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [{
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+           breakpoint: 400,
+           settings: {
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+           }
+        }]
+    });
+
+    $('.partener-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 7,
+      slidesToScroll: 7,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 1220,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 5
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+              //arrows: false,
+              slidesToShow: 4,
+              slidesToScroll: 4
+          }
+        },
+        {
+          breakpoint: 426,
+          settings: {
+              //arrows: false,
+              slidesToShow: 3,
+              slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 376,
+          settings: {
+              arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 1
+          }
+        }
+      ]
+  });
 
     $('.news__nav-slider').bxSlider({
      
@@ -1294,15 +1370,15 @@ $(document).ready(function(){
       slideMargin: 10,
     });
 
-    $('.partener-slider').bxSlider({
-      slideWidth: 170,
-      // minSlides: 8,
-      // maxSlides: 8,
-      minSlides: minSlides,
-      maxSlides: maxSlides,
-      slideMargin: 10,
-      stopAutoOnClick: true,
-    });
+    // $('.partener-slider').bxSlider({
+    //   slideWidth: 170,
+    //   // minSlides: 8,
+    //   // maxSlides: 8,
+    //   minSlides: minSlides,
+    //   maxSlides: maxSlides,
+    //   slideMargin: 10,
+    //   stopAutoOnClick: true,
+    // });
 
     $('.over-slider').bxSlider({
       slideWidth: ($(window).width() < 376 ) ? 300 : ($(window).width() < 426 ) ? 200 : 380, //380,
@@ -1335,7 +1411,8 @@ $(document).ready(function(){
       //auto: true
     });
 
-    $("#search-js, #modal-btn-js, #modal-js").click(function(){
+    $("#search-js, #modal-btn-js, #modal-js").click(function(e){
+      e.preventDefault();
       $("#modal-js").slideToggle(); 
     });
 
@@ -1343,9 +1420,9 @@ $(document).ready(function(){
       $("#modal-calender-js").slideDown();
     });
 
-    $(".send-code").click(function(){
-      $("#modal-send-js").slideDown();
-    });
+    // $(".send-code").click(function(){
+    //   $("#modal-send-js").slideDown();
+    // });
 
     $("#modal-close-js").click(function(){
       $("#modal-send-js").slideUp();
@@ -1410,6 +1487,13 @@ $(document).ready(function(){
           
         })
       })
+    })
+
+
+    //PROFIL MENU ON MOBILE
+    $(".navbar__item--profil").click(function(e){
+      e.preventDefault();
+      $(".user__list-item--menu").slideToggle();
     })
 
 
@@ -1693,27 +1777,30 @@ $(document).ready(function(){
         // })
     });
 
-    //MAP OFFICES
-    ymaps.ready(init);
 
-    function init(){
-      var myMapOffices = new ymaps.Map("map-offices1", {
-                  center: [56.829374, 60.672699],
-                  zoom: 7
-                }, {
-                  searchControlProvider: 'yandex#search'
-              });
+
+
+    //MAP OFFICES  testing
+    // ymaps.ready(init);
+
+    // function init(){
+    //   var myMapOffices = new ymaps.Map("map-offices1", {
+    //               center: [56.829374, 60.672699],
+    //               zoom: 7
+    //             }, {
+    //               searchControlProvider: 'yandex#search'
+    //           });
     
-            myMapOffices.behaviors.disable(["drag", "scrollZoom"]);
+    //         myMapOffices.behaviors.disable(["drag", "scrollZoom"]);
 
 
-            dataLocation.forEach(elt => {
-              console.log(elt)
-                const myPlacemark = new ymaps.Placemark(elt.coordinate, elt.balloon, elt.icon);
-                myMapOffices.geoObjects.add(myPlacemark);
-            })
+    //         dataLocation.forEach(elt => {
+    //           console.log(elt)
+    //             const myPlacemark = new ymaps.Placemark(elt.coordinate, elt.balloon, elt.icon);
+    //             myMapOffices.geoObjects.add(myPlacemark);
+    //         })
 
-    }
+    // }
 
 
 

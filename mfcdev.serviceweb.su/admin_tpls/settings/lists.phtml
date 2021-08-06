@@ -1,0 +1,39 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    <h1 class="h2 col-auto">Настройки</h1>
+
+    <div class="col-auto">
+        <a href="/admin/settings/add" class="btn btn-outline-dark"><span data-feather="plus-circle"></span> Добавить настройку</a>
+    </div>
+</div>
+<table class="table table-striped table-sm">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Значение</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php if(isset($_RESPONSE['data']) and $_RESPONSE['data']):?>
+        <?php foreach($_RESPONSE['data'] as $guideItem):?>
+            <tr>
+                <td><?=$guideItem->getName()?></td>
+                <td><?=$guideItem->getValue('descr')?></td>
+                <td>
+                    <?php if($guideItem->getValue('type') == 'string'):?>
+                        <input type="text" name="<?=$guideItem->getName()?>" value="<?=$guideItem->getValue('value')?>">
+                    <?php endif;?>
+
+                    <?php if($guideItem->getValue('type') == 'boolean'):?>
+                        <input type="checkbox" name="<?=$guideItem->getName()?>" value="1" <?=($guideItem->getValue('value')) ? 'checked':''?>>
+                    <?php endif;?>
+                </td>
+            </tr>
+        <?php endforeach;?>
+    <?php else:?>
+        <td></td><td>Нет данных</td>
+    <?php endif;?>
+    </tbody>
+</table>

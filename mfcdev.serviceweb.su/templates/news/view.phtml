@@ -1,0 +1,59 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--services">Новости</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--news">
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'news'])?>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="offers  offers--new">
+                        <ul class="breadcrumbs offers__breadcrumbs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item"> Новости</li>
+                            <li class="breadcrumbs__item"> <?=$this->getName($_RESPONSE['source'])?></li>
+                        </ul>
+                        <h2 class="offers__title"><?=$this->getName($_RESPONSE['source'])?></h2>
+                        <div class="offers__inner-btn">
+                            <span class="offers__date"><?=$this->formatDate($this->getValue($_RESPONSE['source'], 'create_time'))?></span>
+                            <?php if($tag = $this->getValue($_RESPONSE['source'], 'tag')):?>
+                                <a href="/news/lists?tag=<?=$this->getId($tag)?>" class="offers__top-btn"><?=$this->getName($tag)?></a>
+                            <?php endif;?>
+                        </div>
+                        <div class="new-blog">
+
+                            <?php if($img = $this->getValue($_RESPONSE['source'], 'img')):?>
+                                <div class="new-blog__picture">
+                                    <img class="new-blog__img" src="<?=$this->macros('files', 'getFileURL', [$img])?>" alt="">
+                                </div>
+                            <?php endif;?>
+                            <div class="new-blog__text"><?=$this->getValue($_RESPONSE['source'], 'content', false)?></div>
+
+                            <?php if($images = $this->getValue($_RESPONSE['source'], 'more_photos')):?>
+                                <h2 class="new-blog__title">Фото по теме:</h2>
+                                <div class="new-blog__slider">
+                                    <div class="newslider">
+                                        <?php foreach($images as $image):?>
+                                            <div><img src="<?=$this->macros('files', 'getFileURL', [$image])?>" /></div>
+                                        <?php endforeach;?>
+
+                                    </div>
+                                </div>
+                            <?php endif;?>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>

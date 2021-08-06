@@ -1,0 +1,65 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Добавление <span id="itemName"></span></h1>
+
+    <?php if($_RESPONSE['guide']->getValue('is_module')){ $form_action = '/admin/'.$_RESPONSE['guide']->getName().'/add/';}
+    else { $form_action = "/admin/guides/add_item/".$_RESPONSE['guide']->getId();}
+    ?>
+    <ul class="nav nav-tabs" id="guideTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="main-tab" data-toggle="tab" href="#mainInfo" role="tab" aria-controls="main" aria-selected="true">Основные данные</a>
+        </li>
+    </ul>
+    <form action="<?=$form_action?>" method="POST" id="form" enctype="multipart/form-data">
+        <?php $fields = $_RESPONSE['fields'];?>
+
+        <div class="tab-content" id="guideTabContent">
+            <div class="tab-pane fade show active" id="mainInfo" role="tabpanel" aria-labelledby="main-tab">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-xl-3 col-form-label">Это каталог дополнительных услуг</label>
+                    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                        <input type="checkbox" name="is_folder" value="1">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Название</label>
+                    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                        <input required class="form-control" type="text" name="name" value="" id="input_name">
+                    </div>
+                </div>
+
+                <?php $this->getTemplate('guides','format_fields',array('field'=>$fields['icon']));?>
+                <?php $this->getTemplate('guides','format_fields',array('field'=>$fields['for']));?>
+
+                <?php if($this->method == 'add_edit_modal'):?>
+                    <input type="hidden" name="is_inner" value="1">
+                <?php endif;?>
+
+                <div class="innerServicesWrp" style="display: none">
+                    <?php $this->getTemplate('guides','format_fields',array('field'=>$fields['inner_services'], 'ignore_hidden'=>1));?>
+                </div>
+
+                <?php $skipFields = ['icon', 'inner_services', 'for'];?>
+
+                <div class="standardFieldsWrp">
+                    <?php foreach($fields as $field):?>
+                        <?php if(!in_array($field['name'], $skipFields)):?>
+                            <?php $this->getTemplate('guides','format_fields',array('field'=>$field));?>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                </div>
+            </div>
+        </div>
+        <div class="form_buttons">
+            <div class="row">
+                <?php  $this->getTemplate('pages','langSwitcher',array()); ?>
+                <div class="col-6">
+                    <button class="btn btn-success saveOutpost">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Добавление <span id="itemName"></span></h1>
+    <form action="/admin/languages/add/" method="POST" id="form" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Название</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <input required="" class="form-control" type="text" name="name" value="" id="input_name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Языковой префикс</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <input type="text" class="form-control" name="prefix" id="input_prefix" value="" maxlength="2">
+            </div>
+        </div>
+
+        <div class="form_buttons">
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-success saveOutpost">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

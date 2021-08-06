@@ -1,0 +1,52 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<?php
+    $allLangs = languages::lists(false);
+    $selectId = (isset($_RESPONSE['selectId']) ? $_RESPONSE['selectId']: 'objectLangSwitch')
+?>
+
+<div class="col-auto">
+    <?php if(!isset($_RESPONSE['pageId'])):?>
+        <select id="<?=$selectId?>" name="lang" class="form-control">
+            <?php foreach($allLangs as $langPrefix=>$langName):?>
+                <option <?=$this->optSel(@$_RESPONSE['lang'], $langPrefix)?> value="<?=$langPrefix?>"><?=$langName?></option>
+            <?php endforeach;?>
+        </select>
+    <?php else:?>
+        <?php $otherLangs = $this->macros('pages_languages','getAllLinks',array($_RESPONSE['pageId'], $_RESPONSE['lang']));?>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?=$allLangs[$_RESPONSE['lang']]?>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <?php foreach($otherLangs as $langData): ?>
+                    <?php if($langData['id'] != $_RESPONSE['pageId']):?>
+                        <?php if($langData['id']):?>
+                            <?php
+                                if($_RESPONSE['fromModule'] != 'pages'){
+                                    $page = $this->macros('pages','getById',array($langData['id']));
+                                    $sourceObject = $page->getSourceObject();
+                                    if($sourceObject){
+                                        $moduleName = $sourceObject->getObjectClassName();
+                                        $objectId = $sourceObject->getId();
+                                    }
+                                    else{
+                                        $moduleName = 'pages';
+                                        $objectId = $langData['id'];
+                                    }
+                                }
+                                else{
+                                    $moduleName = 'pages';
+                                    $objectId = $langData['id'];
+                                }
+                            ?>
+                            <a class="dropdown-item" href="/admin/<?=$moduleName?>/edit/<?=$objectId?>"><?=$langData['lang']?></a>
+                        <?php else:?>
+                            <a class="dropdown-item" href="/admin/pages/makeLangPageCopy/<?=$_RESPONSE['pageId']?>/<?=$langData['prefix']?>">Создать <?=$langData['lang']?></a>
+                        <?php endif;?>
+                    <?php endif;?>
+                <?php endforeach;?>
+            </div>
+        </div>
+    <?php endif;?>
+</div>

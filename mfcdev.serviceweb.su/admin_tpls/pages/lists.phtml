@@ -1,0 +1,35 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<?php
+$limit = utils::getRowsLimit();
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+?>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Список страниц</h1>
+    <?php
+    $this->getTemplate('pages','langSwitcher',array('lang'=>$_RESPONSE['lang'], 'selectId'=>'pagesListCurrentLang'));
+    ?>
+    <a href="/admin/pages/add" class="btn btn-outline-dark"><span data-feather="plus-circle"></span> Добавить страницу</a>
+</div>
+
+<div id="listOfPages">
+    <?php if(isset($_RESPONSE['data']) and $_RESPONSE['data']):?>
+        <ul class="root">
+            <li>
+                <a href="#" class="pageLink" data-id="0">[Корень]</a>
+            </li>
+
+            <?php foreach($_RESPONSE['data'] as $k=>$guideItem):?>
+                <li>
+                    <a href="#" class="expandSubPages" data-id="<?=$guideItem->getId()?>" title="Развернуть подстраницы">[+]</a>
+                    <a draggable="true" data-id="<?=$guideItem->getId()?>" class="pageLink" href="/admin/pages/edit/<?=$guideItem->getId()?>"><?=$guideItem->getName()?></a>
+                </li>
+            <?php endforeach;?>
+        </ul>
+    <?php else:?>
+        Нет страниц
+    <?php endif;?>
+</div>
+
+

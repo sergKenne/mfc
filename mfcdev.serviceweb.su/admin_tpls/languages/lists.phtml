@@ -1,0 +1,28 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Языки</h1>
+    <a href="/admin/languages/add/" class="btn btn-outline-dark"><span data-feather="plus-circle"></span> Добавить язык</a>
+</div>
+<table class="table table-striped table-sm numered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Языковой префикс</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php if(isset($_RESPONSE['data']) and $_RESPONSE['data']):?>
+        <?php foreach($_RESPONSE['data'] as $k=>$guideItem):?>
+            <tr>
+                <td><?=$guideItem->getId()?></td>
+                <td><a href="/admin/languages/edit/<?=$guideItem->getId()?>"><?=$guideItem->getName()?></a></td>
+                <td><?=$guideItem->getValue('prefix')?></td>
+            </tr>
+        <?php endforeach;?>
+    <?php else:?>
+        <tr>Нет данных</tr>
+    <?php endif;?>
+    </tbody>
+</table>

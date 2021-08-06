@@ -1,0 +1,89 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<?php if(isset($_RESPONSE['page'])){  $docs = $this->macros('documents','lists',[]);} else {$docs = $_RESPONSE;}?>
+
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--services">Документы</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--news" >
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'documents'])?>
+                        </div>
+                    </div>
+                </div>
+                <div class="news news--offices">
+                    <div class="">
+                        <ul class="breadcrumbs news__breadcrumbs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item">Документы</li>
+                        </ul>
+                    </div>
+                    <form method="get" class="search-form our-services__search-form">
+                        <input class="search-form__input" type="text" name="q" placeholder="Поиск">
+                        <?php if(isset($_GET['cat'])):?>
+                            <input type="hidden" name="cat" value="<?=$_GET['cat']?>">
+                        <?php endif;?>
+                        <button class="search-form__btn"><svg class="search-form__icon"><use xlink:href="sprite.svg#input-search"></use></svg></button>
+                    </form>
+
+                    <?php if(isset($_GET['q'])):?>
+                        Результаты поиска по запросу "<?=htmlspecialchars($_GET['q'])?>":
+                    <?php endif;?>
+
+                    <div class="documents">
+                        <div class="documents__bar" id="<?=(isset($_GET['cat'])) ? '' : 'doc-js' ?>">
+                            <?php if(isset($docs['cat']) and $docs['cat']):?>
+                                <?=$this->getName($docs['cat'])?> <a href="/docs"><i class="fas fa-times documents__bar-icon" style="color: #fff"></i></a>
+                            <?php else:?>
+                                Выберите категорию документа
+                                <i class="fas fa-angle-down documents__bar-icon"></i>
+                            <?php endif;?>
+                        </div>
+                        <div class="documents__list">
+                            <?php foreach($docs['data'] as $doc):?>
+                                <?php if($file = $this->macros('files', 'getById', [$this->getValue($doc, 'file')])):?>
+                                    <a download="<?=htmlspecialchars($this->getName($file))?>" href="<?=$file->getFileLink()?>" class="documents__item">
+                                        <img src="/img/doc-file.png" alt="" class="documents__icon">
+                                        <div class="documents__inner-item">
+                                            <h6 class="documents__inner-title"><?=$this->getName($doc)?></h6>
+                                            <p class="documents__inner-text"><?=$this->getValue($doc, 'descr')?> <?=$this->formatDate($this->getValue($doc, 'date'))?></p>
+                                        </div>
+                                    </a>
+                                <?php endif;?>
+                            <?php endforeach;?>
+                        </div>
+                    </div>
+                    <?php $this->getTemplateByFile('./templates/pages/parts/numpages.phtml', ['total'=>$docs['total']])?>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+
+<?php $categories = $this->macros('guides','list_items',['documents_categories', false, false, false, false, true]) ?>
+<div class="modal" id="modal-doc-js">
+    <div class="modal__card-inner">
+        <div class="modal__card modal__card--doc">
+            <ul class="documents__list documents__list--doc clearfix">
+                <?php foreach($categories['data'] as $category):?>
+                    <?php if(isset($docs['countByCats'][$this->getId($category)])):?>
+                        <li class="documents__item documents__item--doc">
+                            <img src="/img/doc-file1.png" alt="" class="documents__icon">
+                            <div class="documents__inner-item documents__inner-item--doc">
+                                <a href="?cat=<?=$this->getId($category)?><?=(isset($_GET['q'])) ? '&q='.urlencode(htmlspecialchars($_GET['q'])) : ''?>" class="documents__inner-text documents__inner-text--doc"><?=$this->getName($category)?></a>
+                            </div>
+                        </li>
+                    <?php endif;?>
+                <?php endforeach;?>
+            </ul>
+            <span class="modal__card-close" id="modal-close-js"><i class="fas fa-times"></i></span>
+        </div>
+    </div>
+</div>

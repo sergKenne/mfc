@@ -1,0 +1,131 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--directories">Иванов Иван Иванович</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--jobs" style="opacity: 0;">
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'reservation'])?>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="offers  offers--new">
+                        <ul class="breadcrumbs offers__breadcrumbs offers__breadcrumbs--jobs">
+                            <li class="breadcrumbs__item">Главная</li>
+                            <li class="breadcrumbs__item"><?=$this->getName($_RESPONSE['source'])?></li>
+                        </ul>
+                    </div>
+                   <?php
+                      $template = $this->getValue($_RESPONSE['source'], 'templateFile');
+                      $page_address = $this->getValue($_RESPONSE['source'], 'address');
+                      
+                   ?>
+                    <div class="user">
+                        <div class="user__inner <?=($template=='reservation')?'user__inner--reservation':''?>">
+                            <div class="user__inner-left ">
+                               <? $this->getTemplateByFile('./templates/lk/pages/'.$template.'.phtml', $_RESPONSE);?>
+                            </div>
+                            <div class="user__inner-right">
+                                <div class="user__inner-info">
+                                    <img src="/img/user.png" alt="" class="user__portrait">
+                                    <!-- <h4 class="user__name">Иванов Иван Иванович</h4> -->
+                                    <?  $sel = new selector('lk');
+                                        $sel->notequals('address', '');
+                                        $sel->addAND();
+                                        $sel->equals('visible', '1');
+                                        $lk_menu = $sel->run();
+                                    ?>
+                                    <?php foreach($lk_menu['data'] as $menu_item):?>
+                                      <a href="/lk/view/<?=$this->getValue($menu_item,'address')?>" class="user__btn <?=$this->optSel($this->getValue($menu_item,'address'),$page_address,'user__btn--active')?>"><?=$this->getName($menu_item)?></a>
+                                    <?php endforeach;?>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- model for cancel resevation  -->
+    <div class="modal" id="modal-cancel-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--cancel">
+                <div class="modal__card-cancel">
+                        <p class="jobs__card-description jobs__card-description--status" style="padding-right: 0;"><span class="jobs__card-strong jobs__card-strong--cancel">Вы уверены, что хотите отменить запись</span></p>
+                        <p class="jobs__card-description jobs__card-description--status" style="padding-right: 0;"><span class="jobs__card-strong jobs__card-strong--cancel cancel_f_token"></span></p>
+                        <p class="jobs__card-description jobs__card-description--status" style="padding-right: 0;">
+                            <span class="jobs__card-strong">Дата:</span><span class="cancel_f_date"></span>&nbsp;&nbsp;
+                            <span class="jobs__card-strong">Время:</span><span style="color: #E04E39;" class="cancel_f_time"></span><br>
+                            <span class="jobs__card-strong" style="display: inline-block; margin-top: 8px;">Услуга:</span><span style="color: #E04E39;" class="cancel_f_service"></span>
+                        </p>
+                    <div class="jobs__wrap-card-btn jobs__wrap-card-btn--cancel">
+                        <input type="hidden" class="cancel_f_checksum" value="">
+                        <input type="hidden" class="cancel_f_tokenv" value="">
+                        <button class="jobs__card-btn jobs__card-btn--status " data-token="" data-checksum="" onclick="cancel_reservation2(this);return false;">Да, отменить запись</button>
+                    </div>
+                </div>
+                <span class="modal__card-close" id="cancel-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
+
+
+ <!-- model for info -->
+    <div class="modal" id="modal-info-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--info">
+               <div>
+                
+                    <ul class="user__form-result-list user__form-result-list--info">
+                       
+                    </ul>
+                    <p class="user__form-result-description">Заявленное количество обращений<br/> по услуге на подачу документов или получение результата — <span class="info_modal_docs">1</span></p>
+               </div>
+                <span class="modal__card-close" id="info-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for success -->
+    <div class="modal" id="modal-success-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--success">
+               <div class="modal__success">
+                    <img class="modal__success-img" src="/img/success.svg" alt="">
+                    <p class="modal__success-description">Ваша запись успешна отменена!</p>
+               </div>
+                <!-- <span class="modal__card-close" id="cancel-close-js"><i class="fas fa-times"></i></span> -->
+            </div>
+        </div>
+    </div>
+
+<!-- modal for success -->
+    <div class="modal" id="modal-webcam-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--success" style="width: auto!important;">
+               <div class="modal__success">
+                    <div id="my_camera"></div>
+                    <div style="margin-top:30px;">
+                      <button class="user__inner-btn user__inner-btn--form user__inner-btn--m16" id="webcam_button">Сделать фото</button>
+                    </div>
+               </div>
+               <span class="modal__card-close" id="cancel-webcam-js"><i class="fas fa-times"></i></span> 
+            </div>
+        </div>
+    </div>
+
+<link rel="stylesheet" href="/css/calendar.css">

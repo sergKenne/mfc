@@ -1,0 +1,53 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Разрешения</h1>
+</div>
+
+<div>
+    Здесь можно задать разрешения на запуск методов по http-протоколу.<br>
+    Здесь отображаются только public static методы. Над таблицами расположены типы (группы) пользователей.<br>
+    <strong>http</strong> - сам по себе факт разрешения доступа по http. Администратор (admin) может запускать эти методы неограниченно.<br>
+    <strong>guest</strong> - методы, которые разрешено запускать гостям (неавторизованным пользователям. Установите им минимально
+    возможные разрешения, необходимые для работы сайта (например, методы view, webforms/send и пр.)<br><br>
+    Вы можете добавлять любое количество групп пользователей. Название группы должно содержать только латиницу, цифры и знак подчеркивания.<br>
+    Чтобы удалить группу, Вы должны убрать из нее всех пользователей.
+</div>
+<hr>
+<div>
+    <form id="newUserType" action="/admin/permissions/addUserType" method="post">
+        Добавить новый тип пользователя: <input type="text" name="type"><button>ок</button>
+    </form>
+</div>
+<hr>
+<?php foreach($_RESPONSE['classes'] as $module=>$methods):?>
+    <h2>Модуль: <?=$module?></h2>
+
+    <table class="table table-striped table-sm numered">
+        <thead>
+        <tr>
+            <th>Название метода</th>
+            <?php foreach($_RESPONSE['userTypes'] as $userType):?>
+                <th><?=$userType?> <a title="удалить тип пользователя" class="delType" href="/admin/permissions/delUserType/<?=$userType?>"><span data-feather="x-circle"></span></a></th>
+            <?php endforeach;?>
+
+        </tr>
+        </thead>
+        <tbody>
+            <?php foreach($methods as $method):?>
+                <tr>
+                    <td><?=$method?></td>
+                    <?php foreach($_RESPONSE['userTypes'] as $userType):?>
+                        <td>
+                            <?php
+                                $checked = (isset($_RESPONSE['permissions'][$module][$method]) and $_RESPONSE['permissions'][$module][$method]->getValue($userType)) ? 'checked': '';
+                            ?>
+                            <input type="checkbox" data-module="<?=$module?>" data-method="<?=$method?>" data-group="<?=$userType?>" <?=$checked?>>
+                        </td>
+                    <?php endforeach;?>
+                </tr>
+            <?php endforeach;?>
+        </tbody>
+    </table>
+<?php endforeach;?>
+

@@ -1,0 +1,25 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Удаление формы обратной связи</h1>
+
+    <?php if(isset($_RESPONSE['confirm'])):?>
+        <form class="no-ajax" action="/admin/webforms/del/<?=$_RESPONSE['webform']->getId()?>" id="form" method="POST">
+            <h2 style="color:red">Вы действительно хотите удалить форму обратной связи "<?=$_RESPONSE['webform']->getName()?>"?</h2>
+
+            <p>Будет удален весь архив сообщений с вебформы, а вызов ее в шаблонах станет нерабочим.</p>
+
+            <input type="hidden" name="confirm" value="1">
+
+            <div class="form_buttons">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-danger">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <?php endif;?>
+
+</div>

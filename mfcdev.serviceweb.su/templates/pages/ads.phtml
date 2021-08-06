@@ -1,0 +1,281 @@
+<section class="main-content">
+<div class="pub">
+    <section class="pub__banner">
+        <div class="container container--pub">
+            <div class="pub__banner-top">
+                <a href="/">
+                    <img class="pub__logo" src="/img/pub-logo.png" alt="">
+                </a>
+                <div class="pub__contact">
+                    <div class="showcase__phone showcase__phone--pub"><?=$this->getSetting('phone_number')?>
+                        <span class="showcase__work-time showcase__work-time--showcase">
+                            <?=$this->getSetting('work_hours')?>
+                        </span>
+                    </div>
+                    <div class="pub__btn-register">
+                        <a href="/lk/view/reservation" class="btn-animation">Онлайн-запись в МФЦ</a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-right" data-aos-once="true" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <h1 class="pub__title" >РЕКЛАМА В ЦЕНТРАХ <br><span class="pub__title-red">«МОИ ДОКУМЕНТЫ»</span></h1>
+                <p class="pub__description">Cоздаем выгодные условия сотрудничества для наших клиентов</p>
+                <div>
+                    <a href="#" class="pub__banner-btn leave_ad_apply">Оставить заявку</a>
+                </div>
+            </div>
+            <ul class="pub__banner-list" data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <li class="pub__banner-item">
+                    <h3 class="pub__banner-list-title">О Нас</h3>
+                    <p class="pub__banner-list-text"></p>
+                </li>
+                <li class="pub__banner-item">
+                    <h3 class="pub__banner-list-title">120 000 +</h3>
+                    <p class="pub__banner-list-text">Количество<br> заявителей в месяц</p>
+                </li>
+                <li class="pub__banner-item">
+                    <h3 class="pub__banner-list-title">1000 +</h3>
+                    <p class="pub__banner-list-text">Государственных<br> и муниципальных услуг</p>
+                </li>
+                <li class="pub__banner-item">
+                    <h3 class="pub__banner-list-title">123</h3>
+                    <p class="pub__banner-list-text">Количество отделов по всей<br> Свердловской области</p>
+                </li>
+                <li class="pub__banner-item">
+                    <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>1])?>
+                </li>
+            </ul>
+
+            <div>
+                <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>2])?>
+            </div>
+        </div>
+    </section>
+    <section class="pub__market">
+        <div class="container container--pub">
+            <div class="pub__market-inner">
+                <div>
+                    <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>3])?>
+                </div>
+                <div class="market pub__market-item pub__market-item--content" data-aos="fade-right" data-aos-once="true" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <h4 class="market__title">Почему стоит обратиться к нам?</h4>
+                    <p class="market__description">Большой охват аудитории реклама попадает в руки к Вашему потенциальному клиенту и остается у него на долго.</p>
+                    <ul class="market__list pub__market-list">
+                        <li class="market__list-item">
+                            <h5 class="market__list-title">Конверсия</h5>
+                            <div class="market__list-text">
+                                <p >Мы знаем как добиваться максимальной конверсии с минимум вложений.</p>
+                                <img src="/img/market1.png" alt="" class="market__list-icon">
+                            </div>
+                        </li>
+                        <li class="market__list-item">
+                            <h5 class="market__list-title">Бюджет</h5>
+                            <div class="market__list-text">
+                                <p >Мы подберем самую опти мальную цену без ущерба для кампании.</p>
+                                <img src="/img/market2.png" alt="" class="market__list-icon">
+                            </div>
+                        </li>
+                        <li class="market__list-item market__list-item--ecart">
+                            <h5 class="market__list-title">Надежность</h5>
+                            <div class="market__list-text">
+                                <p >Ваша реклама попадает в руки именно к Вашему потенциальному клиенту</p>
+                                <img src="/img/market3.png" alt="" class="market__list-icon">
+                            </div>
+                        </li>
+                        <li class="market__list-item market__list-item--ecart">
+                            <h5 class="market__list-title">Время</h5>
+                            <div class="market__list-text">
+                                <p >Мы экономим ваше время, а вам остается только продавать.</p>
+                                <img src="/img/market4.png" alt="" class="market__list-icon">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pub__main">
+        <div class="container container--pub">
+            <?php if($folderBlock = $this->getValue($_RESPONSE['page'],'ads_folder', false)):?>
+                <div class="market pub__folder">
+                    <h4 class="market__title">Папка-фолдер</h4>
+                    <?=$folderBlock?>
+                    <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>4])?>
+                </div>
+                <?php if($folderItems = $this->getValue($_RESPONSE['page'],'ads_folder_slider')):?>
+                    <ul class="folder-slider pub__slider">
+                        <?php foreach($folderItems as $folderItem):?>
+                            <li class="pub__slider-item">
+                                <h6 class="pub__slider-title"><?=$this->getName($folderItem)?></h6>
+                                <img src="<?=$this->macros('files','getFileURL',[$this->getValue($folderItem, 'img')])?>" alt="" class="pub__slider-img">
+                                <div>
+                                    <?php for($a = 0; $a < 10; $a++):?>
+                                        <?php if($formatPrice = $this->getValue($folderItem, 'a'.$a)):?>
+                                            <p class="pub__slider-text">Формат А<?=$a?><span class="pub__slider-strong"><?=$formatPrice?> руб</span></p>
+                                        <?php endif;?>
+                                    <?php endfor;?>
+                                </div>
+                            </li>
+                        <?php endforeach;?>
+                    </ul>
+                <?php endif;?>
+            <?php endif;?>
+
+            <?php if($ads_promo_day = $this->getValue($_RESPONSE['page'], 'ads_promo_day', false)):?>
+                <div class="market pub__promo">
+                    <h4 class="market__title market__title--promo">Промо день</h4>
+                    <?=$ads_promo_day?>
+                    <div class="market__price market__price--promo">Стоимость <?=$this->getValue($_RESPONSE['page'], 'ads_promo_day_price')?></div>
+                    <img class="market__picture market__picture--promo" src="/img/person.png" alt="">
+                </div>
+            <?php endif;?>
+
+            <?php if($ads_mobile_app = $this->getValue($_RESPONSE['page'], 'ads_mobile_app', false)):?>
+                <div class="market pub__apps">
+                    <h4 class="market__title market__title--apps">Размещение в мобильном <br>приложении "Вне очереди"</h4>
+                    <?=$ads_mobile_app?>
+                    <div class="market__price market__price--apps">Стоимость<br><?=$this->getValue($_RESPONSE['page'], 'ads_mobile_app_price')?></div>
+                    <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>5])?>
+                </div>
+            <?php endif;?>
+
+            <?php if($ads_talon = $this->getValue($_RESPONSE['page'], 'ads_talon', false)):?>
+                <div class="market pub__talon">
+                    <h4 class="market__title market__title--promo">Талон электронной очереди</h4>
+                    <?=$ads_talon?>
+                    <div class="market__btn market__btn--talon">Прейскурант</div>
+                    <img class="market__picture market__picture--talon" src="/img/talon.png" alt="">
+                </div>
+            <?php endif;?>
+
+            <?php if($ads_poster = $this->getValue($_RESPONSE['page'], 'ads_poster', false)):?>
+                <div class="market pub__post">
+                    <h4 class="market__title market__title--promo">Постер</h4>
+                    <?=$ads_poster?>
+                    <img class="market__picture market__picture--post" src="/img/pub-post.png" alt="">
+                </div>
+            <?php endif;?>
+
+            <div class="market pub__role">
+                <h4 class="market__title market__title--role">Размещение ролл ап </h4>
+                <img class="market__dashboard" src="/img/dashboard.svg" alt="">
+            </div>
+
+            <?php if($ads_running_line = $this->getValue($_RESPONSE['page'], 'ads_running_line', false)):?>
+                <div class="market pub__affiche">
+                    <h4 class="market__title market__title--affiche">Бегущая строка</h4>
+                    <?=$ads_running_line?>
+                    <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>6])?>
+                </div>
+            <?php endif;?>
+        </div>
+        <?php if($ads_spread = $this->getValue($_RESPONSE['page'], 'ads_spread')):?>
+            <div class="pub__service">
+                <div class="container container--pub">
+                    <ul class="pub__service-list">
+                        <li class="pub__service-item">
+                            <h4 class="market__title market__title--affiche">Распространение рекламных материалов</h4>
+                            <p class="market__paragraph market__paragraph--service"><?=$ads_spread?></p>
+                        </li>
+                        <li class="pub__service-item">
+                            <h6 class="market__subtitle market__subtitle--service">Стоимость размещения<br><?=$this->getValue($_RESPONSE['page'], 'ads_spread_price')?></h6>
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'ads', 'file'=>7])?>
+                        </li>
+                    </ul>
+                    <ul class="pub__offer-list">
+                        <li class="pub__offer-item pub__offer-item--e1">
+                            <div class="pub__offer-inner">
+                                <p>Листовки форматом<br> от А6</p>
+                                <img src="/img/offer-1.svg" alt="" class="pub__offer-icon">
+                            </div>
+                        </li>
+                        <li class="pub__offer-item pub__offer-item--e2">
+                            <div class="pub__offer-inner">
+                                <p>Буклеты</p>
+                                <img src="/img/offer-2.svg" alt="" class="pub__offer-icon">
+                            </div>
+                        </li>
+                        <li class="pub__offer-item pub__offer-item--e3">
+                            <div class="pub__offer-inner">
+                                <p>Брендированные<br> файлы</p>
+                                <img src="/img/offer-3.svg" alt="" class="pub__offer-icon">
+                            </div>
+                        </li>
+                        <li class="pub__offer-item pub__offer-item--e4">
+                            <div class="pub__offer-inner">
+                               <p>Брендированные<br> Папки</p>
+                               <img src="/img/offer-4.svg" alt="" class="pub__offer-icon">
+                            </div>
+                        </li>
+                        <li class="pub__offer-item pub__offer-item--e5">
+                            <div class="pub__offer-inner">
+                               <p>Календари</p>
+                               <img src="/img/offer-5.svg" alt="" class="pub__offer-icon">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <?php endif;?>
+        <?php if($ads_placement = $this->getValue($_RESPONSE['page'], 'ads_placement', false)):?>
+            <div class="market pub__placement">
+                <div class="container container--pub">
+                    <div class="pub__placement-inner">
+                        <h4 class="market__title market__title--placement">Размещение на сайте</h4>
+                        <?=$ads_placement?>
+                        <img class="market__picture market__picture--placement" src="/img/placement.svg">
+                    </div>
+                </div>
+            </div>
+        <?php endif;?>
+        <?php if($ads_architect = $this->getValue($_RESPONSE['page'], 'ads_architect')):?>
+            <div class="market pub__maket">
+                <div class="container container--pub">
+                    <div class="pub__maket-inner">
+                        <h4 class="market__title market__title--maket">Архитектурный макет</h4>
+                        <p class="market__paragraph market__paragraph--maket">
+                            <?=$ads_architect?>
+                        </p>
+                        <div class="market__price market__price--maket"><?=$this->getValue($_RESPONSE['page'], 'ads_architect_price')?></div>
+                        <img class="market__picture market__picture--maket" src="/img/maket.svg">
+                    </div>
+                </div>
+            </div>
+        <?php endif;?>
+    </section>
+    <?php if($ourWorks = $this->getValue($_RESPONSE['page'], 'ads_our_works')):?>
+        <section class="market pub__office-slider">
+            <div class="container container--pub">
+                <h4 class="market__title market__title--office-slider">Наши последние работы</h4>
+                <div class="pub__inner-slider">
+                    <div class="pubSlider">
+                        <?php foreach($ourWorks as $ourWork):?>
+                            <?php if($fileLink = $this->macros('files','getFileURL', [$ourWork])):?>
+                                <div>
+                                    <img src="<?=$fileLink?>" />
+                                </div>
+                            <?php endif;?>
+                        <?php endforeach;?>
+                    </div>
+                    <img class="market__picture market__picture--office-slider" src="/img/body.png">
+                </div>
+            </div>
+        </section>
+    <?php endif;?>
+    <?php if($ourClients = $this->getValue($_RESPONSE['page'], 'ads_clients')):?>
+        <section class="market pub__office-slider">
+            <div class="container container--pub">
+                <h4 class="market__title market__title--partener">Наши клиенты</h4>
+                <div class="pub__partener">
+                    <?php foreach($ourClients as $ourClient):?>
+                        <div class="pub__partener-item">
+                            <img class="pub__partener-img" src="<?=$this->macros('files','getFileURL', [$this->getValue($ourClient, 'img')])?>" title="<?=$this->getName($ourClient)?>">
+                        </div>
+                    <?php endforeach;?>
+                </div>
+            </div>
+        </section>
+    <?php endif;?>
+</div>
+</section>

@@ -1,0 +1,125 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<?php $editMode = (isset($_RESPONSE['edit']) and is_object($_RESPONSE['edit']));?>
+
+<div class="form-group row">
+    <label for="input_page_name" class="col-sm-4 col-xl-3 col-form-label">Название</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input class="form-control" type="text" name="page[name]" value="<?=($editMode) ? $_RESPONSE['edit']->getName():''?>" id="input_page_name">
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="input_h1_title" class="col-sm-4 col-xl-3 col-form-label">Заголовок h1</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+
+        <input type="text" class="form-control" name="page[h1_title]" id="input_h1_title" value="<?=($editMode) ? $_RESPONSE['edit']->getValue('h1_title'):''?>">
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="input_meta_title" class="col-sm-4 col-xl-3 col-form-label">Meta title</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+
+        <input type="text" class="form-control" name="page[meta_title]" id="input_meta_title" value="<?=($editMode) ? $_RESPONSE['edit']->getValue('meta_title'):''?>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_meta_description" class="col-sm-4 col-xl-3 col-form-label">Meta description </label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+
+        <input type="text" class="form-control" name="page[meta_description]" id="input_meta_description" value="<?=($editMode) ? $_RESPONSE['edit']->getValue('meta_description'):''?>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_meta_keywords" class="col-sm-4 col-xl-3 col-form-label">Meta keywords</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+
+        <input type="text" class="form-control" name="page[meta_keywords]" id="input_meta_keywords" value="<?=($editMode) ? $_RESPONSE['edit']->getValue('meta_keywords'):''?>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_published_on" class="col-sm-4 col-xl-3 col-form-label">Дата публикации</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+
+        <input type="datetime-local" class="form-control" name="page[published_on]" id="input_published_on" value="<?=($editMode) ? str_replace(' ','T',$_RESPONSE['edit']->getValue('published_on')):date('Y-m-d\TH:i')?>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_published" class="col-sm-4 col-xl-3 col-form-label">Опубликована (да/нет)</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+
+        <input type="checkbox" name="page[published]" value="1" id="input_published" <?=($editMode and !$_RESPONSE['edit']->getValue('published')) ? '' :'checked'?>>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_h1_title" class="col-sm-4 col-xl-3 col-form-label">Редирект
+        <small>Если поле заполнено, то страница будет автоматически переадресовывать на заданный адрес.</small>
+    </label>
+
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" name="page[redirect]" id="input_redirect" value="<?=($editMode) ? $_RESPONSE['edit']->getValue('redirect'):''?>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_template" class="col-sm-4 col-xl-3 col-form-label">Шаблон</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <?php
+        $folders = scandir('./templates');
+        $skip = array('.', '..', 'admin', 'autoupdate','files','guides','languages','settings');
+        $preSelectedModule = ''; $preSelectedMethod = '';
+
+        if($editMode){
+            if (isset($_RESPONSE['appendedPage']) and $_RESPONSE['appendedPage']) {
+                $template = $_RESPONSE['appendedPage']->getValue('template');
+            } else {
+                $template = $_RESPONSE['edit']->getValue('template');
+            }
+            if($template!=''){
+                $template = explode('/', $template);
+                $preSelectedModule = $template[0];
+                $preSelectedMethod = $template[1];
+            } else {
+                if(isset($_RESPONSE['source']) and is_object($_RESPONSE['source']) and $sourceModule = $_RESPONSE['source']->getObjectClassName()){
+                    $preSelectedModule = $sourceModule;
+                }
+                else{
+                    $preSelectedModule = 'pages';
+                }
+            }
+        }
+        ?>
+        Модуль: <select name="template[folder]">
+            <option value="">Выберите модуль</option>
+            <?php foreach($folders as $folder):?>
+                <?php if(in_array($folder, $skip)) {continue;}?>
+                <?php if(is_dir('./templates/'.$folder)):?>
+                    <option <?=$this->optSel($preSelectedModule, $folder)?>  value="<?=$folder?>"><?=$folder?></option>
+                <?php endif;?>
+            <?php endforeach;?>
+        </select>
+        Метод: <select name="template[file]">
+            <option value="">Выберите файл</option>
+            <?php if($preSelectedModule):?>
+                <?php $files = $this->macros('pages','phtmlFiles', array($preSelectedModule));?>
+                <?php foreach($files['phtml'] as $file):?>
+                    <option <?=$this->optSel($preSelectedMethod, $file)?> value="<?=$file?>"><?=$file?></option>
+                <?php endforeach;?>
+            <?php endif;?>
+        </select>
+
+        <div>Если шаблон не выбран, то будет использован либо /pages/content, либо, если есть источник данных, то /module/view</div>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_alias" class="col-sm-4 col-xl-3 col-form-label">Псевдоним (URL)</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <input type="text" class="form-control" name="page[alias]" id="input_alias" value="<?=($editMode) ? $_RESPONSE['edit']->getValue('alias'):''?>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="input_content" class="col-sm-4 col-xl-3 col-form-label">Контент страницы</label>
+    <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <textarea class="htmlTextArea form-control" name="page[content]" id="input_content"><?=($editMode) ? $_RESPONSE['edit']->getValue('content'):''?></textarea>
+    </div>
+</div>

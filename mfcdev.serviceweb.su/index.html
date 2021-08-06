@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="fonts/circe.fonts.css">
+    <link rel="stylesheet" href="css/calendar.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <title>MFC</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__modal-menu">
+                <div class="container">
+                    <div class="header__menu-inner">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
+                            <li class="header__menu-item"><a href="announce.html" class="header__menu-link">Объявления</a></li>
+                            <li class="header__menu-item"><a href="offices.html" class="header__menu-link">Офисы</a></li>
+                            <li class="header__menu-item"><a href="jobs.html" class="header__menu-link">Вакансии</a></li>
+                            <li class="header__menu-item"><a href="services.html" class="header__menu-link">Услуги</a></li>
+                            <li class="header__menu-item"><a href="search.html" class="header__menu-link">Проверить статус услуги</a></li>
+                            <li class="header__menu-item"><a href="directories.html" class="header__menu-link">Дирекция</a></li>
+                            <li class="header__menu-item"><a href="business.html" class="header__menu-link">Для бизнеса</a></li>
+                            <li class="header__menu-item"><a href="about.html" class="header__menu-link">О МФЦ</a></li>
+                            <li class="header__menu-item"><a href="documents.html" class="header__menu-link">Документы</a></li>
+                            <li class="header__menu-item"><a href="overservices.html" class="header__menu-link">Дополнительные услуги</a></li>
+                            <li class="header__menu-item"><a href="access.html" class="header__menu-link">Доступная среда</a></li>
+                            <li class="header__menu-item"><a href="news.html" class="header__menu-link">Новости</a></li>
+                            <li class="header__menu-item"><a href="question.html" class="header__menu-link">Задать вопрос</a></li>
+                            <li class="header__menu-item"><a href="stories.html" class="header__menu-link">Истории</a></li>
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Личный кабинет</a></li>
+                        </ul>
+                        <div class="header__menu-footer">
+                            <div class="header__menu-social">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__menu-app">
+                                <h5 class="socials__title">Мобильное приложение:</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store1.png" alt="">
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <img class="socials__list-img" src="img/store2.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__left">
+                            <div class="header__burger">
+                                <svg class="header__burger-svg header__burger-svg--bars"><use xlink:href="sprite.svg#burger"></use></svg>
+                                <svg class="header__burger-svg header__burger-svg--close"><use xlink:href="sprite.svg#close"></use></svg>
+                            </div>
+                            <img class="header__logo" src="img/logo1.svg" alt="logo" />
+                            <div class="header__phone">8 (343) 273-00-08<br><span class="header__work-time">Ежедневно с 8:00  до 20:00</span></div>
+                        </div>
+                        <nav class="navbar header__navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item">
+                                    <a href="jobs.html" class="navbar__link"><svg class="navbar__icon">
+                                        <use xlink:href="sprite.svg#vacance"></use></svg>
+                                        <span class="navbar__text">Вакансии</span>
+                                    </a>
+                                </li>
+                                <li class="navbar__item"><a href="documents.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#doc"></use></svg><span class="navbar__text">Документы</span></a></li>
+                                <li class="navbar__item"><a href="question.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
+                                <li class="navbar__item navbar__item--search"><a href="#" class="navbar__link" id="search-js"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
+                                <li class="navbar__item navbar__item--user"><a href="user.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#user"></use></svg></svg><span class="navbar__text">Личный кабинет</span></a></li>
+                                <li class="navbar__item navbar__item--profil">
+                                    <a href="user.html" class="navbar__link">
+                                        <img class="navbar__icon" src="img/user-profil.svg" alt="">
+                                        <span class="navbar__text navbar__text--profil">
+                                            <span class="navbar__name">Иванов Иван</span>
+                                            <span class="navbar__counter">2</span>
+                                            <i class="fas fa-angle-down navbar__fas-icon"></i> 
+                                        </span> 
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- личный кабинет в мобильных -->
+                            <div class="user__list-item user__list-item--menu">
+                                <div class="user__inner-info">
+                                    <img src="img/user.png" alt="" class="user__portrait">
+                                    <!-- <h4 class="user__name">Иванов Иван Иванович</h4> -->
+                                    <a href="reservation1.html" class="user__btn">Записаться на прием <span class="user__badge">1</span></a>
+                                    <a href="annulation.html" class="user__btn">Отказаться  от приема<span class="user__badge user__badge--active">2</span></a>
+                                    <a href="status.html" class="user__btn">Статус заявления<span class="user__badge">1</span></a>
+                                    <a href="request.html" class="user__btn">Официальное обращение в МФЦ<span class="user__badge">1</span></a>
+                                    <a href="annulation2.html" class="user__btn">Отозвать обращение<span class="user__badge">1</span></a>
+                                    <a href="master.html" class="user__btn">Выезд специалиста<span class="user__badge user__badge--active">1</span></a>
+                                    <a href="freemaster.html" class="user__btn">Бесплатный выезд специалиста<span class="user__badge">1</span></a>
+                                    <a href="formdata.html" class="user__btn user__btn--fixed">Отзыв согласия на обработку персональных данных<span class="user__badge">1</span></a>
+                                    <a href="user.html" class="user__btn user__btn--active">Личная информация<span class="user__badge">1</span></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main-content">
+            <div class="container">
+                <div class="main-content__inner">
+                    <aside class="sidebar main-content__sidebar" >
+                        <a href="#" class="sidebar__link">
+                            <a class="sidebar__link-logo sidebar__link-logo--top" href="index.html"><img class="sidebar__main-logo sidebar__main-logo--top"  src="img/main-logo.svg" alt=""></a>
+                        </a>
+                        <ul class="sidebar__nav-list" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                            <li class="sidebar__nav-item">
+                                <a href="search.html" class="main-btn sidebar__nav-link sidebar__nav-link--active">
+                                    <svg class="main-btn__icon main-btn__icon--first"><use xlink:href="sprite.svg#clipboard"></use></svg>
+                                    <span class="main-btn__text main-btn__text--first">Проверить статус услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="offices.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
+                                    <span class="main-btn__text">Офисы</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="services.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
+                                    <span class="main-btn__text">Услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="about.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#group"></use></svg>
+                                    <span class="main-btn__text">О МФЦ</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="overservices.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#over-services"></use></svg>
+                                    <span class="main-btn__text">Дополнительные услуги</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="master.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#car"></use></svg>
+                                    <span class="main-btn__text">Выезд специалиста</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="business.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#static"></use></svg>
+                                    <span class="main-btn__text">Для бизнеса</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="pub.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#pub"></use></svg>
+                                    <span class="main-btn__text">Реклама в МФЦ</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <main class="main main-content__main">
+                        <div class="showcase">
+                            <div class="showcase__content">
+                                <div>
+                                    <h1 class="showcase__title"  data-aos="fade-right"  data-aos-duration="1500">МНОГОФУНКЦИОНАЛЬНЫЙ<br/><span class="showcase__strong">ЦЕНТР СВЕРДЛОВСКОЙ ОБЛАСТИ</span></h1>
+                                </div>
+                                <div class="showcase__number"  data-aos="fade-left" data-aos-duration="1500">
+                                    <div class="showcase__phone showcase__phone--showcase">8 (343) 273-00-08<span class="showcase__work-time showcase__work-time--showcase">Ежедневно с <span class="header__time-strong">8:00</span> до <span class="header__time-strong">20:00</span></span></div>
+                                    
+                                    <a href="reservation1.html" class="btn-animation">Онлайн-запись в МФЦ</a>
+                                   
+                                </div>
+                                
+                            </div>
+                            <div class="banner-slider showcase__slider">
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                                <div class="showcase__slider-item">
+                                    <img src="img/banner_bg.png" alt="">
+                                    <div class="showcase__slider-caption">
+                                        <h3 class="showcase__slider-title"><span class="showcase__slider-title-strong">МОИ ДОКУМЕНТЫ</span><br>НОВЫЙ УРОВЕНЬ КОМФОРТА ДЛЯ ПОСЕТИТЕЛЕЙ</h3>
+                                        <p class="showcase__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="services">
+                            <li class="services__item" >
+                                <div class="services__card" 
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Рождение ребёнка</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                    <img src="img/serv1.svg" alt="" class="services__img">
+                                    <!-- <div class="services__wrap-img">
+                                        
+                                    </div> -->
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv2.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Смена имени</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv3.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Смена места <br> жительства</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv4.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Сопровождение <br> своего дела</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv5.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Утрата близкого <br> человека</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv6.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Утрата документов</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-once="true"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv7.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Выход на пенсию <br> по старости</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                            <li class="services__item">
+                                <div class="services__card"
+                                    data-aos="flip-left"
+                                    data-aos-delay="50"
+                                    data-aos-duration="1500"
+                                    data-aos-easing="linear"
+                                    data-aos-once="true"
+                                >
+                                    <div class="services__wrap-img">
+                                        <img src="img/serv8.svg" alt="" class="services__img">
+                                    </div>
+                                    <div class="services__overlay">
+                                        <h4 class="services__title">Все услуги нашего <br> МФЦ</h4>
+                                        <div class="services__text"><span>8</span> услуг</div>
+                                    </div>
+                                    <span class="services__left"></span>
+                                    <span class="services__right"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="news">
+
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+        <section class="main-content main-content--news">
+            <div class="container">
+                <div class="main-content__inner">
+                    <div class="sidebar main-content__sidebar">
+                        <p class="sidebar__paragraphe" >Соотношение заболевших в мире</p>
+                        <img class="sidebar__stat" 
+                            src="img/stat1.svg" 
+                            alt="" 
+                            data-aos="fade-right"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            data-aos-once="true"
+                            data-aos-easing="ease-in-sine"
+                        >
+                        <ul class="sidebar__radio-list"  
+                            data-aos="flip-left"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-once="true"
+                        >
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  в Области</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В России</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В мире</label>
+                            </li>
+                        </ul>
+                        <p class="sidebar__paragraphe">Соотношение заболевших в мире</p>
+                        <img src="img/stat2.svg" alt="" class="sidebar__stat"
+                            data-aos="fade-up"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            data-aos-once="true"
+                            data-aos-easing="ease-in-sine"
+                        >
+                        <ul class="sidebar__radio-list"
+                            data-aos="flip-left"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-once="true"
+                        >
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В России</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  В мире</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news main-content__main main-content__main--news">
+                       <div class="news__info"
+                            data-aos="fade-right"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-once="true"
+                       >
+                           <h4 class="news__title">Новости</h4>
+                           <div class="news__wrap-card">
+                               <a href="new.html" class="news__info-card clearfix">
+                                   <img src="img/info.png" alt="" class="news__info-image">
+                                   <div class="news__inner-cart">
+                                       <p class="news__info-text">
+                                           Единовременная выплата семьям, имеющим детей в возрасте до 8 лет, в размере 5000 рублей на ребенка...
+                                        </p>
+                                       <!-- <a href="#" class="news__info-btn">Подробнее</a> -->
+                                   </div>
+                                </a>
+                               <a href="new.html" class="news__info-card clearfix">
+                                   <img src="img/info.png" alt="" class="news__info-image">
+                                   <div class="news__inner-cart">
+                                       <p class="news__info-text">Единовременная выплата семьям, имеющим детей в возрасте до 8 лет, в размере 5000 рублей на ребенка...</p>
+                                       <!-- <a href="#" class="news__info-btn">Подробнее</a> -->
+                                   </div>
+                                </a>
+                           </div>
+                           <div>
+                            <a href="news.html" class="news__slider-btn news__slider-btn--light hide-news-btn">Все новости</a>
+                           </div>
+                       </div>
+                       <div class="news__content"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-once="true"
+                       >
+                            <h4 class="news__title">Объявления</h4>
+                            <ul class="news__card-list">
+                                <a href="#" class="news__card-item">
+                                    <p class="news__card-text">Опрос организаций для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</p>
+                                    <div class="news__card-footer">
+                                        <span class="news__card-date">23.03.2021</span>
+                                        <!-- <span class="news__card-btn">Праздники</span> -->
+                                    </div>
+                                </a>
+                                <a href="#" class="news__card-item">
+                                    <p class="news__card-text">Опрос организаций для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</p>
+                                    <div class="news__card-footer">
+                                        <span class="news__card-date">23.03.2021</span>
+                                        <!-- <span class="news__card-btn">Праздники</span> -->
+                                    </div>
+                                </a>
+                                <a href="#" class="news__card-item">
+                                    <p class="news__card-text">Опрос организаций для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</p>
+                                    <div class="news__card-footer">
+                                        <span class="news__card-date">23.03.2021</span>
+                                        <!-- <span class="news__card-btn">Праздники</span> -->
+                                    </div>
+                                </a>
+                                <a href="#" class="news__card-item">
+                                    <p class="news__card-text">Опрос организаций для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</p>
+                                    <div class="news__card-footer">
+                                        <span class="news__card-date">23.03.2021</span>
+                                        <!-- <span class="news__card-btn">Праздники</span> -->
+                                    </div>
+                                </a>
+                                <a href="#" class="news__card-item">
+                                    <p class="news__card-text">Опрос организаций для обновления списка наиболее востребованных на рынке труда, новых и перспективных профессий</p>
+                                    <div class="news__card-footer">
+                                        <span class="news__card-date">23.03.2021</span>
+                                        <!-- <span class="news__card-btn">Праздники</span> -->
+                                    </div>
+                                </a>
+                            </ul>
+                            <a href="announce.html" class="news__content-btn news__slider-btn news__slider-btn--light">Все объявления</a>
+                       </div>
+                       <div class="news__slider"
+                            data-aos="fade-left"
+                            data-aos-delay="50"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-once="true"
+                       >
+                           <h4 class="news__title">Истории</h4>
+                            <!-- <ul class="news__nav-list">
+                                <li class="news__nav-item">
+                                    <a href="" class="main-btn main-btn--active news__nav-link">
+                                        <span class="main-btn__text main-btn__text--news main-btn__strong">Истории</span>
+                                    </a>
+                                </li>
+                            </ul> -->
+                            <div class="slider news__slider-inner" data-aos="fade-up">
+                                <div class="news__slider-item">
+                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                    <div class="news__slider-caption">
+                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a> 
+                                    </div>
+                                </div>
+                                <div class="news__slider-item">
+                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                    <div class="news__slider-caption">
+                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="news__slider-item">
+                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                    <div class="news__slider-caption">
+                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="news__slider-item">
+                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                    <div class="news__slider-caption">
+                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="news__slider-item">
+                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                    <div class="news__slider-caption">
+                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- <a href="" class="news__slider-btn">Подробнее</a> -->
+                            <a href="stories.html" class="news__slider-btn news__slider-btn--light news__slider-btn--last">Все истории</a>
+                       </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="main-content main-content--info">
+            <div class="container">
+                <div class="main-content__inner">
+                    <div class="sidebar main-content__sidebar">
+                        <img class="sidebar__pub-img" src="img/pub.png" alt="">
+                        <p class="sidebar__paragraphe">Средний возраст наших посетителей</p>
+                        <img src="img/stat3.svg" alt="" class="sidebar__stat-img">
+                        <ul class="sidebar__radio-list">
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  молодые</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  среднего возраста</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  пожилые</label>
+                            </li>
+                            <li class="sidebar__radio-item">
+                                <label class="sidebar__label"><input class="sidebar__radio" type="radio" name="radio"><span></span>  другие</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info main-content__main main-content__main--info">
+                        <h3 class="info__title">Полезные ресурсы</h3>
+                        <ul class="partener-slider info__partener-list">
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener1.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Госуслуги</h5>
+                                </div>
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">ФНС</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h5 class="info__partener-caption">Росеестр</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Правительство СО</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener5.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Портал Бизнес-навигатора МСП</h5>
+                                </div>
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener6.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Информационный портал СО</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener7.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Губернатор СО</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">ФНС</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Росеестр</h5>
+                                </div>    
+                            </li>
+                            <li class="info__partener-item">
+                                <div class="info__partener-inner">
+                                    <div class="info__partener-wrap-img">
+                                        <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                    </div>
+                                    <h5 class="info__partener-caption">Правительство СО</h5>
+                                </div>    
+                            </li>
+                        </ul>
+                        <h3 class="info__title">Наши офисы и центры</h3>
+                        <form class="info__form">
+                            <div class="info__top-btn">
+                                <span class="info__form-btn info__form-btn--active" >На карте</span>
+                                <span class="info__form-btn">Списком</span>
+                            </div>
+                            <div class="info__wrap-list">
+                                <div>
+                                    <input class="info__form-input" type="text" placeholder="Начните вводить адрес...">
+                                </div>
+                                <div class="info__form-list info__form-list--home">
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    <a href="#" class="info__form-list-item">
+                                        <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                        <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <div id="map-offices1" class="info__yandex-map">  
+                        </div>
+                            <div class="info__list-offices" id="office_list">
+                                <!-- <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a> -->
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                                <a href="#" class="info__form-list-item">
+                                    <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
+                                    <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
+                                </a>
+                            </div>
+                        </form>
+                        
+                        <div class="info__wrap-radio">
+                            <h4 class="info__time-title">Выберите время ожидания:</h4>
+                            <div>
+                                <label class="info__label" ><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--first"></span>  менее 5 минут</label>
+                                <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--second"></span>  от 15 до 30 минут</label>
+                            </div>
+                            <div>
+                                <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--middle"></span>  более 30 минут</label>
+                                <label class="info__label"><input class="info__radio" type="radio" name="radio"><span class="info__out info__out--last"></span>  нет данных</label>
+                            </div>
+                        </div>
+                        <div class="info__map">
+                            <div id="tooltip">testing</div>  
+                            <svg id="map-svg" width="564" height="681" viewBox="0 0 564 681" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path data-city="Верхнесалдинский район" fill-rule="evenodd" clip-rule="evenodd" d="M238.1 475.4L239.3 472.5L241.7 461.4H241.8L234.6 456.2L227.8 455.1L227.6 457.1L224.5 457.5L220.8 456.4L221 448.6L228 443.8L228.9 441L232.8 439.7L237.2 439.5L243.7 440.2L244.1 438.2L243.4 435.6H246.4L249.9 432.6L253.5 430.2L253.4 430L253.8 427.4L255.5 424.6L258.1 424.2L259 418.8L260.8 417.4L245.7 413.5L247 409.4L229.4 404.2L230.2 407.7L229.5 410.7H225.6L223.2 416.8L218.2 419.8L215.6 421.5V424.5L218.2 424.7L211.9 433.6L208 434.7L206.3 441.7L207.6 442.8L208.3 442.7L209.5 442.6L211.2 440H212.7L217.1 437.4L217.8 434.1L218.7 431.7L222.8 430L227.8 433.5L228.2 436.1L226 435.9V438.5L223.4 437.8L222.1 442.2L208.2 456L204.2 457.2L203.6 460.8L208 463L204.5 467.8L203 474.3L216.7 476.7L217.8 474.5L220.8 475.2L223.6 474.1L229.5 476.3L238.1 475.4Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Верхняя Пышма" fill-rule="evenodd" clip-rule="evenodd" d="M206.7 583.8L212 582.1L218.4 582.2L220.4 577.9L224.1 579.2L225.2 575.4L227.2 574.1L223.4 573.7L221.5 574.3L219.7 572.8L221.3 571.5L222.1 569.1L224 569.2L227 567.9L233.9 556L234.9 551.3L237.2 540.5L226.3 538L224.9 539.6L215.9 539.5L211.3 538.6L211.9 541.1L211.5 543.1L209.7 545.1L209 545L203 548.5L199.6 567.7H195.1L194 575.9L194.3 576L198.5 576.7L197.9 579.1L200.1 579.7L200.6 583.3L204.1 584.6L204.5 584.5L206.7 583.8Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Красноуфимский район" fill-rule="evenodd" clip-rule="evenodd" d="M50.2 668.4L49.0999 662.5L50.4 659.5L46.5 653.4L49.7999 650.1L51.0999 644.7L50.4 641L47.5999 638.4L50.2 637.5L48.7 634.9L48.2999 631V628.4L47.5999 625.4L46.0999 624.1L47.7999 621.5L50.5999 622.4L52.0999 617.6L57 615.3L56.4 612.2L58.7999 606.3L58.4 604.3L54 603.4L47 604.9L47.9 602.1L49.9 601.9L48.4 599.1L46.2 596.5L44.2 596.7L38.0999 594.5L35.5 592.5L35.7 587.1L37.2 584.5H35L32.4 586.9L29.1 583.9L28 582.2L24.2999 581.3L23.2 579.8L22.1 575.5L20.2999 576.1L16.9 574.6L15 571.5L12 570.7L8.49995 571L6.09995 572.8L2.99995 574.6L1.39995 577.3L0.199951 580L3.19995 582L3.09995 585.5L4.19995 588.5L5.59995 589.9L6.89995 594.1L6.69995 597.5L7.59995 600.3L10.5 600.5L10.7 603.8L7.99995 605.5L6.69995 608.9H10.1L8.59995 614.9L6.09995 618.3L4.89995 624L4.59995 628L2.69995 632L2.09995 636L6.19995 636.4L7.39995 642.2L7.09995 645.5L6.19995 648L8.59995 651.5L8.89995 654L11.6 656L9.49995 662.4L9.59995 665.6L12.2 668.4L15.1 669.7L17.9 669.5L21.2999 667.7L23.7 665.1L26.7 665.4L35.2 664.4L36.5999 667.6L41.2999 669.3L48.4 669.1L50.2 668.4ZM37.5999 604.5L41.4 612.8L36.7999 617L30.9 617.8L12.4 612.7L14.1 610.7L29.1 611L37.5999 604.5Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Камышловский район" fill-rule="evenodd" clip-rule="evenodd" d="M366.6 625.2L366.1 617.1L367.2 611.4L365 610.3L365.9 603.4L363.7 601.1L365.2 598L365.5 594.5L364.3 593L364.1 589L367.6 589.8L368.8 588H371.3L371.6 582L366.1 581.8V580L362.7 578.9L363.2 565.9L363.5 562.5L357.8 561.9L358.4 554.7L360.1 552.7L360.2 552.6L358 552.7L356 554.2L353.6 555L353.1 558.1L349.1 560.4L347 561L345.6 559.5L345.3 557.1L342.4 559.1L343.5 561.4L341 560.9L339.9 559.6H333.4L333.2 559.4L332.1 564.2L329.8 563.8L327.8 567.7L328.1 573L326.3 577.5L327.9 579.1L329.8 577.7L330.7 580.2L327.9 582.2L328 591.2L329 593L329.6 595.9L326.3 599.8L324 601.8L322.5 603.9L324.4 606L328.2 608L330.3 606.6L333.1 606.9L337.1 612.2L337.9 617.6L338.9 619.6L337.8 623.2L339.9 624.3L338.1 626.3L336.2 628.7V628.8L339.2 628.3L341.3 637.2L344.6 637.5L344.5 634.4L348 635.2L352.4 629.5L354.9 630.3L358.9 630L360.2 625.8L363.4 625.7L366.6 625.2ZM348.5 592.4L350.3 594.5L351.9 595.5L354.3 595L353.9 597.6V599.4L351.9 600.3L350.8 599L348.7 600.6L346.2 600.9L343.3 598.6L345.7 594.3H348.1L348.5 592.4Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Каменский район" fill-rule="evenodd" clip-rule="evenodd" d="M329.8 635.8L326.7 635.7L324.8 638.1L321.3 637.5L319.4 635.7V631.6L317.6 631.7L312.1 629.6L310.3 627.1L307.3 628.2L304 625.8L302.5 623.3L290.7 618.4L289.7 614.4L287.1 613.8L287 616L284.2 619L274.8 618.5L274.6 624L272.4 624.4L270.1 626.5L270.4 629.1L268 628.9L268.8 631.5H266.3L264.1 634.6L262.5 635.8L260.4 634.8L256.8 637.1L247.5 638.7L244 637.5L245.4 640.1L245.3 643.5L247 644.7L245.8 646.9L247.8 648L248.6 650.4L249.2 650L256.7 654L258.3 656.3L262.3 654.5L264.9 652.6L268.6 653L271.5 655.5L273.5 657.9L276.5 658.1L280 656.4L283.7 658L286.1 660.6L286.4 663.5L288.5 667L291.4 665.9L294.2 667.7L293.2 670.7L295.1 673.9L298.5 675.8L306.3 678.1L307.7 667.8L305.9 664.6L306.3 661.7L309.7 660.2L313.1 660.7L317.5 656.2L319 652.7L319.1 646.7L323.2 643.3L324.4 640.6L327.3 639L329.8 635.8ZM300.2 631.6L303.2 632.7L300.9 635.6L299.4 643L302 644.5L301.7 646.3L304.7 649.3L307.3 650.7L305.5 654.5L303.6 655.8L300.8 656.8L298.9 660.3L296.9 658.7L297.3 655.9L298.4 653.6L298.8 651.2L296.7 649.6L296.2 648L293.1 646.6L290.6 644.2L287.8 643.7L289.8 641.8L292.9 641.3L294.8 642.1L296.3 639.5L298.2 637.9L299.5 635.5L300.2 631.6Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Ирбитский район" fill-rule="evenodd" clip-rule="evenodd" d="M364.9 547L364.6 544.4L365.5 540.7L370.5 540.9L371.8 537.9L375.3 536.6L377 531.2L384.8 534.9L383.9 532.9L380.9 531.2L381.1 529.5L382.6 528V525.8L384.8 526.5L387 525.6V521.9L391.6 523.9L392.7 522.8L389.4 521.1L388.7 519.4L390.9 518.5L393.9 510L400.2 510.9L402.6 509.6L401.5 508.3L401.1 505L402.2 502.2L404.6 500V497.6L402.6 496.7V494.7L403.5 493.2L401.5 493.6L401.9 488.8L402.8 486.2L404.5 481.6L401.9 480.9L402.6 478.5L406.3 477.6L405.2 476.3L405 473L401.7 474.1L399.1 477.4L394.5 480L390.1 476.7L387.1 475.6L381.9 480.2L382.3 476.5L385.8 473.2L383.8 471.5L376.8 472.6L374 470.6L372.3 470.4L372.5 467.1L362.5 464.5L360.3 465.4L357 461.7L354.6 461.5H351.6V459.3H347.2L344.6 457.9V461.3L342.9 464.6L341.6 465.3L340.5 470.5V474.2L336.1 475.7L334.1 484.4L334.8 487.7L336.5 490.1L332.1 492.7L331.9 497.1L329.5 495.4L329.3 497.1L320.2 497.3H317.2L317.4 498.8L315.4 500.8L313.7 504.4L316.2 503.9L319.8 504.7L319.7 507L323.5 506L326.9 508.5L328.8 515.5L326.9 517.1L329.4 518.9L333.2 519.3L334.8 521.2L333 524.6L329.7 527L326.4 525.4L322.9 526.2L329.4 537.2L331.7 536.7L334.7 539.2L336.7 539.1L334.3 541.1L333.2 544.5L330.2 545.6L327.6 545.1L325 557.4H325.1L331.2 558.2L333.2 559.9L333.4 560.1H339.9L341 561.4L343.5 561.9L342.4 559.6L345.3 557.6L345.6 560L347 561.5L349.3 560.7L353.3 558.4L353.8 555.3L356.2 554.5L358.2 553L360.4 552.9L361.7 550.3L362 549.8L363.5 547.7L364.9 547ZM369.3 495.2H371.7L373.4 499.1L373 502.8L370.8 507.2L369.1 506.1L369.3 508.7L368.6 510.4L364.9 509.1L361.6 509.3L363.8 506.7L366.2 504.5L369.7 496.9L369.3 495.2Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Сысертский район" fill-rule="evenodd" clip-rule="evenodd" d="M224.9 605.9L224.3 606.5L223.8 607.4H223.3L222.6 606.8L221.8 607.5L222.3 607.9L222.8 608.3L223.2 609.1L222.7 609.7L224.9 611V610.2L226 610.1H227.1L227 610.6V610.9L227.8 610.8L228.2 610.4L228.1 609.8L227.6 609.7L228.2 609L228 608.8L226.4 607.7L226.3 607.4L226 607.2L225.4 606.6L225.1 606.3V606.1L224.9 605.9ZM223.1 610.4L217.7 613.3L217.4 615.8H214.6L214.5 618.4L216.8 619.7L214.7 620.2L212.2 619.1L212.6 621L211 619.7L209.7 621.5L208.3 620.9L209.6 623.1L211.7 623.5L209.7 630.3L203.3 633.3L200.3 648.3L203 648.8L200.2 664.8L200.7 664.9L203.9 665.1L207.6 664.3L209.7 665.7L212.6 668.3L216.5 666.3L219.2 664.2L222.7 666.3L228 666.6L230.8 667.7L236.6 670.2L242.9 671L247.7 669.7L250 668.5L247.6 663L246.2 658.2L244.5 653.3L248.6 650.8L247.8 648.4L245.8 647.3L247 645.1L245.3 643.9L245.4 640.5L244 637.9L243.7 637.4L243.4 635.1L246.9 627.9L246.7 624.8L248.4 623.2L248.9 617.4L247.1 616H244.9L244.1 615L243.4 614L243.6 613.3L238 611.7L235.1 610.9L232.7 614.4L229.8 614L229.9 615.6L227.5 612.2L225.3 611.8L225 611.7H224.9L223.1 610.4Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Каменск-Уральский" fill-rule="evenodd" clip-rule="evenodd" d="M300.2 631.6L299.7 635.4L298.4 637.8L296.5 639.4L295 642L293.1 641.2L290 641.7L288 643.6L290.8 644.1L293.3 646.5L296.4 647.9L296.9 649.5L299 651.1L298.6 653.5L297.5 655.8L297.1 658.6L299.1 660.2L301 656.7L303.8 655.7L305.7 654.4L307.5 650.6L304.9 649.2L301.9 646.2L302.2 644.4L299.6 642.9L301.1 635.5L303.4 632.6L300.2 631.6Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Красноуфимск" fill-rule="evenodd" clip-rule="evenodd" d="M37.5999 604.5L29.0999 610.9L14.0999 610.6L12.3999 612.6L30.8999 617.7L36.7999 616.9L41.3999 612.7L37.5999 604.5Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Камышлов" fill-rule="evenodd" clip-rule="evenodd" d="M348.5 592.4L348 594.4H345.6L343.2 598.7L346.1 601L348.6 600.7L350.7 599.1L351.8 600.4L353.8 599.5V597.7L354.2 595.1L351.8 595.6L350.2 594.6L348.5 592.4Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Асбест" fill-rule="evenodd" clip-rule="evenodd" d="M287.5 554.2L285.3 552.6L282.5 554.1L283.8 551.3L273.8 549.1L272.3 555.9L261.9 553.3L261 557.4L257.4 574.7L258.8 578.5L257.5 583.4L279.8 589.4V589.1L280.3 587.1L282.4 587.5L283.5 583.5L281.4 582.9V580.1L282.9 577L284.2 571.3L282.2 569.6L281.2 567.8L283.1 565.7L284.1 564.6L283.7 561.8L286.5 560.3L287.5 554.2Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Ирбит" fill-rule="evenodd" clip-rule="evenodd" d="M369.3 495.2L369.7 496.9L366.2 504.5L363.8 506.7L361.6 509.3L364.9 509.1L368.6 510.4L369.3 508.7L369.1 506.1L370.8 507.2L373 502.8L373.4 499.1L371.7 495.2H369.3Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Пригородный район" fill-rule="evenodd" clip-rule="evenodd" d="M179.3 438.4L179 440.2L179.4 442.8L171.1 440.8L170 448.6L166.5 453L161.5 453.9L159.8 455L157.2 454.8L153.9 453.1L148.7 455.5L142.4 454.2L141.3 460.3H138.7L135.2 456.1L135 458.5L132.8 458.2L131.5 462.6L128.7 462.5L127.8 469.2L134.1 471.3L136.2 471.4L153.8 476.1L154.5 473.8L155.4 472.8L156.5 470.5L156.6 468.4L154.8 468.3L156.9 458.5L163.2 459.7L163.9 457.6L167.7 458.5L167.4 461.2L169.2 461.8L169.9 461.1L170.3 459.6L170 458.3L174.8 458.2L174.7 456.7V455.8H175.5L176.7 456.8L178.1 456.5L179.5 457L179.6 456.9L180.9 455.9L182.2 455.8L182.9 454.9L184.4 454.6L183.6 458.7L187.8 460.4H188.8H189.1L189.9 461L191.1 460.1H193L195.2 458.9H196L196.2 460L198 460.4L198.1 461.2H196.8L196 463.7L196.6 465L193.9 465.4L191.1 464.4L190.3 464.7L190.8 466.9L192.3 467.1L192.2 467.9L191.6 468.9L191.7 470.8L189.4 470.7H187.7L187.6 473.3H186.1L186 474L185.3 478.3L183.3 478.6L182.7 481.1L183.4 482.8L180.8 484.9L179.2 484.6L177 485.4L176.5 486.6L175.3 486.5L175 486L170.4 488.4L168.5 489L168.2 490.6L168.1 491.6L166.8 493.7L167 494.5L165.6 500.5L157.5 498.7L158.7 494.1L155.4 493.4L156.5 487.5L157.8 485.1L151.1 483.4L148.6 491.8L147.5 492.8L148.1 494.8L145.7 502.8L162 507.2L162.6 505.1L166.9 505.9H166.8L169.4 497.5L184.6 501.1L184.9 500.7L185.4 495.9L189.2 496.8L189.5 494.8L193.2 493L194 495L200.6 499.3L208.3 501.3L211.4 507.3L214.8 509.9L217.7 511L221.2 513L226.4 513.6L230 518.8L233 519.5L234.9 515.7L238.2 517.2L245.6 514.8L247.9 515.3L249.3 512.8L253.7 510.5L255.7 508.2L257.4 501.5L256.6 499.3L254.3 503.7L253.9 506.2L250.3 505.4L249 503.6L249.1 501.2L248.5 498.4L245.9 496.4L247.8 495.1L247.7 493.2L248.1 490.3L247.7 489.2L245.3 487.3L247.2 486.9L249.2 488.7V486.2L250.8 484.3L248.8 484.4L247.3 482.3L247.2 480.3L246.1 481.8L244 481.3L247.5 478.8L247.7 478.5L246.8 475.7L244.8 476.8L244.6 474L247 471.6L246.6 470.3L241.8 474L238.7 475.3H238.3L229.7 476.1L223.8 473.9L221 475L218 474.3L216.9 476.5L203.2 474.1L204.7 467.6L208.2 462.8L203.8 460.6L204.4 457L204.5 456.7L203 454.7L203.9 452.7L201.3 452.3L202 449.9L199.4 449.5L195.9 450.8V447.8L198.3 444.8L196.2 444.3L183.7 441.3L179.3 438.4Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Нижний Тагил" fill-rule="evenodd" clip-rule="evenodd" d="M188.8 460.2H187.8L183.6 458.5L184.4 454.4L182.9 454.7L182.2 455.6L180.9 455.7L179.6 456.7L179.5 456.8L178.1 456.3L176.7 456.6L175.5 455.6H174.7V456.5L174.8 458L170 458.1L170.3 459.4L170 461L169.3 461.7L167.5 461.1L167.8 458.4L164 457.5L163.3 459.6L157 458.4L154.9 468.2L156.7 468.3L156.6 470.4L155.5 472.7L154.6 473.7L153.9 476L136.3 471.3L134.2 471.2L127.9 469.1L128.8 462.4L131.6 462.5L132.9 458.1L135.1 458.4L135.3 456L134.8 455.4L133.1 449.7L134.8 447.1L119.3 443.2L121.5 436.7L119.1 436L119.3 433.8L117.6 433.1L119.1 427L115 426.1L114 426.6L110.8 429.8L105.4 437.8L100.9 441.6L101.3 445.7L97.5999 446.8L96.3999 450.8L98.3999 452.8L99.1999 460.1L100.9 466.1L104 466.7L103.4 470.9L111.9 473.2L109 483.2L105.3 487.1L98.4999 494L105.7 495.7L101.6 510.7L112.7 513.3L112 515.5L117.2 516.8L115 522L117.2 521.3L119.4 522L118.7 525.3L121.7 522.9V519.4L123.4 516.6L125.8 514.4L132.3 515.9L131.2 520.3L135.3 521.4L138.1 520.7L138.3 525.1L140.5 525.8L139.4 530.4L150.7 532.7L149.9 534.7L162.1 538.1V537L162.5 535.5L163 533.4L158.5 532.6L160.2 524.5L159.1 521.7L158.8 519.2L157 517.7L161 513.6L168.2 509.9L168.8 506.2L166.3 505.6L162 504.8L161.4 506.9L145.1 502.5L147.5 494.5L146.9 492.5L148 491.5L150.5 483.1L157.2 484.8L155.9 487.2L154.8 493.1L158.1 493.8L156.9 498.4L165 500.2L166.4 494.2L166.2 493.4L167.5 491.3L167.6 490.3L167.9 488.7L169.8 488.1L174.5 485.7L174.8 486.2L176 486.3L176.5 485.1L178.7 484.3L180.3 484.6L182.9 482.5L182.2 480.8L182.8 478.3L184.8 478L185.5 473.7L187.15 466.95L188.8 460.2ZM186 474L186.1 473.3H187.6L187.7 470.7H189.4L191.7 470.8L191.6 468.9L192.2 467.9L192.3 467.1L190.8 466.9L190.3 464.7L191.1 464.4L193.9 465.4L196.6 465L196 463.7L196.8 461.2H198L197.9 460.4L196.1 460L195.9 458.9H195.1L192.9 460.1H191L189.8 461L189 460.4H188.8" fill="#EEE2D6"/>
+                                <path data-city="no thing" d="M186 474L186.1 473.3H187.6L187.7 470.7H189.4L191.7 470.8L191.6 468.9L192.2 467.9L192.3 467.1L190.8 466.9L190.3 464.7L191.1 464.4L193.9 465.4L196.6 465L196 463.7L196.8 461.2H198L197.9 460.4L196.1 460L195.9 458.9H195.1L192.9 460.1H191L189.8 461L189 460.4H188.8M188.8 460.2H187.8L183.6 458.5L184.4 454.4L182.9 454.7L182.2 455.6L180.9 455.7L179.6 456.7L179.5 456.8L178.1 456.3L176.7 456.6L175.5 455.6H174.7V456.5L174.8 458L170 458.1L170.3 459.4L170 461L169.3 461.7L167.5 461.1L167.8 458.4L164 457.5L163.3 459.6L157 458.4L154.9 468.2L156.7 468.3L156.6 470.4L155.5 472.7L154.6 473.7L153.9 476L136.3 471.3L134.2 471.2L127.9 469.1L128.8 462.4L131.6 462.5L132.9 458.1L135.1 458.4L135.3 456L134.8 455.4L133.1 449.7L134.8 447.1L119.3 443.2L121.5 436.7L119.1 436L119.3 433.8L117.6 433.1L119.1 427L115 426.1L114 426.6L110.8 429.8L105.4 437.8L100.9 441.6L101.3 445.7L97.5999 446.8L96.3999 450.8L98.3999 452.8L99.1999 460.1L100.9 466.1L104 466.7L103.4 470.9L111.9 473.2L109 483.2L105.3 487.1L98.4999 494L105.7 495.7L101.6 510.7L112.7 513.3L112 515.5L117.2 516.8L115 522L117.2 521.3L119.4 522L118.7 525.3L121.7 522.9V519.4L123.4 516.6L125.8 514.4L132.3 515.9L131.2 520.3L135.3 521.4L138.1 520.7L138.3 525.1L140.5 525.8L139.4 530.4L150.7 532.7L149.9 534.7L162.1 538.1V537L162.5 535.5L163 533.4L158.5 532.6L160.2 524.5L159.1 521.7L158.8 519.2L157 517.7L161 513.6L168.2 509.9L168.8 506.2L166.3 505.6L162 504.8L161.4 506.9L145.1 502.5L147.5 494.5L146.9 492.5L148 491.5L150.5 483.1L157.2 484.8L155.9 487.2L154.8 493.1L158.1 493.8L156.9 498.4L165 500.2L166.4 494.2L166.2 493.4L167.5 491.3L167.6 490.3L167.9 488.7L169.8 488.1L174.5 485.7L174.8 486.2L176 486.3L176.5 485.1L178.7 484.3L180.3 484.6L182.9 482.5L182.2 480.8L182.8 478.3L184.8 478L185.5 473.7L187.15 466.95L188.8 460.2Z" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="закрытое административнотерриториальное образование – г. Лесной" fill-rule="evenodd" clip-rule="evenodd" d="M169.6 394.7V394.5L170.5 390.4L174 384.5H175.7L178.3 384.3V381.9L175.3 380.8V378.8L177.9 375.3L178.1 373.1L173.1 372.2L171.1 373.1L169.4 372.4L168.3 374.6L164.8 373.7L164.5 371.8L163.3 373L159.2 372.1L156.6 386.9L154.5 393.9L166.8 396.9L169.6 394.7Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Серов" fill-rule="evenodd" clip-rule="evenodd" d="M236.5 201.5L231.1 218.5L225.7 217.2L221.3 217.6L205 213.7L203.3 222.4L207.4 223.3L214.8 227L212 229.2L211.8 231L211.7 231.6L212.6 235.7L211.3 242.7L218.1 246.4L216.6 252.3L218.8 253L218.1 255.8L215.5 256L213.5 266.2L210.7 266L209.4 269.5L209.6 271.9L209.5 272.2L208.7 274.7L206.1 283.4L206.3 283.7L209.4 288V291.7L212.9 292.8L210.3 302.8L234 309.5L230.9 319.3L232 321L237.9 322.1L242 321L245.9 326.2L251.4 327.1L251.9 313.9L261.6 313.6L261.5 310.9L260 310L262.2 308.8L263.1 307.8L263 307.4L263.8 305.8L271.7 305.7L272.5 299.5L286 300.5L286.7 294.4L295.3 296.8L293.6 280.8L281.4 243.6L281.2 239.2L279.9 237.2L277.9 240L277.5 237L278.2 235L276.5 231.5L278.5 230L276.8 229.1L274.4 230.8L273.1 228.4H271.1L271.8 226.4L270.3 226L277.3 219.3L278.4 217.4L277.1 215.8L274.9 215.1V212.5L273.4 211L270.6 210.6L268.9 208.6L265.6 209.3L236.5 201.5Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Краснотурьинск" fill-rule="evenodd" clip-rule="evenodd" d="M206.2 283.6L206 283.3L208.6 274.6L209.4 272.1L209.5 271.8L209.3 269.4L210.6 265.9L213.4 266.1L215.4 255.9L218 255.7L218.7 252.9L216.5 252.2L218 246.3L211.2 242.6L212.5 235.6L211.6 231.5L211.7 230.9L207.5 230.4L206.2 235L203.8 233.7L202.5 240L199.7 241.7L199.6 241.9L195.8 266.8L192.1 274.9L192.7 278.9L194 279.3L196.6 281L206.2 283.6Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Нижняя Салда" fill-rule="evenodd" clip-rule="evenodd" d="M253.6 430.1L250 432.5L246.5 435.5H243.5L244.2 438.1L243.8 440.1L237.3 439.4L232.9 439.6L229 440.9L228.1 443.7L221.1 448.5L220.9 456.3L224.6 457.4L227.7 457L227.9 455L234.7 456.1L241.9 461.3L245.3 459.6L250.7 458.5L252 453.5L256.1 448.7V445.4L255.4 437.6L256.1 433.2L253.6 430.1Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Верхотурский район" fill-rule="evenodd" clip-rule="evenodd" d="M211.6 398L217.3 401.6H228L227.3 403.3L229.5 404L247.1 409.2L245.8 413.3L260.9 417.2L262.8 417.7L265 417.3L266.7 412.3L269.1 411.2L272.6 395.3L269.3 394.9L270.8 392.5L268.6 392.3L269.5 390.1L291.1 395.3L290.4 397.7L299.5 400.5L299.3 403.5L304.5 401.8L307.8 402.9L311.5 400.5L313.5 398.3L322.6 398.1L328.7 399.2L330.2 393.5L329.5 390.7L330.9 389.8L330 387.9H326.1L314.1 384.4L313.2 381.4L314.1 379L311.7 376L311.3 378.2L304.3 375.4L301.3 372.6L302 371.1L303.7 370.9L303.5 368.3L296.5 369.4L296.3 371.4H293.7L290.4 372.7L286.9 369.9L284.7 370.6L275.8 369.9L274.1 367.7L276.1 361.6L271.7 359.4L275.2 346.6L271.3 345.5L272.4 341.4L258.7 338.4L258.9 343L247.5 342.2L247.4 345.4L238.3 346.3L237.6 353.5L223.9 352.6V358.7L212.6 355.9L210.6 361.6H208.4L206.9 358.6L205.8 362.7L206 366.6L186.5 361.6L183.6 370.5L196.7 373.8L196.3 376L204.8 378.2L204.1 380.4L206.5 380.6L208.9 386L210.4 386.9V393.9L211.6 398Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Красноуральск" fill-rule="evenodd" clip-rule="evenodd" d="M195.9 444.5L197.1 441.3L198.8 440.6L200.5 444.3L202.9 445L205.1 446.7H207.7L208.4 442.7L207.7 442.8L206.4 441.7L208.1 434.7L212 433.6L218.3 424.7L215.7 424.5V421.5L218.3 419.8L223.3 416.8L225.7 410.7H229.6L230.3 407.7L229.5 404.2L227.3 403.5L228 401.8H217.3L211.6 398.2L212.3 400.8L186.4 396.9L187.5 398.6L184.9 399.9L185.1 397.9L183.8 396.2L178.8 399.9L179.4 400.3L179.8 404L179.6 410V410.3L175 422.1L176.5 423L180.2 425.6L178.7 430.2L180.2 432.8L179.2 438.6L183.3 441.7L195.9 444.5Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="закрытое административнотерриториальное образование – поселок Свободный" fill-rule="evenodd" clip-rule="evenodd" d="M204.2 457.3L208.2 456.1L222.4 442.2L223.7 437.8L226.3 438.5V435.9L228.5 436.1L228.1 433.5L223.1 430L219 431.7L218.1 434.1L217.4 437.4L213 440H211.5L209.8 442.6L208.6 442.7L207.9 446.7H205.3L203.1 445L200.7 444.3L199 440.6L197.3 441.3L196.1 444.5L198.2 445L195.8 448V451L199.3 449.7L201.9 450.1L201.2 452.5L203.8 452.9L202.9 454.9L204.4 456.9L204.2 457.3Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Белоярский район" fill-rule="evenodd" clip-rule="evenodd" d="M244 614.7L244.8 615.8H247L248.8 617.2L248.3 623L246.6 624.6L246.8 627.8L243.4 635L243.7 637.3L243.9 637.8L247.4 639L256.7 637.4L260.2 635.1L262.4 636.1L264 634.9L266.2 631.7H268.8L268 629.1L270.4 629.3L270.1 626.6L272.4 624.5L274.7 624.1L274.9 618.6L284.2 619.1L287.1 616.1L287.2 613.8H286.9L281.7 609.9L280.4 606.9L281.9 605.4L280.3 603.9L277.3 604.4V599.5L278 595L279.8 591.5V589.3L257.5 583.3L256.2 583L256.1 583.1L255.7 585.2L259.1 586.2L258.5 588.3L263.4 589.5L264.7 586.3L267.1 587.2L266.7 589L265.2 592.9L265 594.2L263.5 596.6L264.2 598.7L266.1 600L266.4 601.8L264.5 602.1H261L259.5 603.4L261.3 605L262.8 609.2L262.5 611.7L253.1 610.7L250.6 609.2L250.3 606.9H252.3L253.2 608.5L254.6 607.6L253.1 605.1L253.3 602.8L249.8 601.8L248.4 602L247.5 602.1L244.5 604.5L243 607L241.1 606.4L240.5 604.1L241.4 602H243.9L245.3 596.6L245.2 596.7L236 594.7L234.3 603.1L231.4 606.2L233.9 609.1L236.3 609L237.9 611.5L243.5 613L243.2 613.7L244 614.7Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Сухоложский район" fill-rule="evenodd" clip-rule="evenodd" d="M332.2 564.3L333.3 559.5L331.4 557.8L325.2 557H325.1L320.8 555.4L316.2 556.4L311 555.1L309.6 557.4L294.6 554L293.6 559.4L290.2 556L287.5 554.2L286.5 560.3L283.7 561.8L284.1 564.5L283 565.7L281.2 567.8L282.2 569.5L284.2 571.2L282.9 576.9L281.4 580.1V582.8L283.5 583.5L282.4 587.5L280.3 587.1L279.8 589.1V589.3L283.4 588.8L284.7 589.5L286.9 592.4L289.3 593.9L295.8 595.9L296.5 592.6L299 592.1L300.5 595.4L304.6 595.5L304 592.5L306.6 592L312 592.7L311.7 599.3L315.3 599.9L317 600.9L317.8 603.4L320.3 604.9L322.7 604H322.9L324.3 601.9L326.6 599.9L329.8 596L329.2 593.1L328.2 591.4L328.1 582.3L330.8 580.3L330 577.8L328.1 579.2L326.5 577.6L328.2 573.1L328 567.8L330 563.9L332.2 564.3Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Артемовский район" fill-rule="evenodd" clip-rule="evenodd" d="M279.1 515.4L280.5 522.7L277 524L276.2 526.4L277.8 530.9L275.9 531.8L274.1 538.7L282.6 546.7L283.7 551.2V551.3L282.4 554.1L285.2 552.6L287.4 554.2L290.1 556L293.5 559.4L294.5 554L309.6 557.4L311 555.1L316.1 556.4L320.7 555.4L325 557L327.6 544.7L330.2 545.2L333.2 544.1L334.3 540.7L336.7 538.7L334.7 538.8L331.7 536.3L329.4 536.8L322.9 525.8L326.4 525L329.7 526.6L333 524.2L334.8 520.8L333.2 518.9L329.4 518.5L326.9 516.7L328.8 515.1L326.9 508.1L323.5 505.6L319.7 506.6L319.8 504.3L316.2 503.5L313.7 504H313.6L311.5 502.7L310.2 506.6L306.1 512.6L305.5 515L304.1 513.1L301.1 514.9L299.2 513.1L296.1 514L295.7 516.9L293.6 518.8L291.8 518.5L288.5 517.2L282.5 516.2L280.5 517L279.1 515.4Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Алапаевск" fill-rule="evenodd" clip-rule="evenodd" d="M257.1 501.5L257.2 501.3L258.7 499.8L260.6 497.2L263.1 496.7L265.1 495.2L266.1 496.5L268.6 498L268.7 500.8L266.7 502.4L273 503.7L275.1 501.5L274.1 499.4L273.1 497.9L272.8 496.1L275.8 496L277.3 495.1L278.7 499.4L280.3 494L283.2 494.5L287.3 492.2H289.6L288.7 490.1L292.8 489.2L294.1 487.4L296.9 487.9L298.2 481.4L296.2 482.9L295.3 480.8L293.3 479.4L291 479.5L290.1 477.4L288 477.1L287.4 475.5L285 475.4L283.6 472.8L285.6 472L270.8 468.1L269.8 472.2L267.4 473.3L268.8 469.4H263.2L259.7 468.4L257.6 476.7L251.2 473.8L247.4 478.8L247.2 479.1L243.7 481.6L245.8 482.1L246.9 480.6L247 482.6L248.5 484.7L250.5 484.6L248.9 486.5V489L246.9 487.2L245 487.6L247.4 489.5L247.8 490.6L247.4 493.5L247.5 495.4L245.6 496.7L248.2 498.7L248.8 501.5L248.7 503.9L250 505.7L253.6 506.5L254 504L256.3 499.6L257.1 501.5Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Режевский район" fill-rule="evenodd" clip-rule="evenodd" d="M229.9 518.6H229.7L228.1 520L229.7 522.1L229.4 525.4L231.7 527.8L229.9 529.9L232.7 530.3L232.4 532.6L228.4 536L226.3 538.4L237.2 540.9L234.9 551.7L261 557.5L261.9 553.4L272.3 556L273.8 549.2L283.8 551.4V551.3L282.7 546.8L274.2 538.8L276 531.9L277.9 531L276.3 526.5L277.1 524.1L280.5 522.7L279.1 515.4L276.4 512.3L277 507.7L274.6 503.6L275.1 501.4L273 503.6L266.7 502.3L268.7 500.7L268.6 497.9L266.1 496.4L265.1 495.1L263.1 496.6L260.6 497.1L258.7 499.7L257.2 501.2L257.1 501.4L255.4 508.1L253.4 510.4L249 512.7L247.6 515.2L245.3 514.7L238 517L234.7 515.5L232.8 519.3L229.9 518.6Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Невьянский район" fill-rule="evenodd" clip-rule="evenodd" d="M191.4 545.6V545.9L190.3 552.2L185.9 553.4L184.4 557.4L185 560L184.7 562.5L181.6 562.8L181 564.9L178.2 564.5L177.4 567.9L180.3 568.7L179.5 572.3L188.6 574.5L194 575.9L195.1 567.7H199.6L203 548.5L209 545L209.8 545.4L211.5 543.3L211.9 541.3L211.3 538.8L215.9 539.7L225 539.8L226.3 538.3L228.5 535.8L232.5 532.4L232.7 530.2L230 529.8L231.7 527.7L229.5 525.3L229.7 522L228.1 519.9L229.7 518.5L229.9 518.6L226.3 513.4L221.1 512.7L217.5 510.7L214.6 509.7L211.2 507.1L208.2 501.1L200.5 499.1L193.9 494.8L193.1 492.8L189.4 494.6L189.1 496.6L185.3 495.7L184.8 500.5L184.5 500.9L179.6 506.8L182.2 508.9L184.7 511.5L184.8 513.5L183.7 517.2L185.3 516.1L186.2 518L185.7 521.5L189.4 527L189.1 529.2L193.9 530.2L194.8 533L193.5 539.3L187.6 538.3V538.7L185.6 542.1L185.7 544.5L191.4 545.9V545.6Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Кировград" fill-rule="evenodd" clip-rule="evenodd" d="M193.9 530.2L189.1 529.1L189.4 526.9L185.7 521.4L186.2 517.9L185.3 516.1L183.8 517.2L184.9 513.5L184.7 511.5L182.2 508.9L179.6 506.8L184.5 500.9L169.3 497.3L166.7 505.7L169.3 506.3L168.7 510L161.5 513.7L157.5 517.8L159.3 519.3L159.6 521.8L160.7 524.6L159 532.7L163.5 533.5L163 535.6L168.9 536.8L167.5 539.3L167.2 547.1V547.4L167.5 550.6L175.5 551.7L178.1 538.7L182.4 539.6L182.8 536.5L184.5 537.1L187.7 535.9L187.6 538.2L193.5 539.2L194.8 532.9L193.9 530.2Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="закрытое административнотерриториальное образование – г. Новоуральск" fill-rule="evenodd" clip-rule="evenodd" d="M177.4 567.9L178.2 564.5L181 565L181.6 562.9L184.7 562.6L185 560.1L184.4 557.5L185.9 553.5L190.4 552.3L191.4 546L185.8 544.6L185.6 542.1L187.6 538.7V538.3L187.7 536L184.5 537.2L182.8 536.6L182.4 539.7L178.1 538.8L175.5 551.8L167.5 550.7L167.2 547.5V547.2L166.1 545.5L164.6 547L164.9 550.6L164.2 556.2L165 559L167.4 558.3L168.3 563L171 568.4L169.9 570.7H168.2L169.1 573L170.7 571.9L173.1 567.9L177 567.8L177.4 567.9Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Заречный" fill-rule="evenodd" clip-rule="evenodd" d="M248.4 602L249.8 601.8L253.3 602.8L253.1 605.1L254.6 607.7L253.2 608.5L252.3 606.9H250.3L250.6 609.2L253.1 610.7L262.5 611.7L262.8 609.2L261.3 605L259.5 603.4L261 602.1H264.5L266.4 601.8L266.1 600L264.2 598.7L263.5 596.6L265 594.2L265.2 592.9L266.7 589L267.1 587.2L264.7 586.3L263.4 589.5L258.5 588.3L259.1 586.2L255.7 585.2L256.1 583.1L253.2 586.8L249.4 586.3L247.8 594.9V595L245.3 596.6L243.9 602H241.4L240.5 604.1L241.1 606.4L243 607L244.5 604.5L247.5 602.1L248.4 602Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Березовский" fill-rule="evenodd" clip-rule="evenodd" d="M257.5 583.3L258.8 578.4L257.4 574.6L261 557.3L234.9 551.5L233.9 556.2L227 568.1L224 569.4L222.1 569.3L221.3 571.7L219.7 573L221.5 574.5L223.4 573.9L227.2 574.3L225.2 575.6L224.1 579.4L223.5 581.6L223.9 584.1L222.9 587.5L223.5 591.1L232.5 594L236 594.8L245.1 596.9L245.3 596.8L247.8 595.2V595.1L249.4 586.6L253.2 587.1L256.1 583.3L256.2 583.2L257.5 583.3Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Байкаловский район" fill-rule="evenodd" clip-rule="evenodd" d="M423.1 489.1L421 486.7H416.9L413.4 489.1L410.4 488.4L408.7 490.1L408.9 487.9L409.8 485.7L405.9 484.6L403.1 485.9L402.2 488.5L401.8 493.3L403.8 492.9L402.9 494.4V496.4L404.9 497.3V499.7L402.5 501.9L401.4 504.7L401.8 508L402.9 509.3L400.5 510.6L394.2 509.7L391.2 518.2L389 519.1L389.7 520.8L393 522.5L391.9 523.6L387.3 521.6V525.3L385.1 526.2L382.9 525.5V527.7L381.4 529.2L381.2 530.9L384.2 532.6L385.1 534.6L377.3 530.9L375.6 536.3L372.1 537.6L370.8 540.6L365.8 540.4L364.9 544.1L365.2 546.7L379.8 543.2L380.3 540.1L381.8 541.5L388.3 544L391.8 543.8L393.2 546.4L394.7 545.3L396.4 542.4L399.6 541.9L404.5 543.9L406.5 546.7H409.1L410.6 549L415.7 549.8L420 548.6L423.4 548.1L426.9 543.8L428.9 542.6L431.1 539.5L435.5 543.9L436 540.4L434 537.4L439.2 534.8L433.7 533.3L433.9 529.4L437.6 527.9L436.3 524.6L433.5 522.6L435.7 520.4L440.1 517.6L439 515.2L437.7 516.3L436.2 515.2L436 513.2H433.6L433.8 511.5L439.2 512.2L439.9 509.4L437.9 504.6L434.4 502.6L432 501.7L430.5 503.4L427.2 501.2L423.7 496.4L424.1 494L421.9 491L423.1 489.1Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Туринский район" fill-rule="evenodd" clip-rule="evenodd" d="M379.4 377.7L376.1 382.3L373.9 393.8L375.4 394.9L376.1 398.6L369.8 402.7L367.6 400.1L360 403L358 413.9L355 413.2L354.3 416.2L354.5 418.8L349.9 419.7L346.2 420.8L344.7 427.5L344.9 435.8L344.7 457.9L347.3 459.3H351.7V461.5H354.8L357.2 461.7L360.5 465.4L362.7 464.5L372.7 467.1L372.5 470.4L374.2 470.6L377 472.6L384 471.5L386 473.2L382.5 476.5L382.1 480.2L387.3 475.6L390.3 476.7L394.7 480L399.3 477.4L401.9 474.1L405.2 473L405.4 476.3L406.5 477.6L402.8 478.5L402.1 480.9L404.7 481.6L403 486.2L405.8 484.9L409.7 486L408.8 488.2L408.6 490.4L410.3 488.7L413.3 489.4L416.8 487H420.9L423 489.4L424.6 486.8L428.3 486.1L430.7 482.8L429 481.1L428.3 477L438.1 474.2L449.6 481.4L461.1 481.8L463.7 481.1L463 438L457.1 441.5L451.7 441.7V438.7H449.5V435L445.1 434.8L446.8 430.2L443.1 430.6L442.7 425.8L434 425.4L433.8 408.2L429.4 408.6L429.2 400.5H425.5L417 399.4L414.4 401.6L403.1 391.4L392.9 386L385.3 379L379.9 377.7H379.4Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Серовский район" fill-rule="evenodd" clip-rule="evenodd" d="M295.3 296.9L286.7 294.5L286 300.6L272.5 299.6L271.7 305.8L263.8 305.9L263 307.5L263.1 307.9L262.2 308.9L260 310L261.5 310.8L261.6 313.5L251.9 313.8L251.4 327H251.5L252.6 331.6H250L247.8 330.5L247.5 341.9L258.9 342.7L258.7 338.1L272.4 341.1L271.3 345.2L275.2 346.3L271.7 359.1L276.1 361.3L274.1 367.4L275.8 369.6L284.7 370.3L286.9 369.6L290.4 372.4L293.7 371.1H296.3L296.5 369.1L303.5 368L303.7 370.6L302 371L301.3 372.5L304.3 375.3L311.3 378.1L311.7 375.9L314.1 378.9L313.2 381.3L314.1 384.3L326.1 387.8H330L330.9 389.7L334.6 397.3L339 398.4L336.2 395.6L337.7 388.6L334.7 381.6L336 376.4L339 375.5L340.5 370.5L341.2 359.6L338.2 353.5L339.5 339.8L338 337.8L339.3 334.8H339.4L336.9 330.2L330.1 323.5L319.2 320.9L318.3 323.1L316.3 324.2L308.9 325.3L306.5 322.5L307.6 297.5L295.2 296.8L295.3 296.9Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Североуральск" fill-rule="evenodd" clip-rule="evenodd" d="M142.1 203.3L168.3 212.6L171.8 229.4L179.4 231.6L180.3 226.7L181.5 220.1L190 221.8L190.7 219.8L203.2 222.4L204.9 213.7L209.4 190.8L208.7 188H206.7L205.6 189.7L204.3 187.5L208.9 170.5L206.1 169.6L209.4 157L163.1 145.2L162.9 145.8L163.5 150.3L158.9 164.1L153.9 167.9L150.1 174L148.5 180.7L145.4 186.8L146.5 189.9L144.8 194.9L144.5 197.7L144.3 200L142.6 201.8L142.1 203.3Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Карпинск" fill-rule="evenodd" clip-rule="evenodd" d="M207.3 223.2L203.2 222.4L190.8 219.7L190.1 221.7L181.6 219.9L180.4 226.6L179.4 231.5L171.8 229.3L168.3 212.5L142.1 203.3L141 207L137.3 220.4L134.5 224.2L133.2 227.7V234.6L129 232.6L127.4 232.7L124.2 233.3L121.8 241.2L115.7 239.1L109 257.9L102.2 255.2L93.3999 283.3L98.7999 284.5L102.7 287.4L103.3 291L106.5 298L108.6 304.9L111.4 307.8L117.7 311.3L127.5 312.1L128.7 315.1L133.5 312.2L138 307.4L137.8 300.7L139.1 295.7L146.1 297.8L150 285L153.9 285.7L159.2 268L161.6 265.9L166.1 267.8L165.7 271.1L192.7 278.8L192.1 274.8L195.8 266.7L199.6 241.9L199.7 241.7L202.5 240L203.8 233.7L206.2 235L207.5 230.4L211.7 230.9L211.9 229.1L214.7 226.9L207.3 223.2Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Новолялинский район" fill-rule="evenodd" clip-rule="evenodd" d="M139.2 345.8L147.2 345.9L160.9 349.8L164.4 347.2H169.4L171.6 338.9L175.3 336.1L178.1 336.5L179.2 340.6L184 342.6L185.5 347L182.9 347.9L182.5 350.9L185.5 352.4L183.8 360.5L186.5 361.2L206 366.2L205.8 362.3L206.9 358.2L208.4 361.2H210.6L212.6 355.5L223.9 358.3V352.2L237.6 353.1L238.3 345.9L247.4 345L247.5 341.8L247.8 330.4L250 331.5H252.6L251.5 326.9L245.8 326L241.9 320.8L237.8 321.9L231.9 320.8L230.8 319.1L233.9 309.3L210.2 302.6L212.8 292.6L209.3 291.5V287.8L206.2 283.5L196.6 280.8L194 279.1L192.7 278.7L165.7 271L166.1 267.7L161.5 265.7L159.1 267.9L153.9 285.5L150 285L146.1 297.8L139.1 295.6L137.8 300.6L138 307.3L133.4 312.1L128.6 315L128.8 315.5L132.2 317.5L136.3 320.9L140.2 323.7L133.8 337.4L135.4 342.1L139.2 345V345.8Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Нижняя Тура" fill-rule="evenodd" clip-rule="evenodd" d="M139.5 372.3L140.4 371L143.4 369.9L144.9 367.7L146.4 369L151.4 362.5L157.7 362.3L164.7 364L163.6 367.7L164.4 371.9L164.7 373.8L168.2 374.7L169.3 372.5L171 373.2L173 372.3L178 373.2L177.8 375.4L175.2 378.9V380.9L178.2 382V384.4L175.6 384.6H174L170.5 390.5L169.6 394.6V394.8L172.4 395.7L178.8 399.9L183.8 396.2L185.1 397.9L184.9 399.9L187.5 398.6L186.4 396.9L212.3 400.8L211.6 398.2L210.3 393.6V386.6L208.8 385.7L206.4 380.3L204 380.1L204.7 377.9L196.2 375.7L196.6 373.5L183.5 370.2L186.4 361.3L183.7 360.6L185.4 352.5L182.3 351L182.7 348L185.3 347.1L183.8 342.7L179 340.7L177.9 336.6L175.1 336.2L171.4 339L169.2 347.3H164.2L160.7 349.9L147 346L139 345.9V346.6L136.7 349.7L134 351L131.4 353.4V359L132.5 366.2L134.8 368.2L135 372.6L139.5 372.3Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Качканар" fill-rule="evenodd" clip-rule="evenodd" d="M149.5 392.8L154.4 394L156.5 387L159.1 372.2L163.2 373.1L164.4 371.9L163.6 367.7L164.7 364L157.7 362.3L151.4 362.5L146.4 369L144.9 367.7L143.4 369.9L140.4 371L139.5 372.3H139.8L142.9 375L147 374.6L149.9 375.8L150.1 379.7L150 383.5L148.6 389.3L149.5 392.8Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Кушва" fill-rule="evenodd" clip-rule="evenodd" d="M179.7 409.8L179.9 403.8L179.5 400.1L178.9 399.7L172.6 395.5L169.8 394.6L167 397L154.7 394L149.8 392.8L151.9 401.4L147.2 406.7L143.7 406.8L140.6 409.5L139.5 414.9L138.2 418.2L135.1 421L134.3 423.6L129.7 422.3L131 425.6L120 422.6L117.2 425.2L115.2 426.3L119.3 427.2L117.8 433.3L119.5 434L119.3 436.2L121.7 436.9L119.5 443.4L135 447.3L133.3 449.9L135 455.6L138.9 460.4H141.5L142.6 454.3L148.9 455.6L154.1 453.2L157.4 454.9L160 455.1L161.7 454L166.7 453.1L170.2 448.7L171.3 440.9L179.6 442.9L179.2 440.3L179.5 438.5L180.5 432.7L179 430.1L180.5 425.5L176.8 422.9L175.3 422L179.9 410.2L179.7 409.8Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Артинский район" fill-rule="evenodd" clip-rule="evenodd" d="M83.2001 604.8L81.4001 608.3L80.5001 612.7L79.2001 614.7L80.1001 616.9L78.8001 620.2L77.3001 619.1L72.9001 618.4L69.6001 620.4L66.3001 618.2L64.3001 619.3L63.2001 617.3L57.1001 615.1H57.0001L52.1001 617.4L50.6001 622.2L47.8001 621.3L46.1001 623.9L47.6001 625.2L48.3001 628.2V630.8L48.7001 634.7L50.2001 637.3L47.6001 638.2L50.4001 640.8L51.1001 644.5L49.8001 649.9L46.5001 653.2L50.4001 659.3L49.1001 662.3L50.2001 668.2L52.0001 667.4L59.2001 670.1L62.7001 671.7H66.0001L68.0001 674.8L69.7001 671.9L73.7001 669L75.6001 666.4L76.5001 664.4L81.2001 664.9L81.7001 668.8L84.9001 671.4L89.3001 671.7L90.8001 675.9H94.2001L96.7001 677.9L101.7 679.7L106.3 677.2L110.2 671.6L110.6 666.4L109.6 663.7L108.3 658.8L99.4001 656.8L99.0001 654.6L96.8001 653.3L99.0001 652L102.3 652.2L103.2 649.4L99.9001 648.7L100.3 646.1L96.4001 645L98.1001 635L102.9 613.5L92.9001 610.9L91.6001 614.8L91.2001 612.4L86.0001 610.7L86.4001 606.8L85.5001 604L83.1001 604.7L83.2001 604.8Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Ачитский район" fill-rule="evenodd" clip-rule="evenodd" d="M83.1999 564.4L79.1999 560.9L77 562.2V564.2L74.5999 562.5L66.5 559.7L64.5 557.1L61.5 558L60.2 560.4L55.5 559.1L54.7999 561L52.2999 563L49.2 561L51.9 560.2L49.9 557.9L47.7999 559.9L42.7999 559.5L41.2 563.1L39.7999 564.8L38.7 568.3L35.2999 568.7L34 571.6L31.6 569.8L28.6 572.7L27.2999 575.5L24.6 574.4L22.2 575.2L23.2999 579.5L24.4 581L28.1 581.9L29.2 583.6L32.5 586.6L35.0999 584.2H37.5L36 586.8L35.7999 592.2L38.4 594.2L44.5 596.4L46.5 596.2L48.7 598.8L50.2 601.6L48.2 601.8L47.2999 604.6L54.2999 603.1L58.7 604L59.0999 606L56.7 611.9L57.2999 615H57.4L63.5 617.2L64.5999 619.2L66.5999 618.1L69.9 620.3L73.1999 618.3L77.5999 619L79.0999 620.1L80.4 616.8L79.5 614.6L80.8 612.6L81.6999 608.2L83.5 604.7L74.8 601.5L78.5 600.6L79.5999 597.3L77.5999 594.9L80.1999 593.6L80.9 591.4L78.5 589.7L77.4 587.7L83.5 564.4H83.1999Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Шалинский район" fill-rule="evenodd" clip-rule="evenodd" d="M139 530.4L139.7 530.5L140.8 525.9L138.6 525.2L138.4 520.8L135.6 521.5L131.5 520.4L132.6 516L126.1 514.5L123.7 516.7L122 519.5V523L119 525.4L119.7 522.1L117.5 521.4L115.3 522.1L117.5 516.9L112.3 515.6L113 513.4L101.9 510.8L106 495.8L98.8 494.1L90.8 502.3L86.8 502.5L84.7 499.3L84.9 494.3L84 490.7L71.8 489.2L65.7 486.9L63.7 492.9L63.8 497.4L61.2 499.4L57.9 498.3L54.8 504.5L53.9 508L55.9 510.8L50 530.1L54.3 536.2L54.9 539.6L52 541V544.6L55.2 544.5L54.1 549.4L57.8 552.2L53.9 554.2L56.8 555.5L55.6 559L60.3 560.3L61.6 557.9L64.6 557L66.6 559.6L74.7 562.4L77.1 564.1V562.1L79.3 560.8L83.2 564.3L94.1 562.1L98.2 561.3L98.4 558.9L123.2 562.4L123.9 565.7L125.6 566.6L125.4 569.2L126.9 570.5L129.1 569L130.5 570.9L131.2 569.7L131.7 566.3L130.8 562.9L132.3 560.6L134.1 559L134.8 558.4L137.1 555.6L141.4 553.8L143.2 552.1L148.9 554.4L156.6 555.9L158.1 552.8L159.9 541.1L162.4 540.3L162.5 538L150.3 534.6L151.1 532.6L139.8 530.3L139 530.4Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Первоуральск" fill-rule="evenodd" clip-rule="evenodd" d="M152 600.2L157.1 603.2L160 599.2L161.6 595.6L164.9 592.5L165.3 589.9L166.4 588.4L168.3 589.9L169.9 588.9L171.9 589.3L172.5 593.7L176.4 596.6L176.9 596.7L179.8 595.9L182.2 595.8L186 597.4L186.1 599.8H196.2L197 594L193 591.7L194.6 585.5L196.3 586L197.9 579.2L198.5 576.8L194.3 576.1L194 576L188.6 574.6L179.5 572.5L180.3 568.9L177.4 568.1L177.1 568L173.2 568.1L170.8 572.1L169.2 573.2L168.3 570.9H170L171.1 568.6L168.4 563.2L167.5 558.5L165 559L164.2 556.2L164.9 550.6L164.6 547L166.1 545.5L167.2 547.2L167.5 539.4L168.9 536.9L163 535.7L162.6 537.2L162.5 538.3L162.4 540.6L159.9 541.4L158.1 553.1L156.6 556.2L148.9 554.7L143.2 552.4L141.4 554.1L137.1 555.9L134.8 558.7L134.1 559.3L132.3 560.9L130.8 563.2L131.7 566.6L131.2 570L130.5 571.2L128.8 574.1V577.8L130.8 578.6L130.5 581.8L129 583L131.9 584.5L131.3 586.8L133.8 587L133.9 590.7L136.1 590.8L140.1 593.1L140.5 588.2L142.6 588.1L146.4 589.4L147.5 587.9L149.6 591.2L148.3 599.9L146.8 602.3L152 600.2Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Ревда" fill-rule="evenodd" clip-rule="evenodd" d="M179.6 599.1L180.9 597L176.9 596.4H176.4L172.5 593.5L171.9 589.1L169.9 588.7L168.3 589.7L166.4 588.2L165.2 589.7L164.9 592.4L161.6 595.5L160 599.1L157.1 603.1L152.1 600.1L152 600.2L152.2 602.4L154.8 605.9L156.4 608.1L159.5 608.7V611.2L158.8 612.6L158.7 615.8L159.7 617.5L159.6 624.2L158 626L157.3 630.4L159.1 633L158.9 637.7H161L161.9 641L155.1 651.7L166.2 654L168.2 643.6L169.5 639.9L169 636.1L170.5 631.6L175.9 627.9L176.4 625.3L177.5 623.4L179.1 618.7L189.3 621.8L191.4 620.4L193.6 620.6L195.1 613.2L193.6 611.8L193.5 611.7L193 611.6L193.5 611.7L191.2 607.4L187.4 606L185.8 603.1L182.1 600L179.6 599.1Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Нижнесергинский район" fill-rule="evenodd" clip-rule="evenodd" d="M133.8 590.5L133.7 586.8L131.2 586.6L131.8 584.3L128.9 582.8L130.4 581.6L130.7 578.4L128.7 577.6V573.9L130.4 571L129 569.1L126.8 570.6L125.3 569.3L125.5 566.7L123.8 565.8L123.1 562.5L98.4 559L98.2 561.4L94.1 562.2L83.2 564.4V564.6L77.1 587.9L78.2 589.9L80.6 591.6L79.9 593.8L77.3 595.1L79.3 597.5L78.2 600.8L74.5 601.7L83.2 604.9L83.4 605L85.8 604.3L86.7 607.1L86.3 611L91.5 612.7L91.9 615.1L93.2 611.2L103.2 613.8L98.4 635.3L96.7 645.3L100.6 646.4L100.2 649L103.5 649.7L102.6 652.5L99.3 652.3L97.1 653.6L99.3 654.9L99.7 657.1L108.6 659.1L109.9 664L109.8 663.8L113.2 663.6L116.1 665.2L119.4 664.3L119.3 661L121 655.5L120.9 651.3L118.2 649.9L119.8 647.1L123.6 646.2L128.8 649.6L133 650.4L136 648.8L141.7 649.3L146.2 651.3L155 651.5L161.8 640.8L160.9 637.4H158.9L159 632.7L157.3 630.2L158 625.8L159.6 624.1L159.7 617.4L158.6 615.7L158.7 612.5L159.4 611.2V608.7L156.3 608.2L154.7 605.9L152.1 602.4L151.9 600.2L146.7 601.9L148.2 599.5L149.5 590.8L147.4 587.5L146.3 589L142.5 587.7L140.4 587.8L140 592.7L136 590.4L133.8 590.5Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Полевской" fill-rule="evenodd" clip-rule="evenodd" d="M200.2 664.8L203 648.8L200.3 648.3L203.3 633.3L209.7 630.3L211.7 623.5L209.6 623.1L208.3 620.9L202.9 620.4L201.6 616.6L202.6 614.6L197.5 615.5L195.1 613.3L193.6 620.7L191.5 620.4L189.4 621.9L179.2 618.8L177.6 623.5L176.5 625.4L176 627.9L170.6 631.7L169.1 636.1L169.6 640L168.3 643.6L166.3 654.1L155.2 651.8L150 660L154.2 662.3L160 662.9L162.7 661.2L164.8 659.7L168.3 660.1L173.7 664.4L177.5 665.2H184.5L187.7 667.2L193.2 664.5L197 664L200.2 664.8Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Богдановичский район" fill-rule="evenodd" clip-rule="evenodd" d="M336.5 628.9L338.3 626.4L340.1 624.4L338 623.3L339.1 619.7L338.1 617.7L337.3 612.3L333.3 607L330.5 606.7L328.4 608.1L324.6 606.1L322.7 604H322.5L320.1 604.9L317.6 603.4L316.8 600.9L315 599.9L311.4 599.3L311.8 592.8L306.4 592L303.8 592.5L304.4 595.5L300.3 595.4L298.8 592.1L296.3 592.6L295.7 595.9L289.2 593.9L286.8 592.4L284.5 589.5L283.2 588.9L279.6 589.4V591.5L278 595L277.2 599.5V604.4L280.2 603.9L281.8 605.4L280.3 606.9L281.6 609.9L286.9 613.8L287.2 613.9L289.8 614.5L290.8 618.5L302.6 623.4L304.1 625.9L307.4 628.3L310.4 627.2L312.2 629.7L317.7 631.8L319.5 631.7V635.8L321.4 637.6L324.9 638.2L326.8 635.8L329.9 635.9L333.1 631.3L336.4 629L336.5 628.9Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Пышминский район" fill-rule="evenodd" clip-rule="evenodd" d="M394.1 623.5L393.9 623.1L392.8 622.8L395 615.1V613.1L397.2 611.3L400 610.4L401.8 598.9L395.2 597.8V595L393.7 593.8L394.2 591.2L392.8 590.1L394 587.2L395.2 586.1L395.4 583.8L393.9 576.1L392.1 575L388.4 566.7L387.5 562.2L384 559.7L383.4 556.6L381.1 560.3L378.2 558.2L377.6 560.3L376.1 558.6L373 557.7L373.3 554.9L370.4 554L367.2 554.6L366.1 552.5L362 549.8L360.7 552.4L360.6 552.5L358.9 554.5L358.3 561.7L364 562.3L363.7 565.7L363.2 578.7L366.6 579.8V581.6L372.1 581.8L371.8 587.8H369L367.8 589.6L364.3 588.8L364.5 592.8L365.7 594.3L365.4 597.8L363.9 600.9L366.1 603.2L365.2 610.1L367.4 611.2L366.3 616.9L366.8 625L367.4 624.9L372.9 627.4L376 627.5L379.4 625.9L382.8 627.8L386.1 627.6L388.9 634L391.2 635.5V630L394.1 623.5Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Талицкий район" fill-rule="evenodd" clip-rule="evenodd" d="M449.7 608.2L446.4 607.5L444.2 606.2L441.1 605.8L444.2 602.8L444.6 598.2L442.6 597.3L444.6 596.6L443.3 594.4L444 592L442.5 593.7L439.2 595.4L441.8 591.7L441.6 588L444.2 580.4L445.9 579.3L445.7 576.3H440.7L436.3 574.1L435.2 571.3L436.7 569.1L439.3 570L440 572.6L442.2 567.2L441.5 563.3L443.5 560.3L448.5 558.8L447.6 554.4L442.4 553.1L440.4 554L438 552.7L435 544.9L435.1 544.2L430.7 539.8L428.5 542.9L426.5 544.1L423 548.4L419.6 548.9L415.3 550.1L410.2 549.3L408.7 547H406.1L404.1 544.2L399.2 542.2L396 542.7L394.3 545.6L392.8 546.7L391.4 544.1L387.9 544.3L381.4 541.8L379.9 540.4L379.4 543.5L364.8 547L363.5 547.3L362 549.4L361.7 549.9L365.8 552.6L366.9 554.7L370.1 554.1L373 555L372.7 557.8L375.8 558.7L377.3 560.4L377.9 558.3L380.8 560.4L383.1 556.7L383.7 559.8L387.2 562.3L388.1 566.8L391.8 575.1L393.6 576.2L395.1 583.9L394.9 586.2L393.7 587.3L392.5 590.2L393.9 591.3L393.4 593.9L394.9 595.1V597.9L401.5 599L399.7 610.5L396.9 611.4L394.7 613.2V615.2L392.5 622.9L393.6 623.2L393.8 623.6L394 623.3L396.7 624.9L399.3 623.1L405.5 626L406.1 629.6L408.9 631.5H413.7L414.7 634.5L417.7 635.9C417.7 635.9 419.5 638.2 420 638.2C420.5 638.2 425.2 638.3 425.2 638.3L431.1 639.6L433.4 637.5L436.6 639.5L441 639.6H443.6L444.8 636.7L445.2 632.7L443.1 629.4L442.8 626L445.8 624.2L449.2 623.7L450 620L452.6 618.2L451.5 613.8L453.2 611.8L449.1 608.6L449.7 608.2Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Тугулымский район" fill-rule="evenodd" clip-rule="evenodd" d="M482.9 538.6L471.3 539.2L467.6 539L465.9 537L467 535.5L466.3 532H461L457.1 533.7L450.3 534.1L449.2 532.1L447 530.6L445.7 533.4L441.6 533.6L439 534.9L433.8 537.5L435.8 540.5L435.3 544L435.2 544.7L438.2 552.5L440.6 553.8L442.6 552.9L447.8 554.2L448.7 558.6L443.7 560.1L441.7 563.1L442.4 567L440.2 572.4L439.5 569.8L436.9 568.9L435.4 571.1L436.5 573.9L440.9 576.1H445.9L446.1 579.1L444.4 580.2L441.8 587.8L442 591.5L439.4 595.2L442.7 593.5L444.2 591.8L443.5 594.2L444.8 596.4L442.8 597.1L444.8 598L444.4 602.6L441.4 605.6L444.4 606L446.6 607.3L449.9 608L452.2 605.3L457.8 606L463.2 605.7L465.3 603.2L466.8 599.6L470 600.9L473.3 599.2L476.6 598.1L480.3 598L485.1 595.2L487.7 596.5L488.9 600.6L491.4 602.3L506.1 602.6L506.6 596L509 593L509.3 589L508 585.3L502.8 586.5L500.8 588.3L498 585.8L496.7 581.3L497.1 577.5L495 574.2L494.6 570.2L492.6 568L493.4 562.8L491.7 559.5L492.1 554.5L493.6 548.8L490.3 547.5L488.6 545.1L488.1 542.2L484.8 542.7L482.7 540.7L482.9 538.6Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Слободо-Туринский район" fill-rule="evenodd" clip-rule="evenodd" d="M484.3 500.2L483.7 487.4L472.6 487L473.9 483.7L470.2 481.3L468.7 479.6L463.9 480.9L461.3 481.6L449.8 481.2L438.3 474L428.5 476.8L429.2 480.9L430.9 482.6L428.5 485.9L424.8 486.6L423.2 489.2L421.9 491.4L424.1 494.4L423.7 496.8L427.2 501.6L430.5 503.8L432 502.1L434.4 503L437.9 505L439.9 509.8L439.2 512.6L433.8 511.9L433.6 513.6H436L436.2 515.6L437.7 516.7L439 515.6L440.1 518L435.7 520.8L433.5 523L436.3 525L437.6 528.3L433.9 529.8L433.7 533.7L439.2 535.2L441.8 533.9L445.9 533.7L447.2 530.9L449.4 532.4L450.5 534.4L457.3 534L461.2 532.3H466.4L467.1 535.8L466 537.3L467.7 539.3L471.4 539.5L482.9 538.8H483L483.2 537.7L486.2 538.2L484.2 535.2L484.5 531.1L483.7 527L484.8 524.2L487 521.3L488.1 518L488.5 514.7L489.7 511.5L491.3 509.9L489.6 506.7L486 507L483.2 504.6L481.6 502.1L484.3 500.2Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Тавдинский район" fill-rule="evenodd" clip-rule="evenodd" d="M528.8 381.6L525.5 386.4H507.4V391.6L504.1 392.3L501.5 395.3L496.3 392.9L492.6 409.4L489.3 418.5L486.7 419.6L486.3 421.3L483.7 421.1L483.3 424.1L480.7 425.2L483.1 426.9L484.2 425.4L486.2 424.7L486 427.3L486.9 428.8L486.5 432.9L473.2 434.2L470.8 436.8L471.9 439.4L469.9 443.1L465.8 440.9L466.9 437.6H463L463.8 480.4L468.6 479.1L470.1 480.8L473.8 483.2L472.5 486.5L483.6 486.9L484.2 499.7L514 480.9L517.4 479.7L519.6 486.4L524.1 487.6L527.4 484.3L528.3 482.1L531.3 480.4L532.6 477L530.1 474.9L531.3 471.9L534.9 471.5L537.8 472.6L540.8 470.4L541.6 465.9L546 464.7L551.6 464.4L552 461.2L554.1 458.4H557.3L563 455.2L551.2 431.3L549.9 424.2L545.8 386.8L536.5 384.8L528.8 381.6Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Таборинский район" fill-rule="evenodd" clip-rule="evenodd" d="M430 302L409 333.1L411.6 334L411.2 337L415.1 343.7L410.7 344.4L410.3 342.7L411.2 340.5L409.7 339.8L409.5 338.5L405.4 337.2L402.6 339.6L397.8 340.9L396.3 342.6L393.7 344.1L389.6 345L384.8 346.5L387.4 350V352.4L385.2 355.2L380.5 356.8L379.5 377.6H379.9L385.3 378.9L392.9 385.9L403.1 391.3L414.4 401.5L417 399.3L425.5 400.4H429.2L429.4 408.5L433.8 408.1L434 425.3L442.7 425.7L443.1 430.5L446.8 430.1L445.1 434.7L449.5 434.9V438.6H451.7V441.6L457.1 441.4L463 437.9H466.7L465.6 441.2L469.7 443.4L471.7 439.7L470.6 437.1L473 434.5L486.3 433.2L486.7 429.1L485.8 427.6L486 425L484 425.7L482.9 427.2L480.5 425.5L483.1 424.4L483.5 421.4L486.1 421.6L486.5 419.9L489.1 418.8L492.4 409.7L496.1 393.2L501.3 395.6L503.9 392.6L507.2 391.9V386.7H525.3L528.6 381.9L526 380.7L508.9 355.6L506.7 341.9L500 321.4L497 320.2L494 320.5L491.9 316.8L489.5 308.6L455.4 302.3L430 302Z" fill="#E3CCB7" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Гаринский район" fill-rule="evenodd" clip-rule="evenodd" d="M375.9 187.7L356.3 183.1L353.9 183.8L352.4 181.8L352.1 181.7L342.6 178.3L311 171.3L308 178.7L305 184.8L302 194.8L299.8 194.1L296.5 197.8L294.1 203.5L284.7 200.7L282.7 209.2L278.1 217.5L277 219.4L270 226.1L271.5 226.5L270.8 228.5H272.8L274.1 230.9L276.5 229.2L278.2 230.1L276.2 231.6L277.9 235.1L277.2 237.1L277.6 240.1L279.6 237.3L280.9 239.3L281.1 243.7L293.3 280.9L295 297L307.4 297.7L306.3 322.7L308.7 325.5L316.1 324.4L318.1 323.3L319 321.1L329.9 323.7L336.7 330.4L339.2 335L343 335.2L347.8 338.5L350.2 342.4L352.4 343.5L352.2 346.3L359.6 347.6L367 346.5L372.9 347.2L375.9 358.3L380.1 356.9L384.8 355.3L387 352.5V350.1L384.4 346.6L389.2 345.1L393.3 344.2L395.9 342.7L397.4 341L402.2 339.7L405 337.3L409.1 338.6L409.3 339.9L410.8 340.6L409.9 342.8L410.3 344.5L414.7 343.8L410.8 337.1L411.2 334.1L408.6 333.2L429.6 302.1L426 301.2L418.1 292.6L416.6 277.9L414.9 258.3L413.4 251.6L402.4 221.2L402.3 217.4L400.2 214.8L396.9 214.7L393.9 213.1L390.5 211.9L377.3 204.8L379.9 196.6L375.9 187.7Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="город Ивдель" fill-rule="evenodd" clip-rule="evenodd" d="M360.3 156.4L358.6 150.7L353.8 133.1L354.3 127.8L357.5 114.3L347.8 96.2001L337.6 84.2001L322.5 75.9001L319 74.1001L305.2 67.3001L303.3 62.4001L281.4 46.3001L268.4 37.1001L261.4 34.5001L254 32.5001L247.5 32.2001L230.7 27.2001L204.4 27.7001L200.3 26.8001L198.7 23.9001L199.9 20.6001L199.1 17.6001L199.4 14.6001L201.3 12.0001L201.2 8.6001L198.7 6.1001L194.6 5.7001L188.8 3.3001L182.3 3.0001L179.4 0.600098L175.8 1.4001L173.2 1.0001L170.7 3.9001L169.9 7.0001L167.4 8.8001L165.5 11.9001L165.2 18.1001L167.9 20.5001L169.4 23.3001L165.7 29.3001L165.6 35.5001L168.3 37.6001L167.9 41.0001L168.1 43.4001L167.8 47.5001L169.9 50.0001L169.1 53.1001L167.2 55.6001L168.8 58.7001L168.9 61.9001L165.8 63.8001L163.3 65.6001L161.3 68.9001L160.5 71.4001L158 74.6001L157.9 80.0001L159.1 83.9001L159 88.6001L159.8 91.3001L161.5 96.0001L161.7 101.5L162.8 107L162.7 113.7L168.2 117.2L167.3 124.1V127.2L167.5 130.4L164.7 136.6L164.2 142.3L163.1 145.3L209.4 157.1L206.1 169.7L208.9 170.6L204.3 187.6L205.6 189.8L206.7 188.1H208.7L209.4 190.9L204.9 213.8L221.2 217.7L225.6 217.3L231 218.6L236.4 201.6L265.1 209.7L268.4 209L270.1 211L272.9 211.4L274.4 212.9V215.5L276.6 216.2L277.9 217.8L282.5 209.5L284.5 201L293.9 203.8L296.3 198.1L299.6 194.4L301.8 195.1L304.8 185.1L307.8 179L310.8 171.6L342.4 178.6L351.9 182L352.2 182.1L353.7 184.1L356.1 183.4L375.7 188L360.3 156.4Z" fill="#D8B89A" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M228.8 608.3L228 608.8L228.2 609L227.6 609.7L228.1 609.8L228.2 610.4L227.8 610.8L226.7 610.9L226.5 611.4L225.3 611.5V611.6L227.5 612L229.9 615.4L229.8 613.8L232.7 614.2L235.1 610.7L238 611.5L236.4 609L234 609.1L231.9 611L229.9 608.7L228.8 608.3Z" fill="#CFA580" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="Алапаевский район" fill-rule="evenodd" clip-rule="evenodd" d="M339.4 335.1H339.3L338 338.1L339.5 340.1L338.2 353.8L341.2 359.9L340.5 370.8L339 375.8L335.9 376.7L334.6 381.9L337.6 388.9L336.1 395.9L338.9 398.7L334.5 397.6L330.8 390L329.4 390.9L330.1 393.7L328.6 399.4L322.5 398.3L313.4 398.5L311.4 400.7L307.7 403.1L304.4 402L299.2 403.7L299.4 400.7L290.3 397.9L291 395.5L269.4 390.3L268.5 392.5L270.7 392.7L269.2 395.1L272.5 395.5L269 411.4L266.6 412.5L264.9 417.5L262.7 417.9L260.8 417.4L259 418.8L258.1 424.2L255.5 424.6L253.8 427.4L253.4 430L253.5 430.2L256 433.5L255.3 437.9L256 445.7V449L251.9 453.8L250.6 458.8L245.2 459.9L241.8 461.6H241.7L239.3 472.7L238.1 475.6H238.5L241.5 474.3L246.3 470.6L246.7 471.9L244.3 474.3L244.5 477.1L246.5 476L247.4 478.8L251.2 473.8L257.6 476.7L259.7 468.4L263.2 469.4H268.8L267.4 473.3L269.8 472.2L270.8 468.1L285.6 472L283.6 472.8L285 475.4L287.4 475.5L288 477.1L290.1 477.4L291 479.5L293.3 479.4L295.3 480.8L296.2 482.9L298.2 481.4L296.9 487.9L294.1 487.4L292.8 489.2L288.7 490.1L289.6 492.2H287.3L283.2 494.5L280.3 494L278.7 499.4L277.3 495.1L275.8 496L272.8 496.1L273.1 497.9L274.1 499.4L275.1 501.5L274.6 503.7L277 507.8L276.4 512.4L279.1 515.5L280.7 517.4L282.7 516.6L288.7 517.6L292 518.9L293.8 519.2L295.9 517.3L296.3 514.4L299.4 513.5L301.3 515.3L304.3 513.5L305.7 515.4L306.3 513L310.4 507L311.7 503.1L313.8 504.4H313.9L315.6 500.8L317.6 498.8L317.4 497.3H320.4L329.5 497.1L329.7 495.4L332.1 497.1L332.3 492.7L336.7 490.1L335 487.7L334.3 484.4L336.3 475.7L340.7 474.2V470.5L341.8 465.3L343.1 464.6L344.8 461.3V457.9L345 435.8L344.8 427.5L346.3 420.8L350 419.7L354.6 418.8L354.4 416.2L355.1 413.2L358.1 413.9L360.1 403L367.7 400.2L369.9 402.8L376.2 398.7L375.5 395L374 393.9L376.2 382.4L379.5 377.8L380.5 357L376.3 358.4L373.3 347.3L367.4 346.6L360 347.7L352.6 346.4L352.8 343.6L350.6 342.5L348.2 338.6L343.4 335.3L339.4 335.1Z" fill="#EEE2D6" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path data-city="no thing"  d="M205.7 584.5L204.6 584.7L204.2 584.8L200.7 583.5L200.2 579.9L198 579.3L196.4 586.1L194.7 585.6L193.1 591.7V591.8L197.1 594.1L196.3 599.9H186.2L186.1 597.5L182.3 595.9L179.9 596L177 596.7L181 597.3L179.8 599.4L182.2 600.3L186 603.4L187.6 606.3L191.4 607.7L193.7 612V612.1L195.2 613.5L197.6 615.7L202.7 614.8L201.7 616.8L203 620.6L208.3 621.2L209.7 621.8L211 620L212.7 621.4L212.3 619.5L214.8 620.6L216.9 620.1L214.6 618.8L214.7 616.2H217.5L217.8 613.7L223.2 610.8L225.1 611.9H225.2L225.5 612V611.9L226.7 611.8L226.9 611.3H227.2V611L227.3 610.4H226.2L225.1 610.5V611.3L222.9 610L223.4 609.3L223 608.5L222.5 608.1L222 607.7L222.8 607L223.5 607.6H224L224.5 606.7L225 606.2L225.2 606.4V606.6L225.5 606.9L226.1 607.5L226.4 607.7L226.5 608L228.2 609.1L229 608.6L230 609L232 611.3L234 609.2L231.5 606.4L234.4 603.3L235.9 595.9L236.1 594.9L232.6 594.1L223.6 591.2L223 587.6L224 584.2L223.6 581.7V581.6L224.2 579.5L220.5 578.2L218.5 582.5L212.1 582.4L207 584L206.3 584.3L205.7 584.5ZM223.6 581.6L223.1 581.9L223.6 581.6Z" fill="#EEE2D6"/>
+                                <path data-city="город Екатеринбург" d="M223.6 581.6L223.1 581.9M205.7 584.5L204.6 584.7L204.2 584.8L200.7 583.5L200.2 579.9L198 579.3L196.4 586.1L194.7 585.6L193.1 591.7V591.8L197.1 594.1L196.3 599.9H186.2L186.1 597.5L182.3 595.9L179.9 596L177 596.7L181 597.3L179.8 599.4L182.2 600.3L186 603.4L187.6 606.3L191.4 607.7L193.7 612V612.1L195.2 613.5L197.6 615.7L202.7 614.8L201.7 616.8L203 620.6L208.3 621.2L209.7 621.8L211 620L212.7 621.4L212.3 619.5L214.8 620.6L216.9 620.1L214.6 618.8L214.7 616.2H217.5L217.8 613.7L223.2 610.8L225.1 611.9H225.2L225.5 612V611.9L226.7 611.8L226.9 611.3H227.2V611L227.3 610.4H226.2L225.1 610.5V611.3L222.9 610L223.4 609.3L223 608.5L222.5 608.1L222 607.7L222.8 607L223.5 607.6H224L224.5 606.7L225 606.2L225.2 606.4V606.6L225.5 606.9L226.1 607.5L226.4 607.7L226.5 608L228.2 609.1L229 608.6L230 609L232 611.3L234 609.2L231.5 606.4L234.4 603.3L235.9 595.9L236.1 594.9L232.6 594.1L223.6 591.2L223 587.6L224 584.2L223.6 581.7V581.6L224.2 579.5L220.5 578.2L218.5 582.5L212.1 582.4L207 584L206.3 584.3L205.7 584.5Z" stroke="#C39367" stroke-width="1.3164" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="564" height="681" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <!-- <div id="map-offices" class="info__yandex-map">  
+                        </div> -->
+                        <!-- <img class="info__map" src="img/map2.svg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer__inner">
+                    <li class="footer__item"
+                        data-aos="fade-right"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div>
+                            <a class="sidebar__link-logo" href="index.html"><img class="sidebar__main-logo"  src="img/main-logo.svg" alt=""></a>
+                        </div>    
+                        <br/><br/>
+                        <h4 class="footer__title">Мобильное приложение:</h4>
+                        <div>
+                            <img src="img/store1.svg" alt="">
+                        </div>
+                        <br/>
+                        <div>
+                            <img src="img/store2.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-up"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">Наши сервисы:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Онлайн консультант в Telegram</a></li>
+                            <li class="footer__list-item"><a href="answer.html" class="footer__list-link">Обратная связь</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Официальное обращение в МФЦ</a></li>
+                            <li class="footer__list-item"><a href="chat.html" class="footer__list-link">Вопрос-ответ</a></li>
+                            <li class="footer__list-item"><a href="user.html" class="footer__list-link">Записаться на прием</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-link">Статус обращения</a></li>
+                            <li class="footer__list-item"><a href="pub.html" class="footer__list-link">Реклама в МФЦ</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__item"
+                        data-aos="fade-down"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <h4 class="footer__title">О МФЦ:</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="about.html" class="footer__list-link">Цели и задачи</a></li>
+                            <li class="footer__list-item"><a href="directories.html" class="footer__list-link">Дирекция</a></li>
+                            <li class="footer__list-item"><a href="jobs.html" class="footer__list-link">Вакансии</a></li>
+                            <li class="footer__list-item"><a href="information.html" class="footer__list-link">Информация для граждан</a></li>
+                            <li class="footer__list-item"><a href="news.html" class="footer__list-link">Новости</a></li>
+                            <li class="footer__list-item"><a href="announce.html" class="footer__list-link">Объявления</a></li>
+                            <li class="footer__list-item"><a href="video.html" class="footer__list-link">Видео</a></li>
+                        </ul>
+                    </li>
+                    <li class="socials footer__item"
+                        data-aos="fade-left"
+                        data-aos-duration="400"
+                        data-aos-easing="linear"
+                        data-aos-once="true"
+                    >
+                        <div class="socials__inner">
+                            <!-- <svg class="socials__logo"><use xlink:href="sprite.svg#main-logo"></use></svg> -->
+                            <div class="socials__contact">
+                                <p class="socials__phone">8 (343) 273-00-08</p>
+                                <span class="socials__text">Ежедневно с 8:00 до 20:00</span>
+                            </div>
+                            <div class="socials__icons">
+                                <h5 class="socials__title">Мы в социальных сетях</h5>
+                                <ul class="socials__list">
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#inst"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#fb"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#ok"></use></svg>
+                                    </li>
+                                    <li class="socials__list-item">
+                                        <svg class="socials__img"><use xlink:href="sprite.svg#vki"></use></svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div class="fix-nav">
+            <a href="" class="fix-nav__item">
+                <img src="img/v1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g1.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item fix-nav__item--img">
+                <img src="img/g3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v2.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v3.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v4.png" alt="">
+            </a>
+            <a href="" class="fix-nav__item">
+                <img src="img/v5.png" alt="">
+            </a>
+        </div>
+        <div class="chat">
+            <button class="button">
+                <svg class="button__svg"><use xlink:href="sprite.svg#chat"></use></svg>
+            </button>
+        </div>    
+    </div>
+    <div class="modal" id="modal-js">
+        <form class="modal__form" action="">
+            <input class="modal__input" type="text" placeholder="Поиск">
+            <button class="modal__btn" id="modal-btn-js" type="submit"><svg class="modal__svg-icon"><use xlink:href="sprite.svg#icon-search"></use></svg></button>
+            <h5 class="modal__form-title">Быстрые ответы:</h5>
+            <ul class="modal__list">
+                <li class="modal__list-item">Офисы Екатеринбург</li>
+                <li class="modal__list-item">Документы для смены места жительства </li>
+                <li class="modal__list-item">Смена имени </li>
+                <li class="modal__list-item">Действия при утере документов</li>
+            </ul>
+        </form>
+    </div>
+    <!-- model for get code number -->
+    <div class="modal" id="modal-send-js">
+        <div class="modal__card-inner">
+            <div class="modal__card">
+                <h5 class="modal__card-title">Заявка № <span>A-11/02256-21</span></h5>
+                <p class="modal__card-text">Статус заявкии: <strong style="font-weight: bold;">На рассмотрении</strong></p>
+                <p class="modal__card-text">Ожидаемая дата выдачи: 21.05.2021</strong></p>
+                <span class="modal__card-date">19 мая 2021</span>
+                <span class="modal__card-close" id="modal-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
+    <section class="navbar-bottom">
+        <!-- <div class="container"> -->
+            <ul class="navbar-bottom__list">
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="navbar-bottom__svg" style=" width:18px; height:18px;"><use xlink:href="sprite.svg#nb1"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Горячая<br> линия
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="navbar-bottom__svg" style="width: 14px; height: 20px;"><use xlink:href="sprite.svg#nb2"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                               Найти<br> отделение 
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="navbar-bottom__svg" style="width: 20px; height: 21px;"><use xlink:href="sprite.svg#nb3"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                записаться <br> онлайн
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="navbar-bottom__svg" style="width: 21px; height: 21px;"><use xlink:href="sprite.svg#nb4"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Пойск
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="navbar-bottom__item">
+                    <a href="" class="navbar-bottom__link">
+                        <div class="navbar-bottom__picture">
+                            <svg class="navbar-bottom__svg" style="width: 20px; height: 20px;"><use xlink:href="sprite.svg#nb5"></use></svg>
+                        </div>
+                        <div class="navbar-bottom__text">
+                            <span class="navbar-bottom__paragraph">
+                                Личный <br> кабинет
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Подключаем API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+    <script> $(function() { AOS.init(); }); </script>
+</body>
+</html>

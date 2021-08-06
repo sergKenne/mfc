@@ -1,0 +1,1160 @@
+object(Error)#50 (7) {
+  ["message":protected]=>
+  string(30) "Function name must be a string"
+  ["string":"Error":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(73) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/modules/vneocheredi.php"
+  ["line":protected]=>
+  int(46)
+  ["trace":"Error":private]=>
+  array(13) {
+    [0]=>
+    array(6) {
+      ["file"]=>
+      string(73) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/modules/vneocheredi.php"
+      ["line"]=>
+      int(23)
+      ["function"]=>
+      string(9) "call_API2"
+      ["class"]=>
+      string(11) "vneocheredi"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(4) "POST"
+        [1]=>
+        string(16) "appointments/all"
+        [2]=>
+        array(0) {
+        }
+      }
+    }
+    [1]=>
+    array(6) {
+      ["file"]=>
+      string(73) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/modules/vneocheredi.php"
+      ["line"]=>
+      int(108)
+      ["function"]=>
+      string(8) "call_API"
+      ["class"]=>
+      string(11) "vneocheredi"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        string(3) "all"
+        [1]=>
+        array(2) {
+          ["user"]=>
+          array(8) {
+            ["firstName"]=>
+            string(4) "name"
+            ["middleName"]=>
+            string(10) "middleName"
+            ["lastName"]=>
+            string(4) "last"
+            ["phone"]=>
+            string(5) "phone"
+            ["gender"]=>
+            string(4) "Male"
+            ["email"]=>
+            string(13) "test@mail.com"
+            ["passport"]=>
+            string(4) "pass"
+            ["snils"]=>
+            string(10) "0000000000"
+          }
+          ["apiKey"]=>
+          string(6) "string"
+        }
+      }
+    }
+    [2]=>
+    array(6) {
+      ["file"]=>
+      string(64) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/modules/lk.php"
+      ["line"]=>
+      int(194)
+      ["function"]=>
+      string(11) "get_reserve"
+      ["class"]=>
+      string(11) "vneocheredi"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(1) {
+        [0]=>
+        array(2) {
+          ["user"]=>
+          array(8) {
+            ["firstName"]=>
+            string(4) "name"
+            ["middleName"]=>
+            string(10) "middleName"
+            ["lastName"]=>
+            string(4) "last"
+            ["phone"]=>
+            string(5) "phone"
+            ["gender"]=>
+            string(4) "Male"
+            ["email"]=>
+            string(13) "test@mail.com"
+            ["passport"]=>
+            string(4) "pass"
+            ["snils"]=>
+            string(10) "0000000000"
+          }
+          ["apiKey"]=>
+          string(6) "string"
+        }
+      }
+    }
+    [3]=>
+    array(6) {
+      ["file"]=>
+      string(88) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/templates/lk/pages/refuse_reservation.phtml"
+      ["line"]=>
+      int(2)
+      ["function"]=>
+      string(15) "get_all_reserve"
+      ["class"]=>
+      string(2) "lk"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(0) {
+      }
+    }
+    [4]=>
+    array(4) {
+      ["file"]=>
+      string(63) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(88)
+      ["args"]=>
+      array(1) {
+        [0]=>
+        string(88) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/templates/lk/pages/refuse_reservation.phtml"
+      }
+      ["function"]=>
+      string(7) "include"
+    }
+    [5]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/templates/lk/view.phtml"
+      ["line"]=>
+      int(34)
+      ["function"]=>
+      string(17) "getTemplateByFile"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(2) {
+        [0]=>
+        string(45) "./templates/lk/pages/refuse_reservation.phtml"
+        [1]=>
+        array(2) {
+          ["source"]=>
+          object(lk)#53 (11) {
+            ["id"]=>
+            string(1) "2"
+            ["name"]=>
+            string(38) "Отказаться от приема"
+            ["lang"]=>
+            string(2) "ru"
+            ["templateFile"]=>
+            string(18) "refuse_reservation"
+            ["form_id"]=>
+            string(1) "0"
+            ["create_time"]=>
+            string(19) "2021-07-20 15:35:20"
+            ["address"]=>
+            string(18) "refuse_reservation"
+            ["visible"]=>
+            int(1)
+            ["_guideFields"]=>
+            array(4) {
+              ["templateFile"]=>
+              array(6) {
+                ["name"]=>
+                string(12) "templateFile"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(12) "Шаблон"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["form_id"]=>
+              array(7) {
+                ["name"]=>
+                string(7) "form_id"
+                ["type"]=>
+                string(5) "guide"
+                ["descr"]=>
+                string(33) "Привязанная форма"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["fromId"]=>
+                string(2) "24"
+                ["required"]=>
+                int(0)
+              }
+              ["address"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "address"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(27) "Адрес страницы"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["visible"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "visible"
+                ["type"]=>
+                string(7) "boolean"
+                ["descr"]=>
+                string(32) "Отображать в меню"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+            }
+            ["guideId"]=>
+            string(2) "26"
+            ["_allFields"]=>
+            array(8) {
+              ["id"]=>
+              array(6) {
+                ["Field"]=>
+                string(2) "id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(3) "PRI"
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(14) "auto_increment"
+              }
+              ["name"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "name"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["lang"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "lang"
+                ["Type"]=>
+                string(10) "varchar(2)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["templateFile"]=>
+              array(6) {
+                ["Field"]=>
+                string(12) "templateFile"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["form_id"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "form_id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["create_time"]=>
+              array(6) {
+                ["Field"]=>
+                string(11) "create_time"
+                ["Type"]=>
+                string(8) "datetime"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["address"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "address"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["visible"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "visible"
+                ["Type"]=>
+                string(10) "tinyint(1)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+            }
+          }
+          ["page"]=>
+          bool(false)
+        }
+      }
+    }
+    [6]=>
+    array(4) {
+      ["file"]=>
+      string(63) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(61)
+      ["args"]=>
+      array(1) {
+        [0]=>
+        string(68) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/templates/lk/view.phtml"
+      }
+      ["function"]=>
+      string(7) "include"
+    }
+    [7]=>
+    array(6) {
+      ["file"]=>
+      string(68) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/templates/default.phtml"
+      ["line"]=>
+      int(124)
+      ["function"]=>
+      string(11) "getTemplate"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(2) "lk"
+        [1]=>
+        string(4) "view"
+        [2]=>
+        array(2) {
+          ["source"]=>
+          object(lk)#53 (11) {
+            ["id"]=>
+            string(1) "2"
+            ["name"]=>
+            string(38) "Отказаться от приема"
+            ["lang"]=>
+            string(2) "ru"
+            ["templateFile"]=>
+            string(18) "refuse_reservation"
+            ["form_id"]=>
+            string(1) "0"
+            ["create_time"]=>
+            string(19) "2021-07-20 15:35:20"
+            ["address"]=>
+            string(18) "refuse_reservation"
+            ["visible"]=>
+            int(1)
+            ["_guideFields"]=>
+            array(4) {
+              ["templateFile"]=>
+              array(6) {
+                ["name"]=>
+                string(12) "templateFile"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(12) "Шаблон"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["form_id"]=>
+              array(7) {
+                ["name"]=>
+                string(7) "form_id"
+                ["type"]=>
+                string(5) "guide"
+                ["descr"]=>
+                string(33) "Привязанная форма"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["fromId"]=>
+                string(2) "24"
+                ["required"]=>
+                int(0)
+              }
+              ["address"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "address"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(27) "Адрес страницы"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["visible"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "visible"
+                ["type"]=>
+                string(7) "boolean"
+                ["descr"]=>
+                string(32) "Отображать в меню"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+            }
+            ["guideId"]=>
+            string(2) "26"
+            ["_allFields"]=>
+            array(8) {
+              ["id"]=>
+              array(6) {
+                ["Field"]=>
+                string(2) "id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(3) "PRI"
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(14) "auto_increment"
+              }
+              ["name"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "name"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["lang"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "lang"
+                ["Type"]=>
+                string(10) "varchar(2)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["templateFile"]=>
+              array(6) {
+                ["Field"]=>
+                string(12) "templateFile"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["form_id"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "form_id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["create_time"]=>
+              array(6) {
+                ["Field"]=>
+                string(11) "create_time"
+                ["Type"]=>
+                string(8) "datetime"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["address"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "address"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["visible"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "visible"
+                ["Type"]=>
+                string(10) "tinyint(1)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+            }
+          }
+          ["page"]=>
+          bool(false)
+        }
+      }
+    }
+    [8]=>
+    array(4) {
+      ["file"]=>
+      string(63) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(53)
+      ["args"]=>
+      array(1) {
+        [0]=>
+        string(68) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/templates/default.phtml"
+      }
+      ["function"]=>
+      string(7) "include"
+    }
+    [9]=>
+    array(6) {
+      ["file"]=>
+      string(63) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(30)
+      ["function"]=>
+      string(11) "getTemplate"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(7) "default"
+        [1]=>
+        bool(false)
+        [2]=>
+        array(2) {
+          ["source"]=>
+          object(lk)#53 (11) {
+            ["id"]=>
+            string(1) "2"
+            ["name"]=>
+            string(38) "Отказаться от приема"
+            ["lang"]=>
+            string(2) "ru"
+            ["templateFile"]=>
+            string(18) "refuse_reservation"
+            ["form_id"]=>
+            string(1) "0"
+            ["create_time"]=>
+            string(19) "2021-07-20 15:35:20"
+            ["address"]=>
+            string(18) "refuse_reservation"
+            ["visible"]=>
+            int(1)
+            ["_guideFields"]=>
+            array(4) {
+              ["templateFile"]=>
+              array(6) {
+                ["name"]=>
+                string(12) "templateFile"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(12) "Шаблон"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["form_id"]=>
+              array(7) {
+                ["name"]=>
+                string(7) "form_id"
+                ["type"]=>
+                string(5) "guide"
+                ["descr"]=>
+                string(33) "Привязанная форма"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["fromId"]=>
+                string(2) "24"
+                ["required"]=>
+                int(0)
+              }
+              ["address"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "address"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(27) "Адрес страницы"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["visible"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "visible"
+                ["type"]=>
+                string(7) "boolean"
+                ["descr"]=>
+                string(32) "Отображать в меню"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+            }
+            ["guideId"]=>
+            string(2) "26"
+            ["_allFields"]=>
+            array(8) {
+              ["id"]=>
+              array(6) {
+                ["Field"]=>
+                string(2) "id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(3) "PRI"
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(14) "auto_increment"
+              }
+              ["name"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "name"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["lang"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "lang"
+                ["Type"]=>
+                string(10) "varchar(2)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["templateFile"]=>
+              array(6) {
+                ["Field"]=>
+                string(12) "templateFile"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["form_id"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "form_id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["create_time"]=>
+              array(6) {
+                ["Field"]=>
+                string(11) "create_time"
+                ["Type"]=>
+                string(8) "datetime"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["address"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "address"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["visible"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "visible"
+                ["Type"]=>
+                string(10) "tinyint(1)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+            }
+          }
+          ["page"]=>
+          bool(false)
+        }
+      }
+    }
+    [10]=>
+    array(6) {
+      ["file"]=>
+      string(60) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/router.php"
+      ["line"]=>
+      int(96)
+      ["function"]=>
+      string(11) "__construct"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(4) {
+        [0]=>
+        string(2) "lk"
+        [1]=>
+        string(4) "view"
+        [2]=>
+        array(1) {
+          [0]=>
+          string(18) "refuse_reservation"
+        }
+        [3]=>
+        array(2) {
+          ["source"]=>
+          object(lk)#53 (11) {
+            ["id"]=>
+            string(1) "2"
+            ["name"]=>
+            string(38) "Отказаться от приема"
+            ["lang"]=>
+            string(2) "ru"
+            ["templateFile"]=>
+            string(18) "refuse_reservation"
+            ["form_id"]=>
+            string(1) "0"
+            ["create_time"]=>
+            string(19) "2021-07-20 15:35:20"
+            ["address"]=>
+            string(18) "refuse_reservation"
+            ["visible"]=>
+            int(1)
+            ["_guideFields"]=>
+            array(4) {
+              ["templateFile"]=>
+              array(6) {
+                ["name"]=>
+                string(12) "templateFile"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(12) "Шаблон"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["form_id"]=>
+              array(7) {
+                ["name"]=>
+                string(7) "form_id"
+                ["type"]=>
+                string(5) "guide"
+                ["descr"]=>
+                string(33) "Привязанная форма"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["fromId"]=>
+                string(2) "24"
+                ["required"]=>
+                int(0)
+              }
+              ["address"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "address"
+                ["type"]=>
+                string(7) "varchar"
+                ["descr"]=>
+                string(27) "Адрес страницы"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+              ["visible"]=>
+              array(6) {
+                ["name"]=>
+                string(7) "visible"
+                ["type"]=>
+                string(7) "boolean"
+                ["descr"]=>
+                string(32) "Отображать в меню"
+                ["index"]=>
+                string(1) "0"
+                ["table"]=>
+                int(0)
+                ["required"]=>
+                int(0)
+              }
+            }
+            ["guideId"]=>
+            string(2) "26"
+            ["_allFields"]=>
+            array(8) {
+              ["id"]=>
+              array(6) {
+                ["Field"]=>
+                string(2) "id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(3) "PRI"
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(14) "auto_increment"
+              }
+              ["name"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "name"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["lang"]=>
+              array(6) {
+                ["Field"]=>
+                string(4) "lang"
+                ["Type"]=>
+                string(10) "varchar(2)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["templateFile"]=>
+              array(6) {
+                ["Field"]=>
+                string(12) "templateFile"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["form_id"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "form_id"
+                ["Type"]=>
+                string(7) "int(11)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["create_time"]=>
+              array(6) {
+                ["Field"]=>
+                string(11) "create_time"
+                ["Type"]=>
+                string(8) "datetime"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["address"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "address"
+                ["Type"]=>
+                string(12) "varchar(255)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+              ["visible"]=>
+              array(6) {
+                ["Field"]=>
+                string(7) "visible"
+                ["Type"]=>
+                string(10) "tinyint(1)"
+                ["Null"]=>
+                string(2) "NO"
+                ["Key"]=>
+                string(0) ""
+                ["Default"]=>
+                NULL
+                ["Extra"]=>
+                string(0) ""
+              }
+            }
+          }
+          ["page"]=>
+          bool(false)
+        }
+      }
+    }
+    [11]=>
+    array(6) {
+      ["file"]=>
+      string(60) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/core/router.php"
+      ["line"]=>
+      int(81)
+      ["function"]=>
+      string(16) "callModuleMethod"
+      ["class"]=>
+      string(6) "router"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(2) "lk"
+        [1]=>
+        string(4) "view"
+        [2]=>
+        array(1) {
+          [0]=>
+          string(18) "refuse_reservation"
+        }
+      }
+    }
+    [12]=>
+    array(6) {
+      ["file"]=>
+      string(54) "/home/cloudpanel/htdocs/mfcdev.serviceweb.su/index.php"
+      ["line"]=>
+      int(9)
+      ["function"]=>
+      string(4) "init"
+      ["class"]=>
+      string(6) "router"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(0) {
+      }
+    }
+  }
+  ["previous":"Error":private]=>
+  NULL
+}

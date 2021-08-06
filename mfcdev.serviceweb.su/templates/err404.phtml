@@ -1,0 +1,38 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content" style="opacity: 0;">
+                        <div>
+                            <h1 class="showcase__title showcase__title--directories">404</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--jobs">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="offers  offers--new" style="opacity: 0;">
+                        <ul class="breadcrumbs offers__breadcrumbs offers__breadcrumbs--jobs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item">404</li>
+                        </ul>
+                    </div>
+                    <div class="contacts">
+                        <div class="contacts__box contacts__box--error">
+                            <h3 class="contacts__list-title contacts__list-title--error">Что-то пошло не так</h3>
+                            <p class="contacts__error-text">Мы не смогли найти страницу</p>
+                            <img class="contacts__error-img" src="/img/404.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>

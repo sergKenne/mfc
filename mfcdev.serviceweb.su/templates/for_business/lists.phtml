@@ -1,0 +1,42 @@
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+        <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--business">Для бизнеса</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--news" >
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'business'])?>
+                        </div>
+                    </div>
+                </div>
+                <div class="news news--offices">
+                    <div class="">
+                        <ul class="breadcrumbs news__breadcrumbs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item">Для бизнеса</li>
+                        </ul>
+                    </div>
+
+                    <?php $business = $this->macros('for_business','lists',[]); ?>
+                    <div class="business">
+                        <ul class="business__list">
+                            <?php foreach($business['data'] as $businessItem):?>
+                                <li class="business__item">
+                                    <a href="/for_business/view/<?=$this->getId($businessItem)?>" class="business__link">
+                                        <h5 class="business__list-title"><?=$this->getName($businessItem)?></h5>
+                                        <p class="business__description"><?=$this->getValue($businessItem, 'list_descr')?></p>
+                                        <img src="<?=$this->macros('files','getFileURL',[$this->getValue($businessItem, 'icon')])?>" alt="" class="business__img">
+                                    </a>
+                                </li>
+                            <?php endforeach;?>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>

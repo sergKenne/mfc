@@ -1,0 +1,47 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Кэширование</h1>
+</div>
+<table class="table table-striped table-sm numered">
+    <thead>
+    <tr>
+        <th>Раздел кэша</th>
+        <th>Объем</th>
+        <th>Количество файлов</th>
+        <th>Сбросить кэш</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php if(isset($_RESPONSE['data'])):?>
+        <tr>
+            <td><strong>Селекторы</strong></td>
+            <td><?=round($_RESPONSE['data']['selectors']['space'] / 1024)?> КБ</td>
+            <td><?=$_RESPONSE['data']['selectors']['count']?></td>
+            <td><a href="/admin/cacher/clearCache/selectors">Сбросить</a></td>
+        </tr>
+        <tr>
+            <td><strong>Справочники</strong></td>
+            <td><?=round($_RESPONSE['data']['guides']['space'] / 1024)?> КБ</td>
+            <td><?=$_RESPONSE['data']['guides']['count']?></td>
+            <td><a href="/admin/cacher/clearCache/guides">Сбросить</a></td>
+        </tr>
+
+        <?php foreach($_RESPONSE['data']['guides']['list'] as $guide):?>
+            <tr>
+                <td>-- <?=$guide['name']?></td>
+                <td><?=round($guide['space'] / 1024)?> КБ</td>
+                <td><?=$guide['count']?></td>
+                <td><a href="/admin/cacher/clearCache/guide/<?=$guide['name']?>">Сбросить</a></td>
+            </tr>
+        <?php endforeach;?>
+    <?php else:?>
+        <tr>
+            <td class="table_no_resources" colspan="6">
+                <p>Нет данных для отображения</p>
+            </td>
+        </tr>
+    <?php endif;?>
+    </tbody>
+</table>

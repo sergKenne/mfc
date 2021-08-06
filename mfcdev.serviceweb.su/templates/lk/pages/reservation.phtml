@@ -1,0 +1,17 @@
+<?php
+    $form = $this->getValue($_RESPONSE['source'], 'form_id');
+
+
+if (isset($_GET['agree'])){
+  $this->getTemplate('formgenerator', 'form', ['form'=>$form]);
+  ?>
+
+
+<?
+}else{ 
+?>
+<?=$this->getValue($_RESPONSE['page'], 'content', false);?>
+<div class="user__bottom-btn user__bottom-btn--master">
+  <a href="?agree" class="user__inner-btn user__inner-btn--form user__inner-btn--bottom">Я согласен</a>
+</div>
+<?}?>

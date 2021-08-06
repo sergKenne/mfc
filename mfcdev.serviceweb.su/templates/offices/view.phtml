@@ -1,0 +1,161 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--services">Офисы</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--news">
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'offices'])?>
+                        </div>
+                    </div>
+                </div>
+                <div class="news news--offices">
+                    <div class="">
+                        <ul class="breadcrumbs news__breadcrumbs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item">Офисы</li>
+                        </ul>
+                    </div>
+                    <h4 class="news__title-desc"><?=$this->getName($_RESPONSE['source'])?></h4>
+                    <div class="offices">
+                        <ul class="offices__list">
+                            <li class="offices__item">
+                                <h5 class="offices__list-title">Адрес офиса</h5>
+                                <p class="offices__list-address"><?=$this->getValue($_RESPONSE['source'], 'address')?></p>
+                                <div class="p offices__list-number">8 (343) 273-00-08</div>
+                                <a href="" class="btn offices__list-btn">Записаться на приём</a>
+                            </li>
+                            <li class="offices__item working_hours">
+                                <h5 class="offices__list-title">Часы работы</h5>
+                                <?=$this->getValue($_RESPONSE['source'], 'working_hours', false)?>
+                            </li>
+                            <li class="offices__item">
+                                <h5 class="offices__list-title">Текущая загруженность офиса</h5>
+                                <p class="offices__worked">Сейчас  — Открыто</p>
+                                <p class="offices__worked">Работает окон  — 2</p>
+                                <p class="offices__worked">Закроется — Сегодня в 18:00</p>
+                                <img src="/img/graph.png" alt="" class="offices__graph">
+                            </li>
+                        </ul>
+
+                        <?php
+                            $photos = $this->getValue($_RESPONSE['source'], 'photos');
+                            $nearestOffices = $this->getValue($_RESPONSE['source'], 'nearest_offices');
+                            $accessible_env = $this->getValue($_RESPONSE['source'], 'accessible_env');
+                            $emps = $this->getValue($_RESPONSE['source'], 'emps');
+                        ?>
+
+                        <div class="offices__cart-map">
+                            <div class="offices__wrap-btn" id="tab-btns">
+                                <button data-tab="tab-map" class="offices__map-btn offices__map-btn--active">Карта</button>
+                                <?php if($photos):?>
+                                    <button data-tab="tab-slide" class="offices__map-btn">Фотографии офиса</button>
+                                <?php endif;?>
+                                <?php if($nearestOffices):?>
+                                    <button data-tab="tab-office" class="offices__map-btn">Ближайшие офисы</button>
+                                <?php endif;?>
+                                <?php if($accessible_env):?>
+                                    <button data-tab="tab-access" class="offices__map-btn">Доступная среда</button>
+                                <?php endif;?>
+                            </div>
+                            <div class="offices__inner-toggle">
+                                <div class="tab tab-map tab--active">
+                                    <div data-coords="<?=$this->getValue($_RESPONSE['source'], 'coords')?>" class="offices__inner-map news__goe-cart" id="map-office"></div>
+                                </div>
+                                <?php if($photos):?>
+                                    <div class="tab tab-slide">
+                                        <div class="officeSlider offices__slide-office">
+                                            <?php foreach($this->getValue($_RESPONSE['source'], 'photos') as $photoId):?>
+                                                <div><img src="<?=$this->macros('files','getFileURL', [$photoId])?>" /></div>
+                                            <?php endforeach;?>
+                                        </div>
+                                    </div>
+                                <?php endif;?>
+
+                                <?php if($nearestOffices):?>
+                                    <div class="tab tab-office">
+                                        <div class="offices__near-offices">
+                                            <div class="offices__near-address">
+                                                <?php $mapData = [];?>
+
+                                                <?php foreach($this->getValue($_RESPONSE['source'], 'nearest_offices') as $office):?>
+                                                    <a href="/offices/view/<?=$this->getId($office)?>" class="news__info-address news__info-address--tab">
+                                                        <label class="info__label info__label--address"><span class="info__out info__out--second"></span>
+                                                            <?=$this->getName($office)?>
+                                                        </label>
+                                                    </a>
+                                                    <?php
+                                                        //geo_yellow.png, geo_grey.png, geo_red.png, geo.png
+                                                        $mapData[] = array(
+                                                            'coordinate'=> explode(', ',$this->getValue($office, 'coords')),
+                                                            'balloon'=> [
+                                                                'balloonContentHeader'=> $this->getName($this->getValue($office, 'city_id')),
+                                                                'balloonContentBody'=> $this->getName($office),
+                                                                'hintContent'=>'неизвестная загруженность'
+                                                            ],
+                                                            'icon' =>[
+                                                                'iconLayout'=>'default#image',
+                                                                'iconImageHref'=> '/img/geo_grey.png',
+                                                                'iconImageSize'=> [38, 48],
+                                                                'iconImageOffset'=> [-15, -62]
+                                                            ]
+                                                        )
+                                                    ?>
+                                                <?php endforeach;?>
+                                            </div>
+                                            <textarea id="mapData" style="display:none"><?=json_encode($mapData)?></textarea>
+                                            <div class="offices__near-map" id="map-offices">
+
+                                            </div>
+                                        </div>
+                                   </div>
+                                <?php endif;?>
+                                <?php if($accessible_env):?>
+                                    <div class="tab tab-access">
+                                        <ul class="offices__access-list">
+                                            <?php foreach($this->getValue($_RESPONSE['source'], 'accessible_env') as $AV):?>
+                                                <li class="offices__access-item">
+                                                    <a href="#" class="offices__access-link">
+                                                        <img src="/img/<?=$this->getValue($AV, 'icon_name')?>" alt="" class="offices__access-img">
+                                                        <p class="offices__access-description"><?=$this->getName($AV)?></p>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach;?>
+                                        </ul>
+                                   </div>
+                                <?php endif;?>
+                            </div>
+                        </div>
+                        <?php if($emps):?>
+                            <div class="offices__personnal">
+                                <div class="offices__wrap-btn">
+                                    <button class="offices__map-btn offices__map-btn--active">Сотрудники</button>
+                                </div>
+                                <ul class="offices__portrait-list">
+                                    <?php foreach($this->getValue($_RESPONSE['source'], 'emps') as $emp):?>
+                                        <li class="offices__portrait-item">
+                                            <img src="<?=$this->macros('files','getFileURL', [$emp->getValue('img')])?>" alt="" class="offices__portrait-img">
+                                            <p class="offices__portrait-name"><?=$this->getName($emp)?></p>
+                                            <p class="offices__portrait-status"><?=$this->getValue($emp, 'post')?></p>
+                                        </li>
+                                    <?php endforeach;?>
+
+                                </ul>
+                                <div class="offices__show-more">
+                                    <button class="offices__map-btn offices__map-btn--show-more" id="show-more-js">Смотреть всех</button>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>

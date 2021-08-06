@@ -1,0 +1,78 @@
+Вызов коммандера 
+mc
+
+Подключиться по FTP 
+Логин:Пароль@Адрес сервера
+
+Синхронизировать папки
+rsync -avzP test/ republi8@80.78.250.159:public_html/test/
+
+Экспорт базы на исходном сервере:
+mysqldump -uимя -pпароль dbname > /var/www/vhosts/domain.ru/httpdocs/dbname.sql
+
+Импорт базы на новом сервере:
+mysql -uимя -pпароль dbname < dbname.sql
+
+Проверить, в какой директории сейчас находитесь - можно с помощью команды:
+# pwd
+
+Распаковать архив
+tar -xvf archive.tar
+
+Создать tar-архив archive.tar сжатый gzip, содержащий файл file1
+tar -zcvf archive.tar.gz file1 
+
+Создать директорию с именем 'dir1'
+mkdir dir1
+
+Удалить директорию с именем 'dir1' и рекурсивно всё её содержимое
+rm -rf dir1
+
+Переименовать или переместить файл или директорию
+mv dir1 new_dir
+
+Скопировать на уровень выше
+cp -rf modx-2.5.5-pl/* .
+
+Скачать архив с другого сервера
+wget -O arch.zip https://modx.com/download/direct?id=modx-2.6.1-pl.zip
+
+Искать в файлах, выводить только названия файлов с путями
+grep -rl '@include' .
+
+Скопировать папку на другой сервер
+scp -r foo your_username@remotehost.edu:/some/remote/directory/bar
+
+
+
+
+
+Для Linux:
+
+— скачиваем файл на локальную машину
+
+$ scp root@11.22.33.44:/home/user/file.tar.gz /opt
+данная команда скачает файл /home/user/file.tar.gz с удаленной машины 11.22.33.44 в папку /opt локальной файловой системы.
+
+— заливаем файл на удаленный сервер
+$ scp /opt/file.tar.gz root@11.22.33.44:/home/user
+
+
+Для Windows:
+
+Открываем консоль и лезем в папку, где у нас установлен PuTTY, затем ищем там pscp.exe
+
+— скачать файл
+
+C:\Program Files\PuTTY>pscp.exe root@11.22.33.44:/home/user/file.tar.gz "D:\install"
+аргументы по аналогии с Linux.
+
+— заливаем файл на удаленный сервер
+
+C:\Program Files\PuTTY>pscp.exe "D:\install\file.tar.gz" root@11.22.33.44:/home/user
+Ну, в общем вы поняли…
+
+
+
+
+14gmrdJMdpf8ApiXu6dBsJ15aYjFeesNZG

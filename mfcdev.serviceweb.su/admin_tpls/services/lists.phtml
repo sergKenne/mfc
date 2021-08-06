@@ -1,0 +1,69 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<?php
+$limit = utils::getRowsLimit();
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+?>
+
+
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2 col-auto"><?=$_RESPONSE['guide']->getValue('descr')?></h1>
+        <div class="col-auto">
+            <a style="font-size: 8pt;" href="/admin/guides/edit/<?=$_RESPONSE['guide']->getId()?>" class="btn btn-outline-dark" style="margin-left:auto">Редактировать справочник</a>
+        </div>
+
+        <!--<div class="col-auto lang_col">
+            <label form="objectLangSwitch" class="inline-label">Язык объектов:</label>
+            <select id="objectLangSwitch" class="form-control">
+                <?php /*$langs = $this->macros('languages','lists',array(false));*/?>
+                <?php /*if($langs):*/?>
+                    <?php /*foreach($langs as $langPrefix=>$langName):*/?>
+                        <option <?/*=$this->optSel($langPrefix, @$_GET['lang'])*/?> value="<?/*=$langPrefix*/?>"><?/*=$langName*/?></option>
+                    <?php /*endforeach;*/?>
+                <?php /*endif;*/?>
+            </select>
+        </div>-->
+        <div class="col-auto">
+            <!--<a href="/admin/guides/add_item/<?/*=$_RESPONSE['guide']->getId()*/?>" class="btn btn-outline-dark"><span data-feather="plus-circle"></span> Добавить объект</a>-->
+            <a href="/admin/services/loadFromApi" class="btn btn-outline-dark">Загрузить услуги с API</a>
+        </div>
+    </div>
+    <table class="table table-striped table-sm numered">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <?php foreach($_RESPONSE['need_fields'] as $field):?>
+                <th><?=$field['descr']?></th>
+            <?php endforeach;?>
+        </tr>
+        </thead>
+        <tbody>
+        <?php if(isset($_RESPONSE['data']) and $_RESPONSE['data']):?>
+            <?php foreach($_RESPONSE['data'] as $k=>$guideItem):?>
+                <tr>
+                    <td><?=$guideItem->getId()?></td>
+                    <td><a href="/admin/guides/edit_item/<?=$_RESPONSE['guide']->getId()?>/<?=$guideItem->getId()?>"><?=$guideItem->getName()?></a></td>
+                    <?php foreach($_RESPONSE['need_fields'] as $field):?>
+                        <?php $value = $guideItem->getValue($field['name']);?>
+                        <td>
+                            <?php if(is_array($value)):?>
+                                [невозможно отобразить значение]
+                            <?php else:?>
+                                <?=$guideItem->getValue($field['name'])?>
+                            <?php endif;?>
+                        </td>
+                    <?php endforeach;?>
+                </tr>
+            <?php endforeach;?>
+        <?php else:?>
+            <td></td><td>Нет данных</td>
+        <?php endif;?>
+        </tbody>
+    </table>
+
+<?php $this->getTemplate('pages','numpages',array('total'=>$_RESPONSE['total']))?>

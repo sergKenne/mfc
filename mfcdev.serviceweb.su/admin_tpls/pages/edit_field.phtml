@@ -1,0 +1,127 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Редактировать поле</h1>
+
+    <form action="/admin/pages/edit_field/<?=$_RESPONSE['edit']->getId()?>" method="POST" id="form">
+        <div class="main_content_container_wrap">
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Название поля</p>
+                    <small>Системное название для использования в коде</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input class="form_input" type="text" name="name" id="name" value="<?=$_RESPONSE['edit']->getName()?>">
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Описание</p>
+                    <small>Человекочитаемое название справочника</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input required class="form_input" type="text" name="descr" value="<?=$_RESPONSE['edit']->getValue('descr')?>">
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Приоритет вывода</p>
+                    <small>Чем меньше число, тем выше поле будет отображаться в форме</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input required class="form_input" type="number" name="priority" value="<?=$_RESPONSE['edit']->getValue('priority')?>">
+                    </div>
+                </div>
+            </div>
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Принадлежит странице</p>
+                    <small>С какой страницей будет связано</small>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input type="hidden" name="pageId" value="<?=$_RESPONSE['edit']->getValue('pageId')?>">
+                        <a class="selectPage" href="/admin/pages/lists_modal/?tpl=1"><?=$_RESPONSE['pageName']?></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <p class="form_label">Тип поля</p>
+                </div>
+                <div class="col-3">
+                    <div class="form_wrapper">
+                        <?php $fieldTypes = array(
+                            "varchar"=>'Строка',
+                            "text"=>"Текст",
+                            "htmltext"=>"HTML-Текст",
+                            "date"=>"Дата",
+                            "datetime"=>"Дата и время",
+                            "int"=>"Число",
+                            "float"=>"Число с точкой",
+                            "boolean"=>"Галочка",
+                            "file"=>"Файл",
+                            "filelist"=>"Набор файлов",
+                            "list"=>"Список определенных значений",
+                            "guide"=>"Список значений другого справочника",
+                            "json"=>"JSON"
+                            )?>
+                        <select name="field_type">
+                            <?php foreach($fieldTypes as $typeSystemName=>$typeName):?>
+                                <option <?=$this->optSel($typeSystemName, $_RESPONSE['edit']->getValue('type'))?> value="<?=$typeSystemName?>"><?=$typeName?></option>
+                            <?php endforeach;?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-3 selectGuide" style="<?=($this->optSel($_RESPONSE['edit']->getValue('type'), 'guide', '', 'display: none'))?>">
+                    <p class="form_label">Выбрать справочник</p>
+                </div>
+                <div class="col-3 selectGuide" style="<?=($this->optSel($_RESPONSE['edit']->getValue('type'), 'guide', '','display: none'))?>">
+                    <select name="guide">
+                        <?php foreach($_RESPONSE['guides']['data'] as $guide):?>
+                            <option value="<?=$guide->getId()?>" <?=$this->optSel($guide->getId(), $_RESPONSE['edit']->getValue('additional_data'))?>><?=$guide->getValue('descr')?></option>
+                        <?php endforeach;?>
+                    </select>
+                    <p class="form_label"><input type="checkbox" name="guideAsTable" value="1" <?=($_RESPONSE['edit']->getValue('guideAsTable') ? 'checked':'')?>>Отображать как список</p>
+                    <p class="form_label"><input type="checkbox" name="multiple" value="1" <?=($_RESPONSE['edit']->getValue('multiple') ? 'checked':'')?>>Можно выбрать несколько значений</p>
+                </div>
+
+                <div class="col-3 selectListItems" style="<?=($this->optSel($_RESPONSE['edit']->getValue('type'), 'list','', 'display: none'))?>">
+                    <p class="form_label">Заполнить список</p>
+                </div>
+                <div class="col-3 selectListItems" style="display: none;">
+                    <p class="listItemWrp">
+                        <?php if($_RESPONSE['edit']->getValue('type') == 'list' and is_array($_RESPONSE['edit']->getValue('additional_data'))):?>
+                            <?php foreach($_RESPONSE['edit']->getValue('additional_data') as $listItem):?>
+                                <input type="text" name="field_values[]" value="<?=$listItem?>" placeholder="введите значение">
+                                <a href="#" class="delListItem">[удалить]</a>
+                            <?php endforeach;?>
+                        <?php else:?>
+                            <input type="text" name="field_values[]" placeholder="введите значение">
+                            <a href="#" class="delListItem">[удалить]</a>
+                        <?php endif;?>
+                    </p>
+                    <a class="btn_sky addAnotherListItem" href="#">Добавить еще значение</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_buttons">
+            <div class="row">
+                <div class="col-auto">
+                    <button class="btn btn-success saveOutpost">Сохранить</button>
+                </div>
+                <div class="col-auto">
+                    <a class="btn btn-danger" href="/admin/pages/del_field/<?=$_RESPONSE['edit']->getId()?>/">Удалить</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

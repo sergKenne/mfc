@@ -1,0 +1,96 @@
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--services">Новости</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--news">
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'news'])?>
+                        </div>
+                    </div>
+                </div>
+                <div class="news news--info">
+                    <div class="">
+                        <ul class="breadcrumbs news__breadcrumbs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item">Новости</li>
+                        </ul>
+                    </div>
+                    <?php $tags = $this->macros('guides', 'list_items', ['news_tags', false, false, false, false, true]);?>
+                    <div class="news__top-nav clearfix">
+                        <?php foreach($tags['data'] as $tag):?>
+                            <a href="?tag=<?=$this->getId($tag)?>" class="news__top-navlink"><?=$this->getName($tag)?></a>
+                        <?php endforeach;?>
+                    </div>
+
+                    <?php $news1 = $this->macros('news', 'lists', [false, true]) ?>
+
+                    <div class="news__card-list news__card-list--all-news clearfix">
+                        <ul class="news__card-blog">
+                            <?php if(isset($news1['featured'])):?>
+                                <li>
+                                    <a href="/news/view/<?=$this->getId($news1['featured'])?>">
+                                        <div class="news__info-card news__info-card--news clearfix">
+                                            <img src="<?=$this->macros('files','preview', [$this->getValue($news1['featured'], 'img'), 571, 406, 'crop'])?>" alt="" class="news__info-image news__info-image--news">
+                                            <div class="news__inner-card news__inner-card--news">
+                                                <p class="news__info-text">
+                                                    <?=$this->getName($news1['featured'])?>
+                                                </p>
+                                                <a href="/news/view/<?=$this->getId($news1['featured'])?>" class="news__info-btn news__info-btn--news">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php endif;?>
+                            <li>
+                                <?php for($i = 0; $i <= 2; $i++):?>
+                                    <?php if(isset($news1['data'][$i])):?>
+                                        <div class="news__card-item">
+                                            <p class="news__card-text">
+                                                <a href="/news/view/<?=$this->getId($news1['data'][$i])?>">
+                                                    <?=$this->getName($news1['data'][$i])?>
+                                                </a>
+                                            </p>
+                                            <div class="news__card-footer">
+                                                <span class="news__card-date"><?=$this->formatDate($this->getValue($news1['data'][$i], 'create_time'))?></span>
+                                                <?php if($tag = $this->getValue($news1['data'][$i], 'tag')):?>
+                                                    <a href="?tag=<?=$this->getId($tag)?>"><span class="news__card-btn"><?=$this->getName($tag)?></span></a>
+                                                <?php endif;?>
+                                            </div>
+                                        </div>
+                                    <?php endif;?>
+                                <?php endfor;?>
+                            </li>
+                        </ul>
+
+                        <div class="news__card-blog">
+                            <?php foreach($news1['data'] as $i=>$news):?>
+                                <?php if($i < 3){ continue;}?>
+
+                                <div class="news__card-item">
+                                    <p class="news__card-text">
+                                        <a href="/news/view/<?=$this->getId($news1['data'][$i])?>">
+                                            <?=$this->getName($news1['data'][$i])?>
+                                        </a>
+                                    </p>
+                                    <div class="news__card-footer">
+                                        <span class="news__card-date"><?=$this->formatDate($this->getValue($news1['data'][$i], 'create_time'))?></span>
+                                        <?php if($tag = $this->getValue($news1['data'][$i], 'tag')):?>
+                                            <a href="?tag=<?=$this->getId($tag)?>"><span class="news__card-btn"><?=$this->getName($tag)?></span></a>
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+                            <?php endforeach;?>
+                        </div>
+                    </div>
+                    <?php $this->getTemplateByFile('./templates/pages/parts/numpages.phtml', ['total'=>$news1['total']])?>
+
+                </div>
+            </main>
+        </div>
+    </div>
+</section>

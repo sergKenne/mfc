@@ -1,0 +1,214 @@
+object(Error)#4 (7) {
+  ["message":protected]=>
+  string(41) "Call to a member function getId() on null"
+  ["string":"Error":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(73) "/var/www/u0718690/data/www/mfc.serviceweb.su/admin/users/registrate.phtml"
+  ["line":protected]=>
+  int(58)
+  ["trace":"Error":private]=>
+  array(7) {
+    [0]=>
+    array(3) {
+      ["file"]=>
+      string(63) "/var/www/u0718690/data/www/mfc.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(51)
+      ["function"]=>
+      string(7) "include"
+    }
+    [1]=>
+    array(6) {
+      ["file"]=>
+      string(64) "/var/www/u0718690/data/www/mfc.serviceweb.su/admin/default.phtml"
+      ["line"]=>
+      int(111)
+      ["function"]=>
+      string(11) "getTemplate"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(5) "users"
+        [1]=>
+        string(10) "registrate"
+        [2]=>
+        array(3) {
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(5) "admin"
+            [1]=>
+            string(4) "user"
+          }
+          ["fields"]=>
+          array(0) {
+          }
+          ["_user"]=>
+          array(4) {
+            ["id"]=>
+            string(1) "1"
+            ["type"]=>
+            string(5) "admin"
+            ["login"]=>
+            string(8) "Stardisk"
+            ["fio"]=>
+            string(0) ""
+          }
+        }
+      }
+    }
+    [2]=>
+    array(4) {
+      ["file"]=>
+      string(63) "/var/www/u0718690/data/www/mfc.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(43)
+      ["args"]=>
+      array(1) {
+        [0]=>
+        string(64) "/var/www/u0718690/data/www/mfc.serviceweb.su/admin/default.phtml"
+      }
+      ["function"]=>
+      string(7) "include"
+    }
+    [3]=>
+    array(6) {
+      ["file"]=>
+      string(63) "/var/www/u0718690/data/www/mfc.serviceweb.su/core/templater.php"
+      ["line"]=>
+      int(30)
+      ["function"]=>
+      string(11) "getTemplate"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(7) "default"
+        [1]=>
+        bool(false)
+        [2]=>
+        array(3) {
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(5) "admin"
+            [1]=>
+            string(4) "user"
+          }
+          ["fields"]=>
+          array(0) {
+          }
+          ["_user"]=>
+          array(4) {
+            ["id"]=>
+            string(1) "1"
+            ["type"]=>
+            string(5) "admin"
+            ["login"]=>
+            string(8) "Stardisk"
+            ["fio"]=>
+            string(0) ""
+          }
+        }
+      }
+    }
+    [4]=>
+    array(6) {
+      ["file"]=>
+      string(60) "/var/www/u0718690/data/www/mfc.serviceweb.su/core/router.php"
+      ["line"]=>
+      int(103)
+      ["function"]=>
+      string(11) "__construct"
+      ["class"]=>
+      string(9) "templater"
+      ["type"]=>
+      string(2) "->"
+      ["args"]=>
+      array(4) {
+        [0]=>
+        string(5) "users"
+        [1]=>
+        string(10) "registrate"
+        [2]=>
+        array(0) {
+        }
+        [3]=>
+        array(3) {
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(5) "admin"
+            [1]=>
+            string(4) "user"
+          }
+          ["fields"]=>
+          array(0) {
+          }
+          ["_user"]=>
+          array(4) {
+            ["id"]=>
+            string(1) "1"
+            ["type"]=>
+            string(5) "admin"
+            ["login"]=>
+            string(8) "Stardisk"
+            ["fio"]=>
+            string(0) ""
+          }
+        }
+      }
+    }
+    [5]=>
+    array(6) {
+      ["file"]=>
+      string(60) "/var/www/u0718690/data/www/mfc.serviceweb.su/core/router.php"
+      ["line"]=>
+      int(80)
+      ["function"]=>
+      string(16) "callModuleMethod"
+      ["class"]=>
+      string(6) "router"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(3) {
+        [0]=>
+        string(5) "users"
+        [1]=>
+        string(10) "registrate"
+        [2]=>
+        array(0) {
+        }
+      }
+    }
+    [6]=>
+    array(6) {
+      ["file"]=>
+      string(54) "/var/www/u0718690/data/www/mfc.serviceweb.su/index.php"
+      ["line"]=>
+      int(9)
+      ["function"]=>
+      string(4) "init"
+      ["class"]=>
+      string(6) "router"
+      ["type"]=>
+      string(2) "::"
+      ["args"]=>
+      array(0) {
+      }
+    }
+  }
+  ["previous":"Error":private]=>
+  NULL
+}

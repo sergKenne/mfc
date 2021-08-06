@@ -11,11 +11,11 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="fonts/circe.fonts.css">
     <link rel="stylesheet" href="css/calendar.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    
     <title>MFC</title>
 </head>
 <body>
@@ -98,7 +98,33 @@
                                 <li class="navbar__item"><a href="question.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#question"></use></svg></svg><span class="navbar__text">Задать вопрос</span></a></li>
                                 <li class="navbar__item navbar__item--search"><a href="#" class="navbar__link" id="search-js"><svg class="navbar__icon"><use xlink:href="sprite.svg#search"></use></svg></svg><span class="navbar__text">Поиск</span></a></li>
                                 <li class="navbar__item navbar__item--user"><a href="user.html" class="navbar__link"><svg class="navbar__icon"><use xlink:href="sprite.svg#user"></use></svg></svg><span class="navbar__text">Личный кабинет</span></a></li>
+                                <li class="navbar__item navbar__item--profil">
+                                    <a href="user.html" class="navbar__link">
+                                        <img class="navbar__icon" src="img/user-profil.svg" alt="">
+                                        <span class="navbar__text navbar__text--profil">
+                                            <span class="navbar__name">Иванов Иван</span>
+                                            <span class="navbar__counter">2</span>
+                                            <i class="fas fa-angle-down navbar__fas-icon"></i> 
+                                        </span> 
+                                    </a>
+                                </li>
                             </ul>
+                            <!-- личный кабинет в мобильных -->
+                            <div class="user__list-item user__list-item--menu">
+                                <div class="user__inner-info">
+                                    <img src="img/user.png" alt="" class="user__portrait">
+                                    <!-- <h4 class="user__name">Иванов Иван Иванович</h4> -->
+                                    <a href="reservation1.html" class="user__btn">Записаться на прием <span class="user__badge">1</span></a>
+                                    <a href="annulation.html" class="user__btn">Отказаться  от приема<span class="user__badge user__badge--active">2</span></a>
+                                    <a href="status.html" class="user__btn">Статус заявления<span class="user__badge">1</span></a>
+                                    <a href="request.html" class="user__btn">Официальное обращение в МФЦ<span class="user__badge">1</span></a>
+                                    <a href="annulation2.html" class="user__btn">Отозвать обращение<span class="user__badge">1</span></a>
+                                    <a href="master.html" class="user__btn">Выезд специалиста<span class="user__badge user__badge--active">1</span></a>
+                                    <a href="freemaster.html" class="user__btn">Бесплатный выезд специалиста<span class="user__badge">1</span></a>
+                                    <a href="formdata.html" class="user__btn user__btn--fixed">Отзыв согласия на обработку персональных данных<span class="user__badge">1</span></a>
+                                    <a href="user.html" class="user__btn user__btn--active">Личная информация<span class="user__badge">1</span></a>
+                                </div>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -529,40 +555,43 @@
                                     </a>
                                 </li>
                             </ul> -->
-                            <div class="slider news__slider-inner" data-aos="fade-up">
-                                <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
-                                    <div class="news__slider-caption">
-                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a> 
+                            <div class="news__slider-inner">
+                                <div class="slider" data-aos="fade-up">
+                                    <div class="news__slider-item">
+                                        <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                        
+                                        <div class="news__slider-caption">
+                                            <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                            <a href="/stories.html" class="news__slider-btn news__slider-btn--show">Подробнее</a> 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
-                                    <div class="news__slider-caption">
-                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    <div class="news__slider-item">
+                                        <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                        <div class="news__slider-caption">
+                                            <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                            <a href="/stories.html" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
-                                    <div class="news__slider-caption">
-                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    <div class="news__slider-item">
+                                        <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                        <div class="news__slider-caption">
+                                            <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                            <a href="/stories.html" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
-                                    <div class="news__slider-caption">
-                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    <div class="news__slider-item">
+                                        <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                        <div class="news__slider-caption">
+                                            <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                            <a href="/stories.html" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="news__slider-item">
-                                    <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
-                                    <div class="news__slider-caption">
-                                        <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
-                                        <a href="" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                    <div class="news__slider-item">
+                                        <img class="news__slider-img" src="img/new-slide3.jpg" alt="">
+                                        <div class="news__slider-caption">
+                                            <p class="news__slider-text">Единые стандарты оформления центров и офисов позволяют сделать их максимально удобными</p>
+                                            <a href="/stories.html" class="news__slider-btn news__slider-btn--show">Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 
@@ -598,101 +627,103 @@
                     </div>
                     <div class="info main-content__main main-content__main--info">
                         <h3 class="info__title">Полезные ресурсы</h3>
-                        <ul class="partener-slider info__partener-list">
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener1.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Госуслуги</h5>
-                                </div>
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener2.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">ФНС</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
+                        <div  class="info__partener-grid">
+                            <ul class="partener-slider info__partener-list">
+                                <li class="info__partener-item">
+                                    <a href="stories.html" class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener1.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">Госуслуги</h5>
+                                    </a>
+                                </li>
+                                <li class="info__partener-item">
+                                    <a href="stories.html" class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">ФНС</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a href="stories.html" class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <div class="info__partener-wrap-img">
+                                                <img class="info__partener-img" src="img/partener3.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <h5 class="info__partener-caption">Росеестр</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a href="stories.html" class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">Правительство СО</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener5.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">Портал Бизнес-навигатора МСП</h5>
+                                    </a>
+                                </li>
+                                <li class="info__partener-item">
+                                    <a class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener6.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">Информационный портал СО</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener7.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">Губернатор СО</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener2.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">ФНС</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a class="info__partener-inner">
                                         <div class="info__partener-wrap-img">
                                             <img class="info__partener-img" src="img/partener3.svg" alt="">
                                         </div>
-                                    </div>
-                                    <h5 class="info__partener-caption">Росеестр</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener4.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Правительство СО</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener5.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Портал Бизнес-навигатора МСП</h5>
-                                </div>
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener6.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Информационный портал СО</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener7.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Губернатор СО</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener2.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">ФНС</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener3.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Росеестр</h5>
-                                </div>    
-                            </li>
-                            <li class="info__partener-item">
-                                <div class="info__partener-inner">
-                                    <div class="info__partener-wrap-img">
-                                        <img class="info__partener-img" src="img/partener4.svg" alt="">
-                                    </div>
-                                    <h5 class="info__partener-caption">Правительство СО</h5>
-                                </div>    
-                            </li>
-                        </ul>
+                                        <h5 class="info__partener-caption">Росеестр</h5>
+                                    </a>    
+                                </li>
+                                <li class="info__partener-item">
+                                    <a class="info__partener-inner">
+                                        <div class="info__partener-wrap-img">
+                                            <img class="info__partener-img" src="img/partener4.svg" alt="">
+                                        </div>
+                                        <h5 class="info__partener-caption">Правительство СО</h5>
+                                    </a>    
+                                </li>
+                            </ul>
+                        </div>
                         <h3 class="info__title">Наши офисы и центры</h3>
                         <form class="info__form">
                             <div class="info__top-btn">
-                                <span class="info__form-btn" >На карте</span>
+                                <span class="info__form-btn info__form-btn--active" >На карте</span>
                                 <span class="info__form-btn">Списком</span>
                             </div>
                             <div class="info__wrap-list">
                                 <div>
                                     <input class="info__form-input" type="text" placeholder="Начните вводить адрес...">
                                 </div>
-                                <div class="info__form-list">
+                                <div class="info__form-list info__form-list--home">
                                     <a href="#" class="info__form-list-item">
                                         <svg class="info__form-svg"><use xlink:href="sprite.svg#loc"></use></svg>
                                         <span class="info__form-city">Алапаевск</span>, ул. Ленина, 16
@@ -1087,8 +1118,11 @@
             </ul>
         </div>
     </section>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Подключаем API -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

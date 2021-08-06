@@ -1,0 +1,95 @@
+<section class="main-content">
+    <div class="container">
+        <div class="main-content__inner">
+            <?php $this->getTemplateByFile('./templates/pages/parts/aside.phtml',[])?>
+            <main class="main main-content__main">
+                <div class="showcase">
+                    <div class="showcase__content">
+                        <div>
+                            <h1 class="showcase__title showcase__title--services">Офисы</h1>
+                        </div>
+                        <div class="showcase__number showcase__number--news" >
+                            <?php $this->getTemplateByFile('./templates/pages/parts/svgs.phtml', ['what'=>'offices'])?>
+                        </div>
+                    </div>
+                </div>
+
+                <?php $offices = $this->macros('offices','officeFilter'); $mapData = [];?>
+
+                <div class="news news--offices">
+                    <div class="">
+                        <ul class="breadcrumbs news__breadcrumbs">
+                            <li class="breadcrumbs__item">Главная  </li>
+                            <li class="breadcrumbs__item">Офисы</li>
+                        </ul>
+                    </div>
+                    <div class="news__top-nav" id="news-md-nav">
+                        <div class="news__nav-row">
+                            <?php foreach(['Екатеринбург', 'Нижний Тагил', 'Каменск-Уральский', 'Первоуральск'] as $city):?>
+                                <a href="?type=city&filter=<?=$city?>" class="news__top-navlink news__top-navlink--offices"><?=$city?></a>
+                            <?php endforeach;?>
+                        </div>
+                        <div class="news__nav-row">
+                            <?php foreach(['Серов', 'Новоуральск', 'Верхняя Пышма', 'Асбест'] as $city):?>
+                                <a href="?type=city&filter=<?=$city?>" class="news__top-navlink news__top-navlink--offices"><?=$city?></a>
+                            <?php endforeach;?>
+                        </div>
+                    </div>
+
+                    <div class="info__wrap-form-list">
+                        <form class=" search-form our-services__search-form">
+                            <input id="office_search" class="search-form__input" name=filter type="text" placeholder="Поиск">
+                            <input type="hidden" name="type" value="search">
+                            <button class="search-form__btn"><svg class="search-form__icon"><use xlink:href="sprite.svg#input-search"></use></svg></button>
+                        </form>
+
+                        <div class="info__form-list office_search_tips" id="search_list" style="display: none">
+
+                        </div>
+                    </div>
+
+
+                    <?php $letters = $this->macros('offices', 'getLetters',[]);?>
+                    <ul class="filter-letter">
+                        <?php foreach($letters as $letter):?>
+                            <li class="filter-letter__item">
+                                <a class="filter-letter__link <?=($offices['type'] == 'letter' and $offices['filter'] == $letter) ? 'filter-letter__link--active' : ''?>" href="?type=letter&filter=<?=$letter?>"><?=$letter?></a>
+                            </li>
+                        <?php endforeach;?>
+                    </ul>
+                    <div class="news__wrap-address">
+                        <?php foreach($offices['data'] as $office):?>
+                            <a href="/offices/view/<?=$office?>" class="news__info-address">
+                                <label class="info__label info__label--address"><span class="info__out info__out--second"></span>
+                                    <?=$this->getName($office)?>
+                                </label>
+                            </a>
+
+                            <?php
+                            //geo_yellow.png, geo_grey.png, geo_red.png, geo.png
+                                $mapData[] = array(
+                                    'coordinate'=> explode(', ',$this->getValue($office, 'coords')),
+                                    'balloon'=> [
+                                            'balloonContentHeader'=> $this->getName($this->getValue($office, 'city_id')),
+                                            'balloonContentBody'=> $this->getName($office),
+                                            'hintContent'=>'неизвестная загруженность'
+                                    ],
+                                    'icon' =>[
+                                        'iconLayout'=>'default#image',
+                                        'iconImageHref'=> '/img/geo_grey.png',
+                                        'iconImageSize'=> [38, 48],
+                                        'iconImageOffset'=> [-15, -62]
+                                    ]
+                                )
+                            ?>
+                        <?php endforeach;?>
+                    </div>
+                    <textarea id="mapData" style="display:none"><?=json_encode($mapData)?></textarea>
+                    <div class="news__goe-cart" id="map-offices">
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>

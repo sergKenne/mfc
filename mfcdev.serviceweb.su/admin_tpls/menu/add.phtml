@@ -1,0 +1,69 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<div class="main_content_container">
+    <h1>Добавить меню</h1>
+
+    <form action="/admin/menu/add/" method="POST" id="form" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Название</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <input required class="form-control" type="text" name="name" value="" id="input_name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input_name" class="col-sm-4 col-xl-3 col-form-label">Структура</label>
+            <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <div class="menu_wrapper">
+
+                </div>
+            </div>
+        </div>
+
+        <textarea name="structure" style="display: none"></textarea>
+
+
+        <div class="new_item_wrapper">
+            <h3>Добавить пункт</h3>
+
+            <div class="row row_form">
+                <div class="col-3">
+                    <p class="form_label">Страница</p>
+                </div>
+                <div class="col-9">
+                    <div class="form_wrapper">
+                        <input type="hidden" name="pageId" value="">
+                        <a class="selectPage" href="#">Выбрать страницу</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-xl-3 col-form-label">Название</label>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" name="item_name" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-xl-3 col-form-label">Ссылка</label>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" name="item_link" value="">
+                </div>
+            </div>
+
+            <button class="btn btn-primary addItem">Добавить</button>
+            <button class="btn btn-secondary cancel" style="display:none">Отменить</button>
+        </div>
+
+        <div class="form_buttons">
+            <div class="row">
+                <?php  $this->getTemplate('pages','langSwitcher',array()); ?>
+                <div class="col-6">
+                    <button class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

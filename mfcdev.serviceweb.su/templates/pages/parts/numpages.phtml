@@ -1,0 +1,79 @@
+<? /** @var templater $this */ ?>
+<? /** @var array $_RESPONSE */ ?>
+
+<?php
+    $limit = utils::getRowsLimit();
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    $total_pages = ceil($_RESPONSE['total'] / $limit);
+
+    if(!function_exists('generateLink')){
+        function generateLink($pageNumber){
+            $link = '?'; $skipParams = ['page','limit']; $paramsCount = 0;
+            foreach($_GET as $getParam=>$value){
+                if(in_array($getParam, $skipParams)){ continue;}
+                if($paramsCount > 0){ $link.='&';}
+                $link .= $getParam.'='.$value;
+                $paramsCount++;
+            }
+            if($paramsCount > 0){ $link .= '&';}
+            $link .= 'page='.$pageNumber;
+            if(isset($_GET['limit'])){ $link.='&limit='.$_GET['limit'];}
+            return $link;
+        }
+    }
+?>
+
+<?php if($total_pages > 1):?>
+<ul class="pagination">
+
+        <?php if($page > 1):?>
+            <li class="pagination__item"><a href="<?=generateLink($page-1)?>">< Предыдущая</a></li>
+        <?php endif;?>
+        <li class="pagination__item"><a class="<?=($page == 1) ? 'pagination__item--active':''?>" href="<?=generateLink(1)?>">1</a></li>
+
+        <?php switch($total_pages){
+            case 2:{?>
+                <li class="pagination__item"><a class="<?=($page == 2) ? 'pagination__item--active':''?>" href="<?=generateLink(2)?>">2</a></li>
+            <? break;}
+
+            case 3:{?>
+                <li class="pagination__item"><a class="<?=($page == 2) ? 'pagination__item--active':''?>" href="<?=generateLink(2)?>">2</a></li>
+                <li class="pagination__item"><a class="<?=($page == 3) ? 'pagination__item--active':''?>" href="<?=generateLink(3)?>">3</a></li>
+            <? break;}
+
+            case 4:{?>
+                <li class="pagination__item"><a class="<?=($page == 2) ? 'pagination__item--active':''?>" href="<?=generateLink(2)?>">2</a></li>
+                <li class="pagination__item"><a class="<?=($page == 3) ? 'pagination__item--active':''?>" href="<?=generateLink(3)?>">3</a></li>
+                <li class="pagination__item"><a class="<?=($page == 4) ? 'pagination__item--active':''?>" href="<?=generateLink(4)?>">4</a></li>
+            <? break;}
+
+            default: {?>
+                <?php if( $page <= 2):?>
+                    <li class="pagination__item"><a class="<?=($page == 2) ? 'pagination__item--active':''?>" href="<?=generateLink(2)?>">2</a></li>
+                    <li class="pagination__item"><a class="<?=($page == 3) ? 'pagination__item--active':''?>" href="<?=generateLink(3)?>">3</a></li>
+                    <li class="pagination__item"><a href="<?=generateLink(4)?>">...</a></li>
+                <?php endif;?>
+
+                <?php if($page > 2 and $page < $total_pages - 2):?>
+                    <li class="pagination__item"><a href="<?=generateLink($page-2)?>">...</a></li>
+                    <li class="pagination__item"><a href="<?=generateLink($page-1)?>"><?=$page-1?></a></li>
+                    <li class="pagination__item"><a class="pagination__item--active" href="<?=generateLink($page)?>"><?=$page?></a></li>
+                    <li class="pagination__item"><a href="<?=generateLink($page+1)?>"><?=$page+1?></a></li>
+                    <li class="pagination__item"><a href="<?=generateLink($page+2)?>">...</a></li>
+                <?php endif;?>
+
+                <?php if($page > 2 and $page >= $total_pages - 2):?>
+                    <li class="pagination__item"><a href="<?=generateLink($total_pages-3)?>">...</a></li>
+                    <li class="pagination__item"><a class="<?=($page == $total_pages-2) ? 'pagination__item--active':''?>" href="<?=generateLink($total_pages-2)?>"><?=$total_pages-2?></a></li>
+                    <li class="pagination__item"><a class="<?=($page == $total_pages-1) ? 'pagination__item--active':''?>" href="<?=generateLink($total_pages-1)?>"><?=$total_pages-1?></a></li>
+                <?php endif;?>
+                <li class="pagination__item"><a class="<?=($page == $total_pages) ? 'pagination__item--active':''?>" href="<?=generateLink($total_pages)?>"><?=$total_pages?></a></li>
+            <?php }
+        }?>
+
+        <?php if($page < $total_pages):?>
+            <li class="pagination__item"><a href="<?=generateLink($page+1)?>">Следующая ></a></li>
+        <?php endif;?>
+
+</ul>
+<?php endif;?>
