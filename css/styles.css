@@ -4299,6 +4299,26 @@ a {
   }
 }
 
+.user__agree-fix-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.user__agree-fix-btn a {
+  background-color: #ffffff;
+}
+
+.user__fix-bande {
+  height: 58px;
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9998;
+}
+
 .over__title {
   font-family: 'Circe';
   font-weight: 800;
@@ -10374,56 +10394,62 @@ button.button:hover::after, button.button:focus::after {
 }
 
 .orangeAnim {
-  -webkit-animation: orange-anim 14s linear  infinite;
-          animation: orange-anim 14s linear  infinite;
+  -webkit-animation: orange-anim 2s linear  infinite;
+          animation: orange-anim 2s linear  infinite;
 }
 
 @-webkit-keyframes orange-anim {
   0% {
-    fill: #74767a;
-  }
-  33% {
     fill: #E04E39;
   }
-  66% {
-    fill: #E04E39;
+  10% {
+    fill: #807e7d;
   }
-  100% {
-    fill: #74767a;
+  60% {
+    fill: #807e7d;
+  }
+  70% {
+    fill: #E04E39;
   }
 }
 
 @keyframes orange-anim {
   0% {
-    fill: #74767a;
-  }
-  33% {
     fill: #E04E39;
   }
-  66% {
-    fill: #E04E39;
+  10% {
+    fill: #807e7d;
   }
-  100% {
-    fill: #74767a;
+  60% {
+    fill: #807e7d;
+  }
+  70% {
+    fill: #E04E39;
   }
 }
 
 .brownAnim {
-  -webkit-animation: brown-anim 14s linear  infinite;
-          animation: brown-anim 14s linear  infinite;
+  -webkit-animation: brown-anim 2s linear  infinite;
+          animation: brown-anim 2s linear  infinite;
 }
 
 @-webkit-keyframes brown-anim {
   0% {
     fill: #623B2A;
   }
-  33% {
-    fill: #74767a;
-  }
-  66% {
+  10% {
     fill: #623B2A;
   }
-  100% {
+  20% {
+    fill: #807e7d;
+  }
+  60% {
+    fill: #807e7d;
+  }
+  70% {
+    fill: #807e7d;
+  }
+  80% {
     fill: #623B2A;
   }
 }
@@ -10432,33 +10458,48 @@ button.button:hover::after, button.button:focus::after {
   0% {
     fill: #623B2A;
   }
-  33% {
-    fill: #74767a;
-  }
-  66% {
+  10% {
     fill: #623B2A;
   }
-  100% {
+  20% {
+    fill: #807e7d;
+  }
+  60% {
+    fill: #807e7d;
+  }
+  70% {
+    fill: #807e7d;
+  }
+  80% {
     fill: #623B2A;
   }
 }
 
 .belgeAnim {
-  -webkit-animation: belge-anim 14s linear  infinite;
-          animation: belge-anim 14s linear  infinite;
+  -webkit-animation: belge-anim 2s linear  infinite;
+          animation: belge-anim 2s linear  infinite;
 }
 
 @-webkit-keyframes belge-anim {
   0% {
     fill: #C79B65;
   }
-  33% {
+  10% {
     fill: #C79B65;
   }
-  66% {
-    fill: #74767a;
+  20% {
+    fill: #C79B65;
   }
-  100% {
+  30% {
+    fill: #807e7d;
+  }
+  60% {
+    fill: #807e7d;
+  }
+  80% {
+    fill: #807e7d;
+  }
+  90% {
     fill: #C79B65;
   }
 }
@@ -10467,13 +10508,22 @@ button.button:hover::after, button.button:focus::after {
   0% {
     fill: #C79B65;
   }
-  33% {
+  10% {
     fill: #C79B65;
   }
-  66% {
-    fill: #74767a;
+  20% {
+    fill: #C79B65;
   }
-  100% {
+  30% {
+    fill: #807e7d;
+  }
+  60% {
+    fill: #807e7d;
+  }
+  80% {
+    fill: #807e7d;
+  }
+  90% {
     fill: #C79B65;
   }
 }
