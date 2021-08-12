@@ -1301,7 +1301,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 3000,
         responsive: [{
           breakpoint: 1440,
           settings: {
@@ -1370,27 +1370,60 @@ $(document).ready(function(){
       slideMargin: 10,
     });
 
-    // $('.partener-slider').bxSlider({
-    //   slideWidth: 170,
-    //   // minSlides: 8,
-    //   // maxSlides: 8,
-    //   minSlides: minSlides,
-    //   maxSlides: maxSlides,
+    // $('.over-slider').bxSlider({
+    //   slideWidth: ($(window).width() < 376 ) ? 300 : ($(window).width() < 426 ) ? 200 : 380, //380,
+    //   minSlides: ($(window).width() < 376 ) ? 1 : ($(window).width() < 426 ) ? 2 : 3, //3,
+    //   maxSlides: ($(window).width() < 376 ) ? 1 : ($(window).width() < 426 ) ? 2 : 3, //($(window).width() < 426 ) ? 2 : ($(window).width() < 376 ) ? 1 : 3,//3,
     //   slideMargin: 10,
     //   stopAutoOnClick: true,
     // });
 
-    $('.over-slider').bxSlider({
-      slideWidth: ($(window).width() < 376 ) ? 300 : ($(window).width() < 426 ) ? 200 : 380, //380,
-      minSlides: ($(window).width() < 376 ) ? 1 : ($(window).width() < 426 ) ? 2 : 3, //3,
-      maxSlides: ($(window).width() < 376 ) ? 1 : ($(window).width() < 426 ) ? 2 : 3, //($(window).width() < 426 ) ? 2 : ($(window).width() < 376 ) ? 1 : 3,//3,
+    $('.over-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        // {
+        //   breakpoint: 1220,
+        //   settings: {
+        //     slidesToShow: 5,
+        //     slidesToScroll: 5
+        //   }
+        // },
+        // {
+        //   breakpoint: 769,
+        //   settings: {
+        //       //arrows: false,
+        //       slidesToShow: 4,
+        //       slidesToScroll: 4
+        //   }
+        // },
+        {
+          breakpoint: 426,
+          settings: {
+              //arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 376,
+          settings: {
+              arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 1
+          }
+        }
+      ]
+  });
 
-      // minSlides: minSlides,
-      // maxSlides: maxSlides,
 
-      slideMargin: 10,
-      stopAutoOnClick: true,
-    });
+
+
 
     $('.newslider').bxSlider({
       //mode: 'fade',

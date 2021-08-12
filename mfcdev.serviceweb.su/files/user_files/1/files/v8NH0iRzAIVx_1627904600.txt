@@ -1,8 +1,0 @@
-open git bash here
-
-для добавления ssh ключа:
-GIT_SSH_COMMAND="ssh -i D:/kaluga-astral/nginx/.ssh/rsa" и команда
-
-запушить git push -u kazzna astral
-
-скачать репозиторий git clone git@79.111.13.129:/opt/git/kazzna.git

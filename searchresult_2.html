@@ -14,10 +14,6 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- <link rel="stylesheet" href="css/uikit.min.css" />
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script> -->
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <title>MFC</title>
 </head>
@@ -28,7 +24,7 @@
                 <div class="container">
                     <div class="header__menu-inner">
                         <ul class="header__menu-list">
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Онлайн-запись в МФЦ</a></li>
                             <li class="header__menu-item"><a href="announce.html" class="header__menu-link">Объявления</a></li>
                             <li class="header__menu-item"><a href="offices.html" class="header__menu-link">Офисы</a></li>
                             <li class="header__menu-item"><a href="jobs.html" class="header__menu-link">Вакансии</a></li>
@@ -38,12 +34,12 @@
                             <li class="header__menu-item"><a href="business.html" class="header__menu-link">Для бизнеса</a></li>
                             <li class="header__menu-item"><a href="about.html" class="header__menu-link">О МФЦ</a></li>
                             <li class="header__menu-item"><a href="documents.html" class="header__menu-link">Документы</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Дополнительные услуги</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Доступная среда</a></li>
+                            <li class="header__menu-item"><a href="overservices.html" class="header__menu-link">Дополнительные услуги</a></li>
+                            <li class="header__menu-item"><a href="access.html" class="header__menu-link">Доступная среда</a></li>
                             <li class="header__menu-item"><a href="news.html" class="header__menu-link">Новости</a></li>
                             <li class="header__menu-item"><a href="question.html" class="header__menu-link">Задать вопрос</a></li>
                             <li class="header__menu-item"><a href="stories.html" class="header__menu-link">Истории</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Личный кабинет</a></li>
+                            <li class="header__menu-item"><a href="user.html" class="header__menu-link">Личный кабинет</a></li>
                         </ul>
                         <div class="header__menu-footer">
                             <div class="header__menu-social">
@@ -123,15 +119,15 @@
                                 </a>
                             </li>
                             <li class="sidebar__nav-item">
-                                <a href="services.html" class="main-btn sidebar__nav-link">
-                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
-                                    <span class="main-btn__text">Услуги</span>
-                                </a>
-                            </li>
-                            <li class="sidebar__nav-item">
                                 <a href="offices.html" class="main-btn sidebar__nav-link">
                                     <svg class="main-btn__icon"><use xlink:href="sprite.svg#location"></use></svg>
                                     <span class="main-btn__text">Офисы</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__nav-item">
+                                <a href="services.html" class="main-btn sidebar__nav-link">
+                                    <svg class="main-btn__icon"><use xlink:href="sprite.svg#check"></use></svg>
+                                    <span class="main-btn__text">Услуги</span>
                                 </a>
                             </li>
                             <li class="sidebar__nav-item">
@@ -147,7 +143,7 @@
                                 </a>
                             </li>
                             <li class="sidebar__nav-item">
-                                <a href="signin.html" class="main-btn sidebar__nav-link">
+                                <a href="master.html" class="main-btn sidebar__nav-link">
                                     <svg class="main-btn__icon"><use xlink:href="sprite.svg#car"></use></svg>
                                     <span class="main-btn__text">Выезд специалиста</span>
                                 </a>
@@ -164,16 +160,15 @@
                                     <span class="main-btn__text">Реклама в МФЦ</span>
                                 </a>
                             </li>
-                            
                         </ul>
                     </aside>
                     <main class="main main-content__main">
                         <div class="showcase">
-                            <div class="showcase__content showcase__content--services">
+                            <div class="showcase__content">
                                 <div>
-                                    <h1 class="showcase__title showcase__title--services">Юридические услуги</h1>
+                                    <h1 class="showcase__title showcase__title--services">Результат поиска</h1>
                                 </div>
-                                <div class="showcase__number showcase__number--services">
+                                <div class="showcase__number showcase__number--news"  style="opacity: 1;">
                                     <svg width="152" height="142" viewBox="0 0 152 142" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M130.005 63.9387C119.937 51.2529 101.376 62.9246 88.0232 53.4044C80.9925 48.3917 76.0837 33.4994 68.7545 29.082C41.5573 12.6896 17.2502 33.9106 17.7183 60.0119C18.5474 106.242 78.7026 118.19 107.346 108.319C126.129 101.846 145.814 83.8581 130.005 63.9387Z" fill="url(#paint0_linear)"/>
                                         <g clip-path="url(#clip0)">
@@ -424,68 +419,67 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="news">
-                            <div class="our-services our-services--over">
-                                <ul class="breadcrumbs our-services__breadcrumbs">
+                        <div class="news news--offices">
+                            <div class="">
+                                <ul class="breadcrumbs news__breadcrumbs">
                                     <li class="breadcrumbs__item">Главная</li>
-                                    <li class="breadcrumbs__item">Дополнительные услуги</li>
-                                    <li class="breadcrumbs__item">Юридически услуги</li>
+                                    <li class="breadcrumbs__item">Поиск</li>
                                 </ul>
-                                <div class="our-services__content">
-                                    <div class="our-services__inner our-services__inner--over">
-                                       
-                                            <ul class="our-services__list our-services__list--over">
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
-                                                        <svg class="our-services__list-type our-services__list-type--law"><use xlink:href="sprite.svg#service-law"></use></svg>
-                                                        <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            </div>
+                            <form action="" class=" search-form our-services__search-form">
+                                <input class="search-form__input" type="text" placeholder="Поиск">
+                                <button class="search-form__btn"><svg class="search-form__icon"><use xlink:href="sprite.svg#input-search"></use></svg></button>
+                            </form>
+                            <h3 class="news__title-result news__title-result--search">Результаты поиска по запросу : <span class="news__title-span">Замена документов</span></h3>
+                            <div class="our-services__content">
+                                <div class="our-services__inner our-services__inner--over">
+                                    <ul class="our-services__list our-services__list--over">
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="our-services__list-item our-services__list-item--over" href="overservices2.html">
+                                                <div class="our-services__list-description"><span>Социальная адаптация безработных граждан на рынке труда</span></div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -628,6 +622,77 @@
             </ul>
         </form>
     </div>
+    <!-- model for documents -->
+    <div class="modal" id="modal-doc-js">
+        <div class="modal__card-inner">
+            <div class="modal__card modal__card--doc">
+                <ul class="documents__list documents__list--doc clearfix">
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Информация  для граждан</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Нормативные правовые акты</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Учредительные документы</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Политика обработкиперсональных данных</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Платная деятельность</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Реестр соглашений</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Противодействие коррупции</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Профилактика терроризма</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">Формы заявлений</a>
+                        </div>
+                    </li>
+                    <li class="documents__item documents__item--doc">
+                        <img src="img/doc-file1.png" alt="" class="documents__icon">
+                        <div class="documents__inner-item documents__inner-item--doc">
+                            <a href="#" class="documents__inner-text documents__inner-text--doc">СОУТ</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+                <span class="modal__card-close" id="modal-close-js"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+     </div>
     <section class="navbar-bottom">
         <!-- <div class="container"> -->
             <ul class="navbar-bottom__list">
