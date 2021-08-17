@@ -1444,7 +1444,12 @@ $(document).ready(function(){
       //auto: true
     });
 
-    $("#search-js, #modal-btn-js, #modal-js").click(function(e){
+    $("#search-js").click(function(e) {
+      e.preventDefault();
+      $("#modal-js").slideDown()
+    })
+
+    $("#modal-btn-js").click(function(e){
       e.preventDefault();
       $("#modal-js").slideToggle(); 
     });
@@ -1460,8 +1465,6 @@ $(document).ready(function(){
     $("#modal-close-js").click(function(){
       $("#modal-send-js").slideUp();
     });
-
-
 
     $(".cancel-js").click(function(){
       $("#modal-cancel-js").slideDown();
@@ -1479,8 +1482,6 @@ $(document).ready(function(){
     $("#info-close-js").click(function(){
       $("#modal-info-js").slideUp();
     });
-
-    
 
     $("#doc-js").click(function(){
       $("#modal-doc-js").slideDown();
@@ -1528,11 +1529,6 @@ $(document).ready(function(){
       e.preventDefault();
       $(".user__list-item--menu").slideToggle();
     })
-
-
-
-
-
 
     //OFFERS JS
     $(".offers-title-js").bind({
@@ -1683,8 +1679,7 @@ $(document).ready(function(){
 
         $closet.find(".tab").removeClass("tab--active");
         $closet.find("."+dataAttr).addClass("tab--active");
-      })
-      
+      })      
     })
 
 
@@ -1697,30 +1692,7 @@ $(document).ready(function(){
               $(this).css({fill: color})
             }
         );
-       
-        // $(this).mousemove((e) => {
-        //   console.log(e.clientX, "X : Y", e.clientY)
-        //   $("#tooltip").text($(this).data("city")).css({
-        //     left: e.offsetX-60,
-        //     top: e.offsetY + 30,
-        //     zIndex: 99999,
-        //     opacity:1
-           
-        //   })
-        // });
-
-        // $(this).mouseout(function(){
-        //   $("#tooltip").text("").css({
-        //     left: 0,
-        //     top: 0,
-        //     zIndex: 99999,
-        //     opacity:0
-           
-        //   })
-        // })
-
-
-
+               
         $(this)
           .mouseenter((e) => {
               console.log(e.clientX, "X : Y", e.clientY)
@@ -1742,210 +1714,7 @@ $(document).ready(function(){
             })
           });
 
-
-        // $(this).click(function(){
-        //   if($(this).data("city")) {
-        //     console.log(cities);
-        //     //alert($(this).data("city"));
-        //     let city = $(this).data("city");
-        //         city = cities.find(c => c.cityName === city )
-
-        //         //city && city.offices.forEach(office => {
-
-        //           // const {coordinates} = office;
-        //           // const current_city = office.city;
-        //           //const current_name = office.name;
-                
-
-        //           const {coordinates} = city.offices[0]
-        //           const current_city = city.offices[0].city;
-        //           const current_name = city.offices[0].name;
-        //           console.log("coordinates:", current_city);
-        //           ymaps.ready(init);
-  
-        //           function init () {
-        //             $(".info__yandex-map").css({display: "block" });
-        //             $(".info__map").css({display: "none" });
-        //               var myMap = new ymaps.Map('map', {
-        //                   //center: [56.829374, 60.672699], 
-        //                   center: coordinates,
-        //                   zoom: 10
-        //               }, {
-        //                   searchControlProvider: 'yandex#search'
-        //               });
-                      
-        //               // Создаём макет содержимого.
-        //               // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        //               //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        //               // ),
-
-        //               // myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        //               //     hintContent: current_name,
-        //               //     balloonContent: current_city
-        //               // }, {
-        //               //     iconLayout: 'default#image',
-        //               //     iconImageHref: '../img/geo.png',
-        //               //     iconImageSize: [40, 48],
-        //               //     iconImageOffset: [-5, -38]
-        //               // }),
-
-        //               // myMap.geoObjects.add(myPlacemark)
-
-
-
-        //               city.offices.forEach(office => {
-        //                 console.log(office)
-        //                   const myPlacemark = new ymaps.Placemark(office.coordinates, office.balloon, office.icon);
-        //                   myMap.geoObjects.add(myPlacemark);
-        //               })
-          
-        //           }
-
-        //       //})
-
-
-        //   } else {
-        //     alert("no Data address")
-        //   }
-        // })
     });
-
-
-
-
-    //MAP OFFICES  testing
-    // ymaps.ready(init);
-
-    // function init(){
-    //   var myMapOffices = new ymaps.Map("map-offices1", {
-    //               center: [56.829374, 60.672699],
-    //               zoom: 7
-    //             }, {
-    //               searchControlProvider: 'yandex#search'
-    //           });
-    
-    //         myMapOffices.behaviors.disable(["drag", "scrollZoom"]);
-
-
-    //         dataLocation.forEach(elt => {
-    //           console.log(elt)
-    //             const myPlacemark = new ymaps.Placemark(elt.coordinate, elt.balloon, elt.icon);
-    //             myMapOffices.geoObjects.add(myPlacemark);
-    //         })
-
-    // }
-
-
-
-
-
-
-
-
-    //FOR ONE OFFICE
-    // function myMapOffice1() {
-    //   ymaps.ready(init);
-    //   function init(){
-    //       var myMapOffice = new ymaps.Map("map-office", {
-    //                 center: [56.829374, 60.672699],
-    //                 zoom: 4
-    //             }, {
-    //               searchControlProvider: 'yandex#search'
-    //           });
-
-    //           myMapOffice.behaviors.disable(["drag", "scrollZoom"]);
-    //       }
-
-    //       const myPlacemark = new ymaps.Placemark(
-    //               [56.829374, 60.672699], 
-                  
-    //               {
-    //                   iconLayout: 'default#image',
-    //                   iconImageHref: '../img/geo.png',
-    //                   iconImageSize: [40, 48],
-    //                   iconImageOffset: [-5, -38]
-    //               }
-    //             );
-    //             myMapOffice.geoObjects.add(myPlacemark);
-    // }
-    // myMapOffice1();
-
-
-
-
-
-
-
-  //   ymaps.ready(function () {
-  //     var myMap = new ymaps.Map('map-office', {
-  //             center: [56.829374, 60.672699],//[55.751574, 37.573856],
-  //             zoom: 9
-  //         }, {
-  //             searchControlProvider: 'yandex#search'
-  //         }),
-          
-  
-  //         // Создаём макет содержимого.
-  //         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-  //             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  //         ),
-  
-  //         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //             hintContent: 'Собственный значок метки',
-  //             balloonContent: 'Это красивая метка'
-  //         }, {
-  //             // Опции.
-  //             // Необходимо указать данный тип макета.
-  //             iconLayout: 'default#image',
-  //             // Своё изображение иконки метки.
-  //             //iconImageHref: 'images/myIcon.gif',
-  //             iconImageHref: '../img/geo.png',
-
-  //             iconImageSize: [40, 48],
-  //             iconImageOffset:[-50, -75] //[-5, -38]
-
-  //             // Размеры метки.
-  //             //iconImageSize: [30, 42],
-  //             // Смещение левого верхнего угла иконки относительно
-  //             // её "ножки" (точки привязки).
-  //             //iconImageOffset: [-5, -38]
-  //         }),
-  
-  //         myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-  //             hintContent: 'Собственный значок метки с контентом',
-  //             balloonContent: 'А эта — новогодняя',
-  //             iconContent: '12'
-  //         }, {
-  //             // Опции.
-  //             // Необходимо указать данный тип макета.
-  //             iconLayout: 'default#imageWithContent',
-  //             // Своё изображение иконки метки.
-  //             iconImageHref: 'images/ball.png',
-  //             // Размеры метки.
-  //             iconImageSize: [48, 48],
-  //             // Смещение левого верхнего угла иконки относительно
-  //             // её "ножки" (точки привязки).
-  //             iconImageOffset: [-24, -24],
-  //             // Смещение слоя с содержимым относительно слоя с картинкой.
-  //             iconContentOffset: [15, 15],
-  //             // Макет содержимого.
-  //             iconContentLayout: MyIconContentLayout
-  //         });
-  
-  //     myMap.geoObjects
-  //         .add(myPlacemark)
-  //         .add(myPlacemarkWithContent);
-  // });
-
-
-
-
-
-
-
-
-
-
 
     //LEVEL-js
 
@@ -1998,161 +1767,6 @@ $(document).ready(function(){
 
 }); //end ready
 
-
-
-
-//CALENDAR
-
-
-// let calendar = document.querySelector('.calendar')
-
-// const month_names = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
-
-// isLeapYear = (year) => {
-//     return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 ===0)
-// }
-
-// getFebDays = (year) => {
-//     return isLeapYear(year) ? 29 : 28
-// }
-
-// var daysSaved = []; 
-
-// generateCalendar = (month, year,days) => {
-//     if(days.length>0){
-//       daysSaved = days;
-//     } else {
-//       days = daysSaved;
-      
-//     }
-//     days = days || [];
-//     let calendar_days = calendar.querySelector('.calendar-days')
-//     let calendar_header_year = calendar.querySelector('#year')
-
-//     let days_of_month = [31, getFebDays(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-//     calendar_days.innerHTML = ''
-
-//     let currDate = new Date()
-//     // if (!month) month = currDate.getMonth()
-//     // if (!year) year = currDate.getFullYear()
-
-//     let curr_month = `${month_names[month]}`
-//     month_picker.innerHTML = curr_month
-//     calendar_header_year.innerHTML = year
-
-//     // get first day of month
-    
-//     let first_day = new Date(year, month, 0)
-
-//     for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
-//         let day = document.createElement('button')
-
-//         day.classList.add('calendar-day-hover')
-//         if (i >= first_day.getDay()) {
-//             //day.classList.add('calendar-day-hover')
-//             const d = ((i - first_day.getDay() + 1)<10) ? `0${i - first_day.getDay() + 1}` : i - first_day.getDay() + 1;
-//             const m = (month < 9) ? `0${month+1}` : month+1;
-//             const y = year; // currDate.getFullYear();
-//             const strDate = `${d}-${m}-${y}`
-//             //console.log(strDate);
-
-
-//             //if(days.includes(strDate)) {
-//               if($.inArray(strDate, days) !== -1) {
-              
-//               day.classList.add('day-active');
-//             } else {
-//               day.setAttribute("disabled", "disabled")
-//               //day.classList.add('disabled');
-//             }
-
-
-
-
-
-
-//             day.innerHTML = i - first_day.getDay() + 1 //+ 1
-//             day.innerHTML += `<span></span>
-//                             <span></span>
-//                             <span></span>
-//                             <span></span>`
-//             if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
-//                 day.classList.add('curr-date')
-//             }
-//         }
-//         calendar_days.appendChild(day)
-//     }
-// }
-
-// let month_list = calendar.querySelector('.month-list')
-
-// month_names.forEach((e, index) => {
-//     let month = document.createElement('div')
-//     month.innerHTML = `<div data-month="${index}">${e}</div>`
-//     month.querySelector('div').onclick = () => {
-//         month_list.classList.remove('show')
-//         curr_month.value = index
-//         generateCalendar(index, curr_year.value)
-//     }
-//     month_list.appendChild(month)
-// })
-
-// let month_picker = calendar.querySelector('#month-picker')
-
-// month_picker.onclick = () => {
-//     //month_list.classList.add('show')
-// }
-
-// let currDate = new Date()
-
-// const d = (currDate.getDay() < 10) ? `0${currDate.getDay()}` : currDate.getDay()
-// const m = (currDate.getMonth() < 10) ? `0${currDate.getMonth()}` : currDate.getMonth()
-// const y = currDate.getFullYear();
-// //console.log(`${d}-${m}-${y}`)
-
-// let curr_month = {value: currDate.getMonth()}
-// let curr_year = {value: currDate.getFullYear()}
-
-// generateCalendar(curr_month.value, curr_year.value, []) //format date ['28-07-2021', '31-07-2021']
-
-// document.querySelector('#prev-year').onclick = () => {
-//    console.log("month", curr_month.value)
-//     //--curr_month.value
-
-//     if(curr_month.value < 1) {
-//       --curr_year.value
-//       curr_month.value = 11
-//       //curr_month
-//     } else {
-//       --curr_month.value
-//     }
-   
-//     generateCalendar(curr_month.value, curr_year.value, [])
-// }
-
-// document.querySelector('#next-year').onclick = () => {
-//     console.log("month", curr_month.value)
-//     if(curr_month.value > 10) {
-//       ++curr_year.value
-//       curr_month.value = 0
-//       //curr_month
-//     } else {
-//       ++curr_month.value
-//     }
-    
-
-
-    
-//     generateCalendar(curr_month.value, curr_year.value, [])
-// }
-
-// let dark_mode_toggle = document.querySelector('.dark-mode-switch')
-
-// dark_mode_toggle.onclick = () => {
-//     document.querySelector('body').classList.toggle('light')
-//     document.querySelector('body').classList.toggle('dark')
-// }
 
 
 
